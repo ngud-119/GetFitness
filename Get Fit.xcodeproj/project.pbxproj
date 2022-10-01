@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
+		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
 		5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF49C28872E8B00EB653A /* AppDelegate.swift */; };
 		5ADCF49F28872E8B00EB653A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF49E28872E8B00EB653A /* SceneDelegate.swift */; };
 		5ADCF4A428872E8B00EB653A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADCF4A228872E8B00EB653A /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
 		5ADCF49928872E8B00EB653A /* Get Fit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Fit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADCF49C28872E8B00EB653A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADCF49E28872E8B00EB653A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */,
 				5A0427DE28889AB7003F9726 /* SignInViewController.swift */,
 				5A482AE42889953500030497 /* SignUpViewController.swift */,
+				5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			files = (
 				5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
+				5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */,
 				5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */,
 				5ADCF49F28872E8B00EB653A /* SceneDelegate.swift in Sources */,
 				5A482AE52889953500030497 /* SignUpViewController.swift in Sources */,
