@@ -37,5 +37,11 @@ class CardCell: UITableViewCell
         cardBackgroundImageView.layer.cornerRadius = 10.0 // Setting card image corner radius
     }
     
+    @IBAction func startButtonTapped(_ sender: UIButton)
+    {
+        print("Start button in card tapped !")
+        print(sender)
+    }
+    
     
 }

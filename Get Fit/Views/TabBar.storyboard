@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5P-sm-pCI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Workouts Screens-->
+        <scene sceneID="43z-Pz-9d5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Workouts Screens" id="vPZ-hR-8rl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="4Pe-z3-0GH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXm-9b-J8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-382" y="418"/>
+        </scene>
+        <!--Diet Plan-->
+        <scene sceneID="pPk-YD-bUR">
+            <objects>
+                <viewController id="St5-ke-9Q8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IRm-Cz-Bvq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGC-tm-C1V">
+                                <rect key="frame" x="84.5" y="412" width="245" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDc-hp-Wuw"/>
+                        <color key="backgroundColor" systemColor="linkColor"/>
+                        <constraints>
+                            <constraint firstItem="PGC-tm-C1V" firstAttribute="centerY" secondItem="IRm-Cz-Bvq" secondAttribute="centerY" id="7hS-da-jVM"/>
+                            <constraint firstItem="PGC-tm-C1V" firstAttribute="centerX" secondItem="IRm-Cz-Bvq" secondAttribute="centerX" id="9fw-ff-qXb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Diet Plan" image="Diet Plan" id="LKD-jC-rys"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5HW-pN-B9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="642"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="5yS-m2-sTu">
+            <objects>
+                <viewController id="4dB-rF-fzo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ll2-sC-N84">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTs-IQ-AcI">
+                                <rect key="frame" x="118" y="412" width="178" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oh9-Lq-JQB"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="TTs-IQ-AcI" firstAttribute="centerY" secondItem="Ll2-sC-N84" secondAttribute="centerY" id="DwU-0L-GEs"/>
+                            <constraint firstItem="TTs-IQ-AcI" firstAttribute="centerX" secondItem="Ll2-sC-N84" secondAttribute="centerX" id="KLx-q2-w85"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="RpM-7h-Zlz">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ZU-Qr-cEu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="642"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ao2-vX-a4z">
+            <objects>
+                <tabBarController id="a5P-sm-pCI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C05-VG-d6A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vPZ-hR-8rl" kind="relationship" relationship="viewControllers" id="VRo-np-dTE"/>
+                        <segue destination="St5-ke-9Q8" kind="relationship" relationship="viewControllers" id="n46-kk-twK"/>
+                        <segue destination="4dB-rF-fzo" kind="relationship" relationship="viewControllers" id="hFg-xg-XhJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9C-3L-0yS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="488" y="-240"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Diet Plan" width="30" height="30"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
