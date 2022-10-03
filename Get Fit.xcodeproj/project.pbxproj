@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
+		5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */; };
+		5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89A28EABFD10080EEFD /* TabBar.storyboard */; };
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
 		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
 		5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
+		5A21D89A28EABFD10080EEFD /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
 		5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +92,9 @@
 			isa = PBXGroup;
 			children = (
 				5ADCF4A228872E8B00EB653A /* Main.storyboard */,
+				5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */,
 				5ADCF4A728872E8F00EB653A /* LaunchScreen.storyboard */,
+				5A21D89A28EABFD10080EEFD /* TabBar.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,9 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */,
 				5ADCF4A928872E8F00EB653A /* LaunchScreen.storyboard in Resources */,
 				5ADCF4A628872E8F00EB653A /* Assets.xcassets in Resources */,
 				5ADCF4A428872E8B00EB653A /* Main.storyboard in Resources */,
+				5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
