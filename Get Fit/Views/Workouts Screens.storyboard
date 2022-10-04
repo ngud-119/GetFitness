@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yce-I0-Vln">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fLB-8f-Uzx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Workouts-->
+        <!--Workouts View Controller-->
         <scene sceneID="Dfe-o0-7j3">
             <objects>
                 <viewController id="yce-I0-Vln" customClass="WorkoutsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,8 +15,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-qv-oyg">
+                                <rect key="frame" x="25" y="88" width="364" height="54"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gDr-rt-i4o" userLabel="Card TableView">
-                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <rect key="frame" x="0.0" y="172" width="414" height="641"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -92,6 +98,7 @@
                                                             </buttonConfiguration>
                                                             <connections>
                                                                 <action selector="startButtonTapped:" destination="O6Y-IJ-7zR" eventType="touchUpInside" id="e0z-Rg-T0N"/>
+                                                                <segue destination="lCW-tg-82s" kind="show" id="NeH-IJ-mBg"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -145,12 +152,6 @@
                                     <outlet property="delegate" destination="yce-I0-Vln" id="u38-a5-Tjl"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MV5-qv-oyg">
-                                <rect key="frame" x="25" y="69" width="364" height="54"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tkn-8t-DDS"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,12 +161,11 @@
                             <constraint firstItem="Tkn-8t-DDS" firstAttribute="bottom" secondItem="gDr-rt-i4o" secondAttribute="bottom" id="Cg3-fd-80S"/>
                             <constraint firstItem="gDr-rt-i4o" firstAttribute="leading" secondItem="Tkn-8t-DDS" secondAttribute="leading" id="EcF-Tm-YI4"/>
                             <constraint firstItem="Tkn-8t-DDS" firstAttribute="trailing" secondItem="MV5-qv-oyg" secondAttribute="trailing" constant="25" id="Ucw-kX-ZHd"/>
-                            <constraint firstItem="MV5-qv-oyg" firstAttribute="top" secondItem="Tkn-8t-DDS" secondAttribute="top" constant="25" id="nTX-3P-WE7"/>
-                            <constraint firstItem="gDr-rt-i4o" firstAttribute="top" secondItem="Tkn-8t-DDS" secondAttribute="top" constant="100" id="yV4-nK-Wjx"/>
+                            <constraint firstItem="gDr-rt-i4o" firstAttribute="top" secondItem="MV5-qv-oyg" secondAttribute="bottom" constant="30" id="cMF-1e-L2o"/>
+                            <constraint firstItem="MV5-qv-oyg" firstAttribute="top" secondItem="Tkn-8t-DDS" secondAttribute="top" id="nTX-3P-WE7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workouts" image="Dumbbell" id="ag0-SX-M68"/>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="lqe-Kf-lN6"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="lqe-Kf-lN6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="workoutsCardTableView" destination="gDr-rt-i4o" id="hPT-Ks-a7C"/>
@@ -173,7 +173,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVH-qv-dEf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-712" y="688"/>
+            <point key="canvasLocation" x="1107.2463768115942" y="687.72321428571422"/>
+        </scene>
+        <!--Workouts List View Controller-->
+        <scene sceneID="eMH-hb-Zf4">
+            <objects>
+                <viewController id="lCW-tg-82s" customClass="WorkoutsListViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3oK-Ic-Zmh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BrH-w6-oA8"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="U8Z-ao-mM6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcg-nf-5Hu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2081.159420289855" y="687.72321428571422"/>
+        </scene>
+        <!--Workouts-->
+        <scene sceneID="exI-yQ-hAu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fLB-8f-Uzx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Workouts" image="Dumbbell" id="cD9-G0-auO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YOB-Zk-1dK">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yce-I0-Vln" kind="relationship" relationship="rootViewController" id="LMh-Ql-JJk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fre-vR-232" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.10144927536234" y="687.72321428571422"/>
         </scene>
     </scenes>
     <resources>

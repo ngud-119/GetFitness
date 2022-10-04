@@ -10,7 +10,10 @@
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
 		5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */; };
 		5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89A28EABFD10080EEFD /* TabBar.storyboard */; };
+		5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */; };
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
+		5A585EE828EBEEEC004C375F /* WorkoutsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A585EE728EBEEEC004C375F /* WorkoutsListViewController.swift */; };
+		5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7522E628EC44410022E260 /* ProfileViewController.swift */; };
 		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
 		5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */; };
 		5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8117C28E9DF8F00E5E7E0 /* CardCell.swift */; };
@@ -26,7 +29,10 @@
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
 		5A21D89A28EABFD10080EEFD /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Profile Screen.storyboard"; sourceTree = "<group>"; };
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5A585EE728EBEEEC004C375F /* WorkoutsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsListViewController.swift; sourceTree = "<group>"; };
+		5A7522E628EC44410022E260 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
 		5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		5AC8117C28E9DF8F00E5E7E0 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 				5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */,
 				5ADCF4A728872E8F00EB653A /* LaunchScreen.storyboard */,
 				5A21D89A28EABFD10080EEFD /* TabBar.storyboard */,
+				5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +115,8 @@
 				5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */,
 				5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */,
 				5AC8117C28E9DF8F00E5E7E0 /* CardCell.swift */,
+				5A585EE728EBEEEC004C375F /* WorkoutsListViewController.swift */,
+				5A7522E628EC44410022E260 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */,
+				5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */,
 				5ADCF4A928872E8F00EB653A /* LaunchScreen.storyboard in Resources */,
 				5ADCF4A628872E8F00EB653A /* Assets.xcassets in Resources */,
 				5ADCF4A428872E8B00EB653A /* Main.storyboard in Resources */,
@@ -185,7 +195,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A585EE828EBEEEC004C375F /* WorkoutsListViewController.swift in Sources */,
 				5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */,
+				5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */,
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
 				5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */,

@@ -40,7 +40,6 @@ class CardCell: UITableViewCell
     @IBAction func startButtonTapped(_ sender: UIButton)
     {
         print("Start button in card tapped !")
-        print(sender)
     }
     
     

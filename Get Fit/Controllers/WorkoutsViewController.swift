@@ -23,6 +23,7 @@ class WorkoutsViewController: UIViewController,UITableViewDelegate,UITableViewDa
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.tabBarController?.navigationItem.hidesBackButton = true // Hide back button of this viewcontroller.
     }
     
     // For creating desired rows in the table view.

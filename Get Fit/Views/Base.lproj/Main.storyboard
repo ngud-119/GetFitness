@@ -400,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-bx-y3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4858" y="-450"/>
+            <point key="canvasLocation" x="4858" y="-242"/>
         </scene>
         <!--TabBar-->
         <scene sceneID="gOH-nF-RGY">
@@ -410,7 +410,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-L7-h68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7983" y="301"/>
+            <point key="canvasLocation" x="6793" y="-8"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7yi-u3-jGA">
@@ -616,11 +616,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlh-0y-wBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4858" y="931"/>
+            <point key="canvasLocation" x="4858" y="964"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="l0s-EL-Bvr"/>
+        <segue reference="mcb-vd-Bbh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
