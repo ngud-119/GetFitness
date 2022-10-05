@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="apl-N5-q0F">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,26 +11,20 @@
         <!--Profile-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="Y6W-OH-hqX" customClass="ProfileViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uND-uX-SEj">
-                                <rect key="frame" x="30" y="30" width="105.5" height="42"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User Image" translatesAutoresizingMaskIntoConstraints="NO" id="qOd-wY-H5p" userLabel="Profile Image View">
-                                <rect key="frame" x="87.5" y="122" width="200" height="200"/>
+                                <rect key="frame" x="127.5" y="153" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="ELB-Sk-TJu"/>
-                                    <constraint firstAttribute="width" constant="200" id="sB2-Wi-Qfc"/>
+                                    <constraint firstAttribute="height" constant="120" id="ELB-Sk-TJu"/>
+                                    <constraint firstAttribute="width" constant="120" id="sB2-Wi-Qfc"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FP1-bg-8WN" userLabel="User Info Stack">
-                                <rect key="frame" x="15" y="372" width="345" height="111.5"/>
+                                <rect key="frame" x="15" y="323" width="345" height="111.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="1Of-HW-cgL" userLabel="User Details Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="111.5"/>
@@ -98,7 +93,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emo-AN-6QV" userLabel="Sign Out Button">
-                                <rect key="frame" x="15" y="513.5" width="345" height="40"/>
+                                <rect key="frame" x="15" y="464.5" width="345" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1gh-XC-NzC"/>
                                 </constraints>
@@ -109,6 +104,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signOutButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lj9-iL-ajv"/>
+                                    <segue destination="7dU-eL-jpZ" kind="show" id="t8z-im-U7O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,18 +113,16 @@
                         <constraints>
                             <constraint firstItem="emo-AN-6QV" firstAttribute="top" secondItem="FP1-bg-8WN" secondAttribute="bottom" constant="30" id="0Cl-l6-Dnm"/>
                             <constraint firstItem="FP1-bg-8WN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="13i-nQ-nSR"/>
-                            <constraint firstItem="uND-uX-SEj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="5Ag-0q-cLH"/>
-                            <constraint firstItem="qOd-wY-H5p" firstAttribute="top" secondItem="uND-uX-SEj" secondAttribute="bottom" constant="50" id="7lI-6d-ZPj"/>
                             <constraint firstItem="qOd-wY-H5p" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Hsd-as-nLL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FP1-bg-8WN" secondAttribute="trailing" constant="15" id="Lt7-hL-F50"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="emo-AN-6QV" secondAttribute="trailing" constant="15" id="OCY-ui-rc1"/>
                             <constraint firstItem="FP1-bg-8WN" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="bII-Fd-NMD"/>
-                            <constraint firstItem="uND-uX-SEj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="jvD-cM-co3"/>
+                            <constraint firstItem="qOd-wY-H5p" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="hj0-l6-bJN"/>
                             <constraint firstItem="emo-AN-6QV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="lzx-zi-vNx"/>
                             <constraint firstItem="FP1-bg-8WN" firstAttribute="top" secondItem="qOd-wY-H5p" secondAttribute="bottom" constant="50" id="pVI-hN-Hus"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="HXD-9C-IF5"/>
+                    <navigationItem key="navigationItem" title="  Profile" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="5UJ-fU-hRP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="userEmail" destination="dJf-4m-6Vt" id="mES-mS-i5m"/>
@@ -139,11 +133,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="59"/>
+            <point key="canvasLocation" x="935.20000000000005" y="58.920539730134934"/>
+        </scene>
+        <!--Sample Vc-->
+        <scene sceneID="sup-I7-pia">
+            <objects>
+                <viewController id="7dU-eL-jpZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JMu-Ci-9m8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qg5-Oy-0hk"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sample Vc" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="bpK-Y7-hB2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bop-dY-hsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1994" y="58"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Pyd-xg-Ajp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="apl-N5-q0F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="HXD-9C-IF5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="DH6-wc-inQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="103"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="t1A-pL-qYp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5i-kU-OER" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="58.920539730134934"/>
         </scene>
     </scenes>
     <resources>
         <image name="User Image" width="1932" height="2576"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>

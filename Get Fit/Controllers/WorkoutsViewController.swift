@@ -7,29 +7,32 @@
 
 import UIKit
 
-// Conformimg to the UITableViewDelegate and UITableViewDataSource protols to perform important operation with table view.
-class WorkoutsViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
+class WorkoutsViewController: UIViewController
 {
     
     @IBOutlet weak var workoutsCardTableView: UITableView!
     
-    let workoutLevel: [String] = ["BEGINNER LEVEL","MODRATE LEVEL","ADVANCE LEVEL"] // Array for storing the workout level text.
-    let workoutName: [String] = ["Strong and Big Chest","Back Workout","Bicep Workout"] // Array for stroing the workout name.
-    let equiptmentType: [String] = ["Full Equipment","No Equipment","Body Weight"] // Array for strting the equiptment label.
-    let workoutType: [String] = ["Strength","Endurance","Weight"] // Array for storing the workout name.
-    let totalWorkouts: [Int] = [6,7,5] // Array for storing total workouts.
-    let totalTime: [Int] = [45,55,60] // Array for storing total time of workout.
-    let cardImages: [UIImage] = [UIImage(named: "Chest.jpeg")!,UIImage(named: "Back.jpeg")!,UIImage(named: "Biceps.jpeg")!] // Array for storing the card images.
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        title = "Workouts"
         self.tabBarController?.navigationItem.hidesBackButton = true // Hide back button of this viewcontroller.
+    
     }
+    
+}
+    
+
+// MARK: TableView Extention
+// Extention for implementing table view
+// Conformimg to the UITableViewDelegate and UITableViewDataSource protocols to perform important operation with table view.
+extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
+{
     
     // For creating desired rows in the table view.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return cardImages.count // Return total numbers of images
+        return WorkoutScreenConstants.cardImages.count // Return total numbers of images
     }
     
     // Returns what cell are being used
@@ -38,7 +41,8 @@ class WorkoutsViewController: UIViewController,UITableViewDelegate,UITableViewDa
         // Use to populate different parameters of custom cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
         
-        cell.configure(image: cardImages[indexPath.row], workoutLevel: workoutLevel[indexPath.row], workoutName: workoutName[indexPath.row], equipmentType: equiptmentType[indexPath.row], workoutType: workoutType[indexPath.row], totalWorkouts: totalWorkouts[indexPath.row], totalTime: totalTime[indexPath.row])
+        // Populating table view
+        cell.configure(image: WorkoutScreenConstants.cardImages[indexPath.row], workoutLevel: WorkoutScreenConstants.workoutLevel[indexPath.row], workoutName: WorkoutScreenConstants.workoutName[indexPath.row], equipmentType: WorkoutScreenConstants.equiptmentType[indexPath.row], workoutType: WorkoutScreenConstants.workoutType[indexPath.row], totalWorkouts: WorkoutScreenConstants.totalWorkouts[indexPath.row], totalTime: WorkoutScreenConstants.totalTime[indexPath.row])
         
         return cell
     }
