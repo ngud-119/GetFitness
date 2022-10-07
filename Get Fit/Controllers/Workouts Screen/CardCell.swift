@@ -29,7 +29,11 @@ class CardCell: UITableViewCell
         workoutTypeLabel.text = workoutType
         totalWorkoutsLabel.text = "Total workouts: \(totalWorkouts)"
         totalTimeLabel.text = "Total time: \(totalTime) minutes"
-        
+        makeRoundedCorners()
+    }
+    
+    private func makeRoundedCorners()
+    {
         cardView.layer.cornerRadius = 10.0 // Make cell rounded
         cardView.layer.borderWidth = 0.5 // Set a line along the border
         cardView.layer.borderColor = UIColor.gray.cgColor // Set the color of border line
@@ -41,6 +45,5 @@ class CardCell: UITableViewCell
     {
         print("Start button in card tapped !")
     }
-    
-    
+
 }

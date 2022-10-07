@@ -22,7 +22,6 @@ class WorkoutsViewController: UIViewController
     
 }
     
-
 // MARK: TableView Extention
 // Extention for implementing table view
 // Conformimg to the UITableViewDelegate and UITableViewDataSource protocols to perform important operation with table view.

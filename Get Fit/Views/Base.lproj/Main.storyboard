@@ -32,13 +32,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="bNS-VR-6A7" userLabel="First Messege">
                                         <rect key="frame" x="0.0" y="0.0" width="245" height="99"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="327.30000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="65D-LN-Esl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="327.30000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="65D-LN-Esl">
                                                 <rect key="frame" x="0.0" y="0.0" width="245" height="54"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GetFit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-pn-nkA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GetFit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-pn-nkA">
                                                 <rect key="frame" x="0.0" y="39" width="245" height="60"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                                 <color key="textColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,7 +49,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cm9-M9-wmK" userLabel="Description">
                                         <rect key="frame" x="0.0" y="93" width="288" height="54"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover the best shape of your body.Click below to continue." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-sV-blf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover the best shape of your body.Click below to continue." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Erd-sV-blf">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="288" id="RtQ-CE-dmn"/>
@@ -371,7 +371,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signInButtonTapped:" destination="WhW-2B-LxT" eventType="touchUpInside" id="VCb-JX-Wke"/>
-                                            <segue destination="eEJ-HB-VZb" kind="show" identifier="SigninVCToTabBar" id="mcb-vd-Bbh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -397,11 +396,12 @@
                         <outlet property="fingertipsText" destination="qOu-q1-Mzp" id="5I2-SL-R4m"/>
                         <outlet property="fitnessText" destination="KMN-Fx-9Rm" id="jbw-vI-Faa"/>
                         <outlet property="passwordTextField" destination="S71-DU-ahM" id="DgY-2m-6nY"/>
+                        <segue destination="eEJ-HB-VZb" kind="presentation" identifier="SignInVCToTabBar" modalPresentationStyle="fullScreen" id="YeZ-fU-jzK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-bx-y3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4858" y="-242"/>
+            <point key="canvasLocation" x="4858" y="5"/>
         </scene>
         <!--TabBar-->
         <scene sceneID="gOH-nF-RGY">
@@ -411,7 +411,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-L7-h68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6793" y="-8"/>
+            <point key="canvasLocation" x="6537" y="296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7yi-u3-jGA">
@@ -576,7 +576,7 @@
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="eEJ-HB-VZb" kind="show" identifier="SignupVCToTabBar" id="l0s-EL-Bvr"/>
+                                            <segue destination="eEJ-HB-VZb" kind="presentation" identifier="SignupVCToTabBar" animates="NO" modalPresentationStyle="fullScreen" id="l0s-EL-Bvr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -621,7 +621,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mcb-vd-Bbh"/>
+        <segue reference="YeZ-fU-jzK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
