@@ -15,11 +15,9 @@ class WorkoutsViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        title = "Workouts"
+        // title = "Workouts"
         self.tabBarController?.navigationItem.hidesBackButton = true // Hide back button of this viewcontroller.
-    
     }
-    
 }
     
 // MARK: TableView Extention
@@ -40,9 +38,35 @@ extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
         // Use to populate different parameters of custom cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
         
-        // Populating table view
+        // Populating table view cells.
         cell.configure(image: WorkoutScreenConstants.cardImages[indexPath.row], workoutLevel: WorkoutScreenConstants.workoutLevel[indexPath.row], workoutName: WorkoutScreenConstants.workoutName[indexPath.row], equipmentType: WorkoutScreenConstants.equiptmentType[indexPath.row], workoutType: WorkoutScreenConstants.workoutType[indexPath.row], totalWorkouts: WorkoutScreenConstants.totalWorkouts[indexPath.row], totalTime: WorkoutScreenConstants.totalTime[indexPath.row])
         
         return cell
+    }
+    
+    // To navigate to exercise list vc
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
+        
+        // Innstance of ExerciseListVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ExerciseListViewController") as? ExerciseListViewController
+        
+        // Populating card view of exercise view controller with selected table view cell.
+        cell.passDataToExerciseListVC(
+            
+            vc: vc,
+            VCTitle: WorkoutScreenConstants.workoutName[indexPath.row],
+            image: WorkoutScreenConstants.cardImages[indexPath.row],
+            workoutLevel:WorkoutScreenConstants.workoutLevel[indexPath.row],
+            workoutName: WorkoutScreenConstants.workoutName[indexPath.row],
+            equipmentType:WorkoutScreenConstants.equiptmentType[indexPath.row],
+            workoutType:WorkoutScreenConstants.workoutType[indexPath.row],
+            totalWorkouts:WorkoutScreenConstants.totalWorkouts[indexPath.row],
+            totalTime: WorkoutScreenConstants.totalTime[indexPath.row]
+        )
+        // To navigate from WorkoutsVC to ExerciseListVC
+        self.navigationController?.pushViewController( vc!, animated: true)
     }
 }

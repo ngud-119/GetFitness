@@ -371,6 +371,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signInButtonTapped:" destination="WhW-2B-LxT" eventType="touchUpInside" id="VCb-JX-Wke"/>
+                                            <segue destination="eEJ-HB-VZb" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="MU8-Rg-SeR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -396,7 +397,6 @@
                         <outlet property="fingertipsText" destination="qOu-q1-Mzp" id="5I2-SL-R4m"/>
                         <outlet property="fitnessText" destination="KMN-Fx-9Rm" id="jbw-vI-Faa"/>
                         <outlet property="passwordTextField" destination="S71-DU-ahM" id="DgY-2m-6nY"/>
-                        <segue destination="eEJ-HB-VZb" kind="presentation" identifier="SignInVCToTabBar" modalPresentationStyle="fullScreen" id="YeZ-fU-jzK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-bx-y3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -621,7 +621,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YeZ-fU-jzK"/>
+        <segue reference="MU8-Rg-SeR"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

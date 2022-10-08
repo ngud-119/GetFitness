@@ -17,7 +17,6 @@ class CardCell: UITableViewCell
     @IBOutlet weak var workoutTypeLabel: UILabel!
     @IBOutlet weak var totalWorkoutsLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
-    @IBOutlet weak var startButton: UIButton!
     
     // Function for setting up the cell.
     func configure(image: UIImage,workoutLevel: String,workoutName: String,equipmentType: String,workoutType: String,totalWorkouts:Int,totalTime: Int)
@@ -32,6 +31,19 @@ class CardCell: UITableViewCell
         makeRoundedCorners()
     }
     
+    // Passes data from current tableview cell to exercise list view controller
+    public func passDataToExerciseListVC(vc: ExerciseListViewController?, VCTitle: String,image: UIImage,workoutLevel: String,workoutName:String, equipmentType: String,workoutType: String,totalWorkouts:Int,totalTime: Int)
+    {
+        vc?.viewControllerTitle = VCTitle
+        vc?.image = image
+        vc?.workoutLevel = workoutLevel
+        vc?.workoutName = workoutName
+        vc?.equipmentType = equipmentType
+        vc?.workoutType = workoutType
+        vc?.totalWorkouts = totalWorkouts
+        vc?.totalTime = totalTime
+    }
+    
     private func makeRoundedCorners()
     {
         cardView.layer.cornerRadius = 10.0 // Make cell rounded
@@ -41,9 +53,4 @@ class CardCell: UITableViewCell
         cardBackgroundImageView.layer.cornerRadius = 10.0 // Setting card image corner radius
     }
     
-    @IBAction func startButtonTapped(_ sender: UIButton)
-    {
-        print("Start button in card tapped !")
-    }
-
 }

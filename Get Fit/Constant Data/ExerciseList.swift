@@ -8,8 +8,8 @@ import UIKit
 
 struct ExerciseList
 {
-    static let cellImage: [UIImage] = [UIImage(named: "Bench Press")!,UIImage(named: "Dumbbell Press")!,UIImage(named: "Incline Dumbbell Press")!,UIImage(named: "Decline Dumbbell Press")!,UIImage(named: "Dumbbell Press Flyes")!]
-    static let exerciseName: [String] = ["Bench Press","Dumbbell Press","Incline Dumbbell Press","Decline Dumbbell Press","Dumbbell Flyes"]
-    static let totalSets: [Int] = [2,3,4,5]
-    static let repRange: [String] = ["10-12"]
+    public static let cellImage: [UIImage] = [UIImage(named: "Bench Press")!,UIImage(named: "Dumbbell Press")!,UIImage(named: "Incline Dumbbell Press")!,UIImage(named: "Decline Dumbbell Press")!,UIImage(named: "Dumbbell Flyes")!]
+    public static let exerciseName: [String] = ["Bench Press","Dumbbell Press","Incline Dumbbell Press","Decline Dumbbell Press","Dumbbell Flyes"]
+    public static let totalSets: [Int] = [2,3,4,5,6]
+    public static let repRange: [String] = ["10-12","10-12","10-12","10-12","10-12"]
 }
