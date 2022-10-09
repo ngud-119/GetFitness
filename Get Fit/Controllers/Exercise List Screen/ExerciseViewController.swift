@@ -1,5 +1,5 @@
 //
-//  EerciseViewController.swift
+//  ExerciseViewController.swift
 //  Get Fit
 //
 //  Created by Sandeep Sahani on 09/10/22.
