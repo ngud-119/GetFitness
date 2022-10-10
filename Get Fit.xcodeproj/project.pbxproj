@@ -10,6 +10,7 @@
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
 		5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */; };
 		5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89A28EABFD10080EEFD /* TabBar.storyboard */; };
+		5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2C8128F48F550070E168 /* CircularProgressView.swift */; };
 		5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */; };
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
 		5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */; };
@@ -33,6 +34,7 @@
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
 		5A21D89A28EABFD10080EEFD /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		5A2D2C8128F48F550070E168 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Profile Screen.storyboard"; sourceTree = "<group>"; };
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */,
 				5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */,
 				5AAB51D828F2E58700913048 /* ExerciseViewController.swift */,
+				5A2D2C8128F48F550070E168 /* CircularProgressView.swift */,
 			);
 			path = "Exercise List Screen";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */,
 				5ADCF49F28872E8B00EB653A /* SceneDelegate.swift in Sources */,
 				5A482AE52889953500030497 /* SignUpViewController.swift in Sources */,
+				5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */,
 				5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
