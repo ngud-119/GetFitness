@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -223,6 +222,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startButtonTapped:" destination="lCW-tg-82s" eventType="touchUpInside" id="NDN-EB-hGN"/>
+                                            <segue destination="4YS-1u-sDe" kind="presentation" identifier="toExercise" animates="NO" modalPresentationStyle="fullScreen" id="UAj-Py-Rm9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -446,7 +446,7 @@
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7M-oP-ETP" userLabel="TutorialVideo">
                                 <rect key="frame" x="15" y="187" width="360" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="lu0-Ud-Jxw"/>
                                 </constraints>
@@ -471,13 +471,64 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FZ7-sQ-5rq" userLabel="Circular Progress View">
                                 <rect key="frame" x="15" y="478.66666666666674" width="360" height="124"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-Ze-SY7" userLabel="CircularProgressView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oc5-Ze-SY7" userLabel="CircularProgressView" customClass="CircularProgressView" customModule="Get_Fit" customModuleProvider="target">
                                         <rect key="frame" x="130" y="0.0" width="100" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Q-uc-85z" userLabel="ExerciseCountStack">
+                                                <rect key="frame" x="29" y="29" width="42" height="42"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-Lm-zid" userLabel="CountStack">
+                                                        <rect key="frame" x="4.6666666666666572" y="0.0" width="32.666666666666664" height="30"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f5U-1X-qMg" userLabel="ExercisesCompletedLabel">
+                                                                <rect key="frame" x="0.0" y="0.0" width="12.333333333333334" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cbt-pl-aUK" userLabel="Separator">
+                                                                <rect key="frame" x="12.333333333333332" y="0.0" width="8" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="R0e-SX-Crx" userLabel="TotalExercisesLabel">
+                                                                <rect key="frame" x="20.333333333333332" y="0.0" width="12.333333333333332" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gJE-jz-pxg" userLabel="SmallWorkoutLabel">
+                                                        <rect key="frame" x="7.6666666666666679" y="30" width="27.000000000000004" height="12"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="2df-6x-JEH"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="42" id="Dvt-gy-YYx"/>
+                                                    <constraint firstAttribute="width" constant="42" id="Jd7-yc-QNx"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="fx9-hb-9o8"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
                                         <constraints>
+                                            <constraint firstItem="Y8Q-uc-85z" firstAttribute="centerY" secondItem="oc5-Ze-SY7" secondAttribute="centerY" id="8Zx-d9-ThI"/>
                                             <constraint firstAttribute="width" constant="100" id="90R-dD-kLw"/>
+                                            <constraint firstItem="Y8Q-uc-85z" firstAttribute="centerX" secondItem="oc5-Ze-SY7" secondAttribute="centerX" id="BUr-60-7Ht"/>
                                             <constraint firstAttribute="height" constant="100" id="VrA-U5-bhC"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="setCompletedLabel" destination="f5U-1X-qMg" id="SqF-2e-aW5"/>
+                                            <outlet property="totalSetsLabel" destination="R0e-SX-Crx" id="WO1-US-VZw"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLY-aq-ueY" userLabel="RepsLabel">
                                         <rect key="frame" x="155.66666666666666" y="99.999999999999943" width="49" height="24"/>
@@ -497,6 +548,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="baseBackgroundColor" red="0.65490196078431373" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextSetButtonTapped:" destination="4YS-1u-sDe" eventType="touchUpInside" id="Bdp-xY-9Qh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maV-dn-two">
                                         <rect key="frame" x="0.0" y="42" width="360" height="34.333333333333343"/>
@@ -506,6 +560,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                             <color key="baseBackgroundColor" red="0.65490196078431373" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="nextExerciseButtonTapped:" destination="4YS-1u-sDe" eventType="touchUpInside" id="dSM-FY-Nnp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -587,8 +644,5 @@
         <image name="Dumbbell" width="30" height="30"/>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

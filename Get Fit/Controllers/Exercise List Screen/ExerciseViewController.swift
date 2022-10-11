@@ -16,7 +16,7 @@ class ExerciseViewController: UIViewController
     @IBOutlet weak var tutorialVideoView: UIView!
     @IBOutlet weak var currentExerciseLabel: UILabel!
     @IBOutlet weak var nextExerciseLabel: UILabel!
-    @IBOutlet weak var circularProgressView: UIView!
+    @IBOutlet weak var circularProgressView: CircularProgressView!
     @IBOutlet weak var totalRepsLabel: UILabel!
     @IBOutlet weak var nextSetButton: UIButton!
     @IBOutlet weak var nextExerciseButton: UIButton!
@@ -24,17 +24,24 @@ class ExerciseViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
-    /*
+    
+    @IBAction func nextSetButtonTapped(_ sender: UIButton)
+    {
+        print("nextSetButtonTapped...")
+    }
+
+    @IBAction func nextExerciseButtonTapped(_ sender: UIButton)
+    {
+        print("nextExerciseButtonTapped...")
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
