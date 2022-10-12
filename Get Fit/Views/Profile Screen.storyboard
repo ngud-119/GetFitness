@@ -104,7 +104,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signOutButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="lj9-iL-ajv"/>
-                                    <segue destination="7dU-eL-jpZ" kind="show" id="t8z-im-U7O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -134,22 +133,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935.20000000000005" y="58.920539730134934"/>
-        </scene>
-        <!--Sample Vc-->
-        <scene sceneID="sup-I7-pia">
-            <objects>
-                <viewController id="7dU-eL-jpZ" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JMu-Ci-9m8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Qg5-Oy-0hk"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Sample Vc" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="bpK-Y7-hB2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bop-dY-hsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1994" y="58"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Pyd-xg-Ajp">
