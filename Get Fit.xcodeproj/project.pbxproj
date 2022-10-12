@@ -28,6 +28,8 @@
 		5ADCF4A628872E8F00EB653A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADCF4A528872E8F00EB653A /* Assets.xcassets */; };
 		5ADCF4A928872E8F00EB653A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADCF4A728872E8F00EB653A /* LaunchScreen.storyboard */; };
 		5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */; };
+		5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */; };
+		5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		5ADCF4A828872E8F00EB653A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ADCF4AA28872E8F00EB653A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Diet Plan Screen.storyboard"; sourceTree = "<group>"; };
+		5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 				5ADCF4A728872E8F00EB653A /* LaunchScreen.storyboard */,
 				5A21D89A28EABFD10080EEFD /* TabBar.storyboard */,
 				5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */,
+				5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,15 +154,40 @@
 		5ADCF4B42887315C00EB653A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5AE5D9E028F7031800E40363 /* Profile Screen */,
+				5AE5D9DC28F6FB3B00E40363 /* Diet Plan Screens */,
 				5AB27F7F28F01C0C008DFEB0 /* Exercise List Screen */,
 				5AB27F7E28F01B66008DFEB0 /* Workouts Screen */,
+				5AE5D9DF28F7026100E40363 /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AE5D9DC28F6FB3B00E40363 /* Diet Plan Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */,
+			);
+			path = "Diet Plan Screens";
+			sourceTree = "<group>";
+		};
+		5AE5D9DF28F7026100E40363 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
 				5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */,
 				5A0427DE28889AB7003F9726 /* SignInViewController.swift */,
 				5A482AE42889953500030497 /* SignUpViewController.swift */,
 				5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		5AE5D9E028F7031800E40363 /* Profile Screen */ = {
+			isa = PBXGroup;
+			children = (
 				5A7522E628EC44410022E260 /* ProfileViewController.swift */,
 			);
-			path = Controllers;
+			path = "Profile Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */,
+				5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */,
 				5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */,
 				5ADCF4A928872E8F00EB653A /* LaunchScreen.storyboard in Resources */,
 				5ADCF4A628872E8F00EB653A /* Assets.xcassets in Resources */,
@@ -241,6 +272,7 @@
 				5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */,
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
+				5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */,
 				5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */,
 				5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */,
 				5AAB51D928F2E58700913048 /* ExerciseViewController.swift in Sources */,

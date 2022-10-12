@@ -4,8 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,49 +11,31 @@
         <scene sceneID="43z-Pz-9d5">
             <objects>
                 <viewControllerPlaceholder storyboardName="Workouts Screens" id="vPZ-hR-8rl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" id="4Pe-z3-0GH"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="Dumbbell" id="4Pe-z3-0GH"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kXm-9b-J8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-254" y="418"/>
+            <point key="canvasLocation" x="129" y="368"/>
         </scene>
-        <!--Diet Plan-->
-        <scene sceneID="pPk-YD-bUR">
+        <!--Diet Plan Screen-->
+        <scene sceneID="26r-CM-0Nb">
             <objects>
-                <viewController id="St5-ke-9Q8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="IRm-Cz-Bvq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diet Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGC-tm-C1V">
-                                <rect key="frame" x="84.5" y="412" width="245" height="72"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDc-hp-Wuw"/>
-                        <color key="backgroundColor" systemColor="linkColor"/>
-                        <constraints>
-                            <constraint firstItem="PGC-tm-C1V" firstAttribute="centerY" secondItem="IRm-Cz-Bvq" secondAttribute="centerY" id="7hS-da-jVM"/>
-                            <constraint firstItem="PGC-tm-C1V" firstAttribute="centerX" secondItem="IRm-Cz-Bvq" secondAttribute="centerX" id="9fw-ff-qXb"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Diet Plan" image="Diet Plan" id="LKD-jC-rys"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5HW-pN-B9f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Diet Plan Screen" id="1Z8-Wk-MMG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diet Plan" image="Diet Plan" id="Wde-dm-X3N"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN8-iY-raH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="642"/>
+            <point key="canvasLocation" x="492" y="368"/>
         </scene>
         <!--Profile Screen-->
         <scene sceneID="TJS-6e-07u">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile Screen" id="p6G-sD-SfP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DdN-Zm-0KI"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="DdN-Zm-0KI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU7-mU-QW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1283" y="418"/>
+            <point key="canvasLocation" x="867" y="368"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ao2-vX-a4z">
@@ -68,9 +48,9 @@
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vPZ-hR-8rl" kind="relationship" relationship="viewControllers" id="VRo-np-dTE"/>
-                        <segue destination="St5-ke-9Q8" kind="relationship" relationship="viewControllers" id="n46-kk-twK"/>
-                        <segue destination="p6G-sD-SfP" kind="relationship" relationship="viewControllers" id="4Et-zj-bdk"/>
+                        <segue destination="vPZ-hR-8rl" kind="relationship" relationship="viewControllers" id="Hsb-Vs-EAL"/>
+                        <segue destination="1Z8-Wk-MMG" kind="relationship" relationship="viewControllers" id="cyS-2a-hpq"/>
+                        <segue destination="p6G-sD-SfP" kind="relationship" relationship="viewControllers" id="RgJ-X9-WjT"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H9C-3L-0yS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,8 +60,7 @@
     </scenes>
     <resources>
         <image name="Diet Plan" width="30" height="30"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="Dumbbell" width="30" height="30"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
     </resources>
 </document>
