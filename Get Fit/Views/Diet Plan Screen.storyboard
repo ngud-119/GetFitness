@@ -1,32 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="myE-Ha-R4M">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Diet Plan-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController title="Diet Plan" id="Y6W-OH-hqX" customClass="DietPlanViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dietPlanViewController" title="Diet Plan" id="Y6W-OH-hqX" customClass="DietPlanViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="245" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-u8-uaB">
+                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="tableViewCell" id="PcF-5q-DlK" customClass="FoodItemTableViewCell" customModule="Get_Fit" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="245"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PcF-5q-DlK" id="GPo-ku-yrZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="245"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TK-vr-tXX">
+                                                    <rect key="frame" x="30" y="10" width="360" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4LX-vD-A7p">
+                                                    <rect key="frame" x="30" y="43" width="360" height="202"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LIH-DQ-X2y">
+                                                        <size key="itemSize" width="148" height="189"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCardCollectionViewCell" id="RHY-Tr-One" customClass="FoodCardCollectionViewCell" customModule="Get_Fit" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="1" width="150" height="200"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LDv-tN-IjA">
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chocolate Oatmeal" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-eg-UNj" userLabel="Food Image">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </imageView>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zVS-dn-nxc" userLabel="Transparent Layer">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </imageView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3AE-3f-8jW" userLabel="Food Description Stack">
+                                                                        <rect key="frame" x="15.000000000000004" y="153" width="34.333333333333343" height="37"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evH-St-21c" userLabel="Food name">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="34.333333333333336" height="15"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zbT-nv-2zc" userLabel="Quantity Label">
+                                                                                <rect key="frame" x="0.0" y="15" width="25" height="11"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
+                                                                                <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eO7-2H-jsZ" userLabel="Calorie Label">
+                                                                                <rect key="frame" x="0.0" y="26" width="25" height="11"/>
+                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="9"/>
+                                                                                <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="3AE-3f-8jW" firstAttribute="leading" secondItem="LDv-tN-IjA" secondAttribute="leading" constant="15" id="rM1-vZ-pBX"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="3AE-3f-8jW" secondAttribute="bottom" constant="10" id="zLL-pV-TAy"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="150" height="200"/>
+                                                            <connections>
+                                                                <outlet property="calorieLabel" destination="eO7-2H-jsZ" id="VqG-jn-3AY"/>
+                                                                <outlet property="cardImage" destination="GzD-eg-UNj" id="fAm-Hf-arR"/>
+                                                                <outlet property="foodNameLabel" destination="evH-St-21c" id="cDt-Zp-mqz"/>
+                                                                <outlet property="foodQuantityLabel" destination="zbT-nv-2zc" id="9pc-0K-ihQ"/>
+                                                                <outlet property="transparentImage" destination="zVS-dn-nxc" id="Es3-68-ncF"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="foodCardCollectionView" destination="4LX-vD-A7p" id="92Y-08-vGG"/>
+                                            <outlet property="foodCategory" destination="3TK-vr-tXX" id="VkZ-Km-A09"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="sdt-u3-CG9"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="MHc-a8-3he"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Diet Plan" image="Diet Plan" id="QvQ-8o-gVX"/>
+                    <navigationItem key="navigationItem" title="Diet Plan" id="qbj-kj-34N"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="foodItemTableView" destination="cAO-u8-uaB" id="39D-td-cIS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="39" y="-9"/>
+            <point key="canvasLocation" x="967.69230769230762" y="-9.24170616113744"/>
+        </scene>
+        <!--Diet Plan-->
+        <scene sceneID="240-lB-JFY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="myE-Ha-R4M" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diet Plan" image="Diet Plan" id="KvZ-cU-nsx"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="osG-D1-pCg">
+                        <rect key="frame" x="0.0" y="47" width="390" height="103"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="uzd-hQ-dta"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LjI-2b-IZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.46153846153846" y="-9.24170616113744"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Chocolate Oatmeal" width="680" height="1020"/>
         <image name="Diet Plan" width="30" height="30"/>
     </resources>
 </document>
