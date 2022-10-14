@@ -20,23 +20,13 @@ class FoodItemTableViewCell: UITableViewCell
         // Initialization code
     }
     
-    private func configureTableViewCell(foodCategory: String,foodCardView: FoodCardCollectionViewCell, image: UIImage,foodName: String,foodQuantity: String,calorie: String) -> FoodCardCollectionViewCell
-    {
-        self.foodCategory.text = foodCategory
-        foodCardView.cardImage.image = image
-        foodCardView.foodNameLabel.text = foodName
-        foodCardView.foodQuantityLabel.text = foodQuantity
-        foodCardView.calorieLabel.text = calorie
-        
-        return foodCardView
-    }
 }
 
 extension FoodItemTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 3
+        return foodCardViewData[foodCardCollectionView.tag].cardImage.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -46,10 +36,18 @@ extension FoodItemTableViewCell:UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCardCollectionViewCell", for: indexPath) as? FoodCardCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCardCollectionViewCell", for: indexPath) as! FoodCardCollectionViewCell
         
-        cell?.makeCornerRounded()
+        cell.configureFoodCard(
+            cardImage: foodCardViewData[foodCardCollectionView.tag].cardImage[indexPath.row],
+            
+            foodNameLabel: foodCardViewData[foodCardCollectionView.tag].foodName[indexPath.row],
+            
+            foodQuantityLabel:foodCardViewData[foodCardCollectionView.tag].foodQuantity[indexPath.row],
+            
+            calorieLabel: foodCardViewData[foodCardCollectionView.tag].foodCalorie[indexPath.row]
+        )
         
-        return configureTableViewCell(foodCategory: DietPlan.foodCategoryTitle[indexPath.row], foodCardView: cell!, image: DietPlan.Breakfast.cardImage[indexPath.row], foodName: DietPlan.Breakfast.foodName[indexPath.row], foodQuantity: DietPlan.Breakfast.foodQuantity[indexPath.row], calorie: DietPlan.Breakfast.foodCalories[indexPath.row])
+        return cell
     }
 }

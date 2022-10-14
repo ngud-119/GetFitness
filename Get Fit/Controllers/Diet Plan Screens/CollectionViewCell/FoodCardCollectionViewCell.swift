@@ -14,9 +14,18 @@ class FoodCardCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var foodNameLabel: UILabel!
     @IBOutlet weak var foodQuantityLabel: UILabel!
     @IBOutlet weak var calorieLabel: UILabel!
-        
+    
+    
+    public func configureFoodCard(cardImage: UIImage,foodNameLabel: String,foodQuantityLabel: String,calorieLabel: String)
+    {
+        self.cardImage.image = cardImage
+        self.foodNameLabel.text = foodNameLabel
+        self.foodQuantityLabel.text = foodQuantityLabel
+        self.calorieLabel.text = calorieLabel
+        makeCornerRounded()
+    }
     // Make card image's corner rounded.
-    public func makeCornerRounded()
+    private func makeCornerRounded()
     {
         cardImage.layer.cornerRadius = 10.0 // Make cell rounded
         cardImage.layer.borderWidth = 0.5 // Set a line along the border
