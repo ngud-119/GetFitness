@@ -21,18 +21,18 @@ struct DietPlan
     
     struct Lunch
     {
-        static let cardImage: [UIImage] = [UIImage(named: "Chocolate Oatmeal")!,UIImage(named: "Mustard Chicken")!,UIImage(named: "Tandoori Chicken")!]
-        static let foodName: [String] = ["Chocolate Oats","Mustard Chicken","Chicken Tandoori"]
+        static let cardImage: [UIImage] = [UIImage(named: "Curd Rice")!,UIImage(named: "Mustard Chicken")!,UIImage(named: "Tandoori Chicken")!]
+        static let foodName: [String] = ["Curd Rice","Mustard Chicken","Chicken Tandoori"]
         static let foodQuantity: [String] = ["1 cup(120 grams)","Per Serving(200 grams)","Per Serving(220 grams)"]
-        static let foodCalories: [String] = ["120 Kcal","220 Kcal","280 Kcal"]
+        static let foodCalories: [String] = ["130 Kcal","220 Kcal","280 Kcal"]
     }
     
     struct Dinner
     {
-        static let cardImage: [UIImage] = [UIImage(named: "Chocolate Oatmeal")!,UIImage(named: "Mustard Chicken")!,UIImage(named: "Tandoori Chicken")!]
-        static let foodName: [String] = ["Chocolate Oats","Mustard Chicken","Chicken Tandoori"]
+        static let cardImage: [UIImage] = [UIImage(named: "Fish Curry")!,UIImage(named: "Biryani")!,UIImage(named: "Chicken Curry")!]
+        static let foodName: [String] = ["Fish Curry","Veg Biryani","Chicken Curry"]
         static let foodQuantity: [String] = ["1 cup(120 grams)","Per Serving(200 grams)","Per Serving(220 grams)"]
-        static let foodCalories: [String] = ["120 Kcal","220 Kcal","280 Kcal"]
+        static let foodCalories: [String] = ["300 Kcal","220 Kcal","290 Kcal"]
     }
     
 }

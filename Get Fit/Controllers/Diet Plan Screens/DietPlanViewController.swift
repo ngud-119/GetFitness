@@ -11,13 +11,13 @@ import UIKit
 var foodCardViewData: [FoodCardModel] =
 [
     // Data for Breakfast section
-    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[0],cardImage: DietPlan.Breakfast.cardImage, foodName: DietPlan.Breakfast.foodName, foodQuantity: DietPlan.Breakfast.foodQuantity, foodCalorie: DietPlan.Breakfast.foodQuantity),
+    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[0],cardImage: DietPlan.Breakfast.cardImage, foodName: DietPlan.Breakfast.foodName, foodQuantity: DietPlan.Breakfast.foodQuantity, foodCalorie: DietPlan.Breakfast.foodCalories),
     
     // Data for Lunch section
-    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[1],cardImage: DietPlan.Lunch.cardImage, foodName: DietPlan.Lunch.foodName, foodQuantity: DietPlan.Lunch.foodQuantity, foodCalorie: DietPlan.Lunch.foodQuantity),
+    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[1],cardImage: DietPlan.Lunch.cardImage, foodName: DietPlan.Lunch.foodName, foodQuantity: DietPlan.Lunch.foodQuantity, foodCalorie: DietPlan.Lunch.foodCalories),
     
     // Data for Dinner section
-    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[2],cardImage: DietPlan.Breakfast.cardImage, foodName: DietPlan.Breakfast.foodName, foodQuantity: DietPlan.Breakfast.foodQuantity, foodCalorie: DietPlan.Breakfast.foodQuantity)
+    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[2],cardImage: DietPlan.Dinner.cardImage, foodName: DietPlan.Dinner.foodName, foodQuantity: DietPlan.Dinner.foodQuantity, foodCalorie: DietPlan.Dinner.foodCalories)
 ]
 
 class DietPlanViewController: UIViewController
@@ -44,6 +44,24 @@ extension DietPlanViewController: UITableViewDelegate,UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int
     {
         return foodCardViewData.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 245.0
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        return foodCardViewData[section].foodCategory
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = UIColor.white
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+        header.textLabel?.frame = header.bounds
+        header.textLabel?.textAlignment = .natural
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell

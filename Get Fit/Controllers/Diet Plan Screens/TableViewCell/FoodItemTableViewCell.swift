@@ -19,14 +19,20 @@ class FoodItemTableViewCell: UITableViewCell
         foodCardCollectionView.dataSource = self
         // Initialization code
     }
-    
+    // Method for setting title for table view cell
+    public func updateTitle(title: String)
+    {
+        foodCategory.text = title
+    }
 }
 
 extension FoodItemTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
+        print(section)
         return foodCardViewData[foodCardCollectionView.tag].cardImage.count
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
