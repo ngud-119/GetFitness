@@ -94,6 +94,7 @@
                                                                 <outlet property="foodNameLabel" destination="evH-St-21c" id="cDt-Zp-mqz"/>
                                                                 <outlet property="foodQuantityLabel" destination="zbT-nv-2zc" id="9pc-0K-ihQ"/>
                                                                 <outlet property="transparentImage" destination="zVS-dn-nxc" id="Es3-68-ncF"/>
+                                                                <segue destination="cWg-jt-f1b" kind="show" id="BY2-Wf-xtJ"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -132,6 +133,52 @@
             </objects>
             <point key="canvasLocation" x="967.69230769230762" y="-9.24170616113744"/>
         </scene>
+        <!--Nutrients View Controller-->
+        <scene sceneID="ylo-1Y-UWF">
+            <objects>
+                <viewController id="cWg-jt-f1b" customClass="NutrientsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IvP-Fq-t4c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chocolate Oatmeal" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-JI-kro" userLabel="Food Image">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="Is9-TR-SmJ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-bj-Fm9" userLabel="Transparent Layer">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="410" id="2Wg-cK-JM5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Nz-Gc-TpJ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FHn-JI-kro" firstAttribute="top" secondItem="IvP-Fq-t4c" secondAttribute="top" id="I0k-d3-74j"/>
+                            <constraint firstItem="FHn-JI-kro" firstAttribute="leading" secondItem="8Nz-Gc-TpJ" secondAttribute="leading" id="KZW-yO-kRi"/>
+                            <constraint firstItem="8Nz-Gc-TpJ" firstAttribute="trailing" secondItem="FHn-JI-kro" secondAttribute="trailing" id="KxB-If-GcY"/>
+                            <constraint firstItem="dfM-bj-Fm9" firstAttribute="top" secondItem="IvP-Fq-t4c" secondAttribute="top" id="Mjk-uq-w2q"/>
+                            <constraint firstItem="dfM-bj-Fm9" firstAttribute="leading" secondItem="8Nz-Gc-TpJ" secondAttribute="leading" id="Osa-qH-wWd"/>
+                            <constraint firstItem="8Nz-Gc-TpJ" firstAttribute="trailing" secondItem="dfM-bj-Fm9" secondAttribute="trailing" id="wvS-9f-rjQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OtV-f2-ETd">
+                        <barButtonItem key="backBarButtonItem" title="Diet Plan" id="lo5-2V-1z9"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="foodImage" destination="FHn-JI-kro" id="KWQ-hx-5Y4"/>
+                        <outlet property="transparentLayer" destination="dfM-bj-Fm9" id="svw-nM-yDw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dh-xc-plB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910" y="-9"/>
+        </scene>
         <!--Diet Plan-->
         <scene sceneID="240-lB-JFY">
             <objects>
@@ -162,6 +209,7 @@
             <point key="canvasLocation" x="38.46153846153846" y="-9.24170616113744"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Chocolate Oatmeal" width="680" height="1020"/>
         <image name="Diet Plan" width="30" height="30"/>

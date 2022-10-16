@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
+		5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DB9A128FC68960048935F /* NutrientsViewController.swift */; };
 		5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */; };
 		5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89A28EABFD10080EEFD /* TabBar.storyboard */; };
 		5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2C8128F48F550070E168 /* CircularProgressView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		5A1DB9A128FC68960048935F /* NutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewController.swift; sourceTree = "<group>"; };
 		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
 		5A21D89A28EABFD10080EEFD /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		5A2D2C8128F48F550070E168 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				5A87AE7228F7FA980079E68E /* TableViewCell */,
 				5A87AE7128F7FA710079E68E /* CollectionViewCell */,
 				5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */,
+				5A1DB9A128FC68960048935F /* NutrientsViewController.swift */,
 			);
 			path = "Diet Plan Screens";
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				5A87AE7428F7FCFD0079E68E /* FoodItemTableViewCell.swift in Sources */,
 				5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */,
 				5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */,
+				5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
