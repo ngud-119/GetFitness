@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -141,30 +142,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chocolate Oatmeal" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-JI-kro" userLabel="Food Image">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
+                            <view contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7q4-T9-LLC" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="151" width="414" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chocolate Oatmeal" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-JI-kro" userLabel="Food Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="680" height="1020"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-bj-Fm9" userLabel="Transparent Layer">
+                                        <rect key="frame" x="-87" y="-141" width="414" height="410"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="410" id="Is9-TR-SmJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FHn-JI-kro" secondAttribute="bottom" id="FNt-D6-j1x"/>
+                                    <constraint firstItem="FHn-JI-kro" firstAttribute="leading" secondItem="7q4-T9-LLC" secondAttribute="leading" id="Plo-Xx-dtT"/>
+                                    <constraint firstAttribute="trailing" secondItem="FHn-JI-kro" secondAttribute="trailing" id="aw5-vY-7hn"/>
+                                    <constraint firstItem="FHn-JI-kro" firstAttribute="top" secondItem="7q4-T9-LLC" secondAttribute="top" id="pKG-a8-meD"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-bj-Fm9" userLabel="Transparent Layer">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="410"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="410" id="2Wg-cK-JM5"/>
-                                </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Nz-Gc-TpJ"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="FHn-JI-kro" firstAttribute="top" secondItem="IvP-Fq-t4c" secondAttribute="top" id="I0k-d3-74j"/>
-                            <constraint firstItem="FHn-JI-kro" firstAttribute="leading" secondItem="8Nz-Gc-TpJ" secondAttribute="leading" id="KZW-yO-kRi"/>
-                            <constraint firstItem="8Nz-Gc-TpJ" firstAttribute="trailing" secondItem="FHn-JI-kro" secondAttribute="trailing" id="KxB-If-GcY"/>
-                            <constraint firstItem="dfM-bj-Fm9" firstAttribute="top" secondItem="IvP-Fq-t4c" secondAttribute="top" id="Mjk-uq-w2q"/>
-                            <constraint firstItem="dfM-bj-Fm9" firstAttribute="leading" secondItem="8Nz-Gc-TpJ" secondAttribute="leading" id="Osa-qH-wWd"/>
-                            <constraint firstItem="8Nz-Gc-TpJ" firstAttribute="trailing" secondItem="dfM-bj-Fm9" secondAttribute="trailing" id="wvS-9f-rjQ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OtV-f2-ETd">
                         <barButtonItem key="backBarButtonItem" title="Diet Plan" id="lo5-2V-1z9"/>
@@ -213,5 +213,8 @@
     <resources>
         <image name="Chocolate Oatmeal" width="680" height="1020"/>
         <image name="Diet Plan" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
