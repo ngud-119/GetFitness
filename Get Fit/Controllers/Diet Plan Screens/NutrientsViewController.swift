@@ -10,14 +10,12 @@ import UIKit
 class NutrientsViewController: UIViewController
 {
 
-    @IBOutlet weak var foodImage: UIImageView!
-    @IBOutlet weak var transparentLayer: UIImageView!
+   
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        foodImage.roundCorners(corners: [.bottomLeft,.bottomRight], radius: 40.0)
-        transparentLayer.roundCorners(corners: [.bottomLeft,.bottomRight], radius: 40.0)
+       
+               
         // Do any additional setup after loading the view.
     }
     

@@ -142,42 +142,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7q4-T9-LLC" userLabel="ImageView">
-                                <rect key="frame" x="0.0" y="151" width="414" height="300"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLe-lG-D2u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chocolate Oatmeal" translatesAutoresizingMaskIntoConstraints="NO" id="FHn-JI-kro" userLabel="Food Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="680" height="1020"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfM-bj-Fm9" userLabel="Transparent Layer">
-                                        <rect key="frame" x="-87" y="-141" width="414" height="410"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-zk-hfW" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jmR-Oz-mfN">
+                                                <rect key="frame" x="20" y="980" width="374" height="200"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="UNJ-P7-5QX"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="corner radius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-Ew-aNW">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="350" id="ROb-Nh-MUB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="corner radius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="jmR-Oz-mfN" secondAttribute="trailing" constant="20" id="AHl-FP-7ko"/>
+                                            <constraint firstAttribute="height" constant="1200" id="LIZ-Af-pyp"/>
+                                            <constraint firstItem="6x0-Ew-aNW" firstAttribute="leading" secondItem="6kw-zk-hfW" secondAttribute="leading" id="Lni-hf-Uxx"/>
+                                            <constraint firstAttribute="trailing" secondItem="6x0-Ew-aNW" secondAttribute="trailing" id="SSb-gv-6Hz"/>
+                                            <constraint firstItem="6x0-Ew-aNW" firstAttribute="leading" secondItem="6kw-zk-hfW" secondAttribute="leading" id="Y1j-ce-dX7"/>
+                                            <constraint firstAttribute="bottom" secondItem="jmR-Oz-mfN" secondAttribute="bottom" constant="20" id="YHs-1S-AOH"/>
+                                            <constraint firstAttribute="trailing" secondItem="6x0-Ew-aNW" secondAttribute="trailing" id="ddA-zs-ATW"/>
+                                            <constraint firstItem="jmR-Oz-mfN" firstAttribute="leading" secondItem="6kw-zk-hfW" secondAttribute="leading" constant="20" id="iGh-bk-tmN"/>
+                                            <constraint firstItem="6x0-Ew-aNW" firstAttribute="top" secondItem="6kw-zk-hfW" secondAttribute="top" id="lCi-p1-e1P"/>
+                                            <constraint firstItem="6x0-Ew-aNW" firstAttribute="top" secondItem="6kw-zk-hfW" secondAttribute="top" id="xBF-dm-tFv"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="FHn-JI-kro" secondAttribute="bottom" id="FNt-D6-j1x"/>
-                                    <constraint firstItem="FHn-JI-kro" firstAttribute="leading" secondItem="7q4-T9-LLC" secondAttribute="leading" id="Plo-Xx-dtT"/>
-                                    <constraint firstAttribute="trailing" secondItem="FHn-JI-kro" secondAttribute="trailing" id="aw5-vY-7hn"/>
-                                    <constraint firstItem="FHn-JI-kro" firstAttribute="top" secondItem="7q4-T9-LLC" secondAttribute="top" id="pKG-a8-meD"/>
+                                    <constraint firstItem="6kw-zk-hfW" firstAttribute="leading" secondItem="bLe-lG-D2u" secondAttribute="leading" id="N8Z-82-zD4"/>
+                                    <constraint firstAttribute="bottom" secondItem="6kw-zk-hfW" secondAttribute="bottom" id="Qv1-kP-Vkc"/>
+                                    <constraint firstAttribute="trailing" secondItem="6kw-zk-hfW" secondAttribute="trailing" id="abK-La-DfZ"/>
+                                    <constraint firstItem="6kw-zk-hfW" firstAttribute="top" secondItem="bLe-lG-D2u" secondAttribute="top" id="kb2-7j-eGu"/>
                                 </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Nz-Gc-TpJ"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="bLe-lG-D2u" firstAttribute="leading" secondItem="IvP-Fq-t4c" secondAttribute="leading" id="6ZV-zp-mbB"/>
+                            <constraint firstAttribute="bottom" secondItem="bLe-lG-D2u" secondAttribute="bottom" id="OFw-0q-SJL"/>
+                            <constraint firstAttribute="trailing" secondItem="bLe-lG-D2u" secondAttribute="trailing" id="SZc-sL-aQw"/>
+                            <constraint firstItem="bLe-lG-D2u" firstAttribute="top" secondItem="IvP-Fq-t4c" secondAttribute="top" id="ScF-OC-CsA"/>
+                            <constraint firstItem="6kw-zk-hfW" firstAttribute="width" secondItem="IvP-Fq-t4c" secondAttribute="width" id="li3-Z6-1SX"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OtV-f2-ETd">
-                        <barButtonItem key="backBarButtonItem" title="Diet Plan" id="lo5-2V-1z9"/>
-                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="foodImage" destination="FHn-JI-kro" id="KWQ-hx-5Y4"/>
-                        <outlet property="transparentLayer" destination="dfM-bj-Fm9" id="svw-nM-yDw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dh-xc-plB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1910" y="-9"/>
+            <point key="canvasLocation" x="2086.9565217391305" y="-9.375"/>
         </scene>
         <!--Diet Plan-->
         <scene sceneID="240-lB-JFY">
@@ -213,8 +247,14 @@
     <resources>
         <image name="Chocolate Oatmeal" width="680" height="1020"/>
         <image name="Diet Plan" width="30" height="30"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
