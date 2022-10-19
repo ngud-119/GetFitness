@@ -336,9 +336,79 @@
                                                     <constraint firstAttribute="trailing" secondItem="8rM-bV-fSY" secondAttribute="trailing" id="nMX-bS-eyk"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9q3-AA-vy8">
-                                                <rect key="frame" x="107" y="583" width="200" height="110"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9q3-AA-vy8" userLabel="Ingredients Stack">
+                                                <rect key="frame" x="15" y="564" width="384" height="140"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUO-O7-6bk" userLabel="Ingrediets">
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QtC-XP-lgt" userLabel="Ingredients Collection View">
+                                                        <rect key="frame" x="0.0" y="24" width="384" height="116"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4cq-Qt-Dud">
+                                                            <size key="itemSize" width="91" height="99"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ingredientsCollectionViewCell" id="9Rx-TM-xEM" customClass="IngredientsCollectionViewCell">
+                                                                <rect key="frame" x="0.0" y="0.0" width="91" height="96"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="rTk-IJ-71w">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="96"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0U-m4-n3h" userLabel="Food Name">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="91" height="15"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                                            <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ORh-RS-TTb" userLabel="Food Image">
+                                                                            <rect key="frame" x="15.5" y="21" width="60" height="54"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="60" id="5f2-8L-Plw"/>
+                                                                                <constraint firstAttribute="height" constant="60" id="jpe-T2-eB7"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ebc-18-UgE" userLabel="Food Quantity">
+                                                                            <rect key="frame" x="31" y="80" width="23" height="10"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="8"/>
+                                                                            <color key="textColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="ORh-RS-TTb" firstAttribute="centerX" secondItem="rTk-IJ-71w" secondAttribute="centerX" id="3Qk-Se-q1L"/>
+                                                                        <constraint firstItem="ORh-RS-TTb" firstAttribute="top" secondItem="x0U-m4-n3h" secondAttribute="bottom" constant="6" id="63E-z2-atw"/>
+                                                                        <constraint firstItem="ebc-18-UgE" firstAttribute="top" secondItem="ORh-RS-TTb" secondAttribute="bottom" constant="5" id="SCi-7b-j8a"/>
+                                                                        <constraint firstItem="x0U-m4-n3h" firstAttribute="leading" secondItem="rTk-IJ-71w" secondAttribute="leading" id="TK6-8e-gcT"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="x0U-m4-n3h" secondAttribute="trailing" id="ebB-6F-yQ3"/>
+                                                                        <constraint firstItem="x0U-m4-n3h" firstAttribute="top" secondItem="rTk-IJ-71w" secondAttribute="top" id="jS3-EX-yBQ"/>
+                                                                        <constraint firstItem="ORh-RS-TTb" firstAttribute="centerY" secondItem="rTk-IJ-71w" secondAttribute="centerY" id="vaN-IU-Xgw"/>
+                                                                    </constraints>
+                                                                </collectionViewCellContentView>
+                                                                <size key="customSize" width="91" height="96"/>
+                                                                <connections>
+                                                                    <outlet property="foodImage" destination="ORh-RS-TTb" id="MIK-39-IeI"/>
+                                                                    <outlet property="foodName" destination="x0U-m4-n3h" id="oOq-UG-Czw"/>
+                                                                    <outlet property="foodQuantitiy" destination="ebc-18-UgE" id="UWd-R9-gcy"/>
+                                                                </connections>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="140" id="5iF-CI-Awh"/>
+                                                    <constraint firstItem="QtC-XP-lgt" firstAttribute="leading" secondItem="9q3-AA-vy8" secondAttribute="leading" id="H10-7d-f26"/>
+                                                    <constraint firstAttribute="bottom" secondItem="QtC-XP-lgt" secondAttribute="bottom" id="Ufp-Oe-xyt"/>
+                                                    <constraint firstAttribute="trailing" secondItem="QtC-XP-lgt" secondAttribute="trailing" id="mIF-td-EYs"/>
+                                                </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -349,6 +419,9 @@
                                             <constraint firstItem="1uq-pH-yg0" firstAttribute="top" secondItem="6x0-Ew-aNW" secondAttribute="bottom" constant="40" id="RcH-LY-dH6"/>
                                             <constraint firstAttribute="trailing" secondItem="6x0-Ew-aNW" secondAttribute="trailing" id="SSb-gv-6Hz"/>
                                             <constraint firstItem="1uq-pH-yg0" firstAttribute="leading" secondItem="6kw-zk-hfW" secondAttribute="leading" constant="15" id="WTi-O3-FeL"/>
+                                            <constraint firstItem="9q3-AA-vy8" firstAttribute="top" secondItem="1uq-pH-yg0" secondAttribute="bottom" constant="30" id="ajM-pN-uQ0"/>
+                                            <constraint firstAttribute="trailing" secondItem="9q3-AA-vy8" secondAttribute="trailing" constant="15" id="aqr-9I-yuX"/>
+                                            <constraint firstItem="9q3-AA-vy8" firstAttribute="leading" secondItem="6kw-zk-hfW" secondAttribute="leading" constant="15" id="iWn-5S-ef6"/>
                                             <constraint firstItem="6x0-Ew-aNW" firstAttribute="top" secondItem="6kw-zk-hfW" secondAttribute="top" id="lCi-p1-e1P"/>
                                         </constraints>
                                     </view>
@@ -375,7 +448,14 @@
                     <navigationItem key="navigationItem" id="1lz-aO-E73"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="carbs" destination="cfb-C6-bk8" id="2fm-w2-exz"/>
+                        <outlet property="fat" destination="Kxj-lV-SU6" id="KSq-XD-Quy"/>
                         <outlet property="foodImageView" destination="6x0-Ew-aNW" id="bHi-Vi-zCa"/>
+                        <outlet property="foodName" destination="fzY-wD-GzW" id="gnE-X0-blM"/>
+                        <outlet property="foodQuantitiy" destination="aqP-FO-fIi" id="IfO-8S-EZX"/>
+                        <outlet property="ingredientsCollectionView" destination="QtC-XP-lgt" id="jbW-hH-uaU"/>
+                        <outlet property="prepTime" destination="Y4U-23-bHr" id="XTf-c8-MKN"/>
+                        <outlet property="protein" destination="m3o-1e-ygF" id="ikA-zA-x2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dh-xc-plB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
