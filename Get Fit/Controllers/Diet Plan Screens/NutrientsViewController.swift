@@ -10,12 +10,11 @@ import UIKit
 class NutrientsViewController: UIViewController
 {
 
-   
+    @IBOutlet weak var foodImageView: UIView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       
-               
+        foodImageView.roundCorners(corners: [.bottomRight,.bottomLeft], radius:40)
         // Do any additional setup after loading the view.
     }
     
@@ -31,7 +30,7 @@ class NutrientsViewController: UIViewController
     */
 }
 
-extension UIImageView
+extension UIView
 {
    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
