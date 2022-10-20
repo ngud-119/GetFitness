@@ -11,7 +11,6 @@ class NutrientsViewController: UIViewController
 {
 
     @IBOutlet weak var foodImageView: UIView!
-    
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodQuantitiy: UILabel!
     @IBOutlet weak var prepTime: UILabel!
@@ -23,8 +22,6 @@ class NutrientsViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        ingredientsCollectionView.delegate = self
-        ingredientsCollectionView.dataSource = self
         foodImageView.roundCorners(corners: [.bottomRight,.bottomLeft], radius:40)
         
         // Do any additional setup after loading the view.
@@ -51,11 +48,16 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         return DietPlan.Ingredients.foodName.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: 96.0, height: 96.0)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ingredientsCollectionViewCell", for: indexPath) as! IngredientsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ingredientsCollectionViewCell", for: indexPath) as! FoodItemListCollectionViewCell
         
-        cell.configure(foodName: DietPlan.Ingredients.foodName[indexPath.row], foodImage: DietPlan.Ingredients.image[indexPath.row], foodQuantity: DietPlan.Ingredients.foodQuantity[indexPath.row])
+        cell.configure(foodName: DietPlan.Ingredients.foodName[indexPath.row], foodImage: DietPlan.Ingredients.foodImage[indexPath.row], foodQuantity: DietPlan.Ingredients.foodQuantity[indexPath.row])
         
         return cell
     }

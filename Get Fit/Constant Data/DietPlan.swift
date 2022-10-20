@@ -39,7 +39,7 @@ struct DietPlan
     {
         static let foodName: [String] = ["Oats","Cocoa Powder","Honey","Milk","Flax Seed"]
         
-        static let image: [UIImage] = [UIImage(named: "Oats")!,UIImage(named: "Cocoa Powder")!,UIImage(named: "Honey")!,UIImage(named: "Milk")!,UIImage(named: "Flaxseeds")!]
+        static let foodImage: [UIImage] = [UIImage(named: "Oats")!,UIImage(named: "Cocoa Powder")!,UIImage(named: "Honey")!,UIImage(named: "Milk")!,UIImage(named: "Flaxseeds")!]
         
         static let foodQuantity: [String] = ["1 cup","2-3 tbsp","5-6 tbsp","1 cup","2-3 tbsp"]
     }
