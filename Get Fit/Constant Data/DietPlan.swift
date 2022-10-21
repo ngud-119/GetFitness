@@ -44,4 +44,15 @@ struct DietPlan
         static let foodQuantity: [String] = ["1 cup","2-3 tbsp","5-6 tbsp","1 cup","2-3 tbsp"]
     }
     
+    struct PreparationProcedure
+    {
+        static let steps: [String] =
+        [
+           "Combine all ingredients in a small pot.",
+           "Transfer the pot to a stove. Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
+           "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"
+        
+        ]
+    }
+    
 }

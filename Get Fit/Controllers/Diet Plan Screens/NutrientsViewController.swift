@@ -18,6 +18,7 @@ class NutrientsViewController: UIViewController
     @IBOutlet weak var fat: UILabel!
     @IBOutlet weak var protein: UILabel!
     @IBOutlet weak var ingredientsCollectionView: UICollectionView!
+    @IBOutlet weak var preparationStepsTableView: UITableView!
     
     override func viewDidLoad()
     {
@@ -26,8 +27,6 @@ class NutrientsViewController: UIViewController
         
         // Do any additional setup after loading the view.
     }
-    
-    
 }
 
 extension UIView
@@ -39,7 +38,19 @@ extension UIView
         mask.path = path.cgPath
         layer.mask = mask
     }
+    
+    // To Make view circular
+    func makeViewCircular()
+    {
+        layer.borderWidth = 1
+        layer.masksToBounds = false
+        layer.borderColor = UIColor.black.cgColor
+        layer.cornerRadius = self.frame.height / 2
+        clipsToBounds = true
+    }
 }
+
+// MARK: Extention for ingredients list view with UICollectionView
 
 extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
@@ -61,7 +72,26 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         
         return cell
     }
-    
-    
+
 }
+
+// MARK: Extention for preparation procedure using UITableView
+
+extension NutrientsViewController: UITableViewDelegate,UITableViewDataSource
+{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return DietPlan.PreparationProcedure.steps.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "preparationTableViewCell", for: indexPath) as! PreparationTableViewCell
+        let steps = indexPath.row
+        cell.configureList(countNumber: "\(steps+1)", procedureText: DietPlan.PreparationProcedure.steps[indexPath.row])
+        return cell
+    }
+
+}
+
 
