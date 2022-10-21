@@ -17,6 +17,7 @@
 		5A4AB1942900916400E460E5 /* FoodItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AB1932900916400E460E5 /* FoodItemListCollectionViewCell.swift */; };
 		5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */; };
 		5A7192262903130E00128967 /* PreparationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7192252903130D00128967 /* PreparationTableViewCell.swift */; };
+		5A71922A29031DB700128967 /* UtilityExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71922929031DB700128967 /* UtilityExtentions.swift */; };
 		5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7522E628EC44410022E260 /* ProfileViewController.swift */; };
 		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
 		5A87AE7428F7FCFD0079E68E /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7328F7FCFD0079E68E /* FoodItemTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 		5A4AB1932900916400E460E5 /* FoodItemListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemListCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		5A7192252903130D00128967 /* PreparationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTableViewCell.swift; sourceTree = "<group>"; };
+		5A71922929031DB700128967 /* UtilityExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtentions.swift; sourceTree = "<group>"; };
 		5A7522E628EC44410022E260 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
 		5A87AE7328F7FCFD0079E68E /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A71922729031D4500128967 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				5A71922929031DB700128967 /* UtilityExtentions.swift */,
+			);
+			name = Extentions;
+			path = Controllers/Extentions;
+			sourceTree = "<group>";
+		};
 		5A87AE7128F7FA710079E68E /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +168,7 @@
 				5ADCF4B22887313F00EB653A /* Models */,
 				5ADCF4B32887314900EB653A /* Views */,
 				5ADCF4B42887315C00EB653A /* Controllers */,
+				5A71922729031D4500128967 /* Extentions */,
 				5AC8518D28ED40C100B17C47 /* Constant Data */,
 				5ADCF4A528872E8F00EB653A /* Assets.xcassets */,
 				5ADCF4AA28872E8F00EB653A /* Info.plist */,
@@ -325,6 +337,7 @@
 				5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */,
 				5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */,
 				5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */,
+				5A71922A29031DB700128967 /* UtilityExtentions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

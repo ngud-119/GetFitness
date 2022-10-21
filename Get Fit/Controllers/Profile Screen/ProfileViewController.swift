@@ -26,16 +26,3 @@ class ProfileViewController: UIViewController
         print("Signing out!!!")
     }
 }
-
-// Extention to make image rounded.
-extension UIImageView
-{
-    func makeImageCircular()
-    {
-        layer.borderWidth = 1
-        layer.masksToBounds = false
-        layer.borderColor = UIColor.black.cgColor
-        layer.cornerRadius = self.frame.height / 2
-        clipsToBounds = true
-    }
-}
