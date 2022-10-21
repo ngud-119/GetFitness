@@ -4,7 +4,6 @@
 //
 //  Created by Sandeep Sahani on 22/10/22.
 //
-
 import UIKit
 
 extension UIView
@@ -40,6 +39,3 @@ extension UIImageView
         clipsToBounds = true
     }
 }
-
-
-
