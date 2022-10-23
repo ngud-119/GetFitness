@@ -24,7 +24,6 @@ class NutrientsViewController: UIViewController
     {
         super.viewDidLoad()
         foodImageView.roundCorners(corners: [.bottomRight,.bottomLeft], radius:40)
-        
         // Do any additional setup after loading the view.
     }
 }
@@ -70,6 +69,12 @@ extension NutrientsViewController: UITableViewDelegate,UITableViewDataSource
         let steps = indexPath.row
         cell.configureList(countNumber: "\(steps+1)", procedureText: DietPlan.PreparationProcedure.steps[indexPath.row])
         return cell
+    }
+    
+    // To dynamically set the height of row according to content lenght of label
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return UITableView.automaticDimension
     }
 
 }
