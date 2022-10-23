@@ -40,7 +40,7 @@ extension UIImageView
     }
 }
 
-// Extention fior custom place holder text color.
+// Extension for custom place holder text color.
 extension UITextField{
    @IBInspectable var placeHolderColor: UIColor? {
         get {
