@@ -50,7 +50,8 @@ struct DietPlan
         [
            "Combine all ingredients in a small pot.",
            "Transfer the pot to a stove. Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
-           "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"
+           "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+           "First set the numberOfLines property to 0 so that the device understands you don't care how many lines it needs. Then specify your favorite BreakMode Then the width needs to be set before sizeToFit() method. Then the label knows it must fit in the specified width"
         
         ]
     }
