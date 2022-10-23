@@ -435,14 +435,14 @@
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="preparationTableViewCell" id="vzx-X9-ERA" customClass="PreparationTableViewCell" customModule="Get_Fit" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="50" width="384" height="22"/>
+                                                                <rect key="frame" x="0.0" y="50" width="384" height="27"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vzx-X9-ERA" id="VOy-EX-G4p">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="22"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="27"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcC-Kd-fvI" userLabel="CircularCountView">
-                                                                            <rect key="frame" x="0.0" y="1" width="20" height="20"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2L-8R-oI4" userLabel="Count Number">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -474,9 +474,9 @@
                                                                         <constraint firstItem="DcC-Kd-fvI" firstAttribute="leading" secondItem="VOy-EX-G4p" secondAttribute="leading" id="Fer-cH-yeF"/>
                                                                         <constraint firstItem="TQb-Cd-hxJ" firstAttribute="top" secondItem="VOy-EX-G4p" secondAttribute="top" constant="5" id="MsQ-gr-LJR"/>
                                                                         <constraint firstItem="TQb-Cd-hxJ" firstAttribute="leading" secondItem="DcC-Kd-fvI" secondAttribute="trailing" constant="5" id="NuV-IA-m4J"/>
-                                                                        <constraint firstItem="DcC-Kd-fvI" firstAttribute="centerY" secondItem="VOy-EX-G4p" secondAttribute="centerY" id="Oja-Do-qGK"/>
+                                                                        <constraint firstItem="DcC-Kd-fvI" firstAttribute="top" secondItem="VOy-EX-G4p" secondAttribute="top" id="Vj2-Dj-Lfx"/>
                                                                         <constraint firstAttribute="trailing" secondItem="TQb-Cd-hxJ" secondAttribute="trailing" id="sPU-XF-4ea"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="TQb-Cd-hxJ" secondAttribute="bottom" constant="5" id="wfH-KQ-U4I"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="TQb-Cd-hxJ" secondAttribute="bottom" constant="10" id="wfH-KQ-U4I"/>
                                                                     </constraints>
                                                                 </tableViewCellContentView>
                                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
