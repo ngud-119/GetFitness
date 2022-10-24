@@ -327,7 +327,7 @@
                                                 <color key="tintColor" systemColor="tintColor"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
