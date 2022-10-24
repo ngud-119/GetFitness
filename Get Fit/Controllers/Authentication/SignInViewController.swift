@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignInViewController: UIViewController
+class SignInViewController: UIViewController,UITextFieldDelegate
 {
     @IBOutlet weak var fitnessText: UILabel!
     @IBOutlet weak var fingertipsText: UILabel!
@@ -19,11 +19,23 @@ class SignInViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
     }
     
     @IBAction func signInButtonTapped(_ sender: Any)
     {
-        print("Sign In button pressed")
+        var text: String? = emailTextField.text
+        var pass: String? = passwordTextField.text
+        print("email is "+text!)
+        print("Password is "+pass!)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        self.view.endEditing(true)
+        return false
     }
     
 }
