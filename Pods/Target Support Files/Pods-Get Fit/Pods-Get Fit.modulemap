@@ -1,0 +1,6 @@
+framework module Pods_Get_Fit {
+  umbrella header "Pods-Get Fit-umbrella.h"
+
+  export *
+  module * { export * }
+}

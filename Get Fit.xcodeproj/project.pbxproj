@@ -16,10 +16,12 @@
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
 		5A4AB1942900916400E460E5 /* FoodItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AB1932900916400E460E5 /* FoodItemListCollectionViewCell.swift */; };
 		5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */; };
+		5A617BFC29082A6A00B7A0EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */; };
 		5A7192262903130E00128967 /* PreparationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7192252903130D00128967 /* PreparationTableViewCell.swift */; };
 		5A71922C2903225A00128967 /* UtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71922B2903225A00128967 /* UtilityExtension.swift */; };
 		5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7522E628EC44410022E260 /* ProfileViewController.swift */; };
 		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
+		5A7FC91329085B7600A1F3F5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FC91229085B7600A1F3F5 /* Utilities.swift */; };
 		5A87AE7428F7FCFD0079E68E /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7328F7FCFD0079E68E /* FoodItemTableViewCell.swift */; };
 		5A87AE7628F831C90079E68E /* FoodCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7528F831C90079E68E /* FoodCardCollectionViewCell.swift */; };
 		5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7728F83D500079E68E /* DietPlan.swift */; };
@@ -38,9 +40,11 @@
 		5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */; };
 		5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */; };
 		5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */; };
+		9555D52AFC3B1848AC2AC11C /* Pods_Get_Fit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85028C3F302E41E835900EB5 /* Pods_Get_Fit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A9DB64AC63805F42333E964 /* Pods-Get Fit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Fit.debug.xcconfig"; path = "Target Support Files/Pods-Get Fit/Pods-Get Fit.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A1DB9A128FC68960048935F /* NutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewController.swift; sourceTree = "<group>"; };
 		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
@@ -50,10 +54,12 @@
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A4AB1932900916400E460E5 /* FoodItemListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemListCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
+		5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A7192252903130D00128967 /* PreparationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTableViewCell.swift; sourceTree = "<group>"; };
 		5A71922B2903225A00128967 /* UtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtension.swift; sourceTree = "<group>"; };
 		5A7522E628EC44410022E260 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
+		5A7FC91229085B7600A1F3F5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5A87AE7328F7FCFD0079E68E /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		5A87AE7528F831C90079E68E /* FoodCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A87AE7728F83D500079E68E /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 		5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Diet Plan Screen.storyboard"; sourceTree = "<group>"; };
 		5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanViewController.swift; sourceTree = "<group>"; };
+		85028C3F302E41E835900EB5 /* Pods_Get_Fit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Fit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE1D3161DF7F852AD3CDDDB7 /* Pods-Get Fit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Fit.release.xcconfig"; path = "Target Support Files/Pods-Get Fit/Pods-Get Fit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,18 +89,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9555D52AFC3B1848AC2AC11C /* Pods_Get_Fit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A71922D2903228400128967 /* Utility Extensions */ = {
+		290151398CB564D75881A3FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A9DB64AC63805F42333E964 /* Pods-Get Fit.debug.xcconfig */,
+				DE1D3161DF7F852AD3CDDDB7 /* Pods-Get Fit.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A71922D2903228400128967 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				5A71922B2903225A00128967 /* UtilityExtension.swift */,
+				5A7FC91229085B7600A1F3F5 /* Utilities.swift */,
 			);
-			path = "Utility Extensions";
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		5A87AE7128F7FA710079E68E /* CollectionViewCell */ = {
@@ -148,6 +167,8 @@
 			children = (
 				5ADCF49B28872E8B00EB653A /* Get Fit */,
 				5ADCF49A28872E8B00EB653A /* Products */,
+				290151398CB564D75881A3FE /* Pods */,
+				DC3BF1778C7BBF6D22382532 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,10 +188,11 @@
 				5ADCF4B22887313F00EB653A /* Models */,
 				5ADCF4B32887314900EB653A /* Views */,
 				5ADCF4B42887315C00EB653A /* Controllers */,
-				5A71922D2903228400128967 /* Utility Extensions */,
+				5A71922D2903228400128967 /* Utilities */,
 				5AC8518D28ED40C100B17C47 /* Constant Data */,
 				5ADCF4A528872E8F00EB653A /* Assets.xcassets */,
 				5ADCF4AA28872E8F00EB653A /* Info.plist */,
+				5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */,
 			);
 			path = "Get Fit";
 			sourceTree = "<group>";
@@ -238,6 +260,14 @@
 			path = "Profile Screen";
 			sourceTree = "<group>";
 		};
+		DC3BF1778C7BBF6D22382532 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85028C3F302E41E835900EB5 /* Pods_Get_Fit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,9 +275,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ADCF4AD28872E8F00EB653A /* Build configuration list for PBXNativeTarget "Get Fit" */;
 			buildPhases = (
+				3E2408AF8A70AD76A222EDA0 /* [CP] Check Pods Manifest.lock */,
 				5ADCF49528872E8B00EB653A /* Sources */,
 				5ADCF49628872E8B00EB653A /* Frameworks */,
 				5ADCF49728872E8B00EB653A /* Resources */,
+				57C1C610E432B03C0CD5EF80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */,
+				5A617BFC29082A6A00B7A0EA /* GoogleService-Info.plist in Resources */,
 				5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */,
 				5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */,
 				5ADCF4A928872E8F00EB653A /* LaunchScreen.storyboard in Resources */,
@@ -307,6 +340,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E2408AF8A70AD76A222EDA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Get Fit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57C1C610E432B03C0CD5EF80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Get Fit/Pods-Get Fit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Get Fit/Pods-Get Fit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Get Fit/Pods-Get Fit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5ADCF49528872E8B00EB653A /* Sources */ = {
@@ -336,6 +411,7 @@
 				5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */,
 				5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */,
 				5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */,
+				5A7FC91329085B7600A1F3F5 /* Utilities.swift in Sources */,
 				5A71922C2903225A00128967 /* UtilityExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +554,7 @@
 		};
 		5ADCF4AE28872E8F00EB653A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9DB64AC63805F42333E964 /* Pods-Get Fit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -489,8 +566,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +584,7 @@
 		};
 		5ADCF4AF28872E8F00EB653A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE1D3161DF7F852AD3CDDDB7 /* Pods-Get Fit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -517,8 +596,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
