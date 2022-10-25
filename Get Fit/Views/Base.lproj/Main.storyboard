@@ -272,7 +272,7 @@
                                 <color key="tintColor" systemColor="tintColor"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="sWs-p7-KbN" userLabel="Messege and button stack">
-                                <rect key="frame" x="30" y="281.5" width="354" height="333"/>
+                                <rect key="frame" x="30" y="256.5" width="354" height="383.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ouN-us-LtY" userLabel="SignIn Messege">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="147"/>
@@ -360,15 +360,24 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryc-2l-yTT">
+                                        <rect key="frame" x="0.0" y="363" width="354" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Ryc-2l-yTT" secondAttribute="trailing" id="3ic-yT-tMm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ryc-2l-yTT" secondAttribute="trailing" id="GHy-oL-NCX"/>
                                     <constraint firstAttribute="trailing" secondItem="ouN-us-LtY" secondAttribute="trailing" id="IfX-1s-aTU"/>
+                                    <constraint firstItem="Ryc-2l-yTT" firstAttribute="leading" secondItem="sWs-p7-KbN" secondAttribute="leading" id="QIY-bY-DjW"/>
                                     <constraint firstItem="H4y-Gm-UVJ" firstAttribute="top" secondItem="ouN-us-LtY" secondAttribute="bottom" constant="30" id="XhW-hc-vHC"/>
                                     <constraint firstItem="ouN-us-LtY" firstAttribute="top" secondItem="sWs-p7-KbN" secondAttribute="top" id="YO3-49-pkb"/>
+                                    <constraint firstItem="Ryc-2l-yTT" firstAttribute="leading" secondItem="sWs-p7-KbN" secondAttribute="leading" id="h7m-vD-vvD"/>
                                     <constraint firstItem="o3h-cu-nes" firstAttribute="leading" secondItem="sWs-p7-KbN" secondAttribute="leading" id="hC3-ox-82b"/>
                                     <constraint firstAttribute="trailing" secondItem="H4y-Gm-UVJ" secondAttribute="trailing" id="kto-5a-OvK"/>
                                     <constraint firstAttribute="trailing" secondItem="o3h-cu-nes" secondAttribute="trailing" id="pN5-QN-0h9"/>
-                                    <constraint firstAttribute="bottom" secondItem="o3h-cu-nes" secondAttribute="bottom" id="qsx-M8-kjw"/>
                                     <constraint firstItem="ouN-us-LtY" firstAttribute="leading" secondItem="sWs-p7-KbN" secondAttribute="leading" id="zlI-tK-1B0"/>
                                 </constraints>
                             </stackView>
@@ -406,6 +415,7 @@
                         <outlet property="SignInButton" destination="d6U-aW-afg" id="NIT-Q8-VZP"/>
                         <outlet property="descriptionText" destination="yEo-oc-4VF" id="Pf9-8x-yjp"/>
                         <outlet property="emailTextField" destination="oqb-Np-EWw" id="msm-Sm-zXm"/>
+                        <outlet property="errorLabel" destination="Ryc-2l-yTT" id="Jcq-dO-q6G"/>
                         <outlet property="fingertipsText" destination="qOu-q1-Mzp" id="5I2-SL-R4m"/>
                         <outlet property="fitnessText" destination="KMN-Fx-9Rm" id="jbw-vI-Faa"/>
                         <outlet property="passwordTextField" destination="S71-DU-ahM" id="DgY-2m-6nY"/>
@@ -607,11 +617,18 @@
                                             <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="signupButtonTapped:" destination="RkD-9N-oEW" eventType="touchUpInside" id="pYD-uH-m0Q"/>
                                             <segue destination="eEJ-HB-VZb" kind="presentation" identifier="SignupVCToTabBar" animates="NO" modalPresentationStyle="fullScreen" id="l0s-EL-Bvr"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eus-dj-gF4" userLabel="Error Label">
+                                <rect key="frame" x="0.0" y="606" width="414" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rTv-pX-Avp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -622,6 +639,8 @@
                             <constraint firstItem="4hQ-xA-8cP" firstAttribute="centerX" secondItem="UPZ-lc-TU3" secondAttribute="centerX" id="2Iq-Cq-OXN"/>
                             <constraint firstItem="rTv-pX-Avp" firstAttribute="bottom" secondItem="MDm-8R-79j" secondAttribute="bottom" constant="30" id="2Pg-MT-QO8"/>
                             <constraint firstItem="A9E-fY-kko" firstAttribute="top" secondItem="WdS-UE-AFd" secondAttribute="bottom" constant="10" id="9JE-Ao-q3Z"/>
+                            <constraint firstItem="Eus-dj-gF4" firstAttribute="leading" secondItem="rTv-pX-Avp" secondAttribute="leading" id="B1q-Wc-qxS"/>
+                            <constraint firstItem="Eus-dj-gF4" firstAttribute="top" secondItem="ybe-7U-muo" secondAttribute="bottom" constant="20" id="CDd-8X-p3c"/>
                             <constraint firstItem="A9E-fY-kko" firstAttribute="top" secondItem="WdS-UE-AFd" secondAttribute="bottom" constant="10" id="FfW-vS-us1"/>
                             <constraint firstItem="A9E-fY-kko" firstAttribute="leading" secondItem="rTv-pX-Avp" secondAttribute="leading" constant="30" id="Foj-Nm-Vi3"/>
                             <constraint firstItem="4hQ-xA-8cP" firstAttribute="leading" secondItem="rTv-pX-Avp" secondAttribute="leading" constant="30" id="I5e-mb-JrY"/>
@@ -630,6 +649,7 @@
                             <constraint firstItem="rTv-pX-Avp" firstAttribute="trailing" secondItem="MDm-8R-79j" secondAttribute="trailing" constant="30" id="SSb-0Q-rHW"/>
                             <constraint firstItem="rTv-pX-Avp" firstAttribute="trailing" secondItem="A9E-fY-kko" secondAttribute="trailing" constant="30" id="T1d-Y0-zhD"/>
                             <constraint firstItem="4iL-Yt-jI5" firstAttribute="leading" secondItem="rTv-pX-Avp" secondAttribute="leading" constant="30" id="VBA-IB-6Tj"/>
+                            <constraint firstItem="rTv-pX-Avp" firstAttribute="trailing" secondItem="Eus-dj-gF4" secondAttribute="trailing" id="Xtk-1g-fKh"/>
                             <constraint firstItem="ybe-7U-muo" firstAttribute="top" secondItem="A9E-fY-kko" secondAttribute="bottom" constant="10" id="fMJ-jm-Vj2"/>
                             <constraint firstItem="WdS-UE-AFd" firstAttribute="top" secondItem="4hQ-xA-8cP" secondAttribute="bottom" constant="10" id="gYp-UJ-nhC"/>
                             <constraint firstItem="WdS-UE-AFd" firstAttribute="centerX" secondItem="UPZ-lc-TU3" secondAttribute="centerX" id="hBP-8g-1rf"/>
@@ -645,6 +665,14 @@
                     <navigationItem key="navigationItem" id="f3J-CL-WwT">
                         <barButtonItem key="backBarButtonItem" title="Back" id="tV8-By-EYL"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="errorLabel" destination="Eus-dj-gF4" id="Z7t-yA-vVz"/>
+                        <outlet property="password" destination="KXO-CP-SuJ" id="xEL-qf-jla"/>
+                        <outlet property="signupButton" destination="IaC-Wn-ob8" id="U4u-rF-Lfc"/>
+                        <outlet property="userEmail" destination="DNz-t9-8Lc" id="MlC-CU-7Ak"/>
+                        <outlet property="userMobileNumber" destination="xRE-va-a5X" id="k0U-SJ-0qG"/>
+                        <outlet property="userName" destination="ErM-rT-hJV" id="l15-Dg-iRk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlh-0y-wBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -652,7 +680,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MU8-Rg-SeR"/>
+        <segue reference="l0s-EL-Bvr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -661,6 +689,9 @@
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
