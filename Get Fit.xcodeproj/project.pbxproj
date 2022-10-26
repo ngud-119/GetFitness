@@ -22,6 +22,7 @@
 		5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7522E628EC44410022E260 /* ProfileViewController.swift */; };
 		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
 		5A7FC91329085B7600A1F3F5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FC91229085B7600A1F3F5 /* Utilities.swift */; };
+		5A7FC91529086C6400A1F3F5 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FC91429086C6400A1F3F5 /* Storyboards.swift */; };
 		5A87AE7428F7FCFD0079E68E /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7328F7FCFD0079E68E /* FoodItemTableViewCell.swift */; };
 		5A87AE7628F831C90079E68E /* FoodCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7528F831C90079E68E /* FoodCardCollectionViewCell.swift */; };
 		5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7728F83D500079E68E /* DietPlan.swift */; };
@@ -40,6 +41,7 @@
 		5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */; };
 		5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */; };
 		5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */; };
+		5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5A95B2909A48000214433 /* LoadingView.swift */; };
 		9555D52AFC3B1848AC2AC11C /* Pods_Get_Fit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85028C3F302E41E835900EB5 /* Pods_Get_Fit.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,7 @@
 		5A7522E628EC44410022E260 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
 		5A7FC91229085B7600A1F3F5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		5A7FC91429086C6400A1F3F5 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		5A87AE7328F7FCFD0079E68E /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		5A87AE7528F831C90079E68E /* FoodCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A87AE7728F83D500079E68E /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Diet Plan Screen.storyboard"; sourceTree = "<group>"; };
 		5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanViewController.swift; sourceTree = "<group>"; };
+		5AF5A95B2909A48000214433 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		85028C3F302E41E835900EB5 /* Pods_Get_Fit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Get_Fit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE1D3161DF7F852AD3CDDDB7 /* Pods-Get Fit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Fit.release.xcconfig"; path = "Target Support Files/Pods-Get Fit/Pods-Get Fit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,7 @@
 			children = (
 				5A71922B2903225A00128967 /* UtilityExtension.swift */,
 				5A7FC91229085B7600A1F3F5 /* Utilities.swift */,
+				5AF5A95B2909A48000214433 /* LoadingView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				5AC8518E28ED413300B17C47 /* WorkoutScreenConstants.swift */,
 				5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */,
 				5A87AE7728F83D500079E68E /* DietPlan.swift */,
+				5A7FC91429086C6400A1F3F5 /* Storyboards.swift */,
 			);
 			path = "Constant Data";
 			sourceTree = "<group>";
@@ -396,6 +402,7 @@
 				5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */,
 				5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */,
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
+				5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
 				5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */,
 				5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */,
@@ -410,6 +417,7 @@
 				5A7192262903130E00128967 /* PreparationTableViewCell.swift in Sources */,
 				5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */,
 				5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */,
+				5A7FC91529086C6400A1F3F5 /* Storyboards.swift in Sources */,
 				5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */,
 				5A7FC91329085B7600A1F3F5 /* Utilities.swift in Sources */,
 				5A71922C2903225A00128967 /* UtilityExtension.swift in Sources */,
