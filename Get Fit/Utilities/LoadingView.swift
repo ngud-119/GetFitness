@@ -7,14 +7,16 @@
 
 import UIKit
 
-class LoadingView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+// Loading view for indication of some loading operation is going on.
+class LoadingView: UIView
+{
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var loadingMessage:UILabel!
+    
+    public func showLoadingView(loadingMessage: String)
+    {
+        
+        spinner.startAnimating()
+        self.loadingMessage.text = loadingMessage
     }
-    */
-
 }
