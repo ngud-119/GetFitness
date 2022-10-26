@@ -17,6 +17,7 @@ class SignUpViewController: UIViewController
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var loadingView: LoadingView!
     
     override func viewDidLoad()
     {
@@ -25,10 +26,26 @@ class SignUpViewController: UIViewController
         self.userMobileNumber.delegate = self
         self.userEmail.delegate = self
         self.password.delegate = self
-        errorLabel.alpha = 0 // Hide error label
-        
+        hideErrorMessage() // Hide Error message
+        hideLoadingView() // Hide Loading view
     }
     
+    private func hideErrorMessage()
+    {
+        errorLabel.alpha = 0 // Hide error label
+    }
+    
+    private func hideLoadingView()
+    {
+        loadingView.alpha = 0 // Hide loading View
+    }
+    
+    private func showLoadingView()
+    {
+        self.navigationItem.hidesBackButton = true // Hide back button
+        loadingView.alpha = 1
+        loadingView.showLoadingView(loadingMessage: "Signing up ...")
+    }
     // Check the fields and validate that the data are correct. If everything is correct this methopd returns nil. Otherwise, it returns error message.
     func validateField() -> String?
     {
@@ -63,11 +80,14 @@ class SignUpViewController: UIViewController
     func transitionToWorkoutsScreen()
     {
         self.performSegue(withIdentifier: Storyboards.segues.SignupVCToTabBarView, sender: self)
-        print("Success")
+        hideLoadingView() // Hide loading view when user signed up succesfully.
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton)
     {
+        // Show Loading screen
+        showLoadingView()
+        
         // Validate the fields
         let error = validateField()
         
@@ -75,6 +95,7 @@ class SignUpViewController: UIViewController
         {
             // There's something wrong with fields.
             showError(error!)
+            hideLoadingView() // Hide loading view if user not filled field properly.
         }
         
         // if all the fields are correct then
@@ -94,6 +115,7 @@ class SignUpViewController: UIViewController
                 {
                     // There was an error creating user
                     self.showError("Error creating user")
+                    self.hideLoadingView() // Hide loading view when something went wrong while creating user.
                 }
                 
                 else
@@ -105,6 +127,7 @@ class SignUpViewController: UIViewController
                         {
                             // Show error message
                             self.showError("Error saving users data")
+                            self.hideLoadingView() // Hide loading view if there is error saving data.
                         }
                     }
                     

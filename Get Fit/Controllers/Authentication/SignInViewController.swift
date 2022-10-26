@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth // Imporing firebaseAuth module to perform necessary authentication process
 
 class SignInViewController: UIViewController
 {
@@ -17,6 +18,7 @@ class SignInViewController: UIViewController
     @IBOutlet weak var SignInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var loadingView: LoadingView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -24,6 +26,19 @@ class SignInViewController: UIViewController
         self.passwordTextField.delegate = self
         hideErrorMessage()
         hideLoadingView()
+    }
+    
+    private func showError(_ message: String)
+    {
+        errorLabel.alpha = 1
+        errorLabel.text = message
+    }
+    
+    // Function for transitioning from sign in screen to workouts screen.
+    private func transitionToWorkoutsScreen()
+    {
+        self.performSegue(withIdentifier: Storyboards.segues.SigninVCToTabBarView, sender: self)
+        hideLoadingView() // Hide loading view when user signin succesfully.
     }
     
     private func hideErrorMessage()
@@ -38,17 +53,40 @@ class SignInViewController: UIViewController
     
     public func showLoadingView()
     {
+        self.navigationItem.hidesBackButton = true // Hides Backbutton
         loadingView.alpha = 1 // Show loading view in signin viewcontroller.
         loadingView.showLoadingView(loadingMessage: "Signing you in...")
     }
     
     @IBAction func signInButtonTapped(_ sender: Any)
     {
-        let text: String? = emailTextField.text
-        let pass: String? = passwordTextField.text
+        // Show loading screen
         showLoadingView()
-        print("email is "+text!)
-        print("Password is "+pass!)
+        
+        // Validate fields
+        
+        // Create cleaned versions of data
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        // Signing in the user
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            
+            if error != nil
+            {
+                // Unable to sign in
+                self.showError(error!.localizedDescription)
+                self.hideLoadingView() // Hide loading view if something went wrong while signing in.
+            }
+            
+            // Successfully signed in user
+            else
+            {
+                self.transitionToWorkoutsScreen()
+            }
+        }
+        
     }
 
 }
