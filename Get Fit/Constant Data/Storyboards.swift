@@ -5,4 +5,11 @@
 //  Created by Sandeep Sahani on 26/10/22.
 //
 
-import Foundation
+struct Storyboards
+{
+    struct segues
+    {
+        static let SignupVCToTabBarView = "signupVCToTabBar"
+        static let SigninVCToTabBarView = "signinVCToTabBar"
+    }
+}
