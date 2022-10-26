@@ -474,7 +474,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-L7-h68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6537" y="296"/>
+            <point key="canvasLocation" x="6756" y="309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7yi-u3-jGA">
@@ -669,15 +669,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-N8-wZn" userLabel="Loading View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDH-N8-wZn" userLabel="Loading View" customClass="LoadingView" customModule="Get_Fit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oot-x8-vqb" userLabel="Transparent View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eje-zm-hf1" userLabel="Spinner and message stack">
-                                        <rect key="frame" x="186" y="437" width="37" height="54"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eje-zm-hf1" userLabel="Spinner and message stack">
+                                        <rect key="frame" x="188.5" y="421" width="37" height="54"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Mwi-LX-RIh">
                                                 <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
@@ -693,11 +693,17 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Eje-zm-hf1" firstAttribute="centerY" secondItem="dDH-N8-wZn" secondAttribute="centerY" id="8f3-Tb-UP8"/>
                                     <constraint firstItem="oot-x8-vqb" firstAttribute="leading" secondItem="dDH-N8-wZn" secondAttribute="leading" id="CAq-Wy-21O"/>
                                     <constraint firstAttribute="bottom" secondItem="oot-x8-vqb" secondAttribute="bottom" id="KqR-4H-i6D"/>
                                     <constraint firstAttribute="trailing" secondItem="oot-x8-vqb" secondAttribute="trailing" id="Tf8-V9-wcc"/>
                                     <constraint firstItem="oot-x8-vqb" firstAttribute="top" secondItem="dDH-N8-wZn" secondAttribute="top" id="W3q-e5-vzy"/>
+                                    <constraint firstItem="Eje-zm-hf1" firstAttribute="centerX" secondItem="dDH-N8-wZn" secondAttribute="centerX" id="mvH-4o-JvR"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="loadingMessage" destination="aqA-6q-ihc" id="O7d-hm-Oy0"/>
+                                    <outlet property="spinner" destination="Mwi-LX-RIh" id="yws-oF-oHm"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rTv-pX-Avp"/>
@@ -741,6 +747,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="errorLabel" destination="Eus-dj-gF4" id="Z7t-yA-vVz"/>
+                        <outlet property="loadingView" destination="dDH-N8-wZn" id="fX8-KJ-sp6"/>
                         <outlet property="password" destination="KXO-CP-SuJ" id="xEL-qf-jla"/>
                         <outlet property="signupButton" destination="IaC-Wn-ob8" id="U4u-rF-Lfc"/>
                         <outlet property="userEmail" destination="DNz-t9-8Lc" id="MlC-CU-7Ak"/>
@@ -755,7 +762,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Fy-VB-duO"/>
+        <segue reference="LYm-ku-Ff7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
