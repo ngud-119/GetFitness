@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth // importing required classes and methods for creating users.
+import FirebaseFirestore // importing require classes and methods to store user data.
 
 class SignUpViewController: UIViewController
 {
@@ -57,6 +59,13 @@ class SignUpViewController: UIViewController
         errorLabel.alpha = 1
     }
     
+    // Function for transitioning from sign up screen to workouts screen.
+    func transitionToWorkoutsScreen()
+    {
+        self.performSegue(withIdentifier: Storyboards.segues.SignupVCToTabBarView, sender: self)
+        print("Success")
+    }
+    
     @IBAction func signupButtonTapped(_ sender: UIButton)
     {
         // Validate the fields
@@ -71,9 +80,42 @@ class SignUpViewController: UIViewController
         // if all the fields are correct then
         else
         {
-            // Create the user
+            // Create cleaned versions of data
+            let userName = userName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let userMobileNumber = userMobileNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let userEmail = userEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            // Transtion to the user
+            // Create the user
+            Auth.auth().createUser(withEmail: userEmail, password: password) { result, err in
+                
+                // check for errors
+                if err != nil
+                {
+                    // There was an error creating user
+                    self.showError("Error creating user")
+                }
+                
+                else
+                {
+                    // User created successfully, now store user data.
+                    let db = Firestore.firestore().collection("users").addDocument(data: ["username":userName ,"mobile number": userMobileNumber,"uid":result!.user.uid]) { error in
+                        
+                        if error != nil
+                        {
+                            // Show error message
+                            self.showError("Error saving users data")
+                        }
+                    }
+                    
+                    // Transition to the user
+                    
+                    self.transitionToWorkoutsScreen()
+        
+                }
+            }
+            
+            
         }
     
     }
