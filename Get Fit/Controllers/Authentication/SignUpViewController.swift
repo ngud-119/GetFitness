@@ -54,9 +54,15 @@ class SignUpViewController: UIViewController
         {
             return "Please fill in all fields."
         }
+        // Check if email is valid.
+        let cleanedEmail = userEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
+        if Utilities.isValidEmail(cleanedEmail) == false
+        {
+            // Email is not valid
+            return "Please enter a valid email."
+        }
         // Check if the password is secure.
-        
         let cleanedPassword = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if Utilities.isPasswordValid(cleanedPassword) == false
