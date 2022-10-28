@@ -58,37 +58,58 @@ class SignInViewController: UIViewController
         loadingView.showLoadingView(loadingMessage: "Signing you in...")
     }
     
+    // Check the fields and validate that the data are correct. If everything is correct this methopd returns nil. Otherwise, it returns error message.
+    func validateFields() -> String?
+    {
+        // Check if all fields are filled.
+        if emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
+        {
+            return "Please fill in all the fields!"
+        }
+        return nil
+    }
+
     @IBAction func signInButtonTapped(_ sender: Any)
     {
         // Show loading screen
         showLoadingView()
         
         // Validate fields
+        let error = validateFields()
         
-        // Create cleaned versions of data
-        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            
-            if error != nil
-            {
-                // Unable to sign in
-                self.showError(error!.localizedDescription)
-                self.hideLoadingView() // Hide loading view if something went wrong while signing in.
-            }
-            
-            // Successfully signed in user
-            else
-            {
-                self.transitionToWorkoutsScreen()
-            }
+        if error != nil
+        {
+           // There's is something with the fields.
+           showError(error!)
+           hideLoadingView() // Hide the loading view if something is wrong with fields.
         }
         
+        // if all the fiedld are correct then.
+        else
+        {
+            // Create cleaned versions of data
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Signing in the user
+            Auth.auth().signIn(withEmail: email, password: password) { result, error in
+                
+                if error != nil
+                {
+                    // Unable to sign in
+                    self.showError(error!.localizedDescription)
+                    self.hideLoadingView() // Hide loading view if something went wrong while signing in.
+                }
+                
+                // Successfully signed in user
+                else
+                {
+                    self.transitionToWorkoutsScreen()
+                }
+            }
+        }
     }
-
 }
 
 // MARK: Extension for dismissing keyboard when return is tapped.
