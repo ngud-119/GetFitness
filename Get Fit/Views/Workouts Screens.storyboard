@@ -12,7 +12,7 @@
         <!--Workouts-->
         <scene sceneID="Dfe-o0-7j3">
             <objects>
-                <viewController storyboardIdentifier="WorkoutsVC" title="Workouts" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yce-I0-Vln" customClass="WorkoutsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Workouts" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yce-I0-Vln" customClass="WorkoutsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TWg-11-1V0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

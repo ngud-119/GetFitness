@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="tintColor"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-gV-FvC" userLabel="Transparent background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-gV-FvC" userLabel="Transparent background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -124,7 +124,7 @@
         <!--Sign In Sign Up View Controller-->
         <scene sceneID="qwC-wO-teJ">
             <objects>
-                <viewController id="iIO-QS-8nZ" customClass="SignInSignUpViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInVC" id="iIO-QS-8nZ" customClass="SignInSignUpViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ks-c6-yNo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,7 +351,7 @@
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                         <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -459,12 +459,11 @@
                         <outlet property="fitnessText" destination="KMN-Fx-9Rm" id="jbw-vI-Faa"/>
                         <outlet property="loadingView" destination="SsN-Aa-t2v" id="Fvd-J3-beM"/>
                         <outlet property="passwordTextField" destination="S71-DU-ahM" id="DgY-2m-6nY"/>
-                        <segue destination="eEJ-HB-VZb" kind="presentation" identifier="signinVCToTabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="9Fy-VB-duO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePm-bx-y3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4905.7971014492759" y="17.410714285714285"/>
+            <point key="canvasLocation" x="4906" y="1"/>
         </scene>
         <!--TabBar-->
         <scene sceneID="gOH-nF-RGY">
@@ -474,12 +473,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-L7-h68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6756" y="309"/>
+            <point key="canvasLocation" x="7018" y="292"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7yi-u3-jGA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7K1-4f-w7F" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignInNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="7K1-4f-w7F" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" id="SHv-h6-0F0">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -761,9 +760,6 @@
             <point key="canvasLocation" x="4905.7971014492759" y="928.79464285714278"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="LYm-ku-Ff7"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="Girl with Dumbbell" width="612" height="408"/>
