@@ -37,7 +37,15 @@ class SignInViewController: UIViewController
     // Function for transitioning from sign in screen to workouts screen.
     private func transitionToWorkoutsScreen()
     {
-        self.performSegue(withIdentifier: Storyboards.segues.SigninVCToTabBarView, sender: self)
+        // self.performSegue(withIdentifier: Storyboards.segues.SigninVCToTabBarView, sender: self)
+        // after login is done, maybe put this in the login web service completion block
+        let storyboard = UIStoryboard(name: Storyboards.Name.TabBar, bundle: nil)
+        let mainTabBarController = storyboard.instantiateViewController(identifier: Storyboards.VCID.TabBarController)
+        
+        // This is to get the SceneDelegate object from your view controller
+            // then call the change root view controller function to change to main tab bar
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+        
         hideLoadingView() // Hide loading view when user signin succesfully.
     }
     
