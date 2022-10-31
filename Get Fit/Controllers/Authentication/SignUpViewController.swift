@@ -19,6 +19,8 @@ class SignUpViewController: UIViewController
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loadingView: LoadingView!
     
+    let profileVC = ProfileViewController() // Creating instance of profile view controller to set user details
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -44,7 +46,7 @@ class SignUpViewController: UIViewController
     {
         self.navigationItem.hidesBackButton = true // Hide back button
         loadingView.alpha = 1
-        loadingView.showLoadingView(loadingMessage: "Signing up ...")
+        loadingView.showLoadingView(loadingMessage: "Signing Up...")
     }
     // Check the fields and validate that the data are correct. If everything is correct this methopd returns nil. Otherwise, it returns error message.
     func validateField() -> String?
@@ -85,7 +87,14 @@ class SignUpViewController: UIViewController
     // Function for transitioning from sign up screen to workouts screen.
     func transitionToWorkoutsScreen()
     {
-        self.performSegue(withIdentifier: Storyboards.segues.SignupVCToTabBarView, sender: self)
+        // after sign up is done, maybe put this in the signup web service completion block
+        let storyboard = UIStoryboard(name: Storyboards.Name.TabBar, bundle: nil)
+        let mainTabBarController = storyboard.instantiateViewController(identifier: Storyboards.VCID.TabBarController)
+        
+        // This is to get the SceneDelegate object from your view controller
+            // then call the change root view controller function to change to main tab bar
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
+        
         hideLoadingView() // Hide loading view when user signed up succesfully.
     }
     
@@ -108,7 +117,7 @@ class SignUpViewController: UIViewController
         else
         {
             // Create cleaned versions of data
-            let userName = userName.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let userName = userName.text!
             let userMobileNumber = userMobileNumber.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let userEmail = userEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = password.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -127,7 +136,7 @@ class SignUpViewController: UIViewController
                 else
                 {
                     // User created successfully, now store user data.
-                    let db = Firestore.firestore().collection("users").addDocument(data: ["username":userName ,"mobile number": userMobileNumber,"uid":result!.user.uid]) { error in
+                    let db = Firestore.firestore().collection("users").addDocument(data: ["username":userName ,"mobile number": userMobileNumber,"userEmail":userEmail,"uid":result!.user.uid]) { error in
                         
                         if error != nil
                         {
@@ -137,8 +146,7 @@ class SignUpViewController: UIViewController
                         }
                     }
                     
-                    // Transition to the user
-                    
+                    // Transition user to tab bar controller.
                     self.transitionToWorkoutsScreen()
         
                 }

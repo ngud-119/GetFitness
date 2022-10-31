@@ -19,6 +19,8 @@ class SignInViewController: UIViewController
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var loadingView: LoadingView!
     
+    let profileVC = ProfileViewController()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -37,7 +39,7 @@ class SignInViewController: UIViewController
     // Function for transitioning from sign in screen to workouts screen.
     private func transitionToWorkoutsScreen()
     {
-        // self.performSegue(withIdentifier: Storyboards.segues.SigninVCToTabBarView, sender: self)
+        
         // after login is done, maybe put this in the login web service completion block
         let storyboard = UIStoryboard(name: Storyboards.Name.TabBar, bundle: nil)
         let mainTabBarController = storyboard.instantiateViewController(identifier: Storyboards.VCID.TabBarController)
@@ -63,7 +65,7 @@ class SignInViewController: UIViewController
     {
         self.navigationItem.hidesBackButton = true // Hides Backbutton
         loadingView.alpha = 1 // Show loading view in signin viewcontroller.
-        loadingView.showLoadingView(loadingMessage: "Signing you in...")
+        loadingView.showLoadingView(loadingMessage: "Signing In...")
     }
     
     // Check the fields and validate that the data are correct. If everything is correct this methopd returns nil. Otherwise, it returns error message.
