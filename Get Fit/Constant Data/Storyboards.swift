@@ -14,6 +14,7 @@ struct Storyboards
     }
     struct VCID
     {
+        static let SignInViewController = "SignInVC"
         static let SignInNavigationController = "SignInNavigationController"
         static let TabBarController = "TabBarController"
     }
