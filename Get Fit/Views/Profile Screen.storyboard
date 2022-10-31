@@ -149,7 +149,7 @@
                         <outlet property="editImageButton" destination="HFN-LG-IZ2" id="aLj-yN-fe3"/>
                         <outlet property="userEmail" destination="dJf-4m-6Vt" id="mES-mS-i5m"/>
                         <outlet property="userImage" destination="qOd-wY-H5p" id="TZM-b2-OmT"/>
-                        <outlet property="userName" destination="kcy-ME-k1S" id="1bb-1M-9vl"/>
+                        <outlet property="userName" destination="kcy-ME-k1S" id="CWH-9k-Dcr"/>
                         <outlet property="userPhoneNumber" destination="bev-7H-hzK" id="JWb-LQ-kIT"/>
                     </connections>
                 </viewController>

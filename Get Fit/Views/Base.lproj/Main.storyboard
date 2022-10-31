@@ -752,7 +752,6 @@
                         <outlet property="userEmail" destination="DNz-t9-8Lc" id="MlC-CU-7Ak"/>
                         <outlet property="userMobileNumber" destination="xRE-va-a5X" id="k0U-SJ-0qG"/>
                         <outlet property="userName" destination="ErM-rT-hJV" id="l15-Dg-iRk"/>
-                        <segue destination="eEJ-HB-VZb" kind="presentation" identifier="signupVCToTabBar" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="LYm-ku-Ff7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlh-0y-wBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
