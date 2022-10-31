@@ -23,10 +23,23 @@ class ProfileViewController: UIViewController
         userImage.makeImageCircular()
     }
     
+    // Methods for setting profile details.
+    public func updateProfileDetails(userName: String,userPhoneNumber: String,userEmail: String)
+    {
+        self.userName.text = userName
+        self.userPhoneNumber.text = userPhoneNumber
+        self.userEmail.text = userEmail
+    }
+    
     private func navigateToSignInVC()
     {
-        // To be continued...
+        let storyboard = UIStoryboard(name: Storyboards.Name.Main, bundle: nil)
         
+        let signInSignUpViewController = storyboard.instantiateViewController(withIdentifier: Storyboards.VCID.SignInNavigationController)
+        
+        // This is to get the SceneDelegate object from your view controller
+            // then call the change root view controller function to change Sign in navigation controller.
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(signInSignUpViewController)
     }
     
     @IBAction func signOutButtonTapped(_ sender: UIButton)
@@ -38,8 +51,9 @@ class ProfileViewController: UIViewController
         {
             try firebaseAuth.signOut()
             navigateToSignInVC()
-            print("User signout...")
+            // print("User signout...")
         }
+        
         catch let signOutError as NSError
         {
             print("Error signing out: %@", signOutError)
