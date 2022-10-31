@@ -34,11 +34,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarStoryboard = UIStoryboard(name: Storyboards.Name.TabBar, bundle: nil)
         
         // If user is logged in before.
-        if let loggedUserName = Auth.auth().currentUser?.displayName
+        if let loggedUserName = Auth.auth().currentUser?.email
         {
+            print(loggedUserName)
             // instantiate the tab bar controller and set it as root view controller
             let tabBarController = tabBarStoryboard.instantiateViewController(withIdentifier: Storyboards.VCID.TabBarController)
             window?.rootViewController = tabBarController
+            
         }
         
         else
