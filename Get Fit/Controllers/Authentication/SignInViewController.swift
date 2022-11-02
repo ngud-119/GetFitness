@@ -115,6 +115,8 @@ class SignInViewController: UIViewController
                 // Successfully signed in user
                 else
                 {
+                    let userUid = Auth.auth().currentUser?.uid
+                    var userData = Utilities.fetchUserData(userUid: userUid!)
                     self.transitionToWorkoutsScreen()
                 }
             }

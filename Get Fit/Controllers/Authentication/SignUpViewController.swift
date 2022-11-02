@@ -147,6 +147,8 @@ class SignUpViewController: UIViewController
                     }
                     
                     // Transition user to tab bar controller.
+                    let userUid = Auth.auth().currentUser?.uid
+                    var userData = Utilities.fetchUserData(userUid: userUid!)
                     self.transitionToWorkoutsScreen()
         
                 }
