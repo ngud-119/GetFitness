@@ -5,4 +5,9 @@
 //  Created by Sandeep Sahani on 31/10/22.
 //
 
-import Foundation
+struct UserData
+{
+    let userName: String
+    let mobileNumber: String
+    let email: String
+}
