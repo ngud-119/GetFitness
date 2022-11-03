@@ -65,7 +65,7 @@ class Utilities
                     let uids = document.documentID
                     if let userName = data["username"] as? String,let mobileNumber = data["mobile number"] as? String,let email = data["userEmail"] as? String
                     {
-//                        userName = document.get("username") as! String
+                        // userName = document.get("username") as! String
 //                        mobileNumber = document.get("mobile number") as! String
 //                        email = document.get("userEmail") as! String
                         print("Doc id :\(uids)")
