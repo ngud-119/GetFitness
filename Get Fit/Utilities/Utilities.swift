@@ -26,6 +26,7 @@ class Utilities
     
     static func fetchUserData(userUid: String) -> UserData?
     {
+        var user : UserData
         var userName:String = ""
         var mobileNumber: String = ""
         var email: String = ""
@@ -63,15 +64,23 @@ class Utilities
                 {
                     let data = document.data()
                     let uids = document.documentID
-                    if let userName = data["username"] as? String,let mobileNumber = data["mobile number"] as? String,let email = data["userEmail"] as? String
+                    if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
                     {
                         // userName = document.get("username") as! String
-//                        mobileNumber = document.get("mobile number") as! String
-//                        email = document.get("userEmail") as! String
-                        print("Doc id :\(uids)")
-                        print("User name :\(userName)")
-                        print("Mobile number: \(mobileNumber)")
-                        print("Email: \(email)")
+                        //                        mobileNumber = document.get("mobile number") as! String
+                        //                        email = document.get("userEmail") as! String
+                        //                        print("Doc id :\(uids)")
+                        //                        print("User name :\(userName)")
+                        //                        print("Mobile number: \(mobileNumber)")
+                        //
+                        // print("Email: \(email)")
+                        user.
+                        user.userName = name
+                        user.mobileNumber = number
+                        user.email = emailAddress
+                        //                        userName = name
+                        //                        mobileNumber = number
+                        //                        email = emailAddress
                     }
                     
                 }
