@@ -24,33 +24,15 @@ class Utilities
         return emailPred.evaluate(with: email)
     }
     
-    static func fetchUserData(userUid: String) -> UserData?
+    static func fetchUserData() -> UserData?
     {
-        var user : UserData
-        var userName:String = ""
-        var mobileNumber: String = ""
-        var email: String = ""
-        let currentUserUid = Auth.auth().currentUser?.uid
         
+
         let db = Firestore.firestore()
         
-        //        db.collection("users").document(currentUserUid!).getDocument { Snapshot, error in
-        //
-        //            // Check for errors
-        //            if let error = error
-        //            {
-        //                print("Error getting document \(error)")
-        //            }
-        //
-        //            else
-        //            {
-        //                let username = Snapshot?.get("username")
-        //                print(username)
-        //            }
-        //
-        //        }
         db.collection("users").getDocuments { (querySnapshot,error) in
             
+            var user:UserData = UserData(userName: "", mobileNumber: "", email: "")
             // Check for errors
             if let error = error
             {
@@ -59,37 +41,32 @@ class Utilities
             
             else
             {
+                let document = querySnapshot!.documents[1]
+                let data = document.data()
                 
-                for document in querySnapshot!.documents
+                if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
                 {
-                    let data = document.data()
-                    let uids = document.documentID
-                    if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
-                    {
-                        // userName = document.get("username") as! String
-                        //                        mobileNumber = document.get("mobile number") as! String
-                        //                        email = document.get("userEmail") as! String
-                        //                        print("Doc id :\(uids)")
-                        //                        print("User name :\(userName)")
-                        //                        print("Mobile number: \(mobileNumber)")
-                        //
-                        // print("Email: \(email)")
-                        user.
-                        user.userName = name
-                        user.mobileNumber = number
-                        user.email = emailAddress
-                        //                        userName = name
-                        //                        mobileNumber = number
-                        //                        email = emailAddress
-                    }
+                    user = UserData(userName: name, mobileNumber: number, email: number)
                     
+                    print(name)
+                    print(number)
+                    print(emailAddress)
+    
+                }
+                else
+                {
+                    print("Error retriving data!")
                 }
                 
             }
             
-            
         }
-        
-        return nil
+        return UserData(userName: "Apala Mahana", mobileNumber: "7608959767", email: "apalamahana@gmail.com")
+    }
+    
+    static func sendUser(userName: String, mobileNumber: String, email: String) -> UserData
+    {
+        var user = UserData(userName: userName, mobileNumber: mobileNumber, email: email)
+        return user
     }
 }
