@@ -19,7 +19,6 @@ class SignInViewController: UIViewController
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var loadingView: LoadingView!
     
-    let profileVC = ProfileViewController()
     
     override func viewDidLoad()
     {
@@ -115,8 +114,6 @@ class SignInViewController: UIViewController
                 // Successfully signed in user
                 else
                 {
-                    let userUid = Auth.auth().currentUser?.uid
-                    var userData = Utilities.fetchUserData(userUid: userUid!)
                     self.transitionToWorkoutsScreen()
                 }
             }

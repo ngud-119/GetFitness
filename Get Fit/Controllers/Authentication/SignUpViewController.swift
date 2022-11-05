@@ -18,9 +18,7 @@ class SignUpViewController: UIViewController
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loadingView: LoadingView!
-    
-    let profileVC = ProfileViewController() // Creating instance of profile view controller to set user details
-    
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -73,8 +71,8 @@ class SignUpViewController: UIViewController
             
             return "Please make sure your password is atleast 8 characters, contains a special character and a number."
         }
-    
-       return nil
+        
+        return nil
     }
     
     // Method for showing error
@@ -92,7 +90,7 @@ class SignUpViewController: UIViewController
         let mainTabBarController = storyboard.instantiateViewController(identifier: Storyboards.VCID.TabBarController)
         
         // This is to get the SceneDelegate object from your view controller
-            // then call the change root view controller function to change to main tab bar
+        // then call the change root view controller function to change to main tab bar
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
         
         hideLoadingView() // Hide loading view when user signed up succesfully.
@@ -147,16 +145,14 @@ class SignUpViewController: UIViewController
                     }
                     
                     // Transition user to tab bar controller.
-                    let userUid = Auth.auth().currentUser?.uid
-                    var userData = Utilities.fetchUserData(userUid: userUid!)
                     self.transitionToWorkoutsScreen()
-        
+                    
                 }
             }
             
             
         }
-    
+        
     }
 }
 
