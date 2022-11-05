@@ -17,18 +17,28 @@ class ProfileViewController: UIViewController
     @IBOutlet weak var userPhoneNumber: UILabel!
     @IBOutlet weak var userEmail: UILabel!
     
+    var userData: UserData?
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        if let userData = Utilities.fetchUserData()
+        {
+            updateProfileDetails(name: userData.userName, number: userData.mobileNumber, email: userData.email)
+        }
+        else
+        {
+            print("Error fetching user data!")
+        }
         userImage.makeImageCircular()
     }
     
     // Methods for setting profile details.
-    public func updateProfileDetails(userName: String,userPhoneNumber: String,userEmail: String)
+    private func updateProfileDetails(name: String,number: String,email: String)
     {
-        self.userName.text = userName
-        self.userPhoneNumber.text = userPhoneNumber
-        self.userEmail.text = userEmail
+        userName?.text = name
+        userPhoneNumber?.text = number
+        userEmail?.text = email
     }
     
     private func navigateToSignInVC()
@@ -51,7 +61,6 @@ class ProfileViewController: UIViewController
         {
             try firebaseAuth.signOut()
             navigateToSignInVC()
-            // print("User signout...")
         }
         
         catch let signOutError as NSError
