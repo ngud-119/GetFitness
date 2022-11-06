@@ -16,14 +16,14 @@ class ProfileViewController: UIViewController
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPhoneNumber: UILabel!
     @IBOutlet weak var userEmail: UILabel!
-    
-    var userData: UserData?
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         if let userData = Utilities.fetchUserData()
         {
+            print(userData.userName,userData.mobileNumber,userData.email)
             updateProfileDetails(name: userData.userName, number: userData.mobileNumber, email: userData.email)
         }
         else
