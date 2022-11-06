@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bgY-dL-WK2" userLabel="Profile View Stack">
-                                <rect key="frame" x="15" y="304" width="384" height="288.5"/>
+                                <rect key="frame" x="15" y="259.5" width="384" height="377"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qxq-of-IE0" userLabel="Image Stack">
                                         <rect key="frame" x="132" y="0.0" width="120" height="157"/>
@@ -42,22 +42,22 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FP1-bg-8WN" userLabel="User Info Stack">
-                                        <rect key="frame" x="0.0" y="177" width="384" height="111.5"/>
+                                        <rect key="frame" x="0.0" y="177" width="384" height="200"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="1Of-HW-cgL" userLabel="User Details Stack">
-                                                <rect key="frame" x="0.0" y="0.0" width="384" height="111.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="384" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDx-Ar-eSS" userLabel="Username Stack">
-                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bs-v4-lNm">
-                                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="78.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sandeep Sahani" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcy-ME-k1S">
-                                                                <rect key="frame" x="78.5" y="0.0" width="305.5" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcy-ME-k1S">
+                                                                <rect key="frame" x="78.5" y="0.0" width="305.5" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -65,16 +65,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CcU-sF-bcd" userLabel="Mobile No. Stack">
-                                                        <rect key="frame" x="0.0" y="45.5" width="384" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="75" width="384" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xc-qL-lKd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88776697689" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bev-7H-hzK">
-                                                                <rect key="frame" x="270" y="0.0" width="114" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bev-7H-hzK">
+                                                                <rect key="frame" x="270" y="0.0" width="114" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -82,16 +82,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDS-xb-lWZ" userLabel="Email Stack">
-                                                        <rect key="frame" x="0.0" y="91" width="384" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="150" width="384" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrM-rS-jm7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="146" height="20.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="146" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sandeepsahani76j@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJf-4m-6Vt">
-                                                                <rect key="frame" x="146" y="0.0" width="238" height="20.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJf-4m-6Vt">
+                                                                <rect key="frame" x="146" y="0.0" width="238" height="50"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
@@ -147,10 +147,10 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editImageButton" destination="HFN-LG-IZ2" id="aLj-yN-fe3"/>
-                        <outlet property="userEmail" destination="dJf-4m-6Vt" id="mES-mS-i5m"/>
+                        <outlet property="userEmail" destination="dJf-4m-6Vt" id="fOV-SY-LlU"/>
                         <outlet property="userImage" destination="qOd-wY-H5p" id="TZM-b2-OmT"/>
-                        <outlet property="userName" destination="kcy-ME-k1S" id="CWH-9k-Dcr"/>
-                        <outlet property="userPhoneNumber" destination="bev-7H-hzK" id="JWb-LQ-kIT"/>
+                        <outlet property="userName" destination="kcy-ME-k1S" id="SO1-by-qY4"/>
+                        <outlet property="userPhoneNumber" destination="bev-7H-hzK" id="doa-SQ-uGZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
