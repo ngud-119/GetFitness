@@ -7,7 +7,8 @@
 
 struct UserData
 {
-    let userName: String
-    let mobileNumber: String
-    let email: String
+    var userName: String
+    var mobileNumber: String
+    var email: String
 }
+
