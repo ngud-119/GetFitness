@@ -5,18 +5,22 @@
 //  Created by Sandeep Sahani on 25/10/22.
 //
 
+import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
-// Class for utiliy methods
+
+// Class for Utility methods
 class Utilities
 {
+
     // Utility function for checking for a valid and strong passord
     static func isPasswordValid(_ password : String) -> Bool
     {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
+    
     // Utility function for checking for a valid email
     static func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -24,15 +28,16 @@ class Utilities
         return emailPred.evaluate(with: email)
     }
     
+    // Utility function for fetching data from firestore database.
     static func fetchUserData() -> UserData?
     {
+        var userName = "Subham Barik"
+        var userMobileNumber = "6646466464"
+        var userEmail = "bariksubham143@gmail.com"
         
-
         let db = Firestore.firestore()
-        
         db.collection("users").getDocuments { (querySnapshot,error) in
             
-            var user:UserData = UserData(userName: "", mobileNumber: "", email: "")
             // Check for errors
             if let error = error
             {
@@ -41,17 +46,14 @@ class Utilities
             
             else
             {
-                let document = querySnapshot!.documents[1]
+                let document = querySnapshot!.documents[0]
                 let data = document.data()
                 
                 if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
                 {
-                    user = UserData(userName: name, mobileNumber: number, email: number)
-                    
-                    print(name)
-                    print(number)
-                    print(emailAddress)
-    
+                   userName = name
+                   userMobileNumber = number
+                   userEmail = emailAddress
                 }
                 else
                 {
@@ -59,14 +61,9 @@ class Utilities
                 }
                 
             }
-            
         }
-        return UserData(userName: "Apala Mahana", mobileNumber: "7608959767", email: "apalamahana@gmail.com")
+        
+     return UserData(userName: userName, mobileNumber: userMobileNumber, email: userEmail)
     }
     
-    static func sendUser(userName: String, mobileNumber: String, email: String) -> UserData
-    {
-        var user = UserData(userName: userName, mobileNumber: mobileNumber, email: email)
-        return user
-    }
 }
