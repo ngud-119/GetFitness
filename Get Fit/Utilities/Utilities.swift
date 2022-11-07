@@ -22,7 +22,8 @@ class Utilities
     }
     
     // Utility function for checking for a valid email
-    static func isValidEmail(_ email: String) -> Bool {
+    static func isValidEmail(_ email: String) -> Bool
+    {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
@@ -31,9 +32,9 @@ class Utilities
     // Utility function for fetching data from firestore database.
     static func fetchUserData() -> UserData?
     {
-        var userName = "Subham Barik"
-        var userMobileNumber = "6646466464"
-        var userEmail = "bariksubham143@gmail.com"
+        var userName = "user"
+        var userMobileNumber = "12234"
+        var userEmail = "1@2.com"
         
         let db = Firestore.firestore()
         db.collection("users").getDocuments { (querySnapshot,error) in
