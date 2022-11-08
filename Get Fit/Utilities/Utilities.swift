@@ -13,7 +13,7 @@ import FirebaseAuth
 // Class for Utility methods
 class Utilities
 {
-
+    
     // Utility function for checking for a valid and strong passord
     static func isPasswordValid(_ password : String) -> Bool
     {
@@ -32,12 +32,11 @@ class Utilities
     // Utility function for fetching data from firestore database.
     static func fetchUserData() -> UserData?
     {
-        var userName = "user"
-        var userMobileNumber = "12234"
-        var userEmail = "1@2.com"
+        var userName = ""
+        var userMobileNumber = ""
+        var userEmail = ""
         
-        let db = Firestore.firestore()
-        db.collection("users").getDocuments { (querySnapshot,error) in
+        Firestore.firestore().collection("users").getDocuments { querySnapshot, error in
             
             // Check for errors
             if let error = error
@@ -52,9 +51,10 @@ class Utilities
                 
                 if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
                 {
-                   userName = name
-                   userMobileNumber = number
-                   userEmail = emailAddress
+                    print(name,number,emailAddress)
+                    userName = name
+                    userMobileNumber = number
+                    userEmail = emailAddress
                 }
                 else
                 {
@@ -63,8 +63,8 @@ class Utilities
                 
             }
         }
+        return UserData(userName: userName, mobileNumber: userMobileNumber, email: userEmail)
         
-     return UserData(userName: userName, mobileNumber: userMobileNumber, email: userEmail)
     }
     
 }
