@@ -30,39 +30,15 @@ class Utilities
     }
     
     // Utility function for fetching data from firestore database.
-    static func fetchUserData() -> UserData?
+    static func fetchUserData(getDataFromDatabase: @escaping ()-> Void) -> UserData?
     {
+        
         var userName = ""
         var userMobileNumber = ""
         var userEmail = ""
         
-        Firestore.firestore().collection("users").getDocuments { querySnapshot, error in
-            
-            // Check for errors
-            if let error = error
-            {
-                print("Error getting document \(error)")
-            }
-            
-            else
-            {
-                let document = querySnapshot!.documents[0]
-                let data = document.data()
-                
-                if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
-                {
-                    print(name,number,emailAddress)
-                    userName = name
-                    userMobileNumber = number
-                    userEmail = emailAddress
-                }
-                else
-                {
-                    print("Error retriving data!")
-                }
-                
-            }
-        }
+        getDataFromDatabase()
+        
         return UserData(userName: userName, mobileNumber: userMobileNumber, email: userEmail)
         
     }
