@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseCore
 import FirebaseAuth // Importing FirebaseAuth Package to perform important authentication operation.
 
 class ProfileViewController: UIViewController
@@ -16,20 +18,39 @@ class ProfileViewController: UIViewController
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPhoneNumber: UILabel!
     @IBOutlet weak var userEmail: UILabel!
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        if let userData = Utilities.fetchUserData()
-        {
-            print(userData.userName,userData.mobileNumber,userData.email)
-            updateProfileDetails(name: userData.userName, number: userData.mobileNumber, email: userData.email)
-        }
-        else
-        {
-            print("Error fetching user data!")
-        }
+        Utilities.fetchUserData(getDataFromDatabase: {
+            
+            Firestore.firestore().collection("users").getDocuments { querySnapshot, error in
+                
+                // Check for errors
+                if let error = error
+                {
+                    print("Error getting document \(error)")
+                }
+                
+                else
+                {
+                    let document = querySnapshot!.documents[0]
+                    let data = document.data()
+                    
+                    if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
+                    {
+                        self.updateProfileDetails(name: name, number: number, email: emailAddress)
+                    }
+                    else
+                    {
+                        print("Error retriving data!")
+                    }
+                    
+                }
+            }
+        })
+                                
         userImage.makeImageCircular()
     }
     
@@ -48,7 +69,7 @@ class ProfileViewController: UIViewController
         let signInSignUpViewController = storyboard.instantiateViewController(withIdentifier: Storyboards.VCID.SignInNavigationController)
         
         // This is to get the SceneDelegate object from your view controller
-            // then call the change root view controller function to change Sign in navigation controller.
+        // then call the change root view controller function to change Sign in navigation controller.
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(signInSignUpViewController)
     }
     
