@@ -30,17 +30,9 @@ class Utilities
     }
     
     // Utility function for fetching data from firestore database.
-    static func fetchUserData(getDataFromDatabase: @escaping ()-> Void) -> UserData?
+    static func fetchUserData(getDataFromDatabase: @escaping ()-> Void)
     {
-        
-        var userName = ""
-        var userMobileNumber = ""
-        var userEmail = ""
-        
         getDataFromDatabase()
-        
-        return UserData(userName: userName, mobileNumber: userMobileNumber, email: userEmail)
-        
     }
     
 }
