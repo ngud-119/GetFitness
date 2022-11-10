@@ -13,7 +13,6 @@ import FirebaseAuth // Importing FirebaseAuth Package to perform important authe
 class ProfileViewController: UIViewController
 {
     @IBOutlet weak var userImage: UIImageView!
-    
     @IBOutlet weak var editImageButton: UIButton!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPhoneNumber: UILabel!
@@ -22,7 +21,8 @@ class ProfileViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        showLoadingLabel()
+    
         Utilities.fetchUserData(getDataFromDatabase: {
             
             Firestore.firestore().collection("users").getDocuments { querySnapshot, error in
@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController
                 
                 else
                 {
-                    let document = querySnapshot!.documents[0]
+                    let document = querySnapshot!.documents[1]
                     let data = document.data()
                     
                     if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController
                 }
             }
         })
-                                
+                              
         userImage.makeImageCircular()
     }
     
@@ -62,6 +62,13 @@ class ProfileViewController: UIViewController
         userEmail?.text = email
     }
     
+    // Fills the text of labels with 'Loading Data...' to indicate data is being fetched from database.
+    private func showLoadingLabel()
+    {
+        userName.text = "Loading Data..."
+        userPhoneNumber.text = "Loading Data..."
+        userEmail.text = "Loading Data..."
+    }
     private func navigateToSignInVC()
     {
         let storyboard = UIStoryboard(name: Storyboards.Name.Main, bundle: nil)
