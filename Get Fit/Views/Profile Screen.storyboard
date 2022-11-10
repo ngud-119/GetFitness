@@ -38,6 +38,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <color key="baseForegroundColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="editButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tq1-4d-vLG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
