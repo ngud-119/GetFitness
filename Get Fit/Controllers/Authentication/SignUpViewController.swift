@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var loadingView: LoadingView!
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -133,8 +133,9 @@ class SignUpViewController: UIViewController
                 
                 else
                 {
+            
                     // User created successfully, now store user data.
-                    let db = Firestore.firestore().collection("users").addDocument(data: ["username":userName ,"mobile number": userMobileNumber,"userEmail":userEmail,"uid":result!.user.uid]) { error in
+                    Firestore.firestore().collection("users").addDocument(data: ["username":userName ,"mobile number": userMobileNumber,"userEmail":userEmail,"uid":result!.user.uid]) { error in
                         
                         if error != nil
                         {
