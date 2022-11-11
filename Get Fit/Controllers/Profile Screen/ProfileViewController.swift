@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController
     {
         super.viewDidLoad()
         showLoadingLabel()
-    
+        
         Utilities.fetchUserData(getDataFromDatabase: {
             
             Firestore.firestore().collection("users").getDocuments { querySnapshot, error in
@@ -35,22 +35,30 @@ class ProfileViewController: UIViewController
                 
                 else
                 {
-                    let document = querySnapshot!.documents[1]
-                    let data = document.data()
-                    
-                    if let name = data["username"] as? String,let number = data["mobile number"] as? String,let emailAddress = data["userEmail"] as? String
+                    let currentUserUid = Auth.auth().currentUser!.uid
+                    for document in querySnapshot!.documents
                     {
-                        self.updateProfileDetails(name: name, number: number, email: emailAddress)
+                        
+                        if let name = document["username"] as? String,let number = document["mobile number"] as? String,let emailAddress = document["userEmail"] as? String,let uid = document["uid"] as? String
+                        {
+                            // Setting up the profile contents wrt to current user.
+                            if uid == currentUserUid
+                            {
+                                self.setLabelOpacityToOne()
+                                self.updateProfileDetails(name: name, number: number, email: emailAddress)
+                            }
+                        }
+                        else
+                        {
+                            print("Error retriving data!")
+                        }
                     }
-                    else
-                    {
-                        print("Error retriving data!")
-                    }
-                    
+            
                 }
+                
             }
         })
-                              
+        
         userImage.makeImageCircular()
     }
     
@@ -68,6 +76,15 @@ class ProfileViewController: UIViewController
         userName.text = "Loading Data..."
         userPhoneNumber.text = "Loading Data..."
         userEmail.text = "Loading Data..."
+        userName.layer.opacity = 0.5
+        userPhoneNumber.layer.opacity = 0.5
+        userEmail.layer.opacity = 0.5
+    }
+    private func setLabelOpacityToOne()
+    {
+        userName.layer.opacity = 1
+        userPhoneNumber.layer.opacity = 1
+        userEmail.layer.opacity = 1
     }
     private func navigateToSignInVC()
     {
@@ -82,7 +99,7 @@ class ProfileViewController: UIViewController
     
     @IBAction func editButtonTapped(_ sender: UIButton)
     {
-       selectProfileImage()
+        selectProfileImage()
     }
     
     @IBAction func signOutButtonTapped(_ sender: UIButton)
@@ -101,7 +118,7 @@ class ProfileViewController: UIViewController
             print("Error signing out: %@", signOutError)
         }
         
-   }
+    }
     
 }
 
