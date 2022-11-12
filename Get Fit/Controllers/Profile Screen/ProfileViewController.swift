@@ -58,7 +58,12 @@ class ProfileViewController: UIViewController
                                         print(error!.localizedDescription)
                                         return
                                     }
-                                    self.userImage.image = UIImage(data: data!)
+                                    // Setting the image as profile image which was recieved from database
+                                    DispatchQueue.main.async
+                                    {
+                                        self.userImage.image = UIImage(data: data!)
+                                    }
+                                    
                                 }
                                 self.updateProfileDetails(name: name, number: number, email: emailAddress)
                             }
