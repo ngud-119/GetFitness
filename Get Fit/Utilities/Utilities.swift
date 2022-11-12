@@ -35,4 +35,11 @@ class Utilities
         getDataFromDatabase()
     }
     
+    // Users database reference
+    static func updateProfileURLWithDocumentID(documentId: String,profileImageURL: String)
+    {
+        Firestore.firestore().collection("users").document(documentId).setData(["profileImageURL" :profileImageURL], merge: true)
+    }
+    
+    
 }
