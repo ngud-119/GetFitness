@@ -50,11 +50,11 @@ extension ProfileViewController
     func downloadProfileImage(profileImageURL: String, downloadProfileImage: @escaping (_ data: Data?,_ response: URLResponse?,_ error: Error?)-> Void) -> Void
     {
         let url = URL(string: profileImageURL)
-        
+        // Performing HTTPS Request with url
         URLSession.shared.dataTask(with: url!) { data, response, error in
             
             downloadProfileImage(data, response, error)
-        }
+        }.resume()
     }
     
     // Methods for setting profile details.
