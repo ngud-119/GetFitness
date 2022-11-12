@@ -11,7 +11,7 @@ import UIKit
 
 extension ProfileViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate
 {
-    private func selectProfileImage()
+     func selectProfileImage()
     {
         let picker = UIImagePickerController()
         

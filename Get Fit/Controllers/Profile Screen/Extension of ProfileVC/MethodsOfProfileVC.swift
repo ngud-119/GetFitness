@@ -46,6 +46,17 @@ extension ProfileViewController
         }
     }
     
+    // Function to get the saved image from database.
+    func downloadProfileImage(profileImageURL: String, downloadProfileImage: @escaping (_ data: Data?,_ response: URLResponse?,_ error: Error?)-> Void) -> Void
+    {
+        let url = URL(string: profileImageURL)
+        
+        URLSession.shared.dataTask(with: url!) { data, response, error in
+            
+            downloadProfileImage(data, response, error)
+        }
+    }
+    
     // Methods for setting profile details.
     func updateProfileDetails(name: String,number: String,email: String)
     {

@@ -15,6 +15,8 @@
 		5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */; };
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
 		5A4AB1942900916400E460E5 /* FoodItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AB1932900916400E460E5 /* FoodItemListCollectionViewCell.swift */; };
+		5A52A4E829200BD700ED4821 /* MethodsOfProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52A4E729200BD700ED4821 /* MethodsOfProfileVC.swift */; };
+		5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */; };
 		5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */; };
 		5A617BFC29082A6A00B7A0EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */; };
 		5A7192262903130E00128967 /* PreparationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7192252903130D00128967 /* PreparationTableViewCell.swift */; };
@@ -56,6 +58,8 @@
 		5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Profile Screen.storyboard"; sourceTree = "<group>"; };
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A4AB1932900916400E460E5 /* FoodItemListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemListCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A52A4E729200BD700ED4821 /* MethodsOfProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsOfProfileVC.swift; sourceTree = "<group>"; };
+		5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewExtention.swift; sourceTree = "<group>"; };
 		5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A7192252903130D00128967 /* PreparationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 				DE1D3161DF7F852AD3CDDDB7 /* Pods-Get Fit.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A52A4EB29200D9A00ED4821 /* Extension of ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */,
+				5A52A4E729200BD700ED4821 /* MethodsOfProfileVC.swift */,
+			);
+			path = "Extension of ProfileVC";
 			sourceTree = "<group>";
 		};
 		5A71922D2903228400128967 /* Utilities */ = {
@@ -265,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7522E628EC44410022E260 /* ProfileViewController.swift */,
+				5A52A4EB29200D9A00ED4821 /* Extension of ProfileVC */,
 			);
 			path = "Profile Screen";
 			sourceTree = "<group>";
@@ -402,12 +416,14 @@
 				5AB915542910133A0022FE65 /* UserData.swift in Sources */,
 				5A87AE7628F831C90079E68E /* FoodCardCollectionViewCell.swift in Sources */,
 				5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */,
+				5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */,
 				5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */,
 				5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */,
 				5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */,
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
 				5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
+				5A52A4E829200BD700ED4821 /* MethodsOfProfileVC.swift in Sources */,
 				5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */,
 				5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */,
 				5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */,

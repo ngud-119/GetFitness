@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseFirestore // firebase module for the database operations.
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate
