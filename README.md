@@ -1,6 +1,6 @@
 
 <p align="center">
- <img src="[http://some_place.com/image.png](https://github.com/sandeepsahanicodes/GetFit/blob/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png)" />
+ <img src="(https://github.com/sandeepsahanicodes/GetFit/blob/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png)" />
 </p>
 
 # Get Fit
