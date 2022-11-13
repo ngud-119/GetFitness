@@ -1,5 +1,5 @@
 
-![Logo](https://raw.githubusercontent.com/sandeepsahanicodes/GetFit/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/ios-marketing.png)
+![Logo](https://github.com/sandeepsahanicodes/GetFit/blob/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png)
 
 
 # Get Fit
