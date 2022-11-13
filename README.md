@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/sandeepsahanicodes/GetFit/blob/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png)
+<center>![Logo](https://github.com/sandeepsahanicodes/GetFit/blob/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png)</center>
 
 
 # Get Fit
