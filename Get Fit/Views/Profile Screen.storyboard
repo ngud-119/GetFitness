@@ -31,15 +31,15 @@
                                                     <constraint firstAttribute="width" constant="120" id="sB2-Wi-Qfc"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFN-LG-IZ2" userLabel="Edit Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFN-LG-IZ2" userLabel="Add Photo Button">
                                                 <rect key="frame" x="34.5" y="125" width="51.5" height="32"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Edit">
+                                                <buttonConfiguration key="configuration" style="plain" title="Add Photo">
                                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                                     <color key="baseForegroundColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="editButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tq1-4d-vLG"/>
+                                                    <action selector="addPhotoTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="AYP-yg-aVg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -149,7 +149,7 @@
                     <navigationItem key="navigationItem" title="  Profile" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="5UJ-fU-hRP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="editImageButton" destination="HFN-LG-IZ2" id="aLj-yN-fe3"/>
+                        <outlet property="addPhotoButton" destination="HFN-LG-IZ2" id="2pL-qg-QRm"/>
                         <outlet property="userEmail" destination="dJf-4m-6Vt" id="fOV-SY-LlU"/>
                         <outlet property="userImage" destination="qOd-wY-H5p" id="TZM-b2-OmT"/>
                         <outlet property="userName" destination="kcy-ME-k1S" id="SO1-by-qY4"/>
@@ -167,7 +167,6 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="HXD-9C-IF5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="DH6-wc-inQ">
-                        <rect key="frame" x="0.0" y="48" width="414" height="103"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -189,7 +188,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="123"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="person.circle" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
     </resources>
 </document>
