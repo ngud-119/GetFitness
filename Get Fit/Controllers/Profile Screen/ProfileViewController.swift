@@ -14,7 +14,7 @@ import FirebaseStorage
 class ProfileViewController: UIViewController
 {
     @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var editImageButton: UIButton!
+    @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userPhoneNumber: UILabel!
     @IBOutlet weak var userEmail: UILabel!
@@ -82,7 +82,7 @@ class ProfileViewController: UIViewController
         userImage.makeImageCircular()
     }
     
-    @IBAction func editButtonTapped(_ sender: UIButton)
+    @IBAction func addPhotoTapped(_ sender: UIButton)
     {
         selectProfileImage()
     }
