@@ -265,22 +265,22 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fMH-mP-jne" userLabel="Exercise description stack">
                                                             <rect key="frame" x="115" y="6.5" width="39" height="47"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-qA-bTF" userLabel="Exercise name">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyh-qA-bTF" userLabel="Exercise name">
                                                                     <rect key="frame" x="0.0" y="0.0" width="39" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="moL-5n-iel" userLabel="Sets and reps stack">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="moL-5n-iel" userLabel="Sets and reps stack">
                                                                     <rect key="frame" x="0.0" y="20" width="39" height="27"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-zc-zhH" userLabel="No. of sets">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwe-zc-zhH" userLabel="No. of sets">
                                                                             <rect key="frame" x="0.0" y="0.0" width="39" height="13.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9d-KA-af2" userLabel="No of reps">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9d-KA-af2" userLabel="No of reps">
                                                                             <rect key="frame" x="0.0" y="13.5" width="39" height="13.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -539,7 +539,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-b2-9QE" userLabel="Buttom Stack">
-                                <rect key="frame" x="15" y="618.5" width="384" height="76"/>
+                                <rect key="frame" x="15" y="618.5" width="384" height="74"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fj-Di-eDU">
                                         <rect key="frame" x="0.0" y="0.0" width="384" height="32"/>
@@ -552,24 +552,44 @@
                                             <action selector="nextSetButtonTapped:" destination="4YS-1u-sDe" eventType="touchUpInside" id="Bdp-xY-9Qh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maV-dn-two">
-                                        <rect key="frame" x="0.0" y="42" width="384" height="34"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Next Exercise" imagePadding="3">
-                                            <imageReference key="image" image="arrow.right" catalog="system" symbolScale="small"/>
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                            <color key="baseBackgroundColor" red="0.65490196078431373" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="nextExerciseButtonTapped:" destination="4YS-1u-sDe" eventType="touchUpInside" id="dSM-FY-Nnp"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fxI-FB-c9x" userLabel="Second button stack">
+                                        <rect key="frame" x="0.0" y="42" width="384" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maV-dn-two">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="Mcn-QJ-kSl"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="Next Exercise" imagePadding="3">
+                                                    <imageReference key="image" image="arrow.right" catalog="system" symbolScale="small"/>
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="baseBackgroundColor" red="0.65490196078431373" green="0.031372549019607843" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="nextExerciseButtonTapped:" destination="4YS-1u-sDe" eventType="touchUpInside" id="dSM-FY-Nnp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmJ-Qz-lcN" userLabel="Stop Workout">
+                                                <rect key="frame" x="197" y="0.0" width="187" height="32"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Stop Workout">
+                                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="0.8980392157" colorSpace="calibratedRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="stopWorkoutTapped:" destination="4YS-1u-sDe" eventType="touchUpInside" id="dlg-PT-HDC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="maV-dn-two" firstAttribute="leading" secondItem="Q8E-b2-9QE" secondAttribute="leading" id="6IG-QL-OHS"/>
                                     <constraint firstAttribute="trailing" secondItem="2Fj-Di-eDU" secondAttribute="trailing" id="H8H-4g-Pf6"/>
+                                    <constraint firstItem="fxI-FB-c9x" firstAttribute="leading" secondItem="Q8E-b2-9QE" secondAttribute="leading" id="Iy4-Tn-llK"/>
+                                    <constraint firstAttribute="trailing" secondItem="fxI-FB-c9x" secondAttribute="trailing" id="Pvl-6V-lsN"/>
                                     <constraint firstItem="2Fj-Di-eDU" firstAttribute="leading" secondItem="Q8E-b2-9QE" secondAttribute="leading" id="oJQ-DG-jNd"/>
-                                    <constraint firstAttribute="trailing" secondItem="maV-dn-two" secondAttribute="trailing" id="uWE-eR-Jff"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -601,6 +621,7 @@
                         <outlet property="nextExerciseButton" destination="maV-dn-two" id="TBg-HN-8cj"/>
                         <outlet property="nextExerciseLabel" destination="ZJn-MP-evO" id="T9q-3C-0xc"/>
                         <outlet property="nextSetButton" destination="2Fj-Di-eDU" id="GPh-K2-PPU"/>
+                        <outlet property="stopWorkoutButton" destination="dmJ-Qz-lcN" id="xrF-Z7-3bG"/>
                         <outlet property="totalExerciseLabel" destination="4IB-ox-fpo" id="1Ng-KQ-JcL"/>
                         <outlet property="totalRepsLabel" destination="BLY-aq-ueY" id="BAZ-SI-a2a"/>
                         <outlet property="tutorialVideoView" destination="M7M-oP-ETP" id="77W-xi-Art"/>
@@ -613,7 +634,7 @@
         <!--Workouts-->
         <scene sceneID="exI-yQ-hAu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fLB-8f-Uzx" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WorkoutsVCNavigationController" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="fLB-8f-Uzx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Workouts" image="Dumbbell" id="huN-2L-ToY"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
