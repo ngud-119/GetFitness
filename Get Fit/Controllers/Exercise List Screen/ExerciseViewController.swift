@@ -21,6 +21,7 @@ class ExerciseViewController: UIViewController
     @IBOutlet weak var nextSetButton: UIButton!
     @IBOutlet weak var nextExerciseButton: UIButton!
     
+    @IBOutlet weak var stopWorkoutButton: UIButton!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,6 +29,14 @@ class ExerciseViewController: UIViewController
         // Do any additional setup after loading the view.
     }
     
+    // Function to goto workouts ciew controller when stop workout tapped.
+    func backToWorkoutsVC()
+    {
+        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
+    }
     
     @IBAction func nextSetButtonTapped(_ sender: UIButton)
     {
@@ -39,6 +48,10 @@ class ExerciseViewController: UIViewController
         print("nextExerciseButtonTapped...")
     }
     
+    @IBAction func stopWorkoutTapped(_ sender: UIButton)
+    {
+        backToWorkoutsVC()
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
