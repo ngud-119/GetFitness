@@ -30,9 +30,7 @@ extension FoodItemTableViewCell:UICollectionViewDelegate,UICollectionViewDataSou
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        print(section)
         return foodCardViewData[foodCardCollectionView.tag].cardImage.count
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
