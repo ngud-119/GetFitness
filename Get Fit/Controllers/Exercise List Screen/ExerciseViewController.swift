@@ -32,8 +32,8 @@ class ExerciseViewController: UIViewController
     // Function to goto workouts ciew controller when stop workout tapped.
     func backToWorkoutsVC()
     {
-        let storyboard = UIStoryboard(name: "TabBar", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        let storyboard = UIStoryboard(name: Storyboards.Name.TabBar, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: Storyboards.VCID.TabBarController)
         
         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
     }
@@ -52,9 +52,5 @@ class ExerciseViewController: UIViewController
     {
         backToWorkoutsVC()
     }
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
-
+   
 }
