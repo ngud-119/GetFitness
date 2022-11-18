@@ -26,20 +26,40 @@ class ExerciseViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-//
-//            DispatchQueue.main.async
-//            {
-//                self.circularProgressView.progress = self.strokeVal
-//                self.strokeVal += 0.1
-//                if self.strokeVal >= 1
-//                {
-//                    timer.invalidate()
-//                }
-//            }
-//        }
-        circularProgressView.updateSetCount(completedSet: 2, totalSets: 4)
+        
+        // Updating header section
+        updateHeader(exerciseName: WorkoutScreenConstants.workoutName[0], completedExercise: 1, totalExercise: ExerciseList.exerciseName.count)
+        
+        // Update Middle Section =
+        
+        updateMiddleSection(videoView: UIView(), exerciseName: ExerciseList.exerciseName[0], nextExercise: ExerciseList.exerciseName[1])
+        
+        // Update Footer Section
+        
+        updateFooterSection(completedSet: 0, totalSet: ExerciseList.totalSets[0], totalReps: ExerciseList.repRange[0])
         // Do any additional setup after loading the view.
+    }
+    
+    // Function to update header section
+    func updateHeader(exerciseName: String,completedExercise: Int,totalExercise: Int)
+    {
+        self.exerciseNameLabel.text = exerciseName
+        self.exerciseCompletedLabel.text = "\(completedExercise)"
+        self.totalExerciseLabel.text = "\(totalExercise)"
+    }
+    
+    // Function to update middle section
+    func updateMiddleSection(videoView: UIView,exerciseName: String, nextExercise: String)
+    {
+        self.currentExerciseLabel.text = exerciseName
+        self.nextExerciseLabel.text = "Next: \(nextExercise)"
+    }
+    
+    // Function to update to footer section
+    func updateFooterSection(completedSet: Int, totalSet: Int,totalReps: String)
+    {
+        circularProgressView.updateSetCount(completedSet: completedSet, totalSets: totalSet)
+        self.totalRepsLabel.text = "\(totalReps) reps"
     }
     
     // Function to goto workouts ciew controller when stop workout tapped.
@@ -53,21 +73,24 @@ class ExerciseViewController: UIViewController
     
     @IBAction func nextSetButtonTapped(_ sender: UIButton)
     {
-        strokeVal += 0.1
-        if strokeVal <= 1.0
+        strokeVal += 1
+        var stroke = strokeVal/3
+        
+        if stroke <= 1
         {
-            print(strokeVal)
-            circularProgressView.progress = strokeVal
-            
+            print(stroke)
+            circularProgressView.progress = stroke
         }
         else
         {
             strokeVal = 0
+            circularProgressView.progress = 0
         }
+       
         
-        print("nextSetButtonTapped...")
-    }
 
+    }
+    
     @IBAction func nextExerciseButtonTapped(_ sender: UIButton)
     {
         print("nextExerciseButtonTapped...")
