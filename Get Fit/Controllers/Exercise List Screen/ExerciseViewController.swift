@@ -22,10 +22,23 @@ class ExerciseViewController: UIViewController
     @IBOutlet weak var nextExerciseButton: UIButton!
     
     @IBOutlet weak var stopWorkoutButton: UIButton!
+    var strokeVal: CGFloat = 0
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
+//        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+//
+//            DispatchQueue.main.async
+//            {
+//                self.circularProgressView.progress = self.strokeVal
+//                self.strokeVal += 0.1
+//                if self.strokeVal >= 1
+//                {
+//                    timer.invalidate()
+//                }
+//            }
+//        }
+        circularProgressView.updateSetCount(completedSet: 2, totalSets: 4)
         // Do any additional setup after loading the view.
     }
     
@@ -40,6 +53,18 @@ class ExerciseViewController: UIViewController
     
     @IBAction func nextSetButtonTapped(_ sender: UIButton)
     {
+        strokeVal += 0.1
+        if strokeVal <= 1.0
+        {
+            print(strokeVal)
+            circularProgressView.progress = strokeVal
+            
+        }
+        else
+        {
+            strokeVal = 0
+        }
+        
         print("nextSetButtonTapped...")
     }
 

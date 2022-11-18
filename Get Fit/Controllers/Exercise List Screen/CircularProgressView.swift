@@ -14,6 +14,14 @@ class CircularProgressView: UIView
     private var backgroundLayer: CAShapeLayer!
     private var foregroundLayer: CAShapeLayer!
     
+    public var progress: CGFloat = 0
+    {
+        didSet
+        {
+            didProgressUpdated()
+        }
+    }
+    
     override func draw(_ rect: CGRect)
     {
         let width = rect.width
@@ -27,15 +35,13 @@ class CircularProgressView: UIView
         
         foregroundLayer = createCircularLayer(rect: rect, strokeColor: UIColor.red.cgColor, fillColor: UIColor.clear.cgColor, lineWidth: lineWidth)
         
-        foregroundLayer.strokeEnd = 0
-        
         layer.addSublayer(backgroundLayer)
         layer.addSublayer(foregroundLayer)
-        // updateSetCount(completedSet: 4, totalSets: 5)
+    
     }
-    public func setStroke(strokeVal: CGFloat)
+    private func didProgressUpdated()
     {
-        foregroundLayer.strokeEnd = strokeVal
+        foregroundLayer?.strokeEnd = progress
     }
     public func updateSetCount(completedSet: Int,totalSets: Int)
     {
