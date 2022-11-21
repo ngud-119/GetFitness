@@ -74,7 +74,7 @@ class ExerciseViewController: UIViewController
     @IBAction func nextSetButtonTapped(_ sender: UIButton)
     {
         strokeVal += 1
-        var stroke = strokeVal/3
+        let stroke = strokeVal/3
         
         if stroke <= 1
         {

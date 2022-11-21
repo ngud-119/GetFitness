@@ -63,7 +63,9 @@ class ExerciseListViewController: UIViewController
     // Action performed when start button is pressed.
     @IBAction func startButtonTapped(_ sender: Any)
     {
-        print("Starting workout...")
+        print(viewControllerTitle)
+        
+        
     }
     
     
@@ -84,7 +86,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
         cell.configureCell(image: ExerciseList.cellImage[indexPath.row], name: ExerciseList.exerciseName[indexPath.row], totalSets: ExerciseList.totalSets[indexPath.row], repRange: ExerciseList.repRange[indexPath.row])
-        
+            
         return cell
     }
 }

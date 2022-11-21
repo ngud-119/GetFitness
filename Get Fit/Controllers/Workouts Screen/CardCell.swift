@@ -11,23 +11,17 @@ class CardCell: UITableViewCell
 {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var cardBackgroundImageView: UIImageView!
-    @IBOutlet weak var workoutLevelLabel: UILabel!
+ 
     @IBOutlet weak var workoutNameLabel: UILabel!
-    @IBOutlet weak var equipmentTypeLabel: UILabel!
-    @IBOutlet weak var workoutTypeLabel: UILabel!
+
     @IBOutlet weak var totalWorkoutsLabel: UILabel!
-    @IBOutlet weak var totalTimeLabel: UILabel!
-    
+   
     // Function for setting up the cell.
-    func configure(image: UIImage,workoutLevel: String,workoutName: String,equipmentType: String,workoutType: String,totalWorkouts:Int,totalTime: Int)
+    func configure(image: UIImage,workoutName: String,totalWorkouts:Int)
     {
         cardBackgroundImageView.image = image
-        workoutLevelLabel.text = workoutLevel
         workoutNameLabel.text = workoutName
-        equipmentTypeLabel.text = equipmentType
-        workoutTypeLabel.text = workoutType
         totalWorkoutsLabel.text = "Total workouts: \(totalWorkouts)"
-        totalTimeLabel.text = "Total time: \(totalTime) minutes"
         makeRoundedCorners()
     }
     

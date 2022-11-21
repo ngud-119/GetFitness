@@ -39,7 +39,7 @@ extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "cardCell", for: indexPath) as! CardCell
         
         // Populating table view cells.
-        cell.configure(image: WorkoutScreenConstants.cardImages[indexPath.row], workoutLevel: WorkoutScreenConstants.workoutLevel[indexPath.row], workoutName: WorkoutScreenConstants.workoutName[indexPath.row], equipmentType: WorkoutScreenConstants.equiptmentType[indexPath.row], workoutType: WorkoutScreenConstants.workoutType[indexPath.row], totalWorkouts: WorkoutScreenConstants.totalWorkouts[indexPath.row], totalTime: WorkoutScreenConstants.totalTime[indexPath.row])
+        cell.configure(image: WorkoutScreenConstants.cardImages[indexPath.row], workoutName: WorkoutScreenConstants.workoutName[indexPath.row], totalWorkouts: WorkoutScreenConstants.totalWorkouts[indexPath.row])
         
         return cell
     }
@@ -66,6 +66,7 @@ extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
             totalWorkouts:WorkoutScreenConstants.totalWorkouts[indexPath.row],
             totalTime: WorkoutScreenConstants.totalTime[indexPath.row]
         )
+        
         // To navigate from WorkoutsVC to ExerciseListVC
         self.navigationController?.pushViewController( vc!, animated: true)
     }
