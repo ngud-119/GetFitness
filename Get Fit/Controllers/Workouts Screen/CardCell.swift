@@ -26,16 +26,12 @@ class CardCell: UITableViewCell
     }
     
     // Passes data from current tableview cell to exercise list view controller
-    public func passDataToExerciseListVC(vc: ExerciseListViewController?, VCTitle: String,image: UIImage,workoutLevel: String,workoutName:String, equipmentType: String,workoutType: String,totalWorkouts:Int,totalTime: Int)
+    public func passDataToExerciseListVC(vc: ExerciseListViewController?, VCTitle: String,image: UIImage,workoutName:String,totalWorkouts:Int)
     {
         vc?.viewControllerTitle = VCTitle
         vc?.image = image
-        vc?.workoutLevel = workoutLevel
         vc?.workoutName = workoutName
-        vc?.equipmentType = equipmentType
-        vc?.workoutType = workoutType
         vc?.totalWorkouts = totalWorkouts
-        vc?.totalTime = totalTime
     }
     
     private func makeRoundedCorners()
