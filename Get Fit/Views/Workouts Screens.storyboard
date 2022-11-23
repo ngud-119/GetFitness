@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gDr-rt-i4o" userLabel="Card TableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gDr-rt-i4o" userLabel="Card TableView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="721"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -31,17 +30,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izg-QU-joe" userLabel="CardView">
-                                                    <rect key="frame" x="30" y="16" width="354" height="218"/>
+                                                    <rect key="frame" x="20" y="16" width="374" height="218"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sgY-bq-ZYi" userLabel="CardBackgroundImage">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="218"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="218"/>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999403953552" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="93X-EX-lZ3" userLabel="Transparent Layer">
-                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="218"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="218"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78f-fU-APZ" userLabel="WorkoutNameLabel">
-                                                            <rect key="frame" x="15" y="20" width="324" height="21.5"/>
+                                                            <rect key="frame" x="15" y="20" width="344" height="21.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -79,9 +78,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="izg-QU-joe" firstAttribute="leading" secondItem="m4g-Zv-vVu" secondAttribute="leadingMargin" constant="10" id="MMN-rB-vxS"/>
+                                                <constraint firstItem="izg-QU-joe" firstAttribute="leading" secondItem="m4g-Zv-vVu" secondAttribute="leadingMargin" id="MMN-rB-vxS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="izg-QU-joe" secondAttribute="bottom" constant="5" id="Ml8-1i-qIi"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="izg-QU-joe" secondAttribute="trailing" constant="10" id="tOD-Ip-EJb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="izg-QU-joe" secondAttribute="trailing" id="tOD-Ip-EJb"/>
                                                 <constraint firstItem="izg-QU-joe" firstAttribute="top" secondItem="m4g-Zv-vVu" secondAttribute="topMargin" constant="5" id="whx-7T-rMU"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -102,6 +101,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tkn-8t-DDS"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gDr-rt-i4o" firstAttribute="top" secondItem="Tkn-8t-DDS" secondAttribute="top" id="9oC-lD-IZJ"/>
+                            <constraint firstItem="gDr-rt-i4o" firstAttribute="leading" secondItem="Tkn-8t-DDS" secondAttribute="leading" id="Bnn-HB-z1S"/>
+                            <constraint firstItem="gDr-rt-i4o" firstAttribute="trailing" secondItem="Tkn-8t-DDS" secondAttribute="trailing" id="DIj-zY-COm"/>
+                            <constraint firstItem="gDr-rt-i4o" firstAttribute="bottom" secondItem="Tkn-8t-DDS" secondAttribute="bottom" id="UH9-OW-TxZ"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Workouts" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="lqe-Kf-lN6"/>
