@@ -65,12 +65,8 @@ extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
             vc: vc,
             VCTitle: WorkoutScreenConstants.workoutName[indexPath.row],
             image: WorkoutScreenConstants.cardImages[indexPath.row],
-            workoutLevel:WorkoutScreenConstants.workoutLevel[indexPath.row],
             workoutName: WorkoutScreenConstants.workoutName[indexPath.row],
-            equipmentType:WorkoutScreenConstants.equiptmentType[indexPath.row],
-            workoutType:WorkoutScreenConstants.workoutType[indexPath.row],
-            totalWorkouts:WorkoutScreenConstants.totalWorkouts[indexPath.row],
-            totalTime: WorkoutScreenConstants.totalTime[indexPath.row]
+            totalWorkouts:WorkoutScreenConstants.totalWorkouts[indexPath.row]
         )
         
         // To navigate from WorkoutsVC to ExerciseListVC
