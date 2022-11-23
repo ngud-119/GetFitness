@@ -13,12 +13,10 @@ class ExerciseListViewController: UIViewController
     @IBOutlet weak var workoutsListTableView: UITableView!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var transparentImage: UIImageView!
-    @IBOutlet weak var workoutLevelText: UILabel!
+   
     @IBOutlet weak var workoutNameText: UILabel!
-    @IBOutlet weak var equipmentTypeText: UILabel!
-    @IBOutlet weak var workoutTypeText: UILabel!
     @IBOutlet weak var totalWorkoutsText: UILabel!
-    @IBOutlet weak var totalTimeText: UILabel!
+
     @IBOutlet weak var startButton: UIButton!
     var viewControllerTitle = ""
     var image = UIImage()
@@ -42,12 +40,8 @@ class ExerciseListViewController: UIViewController
     {
         
         cardImage?.image = image
-        workoutLevelText?.text = workoutLevel
         workoutNameText?.text = workoutName
-        equipmentTypeText?.text = equipmentType
-        workoutTypeText?.text = workoutType
         totalWorkoutsText?.text = "Total workouts: \(totalWorkouts)"
-        totalTimeText?.text = "Total time: \(totalTime) minutes"
         makeRoundedCorners()
     }
     
