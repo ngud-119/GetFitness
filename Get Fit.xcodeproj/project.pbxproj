@@ -32,7 +32,6 @@
 		5AAB51D928F2E58700913048 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB51D828F2E58700913048 /* ExerciseViewController.swift */; };
 		5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */; };
 		5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */; };
-		5AB915542910133A0022FE65 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB915532910133A0022FE65 /* UserData.swift */; };
 		5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */; };
 		5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8117C28E9DF8F00E5E7E0 /* CardCell.swift */; };
 		5AC8518F28ED413300B17C47 /* WorkoutScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8518E28ED413300B17C47 /* WorkoutScreenConstants.swift */; };
@@ -75,7 +74,6 @@
 		5AAB51D828F2E58700913048 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
 		5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListCell.swift; sourceTree = "<group>"; };
-		5AB915532910133A0022FE65 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		5AC8117A28E9D24A00E5E7E0 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		5AC8117C28E9DF8F00E5E7E0 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		5AC8518E28ED413300B17C47 /* WorkoutScreenConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutScreenConstants.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				5A87AE7928F89EB90079E68E /* FoodCardModel.swift */,
-				5AB915532910133A0022FE65 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -413,7 +410,6 @@
 			files = (
 				5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */,
 				5AC8518F28ED413300B17C47 /* WorkoutScreenConstants.swift in Sources */,
-				5AB915542910133A0022FE65 /* UserData.swift in Sources */,
 				5A87AE7628F831C90079E68E /* FoodCardCollectionViewCell.swift in Sources */,
 				5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */,
 				5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */,

@@ -11,7 +11,6 @@ class WorkoutsViewController: UIViewController
 {
     
     @IBOutlet weak var workoutsCardTableView: UITableView!
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -44,12 +43,6 @@ extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
-    // Height of cell
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 220
-    }
-    
     // To navigate to exercise list vc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
@@ -58,6 +51,7 @@ extension WorkoutsViewController: UITableViewDelegate,UITableViewDataSource
         
         // Innstance of ExerciseListVC
         let vc = storyboard?.instantiateViewController(withIdentifier: "ExerciseListViewController") as? ExerciseListViewController
+        
         
         // Populating card view of exercise view controller with selected table view cell.
         cell.passDataToExerciseListVC(

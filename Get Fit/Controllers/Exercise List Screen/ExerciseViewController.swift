@@ -36,7 +36,7 @@ class ExerciseViewController: UIViewController
         
         // Update Footer Section
         
-        updateFooterSection(completedSet: 0, totalSet: ExerciseList.totalSets[0], totalReps: ExerciseList.repRange[0])
+        // updateFooterSection(completedSet: 0, totalSet: ExerciseList.totalSets[0], totalReps: ExerciseList.repRange[0])
         // Do any additional setup after loading the view.
     }
     

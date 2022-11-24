@@ -11,15 +11,15 @@ class ExerciseListCell: UITableViewCell
 {
     @IBOutlet weak var exerciseImage: UIImageView!
     @IBOutlet weak var exerciseName: UILabel!
-    @IBOutlet weak var numbersOfSet: UILabel!
-    @IBOutlet weak var numberOfReps: UILabel!
+    @IBOutlet weak var targetMuscleName: UILabel!
+    @IBOutlet weak var equipmentName: UILabel!
     
-    public func configureCell(image:UIImage,name: String,totalSets: Int,repRange: String)
+    public func configureCell(image:UIImage,name: String,targetMuscle: String,equipment: String)
     {
         exerciseImage.image = image
         exerciseName.text = name
-        numbersOfSet.text = "\(totalSets) Sets"
-        numberOfReps.text = repRange + " repetations each"
+        targetMuscleName.text = "Target Muscle: \(targetMuscle)"
+        equipmentName.text = "Equipment: \(equipment)"
         makeRoundedCorners()
     }
     

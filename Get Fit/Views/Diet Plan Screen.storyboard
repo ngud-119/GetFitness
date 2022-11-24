@@ -19,20 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="245" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-u8-uaB">
-                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="245" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cAO-u8-uaB">
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="tableViewCell" id="PcF-5q-DlK" customClass="FoodItemTableViewCell" customModule="Get_Fit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="390" height="245"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="245"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PcF-5q-DlK" id="GPo-ku-yrZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="245"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="245"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4LX-vD-A7p">
-                                                    <rect key="frame" x="15" y="15" width="360" height="215"/>
+                                                    <rect key="frame" x="15" y="15" width="384" height="215"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LIH-DQ-X2y">
                                                         <size key="itemSize" width="148" height="190"/>
@@ -124,6 +123,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cAO-u8-uaB" secondAttribute="trailing" id="4ey-R2-4x0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cAO-u8-uaB" secondAttribute="bottom" id="9Ex-dE-j46"/>
+                            <constraint firstItem="cAO-u8-uaB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="AVi-s0-v3j"/>
+                            <constraint firstItem="cAO-u8-uaB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SuH-BV-n9o"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Diet Plan" largeTitleDisplayMode="always" id="qbj-kj-34N"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -133,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967.69230769230762" y="-9.24170616113744"/>
+            <point key="canvasLocation" x="966.66666666666674" y="-9.375"/>
         </scene>
         <!--Nutrients View Controller-->
         <scene sceneID="ylo-1Y-UWF">

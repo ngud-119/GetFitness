@@ -13,30 +13,24 @@ class ExerciseListViewController: UIViewController
     @IBOutlet weak var workoutsListTableView: UITableView!
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var transparentImage: UIImageView!
-   
     @IBOutlet weak var workoutNameText: UILabel!
     @IBOutlet weak var totalWorkoutsText: UILabel!
 
     @IBOutlet weak var startButton: UIButton!
     var viewControllerTitle = ""
     var image = UIImage()
-    var workoutLevel: String = ""
     var workoutName: String = ""
-    var equipmentType: String = ""
-    var workoutType:String = ""
     var totalWorkouts: Int = 0
-    var totalTime: Int = 0
-    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         title = viewControllerTitle
-        configureCard(image: self.image, workoutLevel: self.workoutLevel, workoutName: self.workoutName, equipmentType: self.equipmentType, workoutType: self.workoutType, totalWorkouts: self.totalWorkouts, totalTime: self.totalTime)
+        configureCard(image: self.image,workoutName: self.workoutName, totalWorkouts: self.totalWorkouts)
     }
     
     // Method to configure the card view.
-    public func configureCard(image:UIImage,workoutLevel: String,workoutName: String,equipmentType: String,workoutType:String,totalWorkouts: Int,totalTime: Int)
+    public func configureCard(image:UIImage,workoutName: String,totalWorkouts: Int)
     {
         
         cardImage?.image = image
@@ -79,7 +73,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
-        cell.configureCell(image: ExerciseList.cellImage[indexPath.row], name: ExerciseList.exerciseName[indexPath.row], totalSets: ExerciseList.totalSets[indexPath.row], repRange: ExerciseList.repRange[indexPath.row])
+        cell.configureCell(image: ExerciseList.cellImage[indexPath.row], name: ExerciseList.exerciseName[indexPath.row], targetMuscle: ExerciseList.totalSets[indexPath.row], equipment: ExerciseList.repRange[indexPath.row])
             
         return cell
     }
