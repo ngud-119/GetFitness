@@ -26,7 +26,9 @@ class ExerciseListViewController: UIViewController
     {
         super.viewDidLoad()
         title = viewControllerTitle
+        ExerciseListData.getExerciseWithBodyPart(bodyPart: "back")
         configureCard(image: self.image,workoutName: self.workoutName, totalWorkouts: self.totalWorkouts)
+        
     }
     
     // Method to configure the card view.
