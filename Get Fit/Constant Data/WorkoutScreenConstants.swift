@@ -10,6 +10,8 @@ import UIKit
 // Struct tot store constants string used is workout screen
 struct WorkoutScreenConstants
 {
+    // Array for storing API endpoints body name with respective card image
+    public static let bodyPart: [String] = ["cardio","shoulders","upper%20arms","lower%20arms","chest","back","upper%20legs","lower%20legs"]
     // Array for storing the card images.
     public static let cardImages: [UIImage] = [UIImage(named: "Cardio")!,UIImage(named: "Shoulder")!,UIImage(named: "Upper arms.jpeg")!,UIImage(named: "Lower arms.jpg")!,UIImage(named: "Chest.jpg")!,UIImage(named: "Back.jpeg")!,UIImage(named: "Leg.jpeg")!,UIImage(named: "Lower legs.jpg")!]
     
