@@ -10,15 +10,15 @@ import UIKit
 
 class ExerciseListData
 {
-    static func getExerciseWithBodyPart(bodyPart: String)
+    static func getExerciseWithBodyPart(bodyPart: String, completion: @escaping (Data?) ->())
     {
+        // var exerciseList = [ExerciseDescription]()
         // URL
         let url = URL(string: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/\(bodyPart)")
         
-        guard url != nil else
+        if url != nil
         {
             print("Error creating url object!")
-            return
         }
         
         // URL Request
@@ -31,7 +31,7 @@ class ExerciseListData
         ]
         
         request.allHTTPHeaderFields = headers
-
+        
         // Specify the body
         
         // Set the request type
@@ -44,22 +44,15 @@ class ExerciseListData
         let dataTask = session.dataTask(with: request) { data, response, error in
             
             // Check for errors
-            if error == nil && data != nil
+            if error != nil
             {
-                let decoder = JSONDecoder()
-                // Try to parse JSON data
-                if let data = data
-                {
-                    do
-                    {
-                        let exerciseList = try decoder.decode([ExerciseDescription].self, from: data)
-                        print(exerciseList)
-                    }
-                    catch
-                    {
-                        print(error.localizedDescription)
-                    }
-                }
+                print(error.debugDescription)
+            }
+            
+            // Passing the data from closure to the calling method
+            else
+            {
+                completion(data)
             }
         }
         
