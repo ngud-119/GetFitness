@@ -37,6 +37,7 @@
 		5AC8518F28ED413300B17C47 /* WorkoutScreenConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC8518E28ED413300B17C47 /* WorkoutScreenConstants.swift */; };
 		5AD2FDEF29328F06000A5740 /* ExerciseListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2FDEE29328F06000A5740 /* ExerciseListData.swift */; };
 		5AD2FDF129333B5A000A5740 /* ExerciseDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */; };
+		5AD79D8A2935E20F0084F661 /* ExerciseListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */; };
 		5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF49C28872E8B00EB653A /* AppDelegate.swift */; };
 		5ADCF49F28872E8B00EB653A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF49E28872E8B00EB653A /* SceneDelegate.swift */; };
 		5ADCF4A428872E8B00EB653A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADCF4A228872E8B00EB653A /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		5AC8518E28ED413300B17C47 /* WorkoutScreenConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutScreenConstants.swift; sourceTree = "<group>"; };
 		5AD2FDEE29328F06000A5740 /* ExerciseListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListData.swift; sourceTree = "<group>"; };
 		5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDescription.swift; sourceTree = "<group>"; };
+		5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListDataModel.swift; sourceTree = "<group>"; };
 		5ADCF49928872E8B00EB653A /* Get Fit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Get Fit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADCF49C28872E8B00EB653A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADCF49E28872E8B00EB653A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			children = (
 				5A87AE7928F89EB90079E68E /* FoodCardModel.swift */,
 				5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */,
+				5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				5A87AE7A28F89EB90079E68E /* FoodCardModel.swift in Sources */,
 				5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */,
 				5A4AB1942900916400E460E5 /* FoodItemListCollectionViewCell.swift in Sources */,
+				5AD79D8A2935E20F0084F661 /* ExerciseListDataModel.swift in Sources */,
 				5ADCF49F28872E8B00EB653A /* SceneDelegate.swift in Sources */,
 				5A482AE52889953500030497 /* SignUpViewController.swift in Sources */,
 				5A87AE7428F7FCFD0079E68E /* FoodItemTableViewCell.swift in Sources */,
