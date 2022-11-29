@@ -10,8 +10,8 @@ import Foundation
 
 struct ExerciseListDataModel
 {
-     var exerciseGIF: [String]
-     var exerciseName: [String]
+    var exerciseGIF: [String]
+    var exerciseName: [String]
     var targetMuscle: [String]
-     var exerciseEquipment: [String]
+    var exerciseEquipment: [String]
 }
