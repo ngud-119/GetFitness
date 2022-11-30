@@ -10,15 +10,16 @@ import UIKit
 
 class ExerciseListData
 {
-    static func getExerciseWithBodyPart(bodyPart: String, completion: @escaping (Data?) ->())
+    static func getExercises(with bodyPart: String, completion: @escaping (Data?) ->())
     {
         // var exerciseList = [ExerciseDescription]()
         // URL
         let url = URL(string: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/\(bodyPart)")
         
-        if url != nil
+        guard url != nil else
         {
             print("Error creating url object!")
+            return
         }
         
         // URL Request
