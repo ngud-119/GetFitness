@@ -23,6 +23,7 @@ class ExerciseListViewController: UIViewController
     var totalWorkouts: Int = 0
     var bodyPart = ""
     
+    // For storing exercises
     var exerciseListData:ExerciseListDataModel = ExerciseListDataModel(exerciseGIF: [], exerciseName: [],targetMuscle: [],exerciseEquipment: [])
     
     override func viewDidLoad()
@@ -31,8 +32,8 @@ class ExerciseListViewController: UIViewController
         title = viewControllerTitle
         configureCard(image: self.image,workoutName: self.workoutName, totalWorkouts: self.totalWorkouts)
         
-        ExerciseListData.getExerciseWithBodyPart(bodyPart: bodyPart) { data in // Data retrived from closure
-            
+        // Get exercises with bodypart
+        ExerciseListData.getExercises(with: bodyPart) { data in // Data retrived from closure
             
             let decoder = JSONDecoder()
             // Try to parse JSON data
@@ -40,10 +41,12 @@ class ExerciseListViewController: UIViewController
             {
                 do
                 {
+                   // Decoded JSON Data
                    let exerciseList = try decoder.decode([ExerciseDescription].self, from: data)
                    
                     for exercise in exerciseList
                     {
+                        // Appending required data from JSON File
                         self.exerciseListData.exerciseGIF.append(exercise.gifUrl)
                         self.exerciseListData.exerciseName.append(exercise.name)
                         self.exerciseListData.targetMuscle.append(exercise.target)
@@ -52,6 +55,7 @@ class ExerciseListViewController: UIViewController
                 
                     DispatchQueue.main.async
                     {
+                        // Reloading tableview after getting data
                         self.workoutsListTableView.reloadData()
                     }
                     
@@ -111,9 +115,11 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
-        cell.configureCell(image: ExerciseList.cellImage[0], name: exerciseListData.exerciseName[indexPath.row], targetMuscle: exerciseListData.targetMuscle[indexPath.row], equipment: exerciseListData.exerciseEquipment[indexPath.row])
+        cell.configureCell(image: ExerciseList.cellImage[0], name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
         
         return cell
     }
+    
+    
 }
 
