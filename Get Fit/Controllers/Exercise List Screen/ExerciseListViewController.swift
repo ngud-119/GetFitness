@@ -52,7 +52,8 @@ class ExerciseListViewController: UIViewController
                         self.exerciseListData.targetMuscle.append(exercise.target)
                         self.exerciseListData.exerciseEquipment.append(exercise.equipment)
                     }
-                
+                    
+                    
                     DispatchQueue.main.async
                     {
                         // Reloading tableview after getting data
@@ -115,7 +116,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
-        cell.configureCell(image: ExerciseList.cellImage[0], name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
+        cell.configureCell(gifURL: exerciseListData.exerciseGIF[indexPath.row], name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
         
         return cell
     }

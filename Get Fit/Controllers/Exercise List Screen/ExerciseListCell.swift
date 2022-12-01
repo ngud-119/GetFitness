@@ -14,9 +14,10 @@ class ExerciseListCell: UITableViewCell
     @IBOutlet weak var targetMuscleName: UILabel!
     @IBOutlet weak var equipmentName: UILabel!
     
-    public func configureCell(image:UIImage,name: String,targetMuscle: String,equipment: String)
+    public func configureCell(gifURL: String,name: String,targetMuscle: String,equipment: String)
     {
-        exerciseImage.image = image
+//        exerciseImage.image = 
+        // exerciseImage.image = UIImage.gifImageWithName("sample")
         exerciseName.text = name
         targetMuscleName.text = "Target Muscle: \(targetMuscle)"
         equipmentName.text = "Equipment: \(equipment)"
