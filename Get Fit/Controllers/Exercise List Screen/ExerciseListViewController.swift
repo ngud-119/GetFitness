@@ -59,7 +59,8 @@ class ExerciseListViewController: UIViewController
                         // Reloading tableview after getting data
                         self.workoutsListTableView.reloadData()
                     }
-                    
+                    print(exerciseList.count)
+                    /// self.totalWorkouts = exerciseList.count
                 }
                 catch
                 {
@@ -116,7 +117,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
-        cell.configureCell(gifURL: exerciseListData.exerciseGIF[indexPath.row], name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
+        cell.configureCell(name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
         
         return cell
     }
