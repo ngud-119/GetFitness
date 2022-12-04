@@ -122,6 +122,23 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         return cell
     }
     
+    /// Send data to next vc when cell of tableview is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
+        
+        // Innstance of ExerciseListVC
+        let vc = storyboard?.instantiateViewController(withIdentifier: "exerciseViewController") as? ExerciseViewController
+        
+        
+        // Populating card view of exercise view controller with selected table view cell.
+        cell.passData(vc: vc, name: exerciseListData.exerciseName[indexPath.row])
+        
+        // To navigate from WorkoutsVC to ExerciseListVC
+        self.navigationController?.pushViewController( vc!, animated: true)
+    }
+    
+    
     
 }
 

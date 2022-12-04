@@ -21,19 +21,19 @@ class ExerciseViewController: UIViewController
     @IBOutlet weak var nextSetButton: UIButton!
     @IBOutlet weak var nextExerciseButton: UIButton!
     
+    var name: String = ""
     @IBOutlet weak var stopWorkoutButton: UIButton!
     var strokeVal: CGFloat = 0
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        print(name)
+        
         // Updating header section
-        updateHeader(exerciseName: WorkoutScreenConstants.workoutName[0], completedExercise: 1, totalExercise: ExerciseList.exerciseName.count)
-        
-        // Update Middle Section =
-        
-        updateMiddleSection(videoView: UIView(), exerciseName: ExerciseList.exerciseName[0], nextExercise: ExerciseList.exerciseName[1])
-        
+    
+        // Update Middle Section
+    
         // Update Footer Section
         
         // updateFooterSection(completedSet: 0, totalSet: ExerciseList.totalSets[0], totalReps: ExerciseList.repRange[0])

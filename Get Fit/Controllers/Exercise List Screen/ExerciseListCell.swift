@@ -22,6 +22,11 @@ class ExerciseListCell: UITableViewCell
         /// makeRoundedCorners()
     }
     
+    public func passData(vc: ExerciseViewController? ,name: String)
+    {
+        vc?.name = name
+    }
+    
 //    private func makeRoundedCorners()
 //    {
 //        exerciseImage.layer.cornerRadius = 5.0
