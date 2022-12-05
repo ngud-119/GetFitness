@@ -10,6 +10,7 @@ import UIKit
 
 class ExerciseListData
 {
+    /// Some error occured while fetching data.
     static func getExercises(with bodyPart: String, completion: @escaping (Data?) ->())
     {
         // var exerciseList = [ExerciseDescription]()
