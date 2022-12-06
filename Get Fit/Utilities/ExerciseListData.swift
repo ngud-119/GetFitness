@@ -11,6 +11,7 @@ import UIKit
 class ExerciseListData
 {
     /// Some error occured while fetching data.
+    ///  Expired API Call limits
     static func getExercises(with bodyPart: String, completion: @escaping (Data?) ->())
     {
         // var exerciseList = [ExerciseDescription]()
