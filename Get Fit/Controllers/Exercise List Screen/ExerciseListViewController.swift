@@ -109,7 +109,8 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         
-        return exerciseListData.exerciseName.count
+//        return exerciseListData.exerciseName.count
+        return 10
     }
     
     // Populates data in table view cell.
@@ -117,8 +118,9 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
-        cell.configureCell(name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
+//        cell.configureCell(name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
         
+        cell.configureCell(name: "Bench press", targetMuscle: "pac", equipment: "Barbell")
         return cell
     }
     
@@ -132,7 +134,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         
         
         // Populating card view of exercise view controller with selected table view cell.
-        cell.passData(vc: vc, name: exerciseListData.exerciseName[indexPath.row])
+        cell.passData(vc: vc, name: WorkoutScreenConstants.bodyPart[indexPath.row])
         
         // To navigate from WorkoutsVC to ExerciseListVC
         self.navigationController?.pushViewController( vc!, animated: true)

@@ -29,7 +29,7 @@ class ExerciseViewController: UIViewController
         super.viewDidLoad()
         
         print(name)
-        
+        exerciseNameLabel.text = name
         // Updating header section
     
         // Update Middle Section
