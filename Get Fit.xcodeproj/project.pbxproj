@@ -29,6 +29,8 @@
 		5A87AE7628F831C90079E68E /* FoodCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7528F831C90079E68E /* FoodCardCollectionViewCell.swift */; };
 		5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7728F83D500079E68E /* DietPlan.swift */; };
 		5A87AE7A28F89EB90079E68E /* FoodCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7928F89EB90079E68E /* FoodCardModel.swift */; };
+		5A8C64A3294220C90014B6EB /* iOSDevCenters+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C64A2294220C90014B6EB /* iOSDevCenters+GIF.swift */; };
+		5A8C64A5294224420014B6EB /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C64A4294224420014B6EB /* GifViewController.swift */; };
 		5AAB51D928F2E58700913048 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB51D828F2E58700913048 /* ExerciseViewController.swift */; };
 		5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */; };
 		5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */; };
@@ -74,6 +76,8 @@
 		5A87AE7528F831C90079E68E /* FoodCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A87AE7728F83D500079E68E /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
 		5A87AE7928F89EB90079E68E /* FoodCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardModel.swift; sourceTree = "<group>"; };
+		5A8C64A2294220C90014B6EB /* iOSDevCenters+GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "iOSDevCenters+GIF.swift"; sourceTree = "<group>"; };
+		5A8C64A4294224420014B6EB /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
 		5AAB51D828F2E58700913048 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
 		5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListCell.swift; sourceTree = "<group>"; };
@@ -173,6 +177,8 @@
 				5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */,
 				5AAB51D828F2E58700913048 /* ExerciseViewController.swift */,
 				5A2D2C8128F48F550070E168 /* CircularProgressView.swift */,
+				5A8C64A2294220C90014B6EB /* iOSDevCenters+GIF.swift */,
+				5A8C64A4294224420014B6EB /* GifViewController.swift */,
 			);
 			path = "Exercise List Screen";
 			sourceTree = "<group>";
@@ -436,8 +442,10 @@
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
 				5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
+				5A8C64A5294224420014B6EB /* GifViewController.swift in Sources */,
 				5AD2FDEF29328F06000A5740 /* ExerciseListData.swift in Sources */,
 				5A52A4E829200BD700ED4821 /* MethodsOfProfileVC.swift in Sources */,
+				5A8C64A3294220C90014B6EB /* iOSDevCenters+GIF.swift in Sources */,
 				5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */,
 				5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */,
 				5AD2FDF129333B5A000A5740 /* ExerciseDescription.swift in Sources */,

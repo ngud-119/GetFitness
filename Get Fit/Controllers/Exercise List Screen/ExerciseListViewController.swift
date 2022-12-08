@@ -130,11 +130,11 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
         // Innstance of ExerciseListVC
-        let vc = storyboard?.instantiateViewController(withIdentifier: "exerciseViewController") as? ExerciseViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "gifViewController") as? GifViewController
         
         
         // Populating card view of exercise view controller with selected table view cell.
-        cell.passData(vc: vc, name: WorkoutScreenConstants.bodyPart[indexPath.row])
+//        cell.passData(vc: vc, name: WorkoutScreenConstants.bodyPart[indexPath.row])
         
         // To navigate from WorkoutsVC to ExerciseListVC
         self.navigationController?.pushViewController( vc!, animated: true)

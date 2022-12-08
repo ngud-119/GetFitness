@@ -13,7 +13,7 @@ class ExerciseViewController: UIViewController
     @IBOutlet weak var exerciseNameLabel: UILabel!
     @IBOutlet weak var exerciseCompletedLabel: UILabel!
     @IBOutlet weak var totalExerciseLabel: UILabel!
-    @IBOutlet weak var tutorialVideoView: UIView!
+    @IBOutlet weak var tutorialVideoView: UIImageView!
     @IBOutlet weak var currentExerciseLabel: UILabel!
     @IBOutlet weak var nextExerciseLabel: UILabel!
     @IBOutlet weak var circularProgressView: CircularProgressView!
@@ -30,6 +30,7 @@ class ExerciseViewController: UIViewController
         
         print(name)
         exerciseNameLabel.text = name
+        /// tutorialVideoView.image = imageURL
         // Updating header section
     
         // Update Middle Section

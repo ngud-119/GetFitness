@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -373,7 +374,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7M-oP-ETP" userLabel="TutorialVideo">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7M-oP-ETP" userLabel="TutorialVideo" customClass="UIImageView" customModule="Get_Fit" customModuleProvider="target">
                                 <rect key="frame" x="15" y="188" width="384" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -557,12 +558,43 @@
                         <outlet property="stopWorkoutButton" destination="dmJ-Qz-lcN" id="xrF-Z7-3bG"/>
                         <outlet property="totalExerciseLabel" destination="4IB-ox-fpo" id="1Ng-KQ-JcL"/>
                         <outlet property="totalRepsLabel" destination="BLY-aq-ueY" id="BAZ-SI-a2a"/>
-                        <outlet property="tutorialVideoView" destination="M7M-oP-ETP" id="77W-xi-Art"/>
+                        <outlet property="tutorialVideoView" destination="M7M-oP-ETP" id="L5Q-uy-VzU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnM-qU-Gb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3179.7101449275365" y="687.72321428571422"/>
+        </scene>
+        <!--Gif View Controller-->
+        <scene sceneID="L1g-aZ-k87">
+            <objects>
+                <viewController storyboardIdentifier="gifViewController" id="0gf-7e-0wx" customClass="GifViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cn0-IE-1Dw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhG-iv-kmf">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7h0-aj-a95"/>
+                                    <constraint firstAttribute="height" constant="240" id="XeF-r0-4bi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="14l-ck-oi5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dhG-iv-kmf" firstAttribute="centerY" secondItem="Cn0-IE-1Dw" secondAttribute="centerY" id="ZbT-Vc-fyF"/>
+                            <constraint firstItem="dhG-iv-kmf" firstAttribute="centerX" secondItem="Cn0-IE-1Dw" secondAttribute="centerX" id="vDq-WM-SgU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gif" destination="dhG-iv-kmf" id="xjO-IR-rRj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jrf-Jk-HFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3965" y="697"/>
         </scene>
         <!--Workouts-->
         <scene sceneID="exI-yQ-hAu">
@@ -598,5 +630,8 @@
         <image name="Dumbbell" width="30" height="30"/>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
