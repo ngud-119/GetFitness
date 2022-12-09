@@ -6,20 +6,30 @@
 //
 
 import UIKit
-import Kingfisher // Library for getting image from web.
+import Kingfisher // Library for getting gif from web.
 
 class GifViewController: UIViewController
 {
+    @IBOutlet weak var exerciseName: UILabel!
+    @IBOutlet weak var targetMuscle: UILabel!
+    @IBOutlet weak var equipment: UILabel!
     @IBOutlet weak var gif: UIImageView!
     
+    var name = ""
+    var muscle = ""
+    var equipmentType = ""
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        let gifURL : String = "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5eeea355389655.59822ff824b72.gif"
+        gif.roundCorners(corners:UIRectCorner.allCorners, radius: 5)
+        exerciseName.text = name
+        targetMuscle.text = "Target Muscle: \(muscle)"
+        equipment.text = "Equipment: \(equipmentType)"
+        let gifURL : String = "https://gymvisual.com/img/p/1/9/7/9/9/19799.gif"
         
         gif.kf.setImage(with: URL(string: gifURL)!)
         
     }
+    
 }
 
