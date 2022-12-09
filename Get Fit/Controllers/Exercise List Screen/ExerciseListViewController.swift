@@ -110,7 +110,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         
 //        return exerciseListData.exerciseName.count
-        return 10
+        return ExerciseList.muscle.count
     }
     
     // Populates data in table view cell.
@@ -120,7 +120,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         
 //        cell.configureCell(name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
         
-        cell.configureCell(name: "Bench press", targetMuscle: "pac", equipment: "Barbell")
+        cell.configureCell(name: ExerciseList.exerciseName[indexPath.row], targetMuscle: ExerciseList.muscle[indexPath.row] , equipment: "Barbell")
         return cell
     }
     
@@ -134,7 +134,7 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         
         
         // Populating card view of exercise view controller with selected table view cell.
-//        cell.passData(vc: vc, name: WorkoutScreenConstants.bodyPart[indexPath.row])
+        cell.passData(vc: vc, name: ExerciseList.exerciseName[indexPath.row], muscle: ExerciseList.muscle[indexPath.row],equipment: ExerciseList.equipment[indexPath.row])
         
         // To navigate from WorkoutsVC to ExerciseListVC
         self.navigationController?.pushViewController( vc!, animated: true)
