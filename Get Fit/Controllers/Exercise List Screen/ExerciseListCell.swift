@@ -22,9 +22,11 @@ class ExerciseListCell: UITableViewCell
         /// makeRoundedCorners()
     }
     
-    public func passData(vc: ExerciseViewController? ,name: String)
+    public func passData(vc: GifViewController? ,name: String, muscle: String, equipment: String)
     {
         vc?.name = name
+        vc?.muscle = muscle
+        vc?.equipmentType = equipment
     }
     
 //    private func makeRoundedCorners()
