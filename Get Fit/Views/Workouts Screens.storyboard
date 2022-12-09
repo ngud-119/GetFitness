@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -169,7 +168,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="startButtonTapped:" destination="lCW-tg-82s" eventType="touchUpInside" id="NDN-EB-hGN"/>
-                                            <segue destination="4YS-1u-sDe" kind="presentation" identifier="toExercise" animates="NO" modalPresentationStyle="fullScreen" id="UAj-Py-Rm9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -563,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnM-qU-Gb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3179.7101449275365" y="687.72321428571422"/>
+            <point key="canvasLocation" x="3949" y="688"/>
         </scene>
         <!--Gif View Controller-->
         <scene sceneID="L1g-aZ-k87">
@@ -573,28 +571,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sKh-pQ-p9c">
+                                <rect key="frame" x="10" y="210.5" width="394" height="67.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIb-uH-Ixe" userLabel="Exercise Name">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74f-tX-5gs" userLabel="Target muscle">
+                                        <rect key="frame" x="0.0" y="43.5" width="394" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhG-iv-kmf">
-                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="7h0-aj-a95"/>
-                                    <constraint firstAttribute="height" constant="240" id="XeF-r0-4bi"/>
+                                    <constraint firstAttribute="height" constant="300" id="Sap-EV-EXL"/>
+                                    <constraint firstAttribute="width" constant="300" id="g0d-1Q-Tl3"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teW-Ah-JJM">
+                                <rect key="frame" x="10" y="618" width="394" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="14l-ck-oi5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dhG-iv-kmf" firstAttribute="centerY" secondItem="Cn0-IE-1Dw" secondAttribute="centerY" id="ZbT-Vc-fyF"/>
-                            <constraint firstItem="dhG-iv-kmf" firstAttribute="centerX" secondItem="Cn0-IE-1Dw" secondAttribute="centerX" id="vDq-WM-SgU"/>
+                            <constraint firstItem="sKh-pQ-p9c" firstAttribute="leading" secondItem="14l-ck-oi5" secondAttribute="leading" constant="10" id="ClL-38-RzA"/>
+                            <constraint firstItem="dhG-iv-kmf" firstAttribute="centerY" secondItem="Cn0-IE-1Dw" secondAttribute="centerY" id="FWu-DX-M88"/>
+                            <constraint firstItem="teW-Ah-JJM" firstAttribute="top" secondItem="dhG-iv-kmf" secondAttribute="bottom" constant="20" id="MWh-EZ-sBV"/>
+                            <constraint firstItem="14l-ck-oi5" firstAttribute="trailing" secondItem="sKh-pQ-p9c" secondAttribute="trailing" constant="10" id="NcO-rJ-4zA"/>
+                            <constraint firstItem="dhG-iv-kmf" firstAttribute="top" secondItem="sKh-pQ-p9c" secondAttribute="bottom" constant="20" id="Sh9-sT-30Z"/>
+                            <constraint firstItem="dhG-iv-kmf" firstAttribute="centerX" secondItem="Cn0-IE-1Dw" secondAttribute="centerX" id="aHg-Me-xg0"/>
+                            <constraint firstItem="sKh-pQ-p9c" firstAttribute="centerX" secondItem="Cn0-IE-1Dw" secondAttribute="centerX" id="oQq-1C-jsg"/>
+                            <constraint firstItem="teW-Ah-JJM" firstAttribute="leading" secondItem="14l-ck-oi5" secondAttribute="leading" constant="10" id="pWI-AQ-AWY"/>
+                            <constraint firstItem="14l-ck-oi5" firstAttribute="trailing" secondItem="teW-Ah-JJM" secondAttribute="trailing" constant="10" id="qdr-q4-eV1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="equipment" destination="teW-Ah-JJM" id="zH4-dm-7ir"/>
+                        <outlet property="exerciseName" destination="HIb-uH-Ixe" id="xEx-nw-Zvt"/>
                         <outlet property="gif" destination="dhG-iv-kmf" id="xjO-IR-rRj"/>
+                        <outlet property="targetMuscle" destination="74f-tX-5gs" id="0cZ-V7-mAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jrf-Jk-HFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3965" y="697"/>
+            <point key="canvasLocation" x="3024.6376811594205" y="687.72321428571422"/>
         </scene>
         <!--Workouts-->
         <scene sceneID="exI-yQ-hAu">
@@ -630,8 +661,5 @@
         <image name="Dumbbell" width="30" height="30"/>
         <image name="arrow.right" catalog="system" width="128" height="95"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
