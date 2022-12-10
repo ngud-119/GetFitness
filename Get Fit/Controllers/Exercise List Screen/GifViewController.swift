@@ -18,6 +18,7 @@ class GifViewController: UIViewController
     var name = ""
     var muscle = ""
     var equipmentType = ""
+    var gifUrl = ""
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class GifViewController: UIViewController
         equipment.text = "Equipment: \(equipmentType)"
         let gifURL : String = "https://gymvisual.com/img/p/1/9/7/9/9/19799.gif"
         
-        gif.kf.setImage(with: URL(string: gifURL)!)
+        gif.kf.setImage(with: URL(string: gifUrl)!)
         
     }
     

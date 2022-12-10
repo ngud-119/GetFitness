@@ -134,10 +134,10 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         
         
         // Populating card view of exercise view controller with selected table view cell.
-        cell.passData(vc: vc, name: ExerciseList.exerciseName[indexPath.row], muscle: ExerciseList.muscle[indexPath.row],equipment: ExerciseList.equipment[indexPath.row])
+        cell.passData(vc: vc, name: ExerciseList.exerciseName[indexPath.row], muscle: ExerciseList.muscle[indexPath.row],equipment: ExerciseList.equipment[indexPath.row], gifUrl: ExerciseList.gifURL[indexPath.row])
         
         // To navigate from WorkoutsVC to ExerciseListVC
-        self.navigationController?.pushViewController( vc!, animated: true)
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
     
     
