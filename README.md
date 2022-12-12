@@ -10,9 +10,13 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 
 ## Technologies Used:
 
+
 - Swift5
 - UIKit
-- Firebase for authentication and saving user
 - TableView with custom cell
 - CollectionView with custom cell
-- URLSession
+- Networking(URLSession)
+## Third party library
+- Firebase for authentication and saving user
+
+
