@@ -16,7 +16,7 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 - TableView with custom cell
 - CollectionView with custom cell
 - Networking(URLSession)
-## Third party library
+### Third party library
 - Firebase for authentication and saving user
 
 
