@@ -1,24 +1,19 @@
 //
-//  ExerciseList.swift
+//  DietPlanData.swift
 //  Get Fit
 //
-//  Created by Sandeep Sahani on 26/11/22.
+//  Created by Sandeep Sahani on 13/12/22.
 //
 
-// Class for getting data from API for exercise list view controller.
 import UIKit
 
-class ExerciseListData
+class DietPlanData
 {
-    
-    /// Some error occured while fetching data.
-    ///  Expired API Call limits
-    ///  Function to get exercise from RapidAPI
-    static func getExercises(with bodyPart: String, completion: @escaping (Data?) ->())
+    /// Function for getting data for populating diet plan VC
+    static func getRecipes(with foodCategory: String, completion: @escaping (Data?) -> ())
     {
-        // var exerciseList = [ExerciseDescription]()
         // URL
-        let url = URL(string: "https://exercisedb.p.rapidapi.com/exercises/bodyPart/\(bodyPart)")
+        let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")
         
         guard url != nil else
         {
@@ -32,12 +27,9 @@ class ExerciseListData
         // Specify the header
         let headers = [
             "X-RapidAPI-Key": "541dd37637msh5d41896e86719efp19da0ejsn8c426b6b0b58",
-            "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
+            "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
         ]
-        
         request.allHTTPHeaderFields = headers
-        
-        // Specify the body
         
         // Set the request type
         request.httpMethod = "GET"
@@ -64,6 +56,5 @@ class ExerciseListData
         // Fire off the data
         dataTask.resume()
     }
-        
-}
 
+}

@@ -19,6 +19,8 @@
 		5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */; };
 		5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */; };
 		5A617BFC29082A6A00B7A0EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */; };
+		5A6AA274294866B7004A9018 /* DietPlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6AA273294866B7004A9018 /* DietPlanData.swift */; };
+		5A6AA27629488C2E004A9018 /* RecipeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6AA27529488C2E004A9018 /* RecipeDescription.swift */; };
 		5A7192262903130E00128967 /* PreparationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7192252903130D00128967 /* PreparationTableViewCell.swift */; };
 		5A71922C2903225A00128967 /* UtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71922B2903225A00128967 /* UtilityExtension.swift */; };
 		5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7522E628EC44410022E260 /* ProfileViewController.swift */; };
@@ -66,6 +68,8 @@
 		5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewExtention.swift; sourceTree = "<group>"; };
 		5A585EE728EBEEEC004C375F /* ExerciseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListViewController.swift; sourceTree = "<group>"; };
 		5A617BFB29082A6A00B7A0EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A6AA273294866B7004A9018 /* DietPlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanData.swift; sourceTree = "<group>"; };
+		5A6AA27529488C2E004A9018 /* RecipeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDescription.swift; sourceTree = "<group>"; };
 		5A7192252903130D00128967 /* PreparationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTableViewCell.swift; sourceTree = "<group>"; };
 		5A71922B2903225A00128967 /* UtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtension.swift; sourceTree = "<group>"; };
 		5A7522E628EC44410022E260 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				5A7FC91229085B7600A1F3F5 /* Utilities.swift */,
 				5AF5A95B2909A48000214433 /* LoadingView.swift */,
 				5AD2FDEE29328F06000A5740 /* ExerciseListData.swift */,
+				5A6AA273294866B7004A9018 /* DietPlanData.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				5A87AE7928F89EB90079E68E /* FoodCardModel.swift */,
 				5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */,
 				5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */,
+				5A6AA27529488C2E004A9018 /* RecipeDescription.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */,
 				5AC8518F28ED413300B17C47 /* WorkoutScreenConstants.swift in Sources */,
 				5A87AE7628F831C90079E68E /* FoodCardCollectionViewCell.swift in Sources */,
+				5A6AA27629488C2E004A9018 /* RecipeDescription.swift in Sources */,
 				5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */,
 				5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */,
 				5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */,
@@ -448,6 +455,7 @@
 				5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
 				5A8C64A5294224420014B6EB /* GifViewController.swift in Sources */,
+				5A6AA274294866B7004A9018 /* DietPlanData.swift in Sources */,
 				5AD2FDEF29328F06000A5740 /* ExerciseListData.swift in Sources */,
 				5A52A4E829200BD700ED4821 /* MethodsOfProfileVC.swift in Sources */,
 				5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */,

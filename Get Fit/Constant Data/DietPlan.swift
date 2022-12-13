@@ -9,7 +9,7 @@ import UIKit
 
 struct DietPlan
 {
-    static let foodCategoryTitle: [String] = ["BreakFast","Lunch","Dinner"]
+    static let foodCategoryTitle: [String] = ["BreakFast","Brunch","Lunch","Drinks","Supper","Dinner"]
     
     struct Breakfast
     {

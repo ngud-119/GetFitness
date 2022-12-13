@@ -26,8 +26,6 @@ class GifViewController: UIViewController
         exerciseName.text = name
         targetMuscle.text = "Target Muscle: \(muscle)"
         equipment.text = "Equipment: \(equipmentType)"
-        let gifURL : String = "https://gymvisual.com/img/p/1/9/7/9/9/19799.gif"
-        
         gif.kf.setImage(with: URL(string: gifUrl)!)
         
     }

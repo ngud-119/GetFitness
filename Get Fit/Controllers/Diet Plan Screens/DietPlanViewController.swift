@@ -20,17 +20,42 @@ var foodCardViewData: [FoodCardModel] =
     FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[2],cardImage: DietPlan.Dinner.cardImage, foodName: DietPlan.Dinner.foodName, foodQuantity: DietPlan.Dinner.foodQuantity, foodCalorie: DietPlan.Dinner.foodCalories)
 ]
 
+// For storing food
+
 class DietPlanViewController: UIViewController
 {
-
+    
     @IBOutlet weak var foodItemTableView: UITableView!
     private var foodCardView = FoodCardCollectionViewCell()
     override func viewDidLoad()
     {
         
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        DietPlanData.getRecipes(with: "Drinks") { data in
+            
+            let decoder = JSONDecoder()
+            // Try to parse JSON data
+            if let data = data
+            {
+                do
+                {
+                    // Decoded JSON Data
+                    let recipes = try decoder.decode([RecipeDescription].self, from: data)
+                    
+                    print(recipes)
+                }
+                catch
+                {
+                    print("Error while parsing data ->\(error)")
+                }
+            }
+            
+        }
+        
     }
+    
+    // Do any additional setup after loading the view.
 }
 
 extension DietPlanViewController: UITableViewDelegate,UITableViewDataSource
@@ -67,7 +92,7 @@ extension DietPlanViewController: UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as? FoodItemTableViewCell
-        
+                
         else
         {
             fatalError("Unable to create tableview cell")
@@ -80,5 +105,5 @@ extension DietPlanViewController: UITableViewDelegate,UITableViewDataSource
         
         return cell
     }
-
+    
 }

@@ -17,3 +17,4 @@ struct ExerciseDescription: Codable
     var name: String
     var target: String
 }
+
