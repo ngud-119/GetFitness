@@ -8,7 +8,7 @@
 // Model for exercise list view controller to populate ExerciseListVC
 import Foundation
 
-struct ExerciseListDataModel
+struct ExerciseListDataModel: Codable
 {
     var exerciseGIF: [String]
     var exerciseName: [String]
