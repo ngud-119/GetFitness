@@ -32,9 +32,8 @@ class DietPlanViewController: UIViewController
         
         super.viewDidLoad()
         
-        DietPlanData.getRecipes(with: "breakfast") { data in
+        DietPlanData.getRecipes(with: "lunch") { data in
             
-            let decoder = JSONDecoder()
             // Try to parse JSON data
             if let data = data
             {
@@ -42,14 +41,11 @@ class DietPlanViewController: UIViewController
                 {
                     // Decoded JSON Data
                     let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
-
-                    // let recipes = try decoder.decode(Welcome.self, from: data)
-                    
                     print(recipes)
                 }
                 catch
                 {
-                    print("Error while parsing data ->\(error)")
+                    print("Error while parsing data -> \(error)")
                 }
             }
             
