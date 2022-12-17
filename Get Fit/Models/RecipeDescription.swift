@@ -3,10 +3,11 @@
 //  Get Fit
 //
 //  Created by Sandeep Sahani on 13/12/22.
-//
+
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
+//   let recipeDescription = try? newJSONDecoder().decode(RecipeDescription.self, from: jsonData)
 
 import Foundation
 
@@ -24,7 +25,6 @@ struct Hit: Codable {
     let recipe: Recipe
 }
 
-///fjkghi
 // MARK: - Recipe
 struct Recipe: Codable {
     let uri: String

@@ -40,7 +40,7 @@ class DietPlanViewController: UIViewController
                 do
                 {
                     // Decoded JSON Data
-                    let recipes = try JSONDecoder().decode([RecipeDescription]g yfvunjko0lp['/'].self, from: data)
+                    let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
                     print(recipes)
                 }
                 catch
