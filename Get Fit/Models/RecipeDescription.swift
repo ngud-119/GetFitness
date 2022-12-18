@@ -9,6 +9,7 @@
 //
 //   let recipeDescription = try? newJSONDecoder().decode(RecipeDescription.self, from: jsonData)
 
+// Made the data model with quicktype.io
 import Foundation
 
 // MARK: - RecipeDescription
