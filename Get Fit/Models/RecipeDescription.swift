@@ -14,46 +14,46 @@ import Foundation
 
 // MARK: - RecipeDescription
 struct RecipeDescription: Codable {
-    let q: String
-    let from, to: Int
-    let more: Bool
-    let count: Int
-    let hits: [Hit]
+    let q: String?
+    let from, to: Int?
+    let more: Bool?
+    let count: Int?
+    let hits: [Hit]?
 }
 
 // MARK: - Hit
 struct Hit: Codable {
-    let recipe: Recipe
+    let recipe: Recipe?
 }
 
 // MARK: - Recipe
 struct Recipe: Codable {
-    let uri: String
-    let label: String
-    let image: String
-    let source: String
-    let url: String
-    let shareAs: String
-    let yield: Int
-    let dietLabels, healthLabels, cautions, ingredientLines: [String]
-    let ingredients: [Ingredient]
-    let calories, totalWeight: Double
-    let totalTime: Int
-    let cuisineType: [String]
-    let mealType: [MealType]
-    let dishType: [DishType]
-    let totalNutrients, totalDaily: [String: Total]
-    let digest: [Digest]
+    let uri: String?
+    let label: String?
+    let image: String?
+    let source: String?
+    let url: String?
+    let shareAs: String?
+    let yield: Int?
+    let dietLabels, healthLabels, cautions, ingredientLines: [String]?
+    let ingredients: [Ingredient]?
+    let calories, totalWeight: Double?
+    let totalTime: Int?
+    let cuisineType: [String]?
+    let mealType: [MealType]?
+    let dishType: [DishType]?
+    let totalNutrients, totalDaily: [String: Total]?
+    let digest: [Digest]?
 }
 
 // MARK: - Digest
 struct Digest: Codable {
-    let label, tag: String
+    let label, tag: String?
     let schemaOrgTag: SchemaOrgTag?
-    let total: Double
-    let hasRDI: Bool
-    let daily: Double
-    let unit: Unit
+    let total: Double?
+    let hasRDI: Bool?
+    let daily: Double?
+    let unit: Unit?
     let sub: [Digest]?
 }
 
@@ -85,9 +85,9 @@ enum DishType: String, Codable {
 
 // MARK: - Ingredient
 struct Ingredient: Codable {
-    let text: String
-    let weight: Double
-    let foodCategory, foodID: String
+    let text: String?
+    let weight: Double?
+    let foodCategory, foodID: String?
     let image: String?
 
     enum CodingKeys: String, CodingKey {
@@ -104,7 +104,8 @@ enum MealType: String, Codable {
 
 // MARK: - Total
 struct Total: Codable {
-    let label: String
-    let quantity: Double
-    let unit: Unit
+    let label: String?
+    let quantity: Double?
+    let unit: Unit?
 }
+

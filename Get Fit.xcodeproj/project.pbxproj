@@ -33,6 +33,7 @@
 		5A87AE7A28F89EB90079E68E /* FoodCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7928F89EB90079E68E /* FoodCardModel.swift */; };
 		5A8C64A5294224420014B6EB /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C64A4294224420014B6EB /* GifViewController.swift */; };
 		5A8C64A8294245300014B6EB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8C64A7294245300014B6EB /* Kingfisher */; };
+		5A9E586E2950B875002504D0 /* APIJsonResponse in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E586D2950B874002504D0 /* APIJsonResponse */; };
 		5AAB51D928F2E58700913048 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB51D828F2E58700913048 /* ExerciseViewController.swift */; };
 		5AB27F7D28F019E8008DFEB0 /* ExerciseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */; };
 		5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */; };
@@ -81,6 +82,7 @@
 		5A87AE7728F83D500079E68E /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
 		5A87AE7928F89EB90079E68E /* FoodCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardModel.swift; sourceTree = "<group>"; };
 		5A8C64A4294224420014B6EB /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
+		5A9E586D2950B874002504D0 /* APIJsonResponse */ = {isa = PBXFileReference; lastKnownFileType = text; path = APIJsonResponse; sourceTree = "<group>"; };
 		5AAB51D828F2E58700913048 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
 		5AB27F8028F01E91008DFEB0 /* ExerciseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListCell.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */,
 				5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */,
 				5A6AA27529488C2E004A9018 /* RecipeDescription.swift */,
+				5A9E586D2950B874002504D0 /* APIJsonResponse */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				5A617BFC29082A6A00B7A0EA /* GoogleService-Info.plist in Resources */,
 				5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */,
 				5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */,
+				5A9E586E2950B875002504D0 /* APIJsonResponse in Resources */,
 				5ADCF4A928872E8F00EB653A /* LaunchScreen.storyboard in Resources */,
 				5ADCF4A628872E8F00EB653A /* Assets.xcassets in Resources */,
 				5ADCF4A428872E8B00EB653A /* Main.storyboard in Resources */,
