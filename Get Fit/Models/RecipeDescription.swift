@@ -40,8 +40,8 @@ struct Recipe: Codable {
     let calories, totalWeight: Double?
     let totalTime: Int?
     let cuisineType: [String]?
-    let mealType: [MealType]?
-    let dishType: [DishType]?
+    // let mealType: [MealType]?
+    // let dishType: [DishType]?
     let totalNutrients, totalDaily: [String: Total]?
     let digest: [Digest]?
 }
