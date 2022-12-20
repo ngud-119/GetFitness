@@ -14,11 +14,11 @@ import Foundation
 
 // MARK: - RecipeDescription
 struct RecipeDescription: Codable {
-    let q: String?
-    let from, to: Int?
-    let more: Bool?
-    let count: Int?
-    let hits: [Hit]?
+    let q: String
+    let from, to: Int
+    let more: Bool
+    let count: Int
+    let hits: [Hit]
 }
 
 // MARK: - Hit
