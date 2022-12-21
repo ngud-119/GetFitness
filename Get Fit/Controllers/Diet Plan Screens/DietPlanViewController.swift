@@ -41,7 +41,7 @@ class DietPlanViewController: UIViewController
                 {
                     // Decoded JSON Data
                     let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
-                    print(recipes)
+                    print(recipes.hits[0])
                 }
                 catch
                 {
@@ -56,6 +56,7 @@ class DietPlanViewController: UIViewController
     // Do any additional setup after loading the view.
 }
 
+// Extension for TableView
 extension DietPlanViewController: UITableViewDelegate,UITableViewDataSource
 {
     
