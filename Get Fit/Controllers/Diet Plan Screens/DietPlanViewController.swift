@@ -7,17 +7,22 @@
 
 import UIKit
 
+var cardImageURL:[String] = [String]()
+var foodName:[String] = [String]()
+var foodQuantity:[String] = [String]()
+var foodCalorie:[String] = [String]()
 // Array for pupulating table view cells
 var foodCardViewData: [FoodCardModel] =
 [
-    // Data for Breakfast section
-    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[0],cardImage: DietPlan.Breakfast.cardImage, foodName: DietPlan.Breakfast.foodName, foodQuantity: DietPlan.Breakfast.foodQuantity, foodCalorie: DietPlan.Breakfast.foodCalories),
-    
-    // Data for Lunch section
-    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[1],cardImage: DietPlan.Lunch.cardImage, foodName: DietPlan.Lunch.foodName, foodQuantity: DietPlan.Lunch.foodQuantity, foodCalorie: DietPlan.Lunch.foodCalories),
-    
-    // Data for Dinner section
-    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[2],cardImage: DietPlan.Dinner.cardImage, foodName: DietPlan.Dinner.foodName, foodQuantity: DietPlan.Dinner.foodQuantity, foodCalorie: DietPlan.Dinner.foodCalories)
+    //    // Data for Breakfast section
+    //    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[0],cardImage: DietPlan.Breakfast.cardImage, foodName: DietPlan.Breakfast.foodName, foodQuantity: DietPlan.Breakfast.foodQuantity, foodCalorie: DietPlan.Breakfast.foodCalories),
+    //
+    //    // Data for Lunch section
+    //    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[1],cardImage: DietPlan.Lunch.cardImage, foodName: DietPlan.Lunch.foodName, foodQuantity: DietPlan.Lunch.foodQuantity, foodCalorie: DietPlan.Lunch.foodCalories),
+    //
+    //    // Data for Dinner section
+    //    FoodCardModel(foodCategory:DietPlan.foodCategoryTitle[2],cardImage: DietPlan.Dinner.cardImage, foodName: DietPlan.Dinner.foodName, foodQuantity: DietPlan.Dinner.foodQuantity, foodCalorie: DietPlan.Dinner.foodCalories)
+    // FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
 ]
 
 // For storing food
@@ -32,23 +37,44 @@ class DietPlanViewController: UIViewController
         
         super.viewDidLoad()
         
-        DietPlanData.getRecipes(with: "lunch") { data in
+        for food in DietPlan.foodCategoryTitle
+        {
             
-            // Try to parse JSON data
-            if let data = data
-            {
-                do
+            
+            DietPlanData.getRecipes(with: food) { data in
+                
+                // Try to parse JSON data
+                if let data = data
                 {
-                    // Decoded JSON Data
-                    let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
-                    print(recipes.hits[0])
+                    do
+                    {
+                        // Decoded JSON Data
+                        let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
+                        
+                        for recipe in recipes.hits
+                        {
+                            cardImageURL.append(recipe.recipe!.image!)
+                            foodName.append(recipe.recipe!.label!)
+                            foodQuantity.append("\(recipe.recipe!.totalWeight!)")
+                            foodCalorie.append("\(recipe.recipe!.calories!)")
+                        }
+                        // Populating TableView with API's data.
+                        foodCardViewData.append(FoodCardModel(foodCategory: DietPlan.foodCategoryTitle[0], cardImage: cardImageURL, foodName: foodName, foodQuantity: foodQuantity, foodCalorie: foodCalorie))
+                        
+                        // Reloading tableView after populating it.
+                        DispatchQueue.main.async
+                        {
+                            self.foodItemTableView.reloadData()
+                        }
+                        
+                    }
+                    catch
+                    {
+                        print("Error while parsing data -> \(error)")
+                    }
                 }
-                catch
-                {
-                    print("Error while parsing data -> \(error)")
-                }
+                
             }
-            
         }
         
     }

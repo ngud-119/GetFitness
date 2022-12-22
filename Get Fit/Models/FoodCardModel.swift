@@ -10,7 +10,7 @@ import UIKit
 struct FoodCardModel
 {
     let foodCategory: String
-    let cardImage: [UIImage]
+    let cardImage: [String]
     let foodName: [String]
     let foodQuantity: [String]
     let foodCalorie: [String]

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FoodCardCollectionViewCell: UICollectionViewCell
 {
@@ -16,9 +17,9 @@ class FoodCardCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var calorieLabel: UILabel!
     
     
-    public func configureFoodCard(cardImage: UIImage,foodNameLabel: String,foodQuantityLabel: String,calorieLabel: String)
+    public func configureFoodCard(cardImageUrl: String,foodNameLabel: String,foodQuantityLabel: String,calorieLabel: String)
     {
-        self.cardImage.image = cardImage
+        cardImage.kf.setImage(with: URL(string: cardImageUrl))
         self.foodNameLabel.text = foodNameLabel
         self.foodQuantityLabel.text = foodQuantityLabel
         self.calorieLabel.text = calorieLabel

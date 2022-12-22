@@ -43,7 +43,7 @@ extension FoodItemTableViewCell:UICollectionViewDelegate,UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCardCollectionViewCell", for: indexPath) as! FoodCardCollectionViewCell
         
         cell.configureFoodCard(
-            cardImage: foodCardViewData[foodCardCollectionView.tag].cardImage[indexPath.row],
+            cardImageUrl: foodCardViewData[foodCardCollectionView.tag].cardImage[indexPath.row],
             
             foodNameLabel: foodCardViewData[foodCardCollectionView.tag].foodName[indexPath.row],
             

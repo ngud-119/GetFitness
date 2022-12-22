@@ -51,6 +51,11 @@ extension ProfileViewController
     {
         let url = URL(string: profileImageURL)
         // Performing HTTPS Request with url
+        guard url != nil else
+        {
+            return
+        }
+        
         URLSession.shared.dataTask(with: url!) { data, response, error in
             
             downloadProfileImage(data, response, error)
