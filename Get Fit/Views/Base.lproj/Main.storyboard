@@ -465,16 +465,6 @@
             </objects>
             <point key="canvasLocation" x="4906" y="1"/>
         </scene>
-        <!--TabBar-->
-        <scene sceneID="gOH-nF-RGY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="TabBar" id="eEJ-HB-VZb" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="ndk-Pf-HQK"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lLN-L7-h68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7018" y="292"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="7yi-u3-jGA">
             <objects>

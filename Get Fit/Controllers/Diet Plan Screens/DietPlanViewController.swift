@@ -15,73 +15,56 @@ var foodCalorie:[String] = [String]()
 // Array for pupulating table view cells
 var foodCardViewData = [FoodCardModel]()
 
+// Food categoty
+let foodCategoty = "Brunch"
+
 class DietPlanViewController: UIViewController
 {
     
     @IBOutlet weak var foodItemTableView: UITableView!
     private var foodCardView = FoodCardCollectionViewCell()
     
-    let myGroup = DispatchGroup()
+    
     override func viewDidLoad()
     {
-        
         super.viewDidLoad()
-        
-        
-        
-        for foodCategoty in DietPlan.foodCategoryTitle
-        {
-           
+       
             DietPlanData.getRecipes(with: foodCategoty) { data in
-                
-                
                 // Try to parse JSON data
                 if let data = data
                 {
                     do
                     {
-                        
                         // Decoded JSON Data
                         let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
                         
                         
                         for recipe in recipes.hits
                         {
-                            self.myGroup.enter()
                             cardImageURL.append(recipe.recipe!.image!)
                             foodName.append(recipe.recipe!.label!)
                             foodQuantity.append("\(recipe.recipe!.totalWeight!)")
                             foodCalorie.append("\(recipe.recipe!.calories!)")
-                            self.myGroup.leave()
-                
-                        }
-                        
-                        self.myGroup.notify(queue: .main)
-                        {
-                           
-                            print("Finished request")
                         }
                         
                         // Populating TableView with API's data.
                         foodCardViewData.append(FoodCardModel(foodCategory: foodCategoty, cardImage: cardImageURL, foodName: foodName, foodQuantity: foodQuantity, foodCalorie: foodCalorie))
                         
-                        
-                        
-                        // Reloading tableView after populating it.
+                        // Reloading TableView after populating data fetched from API.
                         DispatchQueue.main.async
                         {
                             self.foodItemTableView.reloadData()
                         }
-   
+                        
                     }
                     catch
                     {
                         print("Error while parsing data -> \(error)")
                     }
                 }
-                
+               
             }
-        }
+            
     }
     
     // Do any additional setup after loading the view.
