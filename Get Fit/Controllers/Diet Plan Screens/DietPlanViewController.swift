@@ -18,6 +18,7 @@ var foodCardViewData = [FoodCardModel]()
 // Food categoty
 let foodCategoty = "Brunch"
 
+// Implementing Compositional Layout;
 class DietPlanViewController: UIViewController
 {
     
