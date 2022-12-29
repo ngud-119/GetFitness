@@ -4,7 +4,6 @@
 //
 //  Created by Sandeep Sahani on 13/10/22.
 //
-
 import UIKit
 
 class FoodItemTableViewCell: UITableViewCell

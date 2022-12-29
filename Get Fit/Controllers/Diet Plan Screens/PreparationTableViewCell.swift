@@ -4,7 +4,6 @@
 //
 //  Created by Sandeep Sahani on 21/10/22.
 //
-
 import UIKit
 
 // Class for preparation table view cell.

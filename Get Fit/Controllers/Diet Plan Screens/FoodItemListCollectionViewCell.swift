@@ -4,7 +4,6 @@
 //
 //  Created by Sandeep Sahani on 20/10/22.
 //
-
 import UIKit
 
 class FoodItemListCollectionViewCell: UICollectionViewCell
