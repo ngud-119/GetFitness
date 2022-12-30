@@ -26,39 +26,39 @@ class DietPlanViewController: UIViewController
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout
     {
         return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
-
+            
             switch sectionNumber
             {
-
-            case 0: return self.foodCardLayoutSection()
-
+                
+                
+                
             default:
-
-                return nil
+                
+                return self.foodCardLayoutSection()
             }
         }
     }
-
+    
     private func foodCardLayoutSection() -> NSCollectionLayoutSection
     {
-
-       let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
-    .fractionalHeight(1))
-
-       let item = NSCollectionLayoutItem(layoutSize: itemSize)
-    item.contentInsets.bottom = 10
-
-       let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension:
-    .fractionalWidth(0.55))
-
-       let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-
-       let section = NSCollectionLayoutSection(group: group)
+        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
+                .fractionalHeight(1))
+        
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets.bottom = 10
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension:
+                .fractionalWidth(0.55))
+        
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
         section.boundarySupplementaryItems = [supplemetaryHeaderItem()]
         section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10 )
         section.interGroupSpacing = 15
-       return section
+        return section
     }
     
     // Adding header to the group
@@ -77,19 +77,21 @@ class DietPlanViewController: UIViewController
     // Do any additional setup after loading the view.
 }
 
-
-extension DietPlanViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
+// Extension for implementing collection view.
+extension DietPlanViewController: UICollectionViewDelegate,UICollectionViewDataSource
 {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         
         return 5
     }
     
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//
-//        return 5
-//    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        
+        return 5
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
