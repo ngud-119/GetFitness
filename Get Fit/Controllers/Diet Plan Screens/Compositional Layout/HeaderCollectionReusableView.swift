@@ -7,22 +7,23 @@
 
 import UIKit
 
-class HeaderCollectionReusableCell: UICollectionReusableView
+class HeaderCollectionReusableView: UICollectionReusableView
 {
-        static let identifier = "HeaderCollectionReusableCell"
+    static let identifier = "HeaderCollectionReusableView"
     private let label: UILabel = {
        
         let label = UILabel()
         label.text = "Header"
         label.textAlignment = .left
         label.textColor = .white
+        label.font = .systemFont(ofSize: 15.0, weight: .bold)
         return label
         
     }()
     
     public func configure()
     {
-        backgroundColor = .systemGreen
+        backgroundColor = .clear
         addSubview(label)
     }
     

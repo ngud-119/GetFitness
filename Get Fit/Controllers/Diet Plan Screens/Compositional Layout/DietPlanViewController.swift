@@ -46,41 +46,50 @@ class DietPlanViewController: UIViewController
     .fractionalHeight(1))
 
        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-    item.contentInsets.bottom = 15
+    item.contentInsets.bottom = 10
 
        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension:
     .fractionalWidth(0.55))
 
        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-    group.contentInsets = .init(top: 0, leading: 15, bottom: 0, trailing: 2)
 
        let section = NSCollectionLayoutSection(group: group)
-
-       section.orthogonalScrollingBehavior = .groupPaging
-
+        section.orthogonalScrollingBehavior = .groupPaging
+        section.boundarySupplementaryItems = [supplemetaryHeaderItem()]
+        section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10 )
+        section.interGroupSpacing = 15
        return section
+    }
+    
+    // Adding header to the group
+    private func supplemetaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem
+    {
+        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
     
     override func viewDidLoad()
     {
         foodCardCollectionView.delegate = self
         foodCardCollectionView.dataSource = self
-        foodCardCollectionView.register(HeaderCollectionReusableCell.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableCell.identifier )
-        // Creating composional Layout
+        foodCardCollectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier )
         foodCardCollectionView.collectionViewLayout = createCompositionalLayout()
-        
     }
     // Do any additional setup after loading the view.
 }
 
 
-extension DietPlanViewController: UICollectionViewDelegate,UICollectionViewDataSource
+extension DietPlanViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return 5
     }
+    
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//
+//        return 5
+//    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -94,12 +103,11 @@ extension DietPlanViewController: UICollectionViewDelegate,UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
     {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableCell.identifier, for: <#T##IndexPath#>)
-        return UICollectionReusableView()
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
+        
+        header.configure()
+        return header
     }
-
-    
-    
 }
 
 

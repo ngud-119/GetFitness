@@ -19,32 +19,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-Jk-6QU" customClass="foodCardCollectionView">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-Jk-6QU" customClass="foodCardCollectionView">
                                 <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yEH-bK-iNV">
-                                    <size key="itemSize" width="171" height="244"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="00v-be-vUh">
+                                    <size key="itemSize" width="150" height="200"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCardCell" id="Lhf-XG-PG7" customClass="FoodCardCollectionViewCell" customModule="Get_Fit" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="170" height="240"/>
+                                        <rect key="frame" x="0.0" y="50" width="150" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NDa-Vq-2f1">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="240"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="reA-fY-wkc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="240"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kOW-Lg-yWX" userLabel="Transparent Layer">
-                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="240"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FCj-wm-krs">
-                                                    <rect key="frame" x="10" y="183" width="40" height="47"/>
+                                                    <rect key="frame" x="10" y="143" width="40" height="47"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtr-n1-fhN" userLabel="Food Name">
                                                             <rect key="frame" x="0.0" y="0.0" width="40" height="18"/>
@@ -67,20 +67,20 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="FCj-wm-krs" firstAttribute="leading" secondItem="NDa-Vq-2f1" secondAttribute="leading" constant="10" id="0dg-UV-hDw"/>
-                                                <constraint firstItem="reA-fY-wkc" firstAttribute="top" secondItem="NDa-Vq-2f1" secondAttribute="top" id="Avy-oi-h5m"/>
-                                                <constraint firstItem="kOW-Lg-yWX" firstAttribute="leading" secondItem="NDa-Vq-2f1" secondAttribute="leading" id="K7K-M4-nEe"/>
-                                                <constraint firstAttribute="bottom" secondItem="kOW-Lg-yWX" secondAttribute="bottom" id="PPj-Ig-tiL"/>
-                                                <constraint firstAttribute="trailing" secondItem="reA-fY-wkc" secondAttribute="trailing" id="Tks-VR-7ZG"/>
-                                                <constraint firstItem="kOW-Lg-yWX" firstAttribute="top" secondItem="NDa-Vq-2f1" secondAttribute="top" id="ar4-wI-qBb"/>
-                                                <constraint firstAttribute="bottom" secondItem="reA-fY-wkc" secondAttribute="bottom" id="br1-bt-y2i"/>
-                                                <constraint firstItem="reA-fY-wkc" firstAttribute="leading" secondItem="NDa-Vq-2f1" secondAttribute="leading" id="bsa-dJ-EQN"/>
-                                                <constraint firstAttribute="trailing" secondItem="kOW-Lg-yWX" secondAttribute="trailing" id="ktM-9f-62r"/>
-                                                <constraint firstAttribute="bottom" secondItem="FCj-wm-krs" secondAttribute="bottom" constant="10" id="qAZ-sQ-A1k"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="170" height="240"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="FCj-wm-krs" firstAttribute="leading" secondItem="Lhf-XG-PG7" secondAttribute="leading" constant="10" id="0dg-UV-hDw"/>
+                                            <constraint firstItem="reA-fY-wkc" firstAttribute="top" secondItem="Lhf-XG-PG7" secondAttribute="top" id="Avy-oi-h5m"/>
+                                            <constraint firstItem="kOW-Lg-yWX" firstAttribute="leading" secondItem="Lhf-XG-PG7" secondAttribute="leading" id="K7K-M4-nEe"/>
+                                            <constraint firstAttribute="bottom" secondItem="kOW-Lg-yWX" secondAttribute="bottom" id="PPj-Ig-tiL"/>
+                                            <constraint firstAttribute="trailing" secondItem="reA-fY-wkc" secondAttribute="trailing" id="Tks-VR-7ZG"/>
+                                            <constraint firstItem="kOW-Lg-yWX" firstAttribute="top" secondItem="Lhf-XG-PG7" secondAttribute="top" id="ar4-wI-qBb"/>
+                                            <constraint firstAttribute="bottom" secondItem="reA-fY-wkc" secondAttribute="bottom" id="br1-bt-y2i"/>
+                                            <constraint firstItem="reA-fY-wkc" firstAttribute="leading" secondItem="Lhf-XG-PG7" secondAttribute="leading" id="bsa-dJ-EQN"/>
+                                            <constraint firstAttribute="trailing" secondItem="kOW-Lg-yWX" secondAttribute="trailing" id="ktM-9f-62r"/>
+                                            <constraint firstAttribute="bottom" secondItem="FCj-wm-krs" secondAttribute="bottom" constant="10" id="qAZ-sQ-A1k"/>
+                                        </constraints>
+                                        <size key="customSize" width="150" height="200"/>
                                         <connections>
                                             <outlet property="calorieLabel" destination="Abb-4b-dFz" id="CeC-RA-yfV"/>
                                             <outlet property="cardImage" destination="reA-fY-wkc" id="7Oz-4A-24G"/>
@@ -90,6 +90,11 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderCollectionReusableView" id="C7S-5i-isE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.96078431369999995" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -98,7 +103,7 @@
                             <constraint firstItem="sO7-Jk-6QU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4qE-zi-gHf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sO7-Jk-6QU" secondAttribute="trailing" id="52r-Jw-2KB"/>
                             <constraint firstItem="sO7-Jk-6QU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7fe-jL-dNp"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sO7-Jk-6QU" secondAttribute="bottom" id="uTU-Ih-TBz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sO7-Jk-6QU" secondAttribute="bottom" id="x10-oP-JSO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Diet Plan" largeTitleDisplayMode="always" id="qbj-kj-34N"/>
