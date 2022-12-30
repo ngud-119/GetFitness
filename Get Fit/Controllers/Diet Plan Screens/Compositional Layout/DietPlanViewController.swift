@@ -30,7 +30,7 @@ class DietPlanViewController: UIViewController
             switch sectionNumber
             {
 
-            case 0: return self.firstLayoutSection()
+            case 0: return self.foodCardLayoutSection()
 
             default:
 
@@ -39,7 +39,7 @@ class DietPlanViewController: UIViewController
         }
     }
 
-    private func firstLayoutSection() -> NSCollectionLayoutSection
+    private func foodCardLayoutSection() -> NSCollectionLayoutSection
     {
 
        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
