@@ -15,6 +15,8 @@ class FoodCardCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var foodQuantityLabel: UILabel!
     @IBOutlet weak var calorieLabel: UILabel!
     
+    // Identifier for custom collection view cell.
+    static let identifier = "foodCardCell"
     
     public func configureFoodCard(cardImageUrl: String,foodNameLabel: String,foodQuantityLabel: String,calorieLabel: String)
     {
