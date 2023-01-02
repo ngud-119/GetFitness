@@ -97,6 +97,7 @@ extension DietPlanViewController
     }
     
     // To populate data in collection view.
+    // Task3: Use Diffable Data source and populate collection view.
     private func configureCollectionViewDataSource()
     {
         dataSource = DataSource(collectionView: foodCardCollectionView, cellProvider: { (foodCardCollectionView , indexPath, foodCardModel) -> FoodCardCollectionViewCell?  in
