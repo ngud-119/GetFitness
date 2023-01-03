@@ -22,8 +22,8 @@ class FoodCardCollectionViewCell: UICollectionViewCell
     {
         cardImage.kf.setImage(with: URL(string: cardImageUrl))
         self.foodNameLabel.text = foodNameLabel
-        self.foodQuantityLabel.text = foodQuantityLabel
-        self.calorieLabel.text = calorieLabel
+        self.foodQuantityLabel.text = "Per Serving(\(String(format:"%.2f",foodQuantityLabel))"
+        self.calorieLabel.text = "(\(String(format:"%.2f",foodQuantityLabel)) Kcal"
         makeCornerRounded()
     }
     // Make card image's corner rounded.

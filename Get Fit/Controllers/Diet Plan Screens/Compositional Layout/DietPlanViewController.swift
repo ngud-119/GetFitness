@@ -31,12 +31,56 @@ class DietPlanViewController: UIViewController
     
     override func viewDidLoad()
     {
-       configureCollectionViewLayout()
-       configureCollectionViewDataSource()
+        configureCollectionViewLayout()
+        configureCollectionViewDataSource()
+        
+        // Fetch data from API
+        fetchCardData()
     }
     // Do any additional setup after loading the view.
 }
 
+// Extension for fetching data.
+extension DietPlanViewController
+{
+    private func fetchCardData()
+    {
+        DietPlanData.shared.getRecipes(with: "Breakfast") { data in
+            
+            // Try to parse JSON data
+            if let data = data
+            {
+                do
+                {
+                    
+                    // Decoded JSON Data
+                    let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
+                    
+                    
+                    for recipe in recipes.hits
+                    {
+                        cardImageURL.append(recipe.recipe!.image!)
+                        foodName.append(recipe.recipe!.label!)
+                        foodQuantity.append("\(recipe.recipe!.totalWeight!)")
+                        foodCalorie.append("\(recipe.recipe!.calories!)")
+                        
+                    }
+                    print(cardImageURL)
+                    print(foodName)
+                    print(foodQuantity)
+                    print(foodCalorie)
+                }
+                catch
+                {
+                    print("Error while parsing data -> \(error)")
+                }
+            }
+            
+            
+        }
+    }
+    
+}
 // Extention for creating layout.
 extension DietPlanViewController
 {
@@ -52,8 +96,8 @@ extension DietPlanViewController
             
             switch sectionNumber
             {
-        
-              default:
+                
+            default:
                 
                 return self.foodCardLayoutSection()
             }
@@ -109,7 +153,7 @@ extension DietPlanViewController
             return cell
         })
         
-    
+        
     }
     
     private func createDummyData()
@@ -143,7 +187,7 @@ extension DietPlanViewController: UICollectionViewDelegate
         return 3
     }
     
-
+    
     // For creating header of card layout.
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
     {

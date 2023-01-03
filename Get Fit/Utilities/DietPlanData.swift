@@ -7,10 +7,14 @@
 
 import UIKit
 
+/// Class for getting data for food card cell.
 class DietPlanData
 {
-    /// Function for getting data for populating diet plan VC
-    static func getRecipes(with foodCategory: String, completion: @escaping (Data?) -> ())
+    /// Instance for invoking class methods.
+    static let shared = DietPlanData()
+    
+    /// Function for getting data for populating diet plan VC.
+    func getRecipes(with foodCategory: String, completion: @escaping (Data?) -> ())
     {
         // URL
         let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")
