@@ -1,5 +1,5 @@
 <p align="center">
- <img width="30" alt="Icon-20@3x" src="https://user-images.githubusercontent.com/82876741/210613108-75830c96-90a7-4420-9963-874a0be1d4f5.png">
+ <img width="90" alt="Icon-60@3x" src="https://user-images.githubusercontent.com/82876741/210613281-f5c461d2-4d96-462c-b81e-fc2f6e12f80d.png">
 </p>
 
 # Get Fit
