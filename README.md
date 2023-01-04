@@ -1,6 +1,5 @@
-
 <p align="center">
- <img src="https://github.com/sandeepsahanicodes/GetFit/blob/main/Get%20Fit/Assets.xcassets/AppIcon.appiconset/Icon-60%403x.png"/>
+ <img width="30" alt="Icon-20@3x" src="https://user-images.githubusercontent.com/82876741/210613108-75830c96-90a7-4420-9963-874a0be1d4f5.png">
 </p>
 
 # Get Fit
