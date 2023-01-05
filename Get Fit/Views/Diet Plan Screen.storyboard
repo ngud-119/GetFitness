@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-Jk-6QU" customClass="foodCardCollectionView" customModule="Get_Fit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="00v-be-vUh">
                                     <size key="itemSize" width="150" height="200"/>
@@ -535,7 +535,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dh-xc-plB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="-9"/>
+            <point key="canvasLocation" x="4725" y="-31"/>
+        </scene>
+        <!--Food Nutrients View Controller-->
+        <scene sceneID="Jup-Yb-ILs">
+            <objects>
+                <viewController id="wY7-oP-9Ce" customClass="FoodNutrientsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eZj-rU-dap">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Je2-xn-D5Q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="46O-0e-bt3">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KGp-R6-aCa">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UBz-iq-XOp">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sct-LO-C3u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Je2-xn-D5Q" firstAttribute="leading" secondItem="Sct-LO-C3u" secondAttribute="leading" id="MV0-yN-jbt"/>
+                            <constraint firstItem="Je2-xn-D5Q" firstAttribute="top" secondItem="eZj-rU-dap" secondAttribute="top" id="Off-j9-cy3"/>
+                            <constraint firstItem="Sct-LO-C3u" firstAttribute="trailing" secondItem="Je2-xn-D5Q" secondAttribute="trailing" id="alG-Fq-wud"/>
+                            <constraint firstItem="Sct-LO-C3u" firstAttribute="bottom" secondItem="Je2-xn-D5Q" secondAttribute="bottom" id="jdW-8k-moT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="foodNutrientsCollectionView" destination="Je2-xn-D5Q" id="JaR-3o-PqF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1l7-G2-NHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2616" y="-9"/>
         </scene>
         <!--Diet Plan-->
         <scene sceneID="240-lB-JFY">
@@ -571,6 +617,9 @@
     <resources>
         <image name="Chocolate Oatmeal" width="680" height="1020"/>
         <image name="Diet Plan" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
