@@ -10,7 +10,7 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 
 [Figma Design of the App](https://www.figma.com/community/file/1127341178423272618)
 
-## Technologies Used:
+# Technologies Used:
 ### Foundation
 - Swift5
 - UIKit
