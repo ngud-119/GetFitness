@@ -6,6 +6,9 @@
 
 Get Fit, a one destination fitness app that will provide workout plan(with videos), diet plan. User can use this app to do there favourite workout and can use the diet plan to prepare healthy meal with its nutritional values.
 
+# User Interface Design of App
+
+[Figma Design of the App](https://www.figma.com/community/file/1127341178423272618)
 
 ## Technologies Used:
 ### Foundation
