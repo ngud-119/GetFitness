@@ -10,7 +10,6 @@
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
 		5A0905AF295D68EB00F4629B /* FoodCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905AE295D68EB00F4629B /* FoodCardCollectionViewCell.swift */; };
 		5A0905B3295D698700F4629B /* PreparationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905B2295D698700F4629B /* PreparationTableViewCell.swift */; };
-		5A0905B5295D69B400F4629B /* FoodItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905B4295D69B400F4629B /* FoodItemTableViewCell.swift */; };
 		5A0905B7295E118500F4629B /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905B6295E118500F4629B /* HeaderCollectionReusableView.swift */; };
 		5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DB9A128FC68960048935F /* NutrientsViewController.swift */; };
 		5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */; };
@@ -62,7 +61,6 @@
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A0905AE295D68EB00F4629B /* FoodCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A0905B2295D698700F4629B /* PreparationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTableViewCell.swift; sourceTree = "<group>"; };
-		5A0905B4295D69B400F4629B /* FoodItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemTableViewCell.swift; sourceTree = "<group>"; };
 		5A0905B6295E118500F4629B /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		5A1DB9A128FC68960048935F /* NutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewController.swift; sourceTree = "<group>"; };
 		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 				5A1DB9A128FC68960048935F /* NutrientsViewController.swift */,
 				5A0905B2295D698700F4629B /* PreparationTableViewCell.swift */,
 				5A751B4A296683F500BC7A3D /* FoodItemListCollectionViewCell.swift */,
-				5A0905B4295D69B400F4629B /* FoodItemTableViewCell.swift */,
 			);
 			path = "Diet Plan Screens";
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0905B5295D69B400F4629B /* FoodItemTableViewCell.swift in Sources */,
 				5A0905B7295E118500F4629B /* HeaderCollectionReusableView.swift in Sources */,
 				5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */,
 				5AC8518F28ED413300B17C47 /* WorkoutScreenConstants.swift in Sources */,
