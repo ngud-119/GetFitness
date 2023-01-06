@@ -7,87 +7,59 @@
 
 import UIKit
 
-var cardImageURL:[String] = [String]()
-var foodName:[String] = [String]()
-var foodQuantity:[String] = [String]()
-var foodCalorie:[String] = [String]()
 
 // Array for pupulating table view cells
 var foodCardViewData = [FoodCardModel]()
-
-// Food categoty
-let foodCategoty = "Breakfast"
 
 // Task2: Implement Compositional Layout;
 class DietPlanViewController: UIViewController
 {
     @IBOutlet weak var foodCardCollectionView: UICollectionView!
     
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, FoodCardModel>
-    typealias DataSourceSnapshot = NSDiffableDataSourceSnapshot<Section,FoodCardModel>
-    
-    private var dataSource: DataSource!
-    private var snapshot = DataSourceSnapshot()
-    
     override func viewDidLoad()
     {
-        configureCollectionViewLayout()
-        configureCollectionViewDataSource()
-        
+        // ["BreakFast","Brunch","Lunch","Drinks","Supper","Dinner"]
+        configureCollectionView()
         // Fetch data from API
-        fetchCardData()
+        Task.init(operation: {
+            
+            let breakfast = await DietPlanData.shared.getRecipes(foodCategory: "Breakfast")
+            
+            foodCardViewData.append(FoodCardModel(foodCategory: "Breakfast" , cardImage: breakfast.cardImage, foodName: breakfast.foodName, foodQuantity: breakfast.foodQuantity, foodCalorie: breakfast.foodCalorie))
+            
+            let brunch = await DietPlanData.shared.getRecipes(foodCategory: "Brunch")
+            
+            foodCardViewData.append(FoodCardModel(foodCategory: "Brunch" , cardImage: brunch.cardImage, foodName: brunch.foodName, foodQuantity: brunch.foodQuantity, foodCalorie: brunch.foodCalorie))
+            
+            let lunch = await DietPlanData.shared.getRecipes(foodCategory: "Lunch")
+            
+            foodCardViewData.append(FoodCardModel(foodCategory: "Lunch" , cardImage: lunch.cardImage, foodName: lunch.foodName, foodQuantity: lunch.foodQuantity, foodCalorie: lunch.foodCalorie))
+            
+            let drinks = await DietPlanData.shared.getRecipes(foodCategory: "Drinks")
+            
+            foodCardViewData.append(FoodCardModel(foodCategory: "Drinks" , cardImage: drinks.cardImage, foodName: drinks.foodName, foodQuantity: drinks.foodQuantity, foodCalorie: drinks.foodCalorie))
+            
+            let supper = await DietPlanData.shared.getRecipes(foodCategory: "Supper")
+            
+            foodCardViewData.append(FoodCardModel(foodCategory: "Supper" , cardImage: supper.cardImage, foodName: supper.foodName, foodQuantity: supper.foodQuantity, foodCalorie: supper.foodCalorie))
+            
+            let dinner = await DietPlanData.shared.getRecipes(foodCategory: "Dinner")
+            
+            foodCardViewData.append(FoodCardModel(foodCategory: "Dinner" , cardImage: dinner.cardImage, foodName: dinner.foodName, foodQuantity: dinner.foodQuantity, foodCalorie: dinner.foodCalorie))
+            
+            DispatchQueue.main.async
+            {
+                self.foodCardCollectionView.reloadData()
+            }
+        })
+       
+        // Do any additional setup after loading the view.
     }
-    // Do any additional setup after loading the view.
 }
 
-// Extension for fetching data.
+// Extention for compositional Layout and setting collection view.
 extension DietPlanViewController
 {
-    private func fetchCardData()
-    {
-        DietPlanData.shared.getRecipes(with: "Breakfast") { data in
-            
-            // Try to parse JSON data
-            if let data = data
-            {
-                do
-                {
-                    
-                    // Decoded JSON Data
-                    let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
-                    
-                    
-                    for recipe in recipes.hits
-                    {
-                        cardImageURL.append(recipe.recipe!.image!)
-                        foodName.append(recipe.recipe!.label!)
-                        foodQuantity.append("\(recipe.recipe!.totalWeight!)")
-                        foodCalorie.append("\(recipe.recipe!.calories!)")
-                        
-                    }
-                    print(cardImageURL)
-                    print(foodName)
-                    print(foodQuantity)
-                    print(foodCalorie)
-                }
-                catch
-                {
-                    print("Error while parsing data -> \(error)")
-                }
-            }
-            
-            
-        }
-    }
-    
-}
-// Extention for creating layout.
-extension DietPlanViewController
-{
-    enum Section
-    {
-        case main
-    }
     
     // Function to create compositional Layout.
     private func createCompositionalLayout() -> UICollectionViewCompositionalLayout
@@ -105,7 +77,7 @@ extension DietPlanViewController
     }
     
     // Creating card layout with NSCollectionLayoutSection
-    public func foodCardLayoutSection() -> NSCollectionLayoutSection
+    private func foodCardLayoutSection() -> NSCollectionLayoutSection
     {
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
@@ -113,13 +85,13 @@ extension DietPlanViewController
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets.bottom = 10
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension:
-                .fractionalWidth(0.55))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.43), heightDimension:
+                .fractionalWidth(0.60))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
+        section.orthogonalScrollingBehavior = .continuous
         section.boundarySupplementaryItems = [supplemetaryHeaderItem()]
         section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10 )
         section.interGroupSpacing = 15
@@ -127,63 +99,41 @@ extension DietPlanViewController
     }
     
     // Adding header to the group
-    public func supplemetaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem
+    private func supplemetaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem
     {
         return .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
     
-    private func configureCollectionViewLayout()
+    private func configureCollectionView()
     {
         foodCardCollectionView.delegate = self
+        foodCardCollectionView.dataSource = self
         foodCardCollectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier )
         foodCardCollectionView.collectionViewLayout = createCompositionalLayout()
     }
     
-    // To populate data in collection view.
-    // Task3: Use Diffable Data source and populate collection view.
-    private func configureCollectionViewDataSource()
-    {
-        dataSource = DataSource(collectionView: foodCardCollectionView, cellProvider: { (foodCardCollectionView , indexPath, foodCardModel) -> FoodCardCollectionViewCell?  in
-            
-            let cell = foodCardCollectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier, for: indexPath) as! FoodCardCollectionViewCell
-            
-            cell.configureFoodCard(cardImageUrl: DietPlan.Breakfast.cardImageURL[indexPath.row], foodNameLabel: DietPlan.Breakfast.foodName[indexPath.row], foodQuantityLabel: DietPlan.Breakfast.foodQuantity[indexPath.row], calorieLabel: DietPlan.Breakfast.foodQuantity[indexPath.row])
-            
-            return cell
-        })
-        
-        
-    }
-    
-    private func createDummyData()
-    {
-        var dummyFoodCardData: [FoodCardModel] = []
-        dummyFoodCardData.append(FoodCardModel(foodCategory: "Breakfast", cardImage: DietPlan.Breakfast.cardImageURL, foodName: DietPlan.Breakfast.foodName, foodQuantity: DietPlan.Breakfast.foodQuantity, foodCalorie: DietPlan.Breakfast.foodCalories))
-        applySnapshot(with: dummyFoodCardData)
-    }
-    
-    private func applySnapshot(with foodcardData: [FoodCardModel])
-    {
-        snapshot = DataSourceSnapshot()
-        snapshot.appendSections([Section.main])
-        snapshot.appendItems(foodcardData)
-        dataSource.apply(snapshot,animatingDifferences: true)
-        
-    }
-    
 }
+
 // Extension for Populating collection view.
-extension DietPlanViewController: UICollectionViewDelegate
+extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewDataSource
 {
-    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier , for: indexPath) as! FoodCardCollectionViewCell
+        
+        cell.configureFoodCard(cardImageUrl: foodCardViewData[indexPath.section].cardImage[indexPath.row], foodNameLabel: foodCardViewData[indexPath.section].foodName[indexPath.row], foodQuantityLabel: foodCardViewData[indexPath.section].foodQuantity[indexPath.row], calorieLabel: foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        
+        return cell
+        
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 5
+        return foodCardViewData[0].foodName.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int
     {
-        return 3
+        return foodCardViewData.count
     }
     
     
@@ -192,7 +142,7 @@ extension DietPlanViewController: UICollectionViewDelegate
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
         
-        header.configure()
+        header.configure(headerTitle: foodCardViewData[indexPath.section].foodCategory)
         return header
     }
 }
