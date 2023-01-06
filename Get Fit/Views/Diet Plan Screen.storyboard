@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-Jk-6QU" customClass="foodCardCollectionView" customModule="Get_Fit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="00v-be-vUh">
                                     <size key="itemSize" width="150" height="200"/>
@@ -44,22 +44,22 @@
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FCj-wm-krs">
-                                                    <rect key="frame" x="10" y="143" width="40" height="47"/>
+                                                    <rect key="frame" x="10" y="143" width="132" height="47"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtr-n1-fhN" userLabel="Food Name">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="18"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="132" height="18"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldq-5z-YzD" userLabel="Food Quantitiy">
-                                                            <rect key="frame" x="0.0" y="18" width="40" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="18" width="132" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abb-4b-dFz" userLabel="Food Calories">
-                                                            <rect key="frame" x="0.0" y="32.5" width="40" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="32.5" width="132" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -79,6 +79,7 @@
                                             <constraint firstItem="reA-fY-wkc" firstAttribute="leading" secondItem="Lhf-XG-PG7" secondAttribute="leading" id="bsa-dJ-EQN"/>
                                             <constraint firstAttribute="trailing" secondItem="kOW-Lg-yWX" secondAttribute="trailing" id="ktM-9f-62r"/>
                                             <constraint firstAttribute="bottom" secondItem="FCj-wm-krs" secondAttribute="bottom" constant="10" id="qAZ-sQ-A1k"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="FCj-wm-krs" secondAttribute="trailing" id="yZw-lr-Yvj"/>
                                         </constraints>
                                         <size key="customSize" width="150" height="200"/>
                                         <connections>
