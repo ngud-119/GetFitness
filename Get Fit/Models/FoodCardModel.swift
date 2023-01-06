@@ -7,11 +7,11 @@
 
 import UIKit
 
-struct FoodCardModel: Hashable
+struct FoodCardModel
 {
     var foodCategory: String
     var cardImage: [String]
     var foodName: [String]
-    var foodQuantity: [String]
-    var foodCalorie: [String]
+    var foodQuantity: [Double]
+    var foodCalorie: [Double]
 }
