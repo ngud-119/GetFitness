@@ -13,7 +13,7 @@ class HeaderCollectionReusableView: UICollectionReusableView
     private let label: UILabel = {
        
         let label = UILabel()
-        label.text = "Header"
+        // label.text = "Header"
         label.textAlignment = .left
         label.textColor = .white
         label.font = .systemFont(ofSize: 15.0, weight: .bold)
@@ -21,9 +21,10 @@ class HeaderCollectionReusableView: UICollectionReusableView
         
     }()
     
-    public func configure()
+    public func configure(headerTitle: String)
     {
         backgroundColor = .clear
+        label.text = headerTitle
         addSubview(label)
     }
     
