@@ -14,6 +14,7 @@ import Foundation
 
 // MARK: - RecipeDescription
 struct RecipeDescription: Codable {
+
     let q: String
     let from, to: Int
     let more: Bool
