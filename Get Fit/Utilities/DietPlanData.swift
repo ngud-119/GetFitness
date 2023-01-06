@@ -14,19 +14,26 @@ class DietPlanData
     static let shared = DietPlanData()
     
     /// Function for getting data for populating diet plan VC.
-    func getRecipes(with foodCategory: String, completion: @escaping (Data?) -> ())
+    public func getRecipes(foodCategory: String) async -> FoodCardModel
     {
+        var cardImageURL:[String] = [String]()
+        var foodName:[String] = [String]()
+        var foodQuantity:[Double] = [Double]()
+        var foodCalorie:[Double] = [Double]()
+        
+        var foodCardData = FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
+
         // URL
         let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")
         
-        guard url != nil else
+        guard let url = url else
         {
             print("Error creating url object!")
-            return
+            return FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
         }
         
         // URL Request
-        var request = URLRequest(url: url!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
         
         // Specify the header
         let headers = [
@@ -41,24 +48,32 @@ class DietPlanData
         // Get the URLSession
         let session = URLSession.shared
         
-        // Create data task
-        let dataTask = session.dataTask(with: request) { data, response, error in
+        do
+        {
+            let (data, _) = try await session.data(for: request)
+            let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
             
-            // Check for errors
-            if error != nil
+            for recipe in recipes.hits
             {
-                print(error.debugDescription)
+                cardImageURL.append(recipe.recipe!.image!)
+                foodName.append(recipe.recipe!.label!)
+                foodQuantity.append(recipe.recipe!.totalWeight!)
+                foodCalorie.append(recipe.recipe!.calories!)
+                
             }
             
-            // Passing the data from closure to the calling method
-            else
-            {
-                completion(data)
-            }
+            foodCardData.cardImage = cardImageURL
+            foodCardData.foodName = foodName
+            foodCardData.foodQuantity = foodQuantity
+            foodCardData.foodCalorie = foodCalorie
+            
+            return foodCardData
         }
         
-        // Fire off the data
-        dataTask.resume()
+        catch
+        {
+            return FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
+        }
+         
     }
-
 }
