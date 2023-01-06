@@ -18,12 +18,12 @@ class FoodCardCollectionViewCell: UICollectionViewCell
     // Identifier for custom collection view cell.
     static let identifier = "foodCardCell"
     
-    public func configureFoodCard(cardImageUrl: String,foodNameLabel: String,foodQuantityLabel: String,calorieLabel: String)
+    public func configureFoodCard(cardImageUrl: String,foodNameLabel: String,foodQuantityLabel: Double,calorieLabel: Double)
     {
         cardImage.kf.setImage(with: URL(string: cardImageUrl))
         self.foodNameLabel.text = foodNameLabel
-        self.foodQuantityLabel.text = "Per Serving(\(String(format:"%.2f",foodQuantityLabel))"
-        self.calorieLabel.text = "(\(String(format:"%.2f",foodQuantityLabel)) Kcal"
+        self.foodQuantityLabel.text = "\(String(format:"Per Serving(%.0f grams)",foodQuantityLabel))"
+        self.calorieLabel.text = "\(String(format:"%.0f Kcal",calorieLabel))"
         makeCornerRounded()
     }
     // Make card image's corner rounded.
