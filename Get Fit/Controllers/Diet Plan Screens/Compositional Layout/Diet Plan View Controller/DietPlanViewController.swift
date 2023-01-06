@@ -105,12 +105,11 @@ extension DietPlanViewController
     }
     
     // Creating card layout with NSCollectionLayoutSection
-    private func foodCardLayoutSection() -> NSCollectionLayoutSection
+    public func foodCardLayoutSection() -> NSCollectionLayoutSection
     {
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
                 .fractionalHeight(1))
-        
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets.bottom = 10
         
@@ -128,9 +127,9 @@ extension DietPlanViewController
     }
     
     // Adding header to the group
-    private func supplemetaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem
+    public func supplemetaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem
     {
-        .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        return .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
     
     private func configureCollectionViewLayout()
