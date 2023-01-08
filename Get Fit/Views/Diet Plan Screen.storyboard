@@ -111,6 +111,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="foodCardCollectionView" destination="sO7-Jk-6QU" id="W6F-B6-x1F"/>
+                        <segue destination="wY7-oP-9Ce" kind="show" id="DU1-Pe-gLQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -541,23 +542,23 @@
         <!--Food Nutrients View Controller-->
         <scene sceneID="Jup-Yb-ILs">
             <objects>
-                <viewController id="wY7-oP-9Ce" customClass="FoodNutrientsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="foodNutrientsViewController" id="wY7-oP-9Ce" customClass="FoodNutrientsViewController" customModule="Get_Fit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eZj-rU-dap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Je2-xn-D5Q">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="46O-0e-bt3">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="0.0" height="200"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KGp-R6-aCa">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="KGp-R6-aCa">
+                                        <rect key="frame" x="0.0" y="200" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UBz-iq-XOp">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -565,10 +566,37 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="HeaderImageReusableView" id="AGQ-sa-74t" customClass="HeaderImageReusableView" customModule="Get_Fit" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chocolate Oatmeal" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-r9-NBs">
+                                            <rect key="frame" x="8" y="0.0" width="398" height="192"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zMF-kS-OO6" userLabel="TrasparentLayer">
+                                            <rect key="frame" x="8" y="8" width="398" height="184"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zMF-kS-OO6" firstAttribute="leading" secondItem="AGQ-sa-74t" secondAttribute="leadingMargin" id="4KF-61-02B"/>
+                                        <constraint firstItem="i3x-r9-NBs" firstAttribute="top" secondItem="AGQ-sa-74t" secondAttribute="firstBaseline" id="LZu-SU-86O"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="i3x-r9-NBs" secondAttribute="trailing" id="St8-g0-bjY"/>
+                                        <constraint firstItem="zMF-kS-OO6" firstAttribute="top" secondItem="AGQ-sa-74t" secondAttribute="topMargin" id="Yvs-aL-o7s"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="i3x-r9-NBs" secondAttribute="bottom" id="odf-mo-4HX"/>
+                                        <constraint firstItem="i3x-r9-NBs" firstAttribute="leading" secondItem="AGQ-sa-74t" secondAttribute="leadingMargin" id="ovg-7R-qH0"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zMF-kS-OO6" secondAttribute="bottom" id="u1L-9h-WiN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="zMF-kS-OO6" secondAttribute="trailing" id="z6O-ZC-kJq"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="foodImage" destination="i3x-r9-NBs" id="ddy-pX-UIq"/>
+                                        <outlet property="transparentLayer" destination="zMF-kS-OO6" id="jXV-fg-LvL"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Sct-LO-C3u"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Je2-xn-D5Q" firstAttribute="leading" secondItem="Sct-LO-C3u" secondAttribute="leading" id="MV0-yN-jbt"/>
                             <constraint firstItem="Je2-xn-D5Q" firstAttribute="top" secondItem="eZj-rU-dap" secondAttribute="top" id="Off-j9-cy3"/>
@@ -576,6 +604,7 @@
                             <constraint firstItem="Sct-LO-C3u" firstAttribute="bottom" secondItem="Je2-xn-D5Q" secondAttribute="bottom" id="jdW-8k-moT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vER-mt-P6K"/>
                     <connections>
                         <outlet property="foodNutrientsCollectionView" destination="Je2-xn-D5Q" id="JaR-3o-PqF"/>
                     </connections>
@@ -618,9 +647,6 @@
     <resources>
         <image name="Chocolate Oatmeal" width="680" height="1020"/>
         <image name="Diet Plan" width="30" height="30"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

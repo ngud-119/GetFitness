@@ -7,7 +7,7 @@
 
 import UIKit
 
-// Loading view for indication of some loading operation is going on.
+/// Loading view for indication of some loading operation is going on.
 class LoadingView: UIView
 {
     @IBOutlet weak var spinner: UIActivityIndicatorView!

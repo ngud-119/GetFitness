@@ -7,30 +7,53 @@
 
 import UIKit
 
-class FoodNutrientsViewController: UIViewController, UICollectionViewDelegate
+class FoodNutrientsViewController: UIViewController
 {
-   
+    
     @IBOutlet weak var foodNutrientsCollectionView: UICollectionView!
     
-    var dietVC = DietPlanViewController()
     override func viewDidLoad()
     {
-        self.viewDidLoad()
+        super.viewDidLoad()
+        configureFoodNutrientsCollectionView()
         
-        foodNutrientsCollectionView.delegate = self
-        foodNutrientsCollectionView.register(HeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier )
-        foodNutrientsCollectionView.collectionViewLayout = createCompositionalLayout()
+    }
+}
+
+// MARK: Extension for populating data in the collection view
+extension FoodNutrientsViewController: UICollectionViewDelegate,UICollectionViewDataSource
+{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
     }
     
-    // Implement sections
-    private func createCompositionalLayout() -> UICollectionViewCompositionalLayout
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        UICollectionViewCompositionalLayout { sectionIndex, LayoutEnvironment in
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        cell.backgroundColor = .red
+        
+        return cell
+    }
+    
+}
 
-            switch sectionIndex
+// MARK: Extention for creating compositional layout and configuring collection view
+
+extension FoodNutrientsViewController
+{
+    // Function to create compositional Layout.
+    private func createLayout() -> UICollectionViewCompositionalLayout
+    {
+        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
             
+            switch sectionNumber
             {
+                
             default:
+                
                 return self.foodCardLayoutSection()
             }
         }
@@ -45,18 +68,49 @@ class FoodNutrientsViewController: UIViewController, UICollectionViewDelegate
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets.bottom = 10
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.45), heightDimension:
-                .fractionalWidth(0.55))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.43), heightDimension:
+                .fractionalWidth(0.60))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        // section.boundarySupplementaryItems = [supplemetaryHeaderItem()]
-        section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10 )
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = .init(top: 10, leading: 10, bottom: 0, trailing: 10 )
         section.interGroupSpacing = 15
+        section.boundarySupplementaryItems = [headerImageView()]
         return section
     }
     
+    private func configureFoodNutrientsCollectionView()
+    {
+        foodNutrientsCollectionView.delegate = self
+        foodNutrientsCollectionView.dataSource = self
+        foodNutrientsCollectionView.register(HeaderImageReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier )
+        foodNutrientsCollectionView.contentInsetAdjustmentBehavior = .never
+        foodNutrientsCollectionView.collectionViewLayout = createLayout()
+    }
     
 }
+
+// MARK: For creating header image of collection view
+extension FoodNutrientsViewController: UICollectionViewDelegateFlowLayout
+{
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier, for: indexPath) as! HeaderImageReusableView
+        
+        
+        return header
+    }
+    
+    
+    // For setting height of header image
+    
+    private func headerImageView() -> NSCollectionLayoutBoundarySupplementaryItem
+    {
+        return .init(layoutSize: .init(widthDimension: .absolute(view.frame.width), heightDimension: .absolute(300)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    }
+    
+}
+

@@ -5,14 +5,13 @@
 //  Created by Sandeep Sahani on 26/11/22.
 //
 
-// Class for getting data from API for exercise list view controller.
+
 import UIKit
 
+/// Class for getting data from API for exercise list view controller.
 class ExerciseListData
 {
     
-    /// Some error occured while fetching data.
-    ///  Expired API Call limits
     ///  Function to get exercise from RapidAPI
     static func getExercises(with bodyPart: String, completion: @escaping (Data?) ->())
     {

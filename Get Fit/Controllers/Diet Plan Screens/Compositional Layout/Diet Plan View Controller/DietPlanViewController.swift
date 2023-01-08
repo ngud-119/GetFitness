@@ -18,8 +18,8 @@ class DietPlanViewController: UIViewController
     
     override func viewDidLoad()
     {
-        // ["BreakFast","Brunch","Lunch","Drinks","Supper","Dinner"]
         configureCollectionView()
+        
         // Fetch data from API
         Task.init(operation: {
             
@@ -57,7 +57,7 @@ class DietPlanViewController: UIViewController
     }
 }
 
-// Extention for compositional Layout and setting collection view.
+// MARK: Extention for compositional Layout and setting collection view.
 extension DietPlanViewController
 {
     
@@ -114,7 +114,7 @@ extension DietPlanViewController
     
 }
 
-// Extension for Populating collection view.
+// MARK: Extension for Populating collection view.
 extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewDataSource
 {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -136,8 +136,32 @@ extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewData
         return foodCardViewData.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier, for: indexPath) as! FoodCardCollectionViewCell
+        
+        print(foodCardViewData[indexPath.section].foodName[indexPath.row])
+        print(foodCardViewData[indexPath.section].foodQuantity[indexPath.row])
+        print(foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        
+        let DietPlanstoryboard = UIStoryboard(name: "Diet Plan Screen", bundle: nil)
+
+        // Instance of ExerciseListVC
+        let vc = DietPlanstoryboard.instantiateViewController(withIdentifier: "foodNutrientsViewController") as! FoodNutrientsViewController
+        
+        // To navigate from WorkoutsVC to ExerciseListVC
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
-    // For creating header of card layout.
+    
+    
+}
+
+// MARK: For creating header of card layout.
+extension DietPlanViewController
+{
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
