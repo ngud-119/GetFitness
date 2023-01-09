@@ -10,26 +10,31 @@ import UIKit
 /// Class for custom header view for FoodNutrientsViewController.
 class HeaderImageReusableView: UICollectionReusableView
 {
-    @IBOutlet weak var foodImage: UIImageView!
-    @IBOutlet weak var transparentLayer: UIImageView!
+    @IBOutlet var foodImage: UIImageView!
+    @IBOutlet var transparentLayer: UIImageView!
 
     static let identifier = "HeaderImageReusableView"
+    
+    let foodImageView: UIImageView = {
+        
+        let foodImage = UIImageView(image: UIImage(named: "Chocolate Oatmeal"))
+        foodImage.contentMode = .scaleAspectFill
+        foodImage.layer.opacity = 0.60
+        return foodImage
+        
+    }()
+    
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        
-        self.backgroundColor = .red
-        setImage(image: "Chocolate Oatmeal")
-        
+        addSubview(foodImageView)
+        foodImageView.fillSuperview()
         
     }
     
-    private func setImage(image: String)
+    func setCornerRadius()
     {
-        if let unwrapedImage = UIImage(named: image)
-        {
-            self.foodImage.image = unwrapedImage
-        }
+        
     }
     
     required init?(coder: NSCoder)
