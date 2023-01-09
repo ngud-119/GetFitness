@@ -32,11 +32,7 @@ class HeaderImageReusableView: UICollectionReusableView
         
     }
     
-    func setCornerRadius()
-    {
-        
-    }
-    
+   
     required init?(coder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")

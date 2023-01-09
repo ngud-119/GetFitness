@@ -59,13 +59,7 @@ extension FoodNutrientsViewController
     // Creating card layout with NSCollectionLayoutSection
     private func foodCardLayoutSection() -> NSCollectionLayoutSection
     {
-        let text: UILabel = {
-           
-            let label = UILabel()
-            label.text = "Label"
-            
-            return label
-        }()
+       
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
                 .fractionalHeight(1))
