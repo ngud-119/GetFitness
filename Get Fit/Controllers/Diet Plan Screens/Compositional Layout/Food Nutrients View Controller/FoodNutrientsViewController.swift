@@ -16,7 +16,6 @@ class FoodNutrientsViewController: UIViewController
     {
         super.viewDidLoad()
         configureFoodNutrientsCollectionView()
-        
     }
 }
 
@@ -24,24 +23,22 @@ class FoodNutrientsViewController: UIViewController
 extension FoodNutrientsViewController: UICollectionViewDelegate,UICollectionViewDataSource
 {
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
         10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
         cell.backgroundColor = .red
-        
         return cell
     }
     
 }
 
 // MARK: Extention for creating compositional layout and configuring collection view
-
 extension FoodNutrientsViewController
 {
     // Function to create compositional Layout.
@@ -62,14 +59,21 @@ extension FoodNutrientsViewController
     // Creating card layout with NSCollectionLayoutSection
     private func foodCardLayoutSection() -> NSCollectionLayoutSection
     {
+        let text: UILabel = {
+           
+            let label = UILabel()
+            label.text = "Label"
+            
+            return label
+        }()
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
                 .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets.bottom = 10
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.43), heightDimension:
-                .fractionalWidth(0.60))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension:
+                .fractionalWidth(0.5))
         
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
@@ -78,6 +82,7 @@ extension FoodNutrientsViewController
         section.contentInsets = .init(top: 10, leading: 10, bottom: 0, trailing: 10 )
         section.interGroupSpacing = 15
         section.boundarySupplementaryItems = [headerImageView()]
+      
         return section
     }
     
@@ -100,16 +105,19 @@ extension FoodNutrientsViewController: UICollectionViewDelegateFlowLayout
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier, for: indexPath) as! HeaderImageReusableView
         
-        
         return header
     }
     
+    // Setting corner radius in bottom of header view.
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath)
+    {
+        view.roundCorners(corners: [.bottomLeft,.bottomRight], radius: 40)
+    }
     
     // For setting height of header image
-    
     private func headerImageView() -> NSCollectionLayoutBoundarySupplementaryItem
     {
-        return .init(layoutSize: .init(widthDimension: .absolute(view.frame.width), heightDimension: .absolute(300)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        return .init(layoutSize: .init(widthDimension: .absolute(view.frame.width), heightDimension: .absolute(400)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
     }
     
 }
