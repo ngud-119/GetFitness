@@ -25,14 +25,14 @@ extension FoodNutrientsViewController: UICollectionViewDelegate,UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        10
+        4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutientsCollectionViewCell.identifier, for: indexPath) as! FoodNutientsCollectionViewCell
         
-        cell.backgroundColor = .red
+        cell.configure(title: "prep time", quantity: "12", unit: "g")
         return cell
     }
     
@@ -61,8 +61,8 @@ extension FoodNutrientsViewController
     {
        
         
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension:
-                .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension:
+                .fractionalHeight(0.5))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets.bottom = 10
         
@@ -85,6 +85,10 @@ extension FoodNutrientsViewController
         foodNutrientsCollectionView.delegate = self
         foodNutrientsCollectionView.dataSource = self
         foodNutrientsCollectionView.register(HeaderImageReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier )
+        
+//        foodNutrientsCollectionView.register(FoodNutientsCollectionViewCell.self, forCellWithReuseIdentifier: FoodNutientsCollectionViewCell.identifier)
+        
+        foodNutrientsCollectionView.register(FoodNutientsCollectionViewCell.self, forCellWithReuseIdentifier: FoodNutientsCollectionViewCell.identifier)
         foodNutrientsCollectionView.contentInsetAdjustmentBehavior = .never
         foodNutrientsCollectionView.collectionViewLayout = createLayout()
     }

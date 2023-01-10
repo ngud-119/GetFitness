@@ -10,8 +10,6 @@ import UIKit
 /// Class for custom header view for FoodNutrientsViewController.
 class HeaderImageReusableView: UICollectionReusableView
 {
-    @IBOutlet var foodImage: UIImageView!
-    @IBOutlet var transparentLayer: UIImageView!
 
     static let identifier = "HeaderImageReusableView"
     

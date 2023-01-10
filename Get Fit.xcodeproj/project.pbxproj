@@ -33,6 +33,7 @@
 		5A7FC91529086C6400A1F3F5 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FC91429086C6400A1F3F5 /* Storyboards.swift */; };
 		5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7728F83D500079E68E /* DietPlan.swift */; };
 		5A87AE7A28F89EB90079E68E /* FoodCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7928F89EB90079E68E /* FoodCardModel.swift */; };
+		5A88247F296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A88247E296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift */; };
 		5A8C64A5294224420014B6EB /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C64A4294224420014B6EB /* GifViewController.swift */; };
 		5A8C64A8294245300014B6EB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8C64A7294245300014B6EB /* Kingfisher */; };
 		5A9E586E2950B875002504D0 /* APIJsonResponse in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E586D2950B874002504D0 /* APIJsonResponse */; };
@@ -85,6 +86,7 @@
 		5A7FC91429086C6400A1F3F5 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		5A87AE7728F83D500079E68E /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
 		5A87AE7928F89EB90079E68E /* FoodCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardModel.swift; sourceTree = "<group>"; };
+		5A88247E296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A8C64A4294224420014B6EB /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
 		5A9E586D2950B874002504D0 /* APIJsonResponse */ = {isa = PBXFileReference; lastKnownFileType = text; path = APIJsonResponse; sourceTree = "<group>"; };
 		5AAB51D828F2E58700913048 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0905AE295D68EB00F4629B /* FoodCardCollectionViewCell.swift */,
+				5A88247E296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift */,
 			);
 			path = "CollectionView Cell";
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */,
 				5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */,
 				5A0905AF295D68EB00F4629B /* FoodCardCollectionViewCell.swift in Sources */,
+				5A88247F296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift in Sources */,
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
 				5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
