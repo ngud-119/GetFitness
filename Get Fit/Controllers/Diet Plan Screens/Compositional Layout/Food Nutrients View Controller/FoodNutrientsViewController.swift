@@ -27,7 +27,7 @@ extension FoodNutrientsViewController: UICollectionViewDelegate,UICollectionView
     {
         4
     }
-    
+    // TASK1:Implemant different sections
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutientsCollectionViewCell.identifier, for: indexPath) as! FoodNutientsCollectionViewCell
