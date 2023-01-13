@@ -23,7 +23,8 @@ class FoodNutientsCollectionViewCell: UICollectionViewCell
     /// This method will populate collection view
     public func configure(title: String,quantity: String,unit: String)
     {
-        self.headingTitle.text = title
+        // Fatal Error: found nil while unwraping optionals
+        // self.headingTitle.text = title
         self.quantityLabel.text = quantity
         self.unitLabel.text = unit
     }
