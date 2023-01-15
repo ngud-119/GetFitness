@@ -86,10 +86,7 @@ extension FoodNutrientsViewController
         foodNutrientsCollectionView.delegate = self
         foodNutrientsCollectionView.dataSource = self
         foodNutrientsCollectionView.register(HeaderImageReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier )
-        
-//        foodNutrientsCollectionView.register(FoodNutientsCollectionViewCell.self, forCellWithReuseIdentifier: FoodNutientsCollectionViewCell.identifier)
-        
-        foodNutrientsCollectionView.register(FoodNutientsCollectionViewCell.self, forCellWithReuseIdentifier: FoodNutientsCollectionViewCell.identifier)
+                        
         foodNutrientsCollectionView.contentInsetAdjustmentBehavior = .never
         foodNutrientsCollectionView.collectionViewLayout = createLayout()
     }
@@ -103,6 +100,8 @@ extension FoodNutrientsViewController: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier, for: indexPath) as! HeaderImageReusableView
+        
+        header.configureHeader(imageName: "Cardio")
         
         return header
     }
