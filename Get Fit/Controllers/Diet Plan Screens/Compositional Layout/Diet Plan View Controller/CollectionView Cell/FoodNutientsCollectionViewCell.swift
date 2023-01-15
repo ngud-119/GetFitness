@@ -11,7 +11,7 @@ import UIKit
 class FoodNutientsCollectionViewCell: UICollectionViewCell
 {
     /// Reusable identifier for collection view cell.
-    static let identifier = "FoodNutientsCollectionViewCell"
+    static let identifier = "foodNutrientsCollectionViewCell"
     
     @IBOutlet weak var headingTitle: UILabel!
     
@@ -23,8 +23,9 @@ class FoodNutientsCollectionViewCell: UICollectionViewCell
     /// This method will populate collection view
     public func configure(title: String,quantity: String,unit: String)
     {
-        // Fatal Error: found nil while unwraping optionals
-        // self.headingTitle.text = title
+        // Fatal Error: found nil while unwraping optionals.
+        // Error was due to same name of collection view cell class and reusable identifier.
+        self.headingTitle.text = title
         self.quantityLabel.text = quantity
         self.unitLabel.text = unit
     }
