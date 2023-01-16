@@ -34,6 +34,7 @@ extension FoodNutrientsViewController: UICollectionViewDelegate,UICollectionView
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutientsCollectionViewCell.identifier, for: indexPath) as! FoodNutientsCollectionViewCell
         
         cell.configure(title: "prep time", quantity: "12", unit: "g")
+        
         return cell
     }
     
@@ -101,7 +102,7 @@ extension FoodNutrientsViewController: UICollectionViewDelegateFlowLayout
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderImageReusableView.identifier, for: indexPath) as! HeaderImageReusableView
         
-        header.configureHeader(imageName: "Cardio")
+        header.configureHeader(imageName: "Chocolate Oatmeal", name: "Chocolate Oatmeal", quantity: "per serving(100g)")
         
         return header
     }
