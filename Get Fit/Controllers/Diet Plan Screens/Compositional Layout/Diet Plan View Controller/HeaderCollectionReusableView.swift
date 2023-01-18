@@ -34,4 +34,6 @@ class HeaderCollectionReusableView: UICollectionReusableView
         label.frame = bounds 
     }
     
+
+    
 }

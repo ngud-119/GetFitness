@@ -31,6 +31,7 @@ extension FoodNutrientsViewController: UICollectionViewDelegate,UICollectionView
     // TASK2: Design custom cell for collection view.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutientsCollectionViewCell.identifier, for: indexPath) as! FoodNutientsCollectionViewCell
         
         cell.configure(title: "prep time", quantity: "12", unit: "g")
