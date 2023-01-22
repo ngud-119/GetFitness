@@ -8,6 +8,7 @@
 import Foundation
 
 /// Enum for storing different sections of FoodNutrientsCollectionView
+// Unable to create layout.
 enum Section
 {
     case foodNutrientsSection([FoodNutrientsModel])

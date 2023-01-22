@@ -55,6 +55,7 @@ class HeaderImageReusableView: UICollectionReusableView
         return label
     }()
     
+    
     override init(frame: CGRect)
     {
         
