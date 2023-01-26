@@ -10,7 +10,7 @@ import UIKit
 class NutrientsViewController: UIViewController
 {
 
-    @IBOutlet weak var foodImageView: UIView!
+    @IBOutlet weak var foodImageView: UIImageView!
 //    @IBOutlet weak var foodName: UILabel!
 //    @IBOutlet weak var foodQuantitiy: UILabel!
 //    @IBOutlet weak var prepTime: UILabel!
@@ -19,17 +19,17 @@ class NutrientsViewController: UIViewController
 //    @IBOutlet weak var protein: UILabel!
 //    @IBOutlet weak var ingredientsCollectionView: UICollectionView!
 //    @IBOutlet weak var preparationStepsTableView: UITableView!
-    @IBOutlet weak var foodView: UIView!
     
-    @IBOutlet weak var ContaintsScrollView: UIScrollView!
+    @IBOutlet weak var containtsScrollView: UIScrollView!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        foodImageView.roundCorners(corners: [.bottomLeft,.bottomRight], radius:40)
-       
-        ContaintsScrollView.contentInsetAdjustmentBehavior = .never
+        foodImageView.image = UIImage(named: "Chocolate Oatmeal")
+    
+        containtsScrollView.contentInsetAdjustmentBehavior = .never
         foodImageView.layer.opacity = 0.60
+
         // Do any additional setup after loading the view.
     }
 }
