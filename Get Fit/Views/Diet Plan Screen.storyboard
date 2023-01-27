@@ -154,46 +154,46 @@
                                                 </subviews>
                                             </stackView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IkZ-9e-KNI" userLabel="Food Nutrients Collection View">
-                                                <rect key="frame" x="15" y="487" width="384" height="55"/>
+                                                <rect key="frame" x="15" y="487" width="384" height="60"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="55" id="zbv-lj-JzQ"/>
+                                                    <constraint firstAttribute="height" constant="60" id="zbv-lj-JzQ" userLabel="height = 60"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="avz-5b-gs9">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="avz-5b-gs9">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pwS-kU-7bx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="55"/>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodNutrientsCollectionViewCell" id="pwS-kU-7bx" customClass="FoodNutrientsCollectionViewCell" customModule="Get_Fit" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="2.5" width="80" height="55"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="6Wj-uy-rOj">
                                                             <rect key="frame" x="0.0" y="0.0" width="80" height="55"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3JN-8V-jJY">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3JN-8V-jJY">
                                                                     <rect key="frame" x="0.0" y="0.0" width="80" height="55"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZR-2P-Yl4" userLabel="Titile">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="27.5" height="27.5"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="27.5" height="14"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
                                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="SHs-mM-fsU">
-                                                                            <rect key="frame" x="0.0" y="27.5" width="46" height="27.5"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="SHs-mM-fsU" userLabel="Food Amount Stack">
+                                                                            <rect key="frame" x="0.0" y="14" width="46" height="41"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eFt-lM-iXV" userLabel="Amount">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="34" height="27.5"/>
+                                                                                    <rect key="frame" x="0.0" y="5" width="34" height="36"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="69I-eK-DHJ" userLabel="Unit">
-                                                                                    <rect key="frame" x="34" y="3.5" width="12" height="24"/>
+                                                                                    <rect key="frame" x="34" y="17" width="12" height="24"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                                     <color key="textColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -213,6 +213,11 @@
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <size key="customSize" width="80" height="55"/>
+                                                        <connections>
+                                                            <outlet property="amount" destination="eFt-lM-iXV" id="Smf-wg-uES"/>
+                                                            <outlet property="title" destination="QZR-2P-Yl4" id="Vez-LU-QTj"/>
+                                                            <outlet property="unit" destination="69I-eK-DHJ" id="NOV-ox-dem"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
@@ -255,6 +260,7 @@
                     <connections>
                         <outlet property="containtsScrollView" destination="x7N-oy-5E9" id="FFB-9n-icF"/>
                         <outlet property="foodImageView" destination="c7f-Ch-gb9" id="Ltm-7x-dE2"/>
+                        <outlet property="foodNutrientCollectionView" destination="IkZ-9e-KNI" id="qKa-RV-S3t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4dh-xc-plB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
