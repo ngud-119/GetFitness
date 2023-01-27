@@ -11,12 +11,7 @@ class NutrientsViewController: UIViewController
 {
 
     @IBOutlet weak var foodImageView: UIImageView!
-//    @IBOutlet weak var foodName: UILabel!
-//    @IBOutlet weak var foodQuantitiy: UILabel!
-//    @IBOutlet weak var prepTime: UILabel!
-//    @IBOutlet weak var carbs: UILabel!
-//    @IBOutlet weak var fat: UILabel!
-//    @IBOutlet weak var protein: UILabel!
+    @IBOutlet weak var foodNutrientCollectionView: UICollectionView!
 //    @IBOutlet weak var ingredientsCollectionView: UICollectionView!
 //    @IBOutlet weak var preparationStepsTableView: UITableView!
     
@@ -26,14 +21,36 @@ class NutrientsViewController: UIViewController
     {
         super.viewDidLoad()
         foodImageView.image = UIImage(named: "Chocolate Oatmeal")
-    
         containtsScrollView.contentInsetAdjustmentBehavior = .never
         foodImageView.layer.opacity = 0.60
+        
+        foodNutrientCollectionView.delegate = self
+        foodNutrientCollectionView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
 }
 
+extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
+{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath) as! FoodNutrientsCollectionViewCell
+        
+        cell.configureCell(cellTitle: "prep time", foodQuantity: 60.9, foodUnit: "g")
+        return cell
+    }
+    
+    
+    
+    
+    
+}
 
 //// MARK: Extention for ingredients list view with UICollectionView
 //
