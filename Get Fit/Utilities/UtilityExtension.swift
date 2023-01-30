@@ -39,6 +39,7 @@ extension UIImageView
         layer.cornerRadius = self.frame.height / 2
         clipsToBounds = true
     }
+   
 }
 
 // MARK: Extension for custom place holder text color.
