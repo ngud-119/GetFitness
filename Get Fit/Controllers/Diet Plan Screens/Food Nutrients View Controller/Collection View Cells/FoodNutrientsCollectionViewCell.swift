@@ -7,21 +7,21 @@
 
 import UIKit
 
-/// Class custom food nutrients collection view cell.
+/// Custom food nutrients collection view cell.
 final class FoodNutrientsCollectionViewCell: UICollectionViewCell
 {
     static let identifier = "foodNutrientsCollectionViewCell"
     
-//    @IBOutlet weak var title: UILabel!
-//
-//    @IBOutlet weak var amount: UILabel!
-//
-//    @IBOutlet weak var unit: UILabel!
-//
-//    public func configureCell(cellTitle: String,foodQuantity: Double,foodUnit: String)
-//    {
-//        self.title.text = cellTitle
-//        self.amount.text = "\(foodQuantity)"
-//        self.unit.text = foodUnit
-//    }
+    @IBOutlet weak var title: UILabel!
+
+    @IBOutlet weak var amount: UILabel!
+
+    @IBOutlet weak var unit: UILabel!
+
+    public func configureCell(cellTitle: String,foodQuantity: Double,foodUnit: String)
+    {
+        self.title.text = cellTitle
+        self.amount.text = "\(foodQuantity)"
+        self.unit.text = foodUnit
+    }
 }
