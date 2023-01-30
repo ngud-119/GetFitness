@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0427DE28889AB7003F9726 /* SignInViewController.swift */; };
 		5A0905AF295D68EB00F4629B /* FoodCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905AE295D68EB00F4629B /* FoodCardCollectionViewCell.swift */; };
-		5A0905B3295D698700F4629B /* PreparationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905B2295D698700F4629B /* PreparationTableViewCell.swift */; };
+		5A0905B3295D698700F4629B /* PreparationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905B2295D698700F4629B /* PreparationCollectionViewCell.swift */; };
 		5A0905B7295E118500F4629B /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0905B6295E118500F4629B /* HeaderCollectionReusableView.swift */; };
 		5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1DB9A128FC68960048935F /* NutrientsViewController.swift */; };
 		5A21D89928EABB8A0080EEFD /* Workouts Screens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */; };
 		5A21D89B28EABFD10080EEFD /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A21D89A28EABFD10080EEFD /* TabBar.storyboard */; };
 		5A2D2C8228F48F550070E168 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2D2C8128F48F550070E168 /* CircularProgressView.swift */; };
 		5A2D450A28EC034600FF7EAC /* Profile Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */; };
+		5A34412529838F2C00241231 /* FoodNutrientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34412429838F2C00241231 /* FoodNutrientsCollectionViewCell.swift */; };
+		5A34412729839B0B00241231 /* IngredientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A34412629839B0B00241231 /* IngredientsCollectionViewCell.swift */; };
 		5A482AE52889953500030497 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A482AE42889953500030497 /* SignUpViewController.swift */; };
 		5A52A4E829200BD700ED4821 /* MethodsOfProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52A4E729200BD700ED4821 /* MethodsOfProfileVC.swift */; };
 		5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */; };
@@ -24,16 +26,12 @@
 		5A6AA274294866B7004A9018 /* DietPlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6AA273294866B7004A9018 /* DietPlanData.swift */; };
 		5A6AA27629488C2E004A9018 /* RecipeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6AA27529488C2E004A9018 /* RecipeDescription.swift */; };
 		5A71922C2903225A00128967 /* UtilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A71922B2903225A00128967 /* UtilityExtension.swift */; };
-		5A751B452966018600BC7A3D /* FoodNutrientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A751B442966018600BC7A3D /* FoodNutrientsViewController.swift */; };
-		5A751B4B296683F500BC7A3D /* FoodItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A751B4A296683F500BC7A3D /* FoodItemListCollectionViewCell.swift */; };
 		5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7522E628EC44410022E260 /* ProfileViewController.swift */; };
 		5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */; };
-		5A7C357D296ADB2C00FB20D1 /* HeaderImageReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C357C296ADB2C00FB20D1 /* HeaderImageReusableView.swift */; };
 		5A7FC91329085B7600A1F3F5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FC91229085B7600A1F3F5 /* Utilities.swift */; };
 		5A7FC91529086C6400A1F3F5 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FC91429086C6400A1F3F5 /* Storyboards.swift */; };
 		5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7728F83D500079E68E /* DietPlan.swift */; };
 		5A87AE7A28F89EB90079E68E /* FoodCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87AE7928F89EB90079E68E /* FoodCardModel.swift */; };
-		5A88247F296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A88247E296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift */; };
 		5A8C64A5294224420014B6EB /* GifViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8C64A4294224420014B6EB /* GifViewController.swift */; };
 		5A8C64A8294245300014B6EB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 5A8C64A7294245300014B6EB /* Kingfisher */; };
 		5AAB51D928F2E58700913048 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAB51D828F2E58700913048 /* ExerciseViewController.swift */; };
@@ -53,8 +51,6 @@
 		5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */; };
 		5AE5D9DB28F6FA0600E40363 /* Diet Plan Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */; };
 		5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */; };
-		5AEE70CC2975B4ED007F1FD1 /* IngredientsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE70CB2975B4ED007F1FD1 /* IngredientsCollectionViewCell.swift */; };
-		5AEE70CE2975B622007F1FD1 /* PreparationStepsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE70CD2975B622007F1FD1 /* PreparationStepsCollectionViewCell.swift */; };
 		5AEE70D02975B8CD007F1FD1 /* IngredientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE70CF2975B8CD007F1FD1 /* IngredientModel.swift */; };
 		5AEE70D22975B999007F1FD1 /* PreparationDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE70D12975B999007F1FD1 /* PreparationDescription.swift */; };
 		5AEE70D62975CD4C007F1FD1 /* FoodNutrientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE70D52975CD4C007F1FD1 /* FoodNutrientsModel.swift */; };
@@ -66,13 +62,15 @@
 		3A9DB64AC63805F42333E964 /* Pods-Get Fit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Get Fit.debug.xcconfig"; path = "Target Support Files/Pods-Get Fit/Pods-Get Fit.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0427DE28889AB7003F9726 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		5A0905AE295D68EB00F4629B /* FoodCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardCollectionViewCell.swift; sourceTree = "<group>"; };
-		5A0905B2295D698700F4629B /* PreparationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationTableViewCell.swift; sourceTree = "<group>"; };
+		5A0905B2295D698700F4629B /* PreparationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A0905B6295E118500F4629B /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		5A1DB9A128FC68960048935F /* NutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsViewController.swift; sourceTree = "<group>"; };
 		5A21D89828EABB8A0080EEFD /* Workouts Screens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Workouts Screens.storyboard"; sourceTree = "<group>"; };
 		5A21D89A28EABFD10080EEFD /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		5A2D2C8128F48F550070E168 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		5A2D450928EC034600FF7EAC /* Profile Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Profile Screen.storyboard"; sourceTree = "<group>"; };
+		5A34412429838F2C00241231 /* FoodNutrientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrientsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A34412629839B0B00241231 /* IngredientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A482AE42889953500030497 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A52A4E729200BD700ED4821 /* MethodsOfProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodsOfProfileVC.swift; sourceTree = "<group>"; };
 		5A52A4E929200D5100ED4821 /* ImagePickerViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewExtention.swift; sourceTree = "<group>"; };
@@ -81,16 +79,12 @@
 		5A6AA273294866B7004A9018 /* DietPlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanData.swift; sourceTree = "<group>"; };
 		5A6AA27529488C2E004A9018 /* RecipeDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDescription.swift; sourceTree = "<group>"; };
 		5A71922B2903225A00128967 /* UtilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityExtension.swift; sourceTree = "<group>"; };
-		5A751B442966018600BC7A3D /* FoodNutrientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrientsViewController.swift; sourceTree = "<group>"; };
-		5A751B4A296683F500BC7A3D /* FoodItemListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodItemListCollectionViewCell.swift; path = "Compositional Layout/Diet Plan View Controller/CollectionView Cell/FoodItemListCollectionViewCell.swift"; sourceTree = "<group>"; };
 		5A7522E628EC44410022E260 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A7A8B2F28E891A60024E4C1 /* SignInSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInSignUpViewController.swift; sourceTree = "<group>"; };
-		5A7C357C296ADB2C00FB20D1 /* HeaderImageReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderImageReusableView.swift; sourceTree = "<group>"; };
 		5A7FC91229085B7600A1F3F5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		5A7FC91429086C6400A1F3F5 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		5A87AE7728F83D500079E68E /* DietPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlan.swift; sourceTree = "<group>"; };
 		5A87AE7928F89EB90079E68E /* FoodCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCardModel.swift; sourceTree = "<group>"; };
-		5A88247E296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutientsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A8C64A4294224420014B6EB /* GifViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifViewController.swift; sourceTree = "<group>"; };
 		5AAB51D828F2E58700913048 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		5AB27F7C28F019E8008DFEB0 /* ExerciseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseList.swift; sourceTree = "<group>"; };
@@ -111,8 +105,6 @@
 		5ADCF4B028872FA600EB653A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5AE5D9DA28F6FA0500E40363 /* Diet Plan Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Diet Plan Screen.storyboard"; sourceTree = "<group>"; };
 		5AE5D9DD28F6FB7300E40363 /* DietPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietPlanViewController.swift; sourceTree = "<group>"; };
-		5AEE70CB2975B4ED007F1FD1 /* IngredientsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCollectionViewCell.swift; sourceTree = "<group>"; };
-		5AEE70CD2975B622007F1FD1 /* PreparationStepsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationStepsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5AEE70CF2975B8CD007F1FD1 /* IngredientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientModel.swift; sourceTree = "<group>"; };
 		5AEE70D12975B999007F1FD1 /* PreparationDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparationDescription.swift; sourceTree = "<group>"; };
 		5AEE70D52975CD4C007F1FD1 /* FoodNutrientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNutrientsModel.swift; sourceTree = "<group>"; };
@@ -146,10 +138,28 @@
 		5A0905AD295D639200F4629B /* Compositional Layout */ = {
 			isa = PBXGroup;
 			children = (
-				5A751B482966052F00BC7A3D /* Food Nutrients View Controller */,
 				5A751B472966050200BC7A3D /* Diet Plan View Controller */,
 			);
 			path = "Compositional Layout";
+			sourceTree = "<group>";
+		};
+		5A145F6E2987E0A1007F6C45 /* Food Nutrients View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A1DB9A128FC68960048935F /* NutrientsViewController.swift */,
+				5A145F6F2987E0C4007F6C45 /* Collection View Cells */,
+			);
+			path = "Food Nutrients View Controller";
+			sourceTree = "<group>";
+		};
+		5A145F6F2987E0C4007F6C45 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5A34412629839B0B00241231 /* IngredientsCollectionViewCell.swift */,
+				5A34412429838F2C00241231 /* FoodNutrientsCollectionViewCell.swift */,
+				5A0905B2295D698700F4629B /* PreparationCollectionViewCell.swift */,
+			);
+			path = "Collection View Cells";
 			sourceTree = "<group>";
 		};
 		5A52A4EB29200D9A00ED4821 /* Extension of ProfileVC */ = {
@@ -189,26 +199,6 @@
 				5A751B46296604B000BC7A3D /* CollectionView Cell */,
 			);
 			path = "Diet Plan View Controller";
-			sourceTree = "<group>";
-		};
-		5A751B482966052F00BC7A3D /* Food Nutrients View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				5A751B492966805200BC7A3D /* CollectionView Cell */,
-				5A751B442966018600BC7A3D /* FoodNutrientsViewController.swift */,
-				5A7C357C296ADB2C00FB20D1 /* HeaderImageReusableView.swift */,
-			);
-			path = "Food Nutrients View Controller";
-			sourceTree = "<group>";
-		};
-		5A751B492966805200BC7A3D /* CollectionView Cell */ = {
-			isa = PBXGroup;
-			children = (
-				5A88247E296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift */,
-				5AEE70CB2975B4ED007F1FD1 /* IngredientsCollectionViewCell.swift */,
-				5AEE70CD2975B622007F1FD1 /* PreparationStepsCollectionViewCell.swift */,
-			);
-			path = "CollectionView Cell";
 			sourceTree = "<group>";
 		};
 		5AB27F7E28F01B66008DFEB0 /* Workouts Screen */ = {
@@ -320,10 +310,8 @@
 		5AE5D9DC28F6FB3B00E40363 /* Diet Plan Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5A145F6E2987E0A1007F6C45 /* Food Nutrients View Controller */,
 				5A0905AD295D639200F4629B /* Compositional Layout */,
-				5A1DB9A128FC68960048935F /* NutrientsViewController.swift */,
-				5A0905B2295D698700F4629B /* PreparationTableViewCell.swift */,
-				5A751B4A296683F500BC7A3D /* FoodItemListCollectionViewCell.swift */,
 			);
 			path = "Diet Plan Screens";
 			sourceTree = "<group>";
@@ -485,19 +473,15 @@
 				5A0905B7295E118500F4629B /* HeaderCollectionReusableView.swift in Sources */,
 				5A585EE828EBEEEC004C375F /* ExerciseListViewController.swift in Sources */,
 				5AC8518F28ED413300B17C47 /* WorkoutScreenConstants.swift in Sources */,
-				5AEE70CC2975B4ED007F1FD1 /* IngredientsCollectionViewCell.swift in Sources */,
+				5A34412529838F2C00241231 /* FoodNutrientsCollectionViewCell.swift in Sources */,
 				5AEE70D62975CD4C007F1FD1 /* FoodNutrientsModel.swift in Sources */,
 				5A6AA27629488C2E004A9018 /* RecipeDescription.swift in Sources */,
 				5ADCF4B128872FA600EB653A /* WelcomeViewController.swift in Sources */,
-				5AEE70CE2975B622007F1FD1 /* PreparationStepsCollectionViewCell.swift in Sources */,
-				5A7C357D296ADB2C00FB20D1 /* HeaderImageReusableView.swift in Sources */,
-				5A751B452966018600BC7A3D /* FoodNutrientsViewController.swift in Sources */,
 				5A52A4EA29200D5100ED4821 /* ImagePickerViewExtention.swift in Sources */,
 				5A87AE7828F83D500079E68E /* DietPlan.swift in Sources */,
 				5A7522E728EC44410022E260 /* ProfileViewController.swift in Sources */,
 				5AB27F8128F01E91008DFEB0 /* ExerciseListCell.swift in Sources */,
 				5A0905AF295D68EB00F4629B /* FoodCardCollectionViewCell.swift in Sources */,
-				5A88247F296D2972008EBF5D /* FoodNutientsCollectionViewCell.swift in Sources */,
 				5AC8117B28E9D24A00E5E7E0 /* WorkoutsViewController.swift in Sources */,
 				5AF5A95C2909A48000214433 /* LoadingView.swift in Sources */,
 				5ADCF49D28872E8B00EB653A /* AppDelegate.swift in Sources */,
@@ -508,9 +492,9 @@
 				5AE5D9DE28F6FB7300E40363 /* DietPlanViewController.swift in Sources */,
 				5AC8117D28E9DF8F00E5E7E0 /* CardCell.swift in Sources */,
 				5AD2FDF129333B5A000A5740 /* ExerciseDescription.swift in Sources */,
+				5A34412729839B0B00241231 /* IngredientsCollectionViewCell.swift in Sources */,
 				5A7A8B3028E891A60024E4C1 /* SignInSignUpViewController.swift in Sources */,
 				5AAB51D928F2E58700913048 /* ExerciseViewController.swift in Sources */,
-				5A751B4B296683F500BC7A3D /* FoodItemListCollectionViewCell.swift in Sources */,
 				5A87AE7A28F89EB90079E68E /* FoodCardModel.swift in Sources */,
 				5A0427DF28889AB7003F9726 /* SignInViewController.swift in Sources */,
 				5AEE70D22975B999007F1FD1 /* PreparationDescription.swift in Sources */,
@@ -522,7 +506,7 @@
 				5A7FC91529086C6400A1F3F5 /* Storyboards.swift in Sources */,
 				5A1DB9A228FC68960048935F /* NutrientsViewController.swift in Sources */,
 				5AEE70D02975B8CD007F1FD1 /* IngredientModel.swift in Sources */,
-				5A0905B3295D698700F4629B /* PreparationTableViewCell.swift in Sources */,
+				5A0905B3295D698700F4629B /* PreparationCollectionViewCell.swift in Sources */,
 				5A7FC91329085B7600A1F3F5 /* Utilities.swift in Sources */,
 				5A71922C2903225A00128967 /* UtilityExtension.swift in Sources */,
 			);
