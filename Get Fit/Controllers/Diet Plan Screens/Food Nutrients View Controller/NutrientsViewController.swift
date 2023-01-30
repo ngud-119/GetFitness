@@ -9,14 +9,14 @@ import UIKit
 
 class NutrientsViewController: UIViewController
 {
-//
+
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodNutrientCollectionView: UICollectionView!
     @IBOutlet weak var ingredientsCollectionView: UICollectionView!
-////    @IBOutlet weak var preparationStepsTableView: UITableView!
-//
+    @IBOutlet weak var preparationCollectionView: UICollectionView!
+
    @IBOutlet weak var containtsScrollView: UIScrollView!
-//
+
    static let storyboardID = "nutrientsViewController"
    override func viewDidLoad()
     {
@@ -24,21 +24,38 @@ class NutrientsViewController: UIViewController
         foodImageView.image = UIImage(named: "Chocolate Oatmeal")
         containtsScrollView.contentInsetAdjustmentBehavior = .never
         foodImageView.layer.opacity = 0.60
-//
+
         foodNutrientCollectionView.delegate = self
         foodNutrientCollectionView.dataSource = self
-//
+
         ingredientsCollectionView.delegate = self
         ingredientsCollectionView.dataSource = self
-//
-//
-//        // Do any additional setup after loading the view.
+        
+        preparationCollectionView.delegate = self
+        preparationCollectionView.dataSource = self
+
+       
+
+       // Do any additional setup after loading the view.
     }
 }
 
-//
+private func estimateFrameForText(text: String) -> CGRect {
+    //we make the height arbitrarily large so we don't undershoot height in calculation
+    let height: CGFloat = 30
+
+    let size = CGSize(width: 300, height: 30)
+    let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+    let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)]
+
+    return NSString(string: text).boundingRect(with: size, options: options, attributes: attributes, context: nil)
+}
+
+
 extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         // Cell count for food nutrients collection view.
@@ -54,36 +71,36 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         // Cell count for preparation collection view.
         else
         {
-            return 10
+            return DietPlan.PreparationProcedure.steps.count
         }
 
-        
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         if collectionView == foodNutrientCollectionView
         {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath)
-            cell.backgroundColor = .red
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath) as! FoodNutrientsCollectionViewCell
+            cell.configureCell(cellTitle: "prep time", foodQuantity: 80.0, foodUnit: "g")
+           
             return cell
         }
         else if collectionView == self.ingredientsCollectionView
         {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath) as! IngredientsCollectionViewCell
 
-//            if let image = UIImage(named: "Chocolate Oatmeal")
-//            {
-//                cell.configure(foodName: "Oats", foodImage: image, foodQuantity: "8")
-//            }
-            cell.backgroundColor = .blue
+            if let image = UIImage(named: "Chocolate Oatmeal")
+            {
+                cell.configure(foodName: "Oats", foodImage: image, foodQuantity: "8")
+            }
+    
             return cell
         }
         else
         {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PreparationCollectionViewCell.identifier, for: indexPath) as! PreparationCollectionViewCell
             
-            cell.backgroundColor = .blue
+            cell.configureList(countNumber: "\(indexPath.row + 1)", procedureText: DietPlan.PreparationProcedure.steps[indexPath.row])
             return cell
         }
 
@@ -102,8 +119,15 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         else
         {
             return CGSize(width: view.bounds.width, height: 30)
+             // return UICollectionViewFlowLayoutAutoma
         }
+        
+  
     }
+    
+    
+    
+    
     
 }
 
@@ -151,6 +175,7 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
 //    }
 //
 //    // To dynamically set the height of row according to content lenght of label
+
 //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
 //    {
 //        return UITableView.automaticDimension
