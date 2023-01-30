@@ -9,48 +9,104 @@ import UIKit
 
 class NutrientsViewController: UIViewController
 {
-
+//
     @IBOutlet weak var foodImageView: UIImageView!
     @IBOutlet weak var foodNutrientCollectionView: UICollectionView!
-//    @IBOutlet weak var ingredientsCollectionView: UICollectionView!
-//    @IBOutlet weak var preparationStepsTableView: UITableView!
-    
-    @IBOutlet weak var containtsScrollView: UIScrollView!
-    
-    override func viewDidLoad()
+    @IBOutlet weak var ingredientsCollectionView: UICollectionView!
+////    @IBOutlet weak var preparationStepsTableView: UITableView!
+//
+   @IBOutlet weak var containtsScrollView: UIScrollView!
+//
+   static let storyboardID = "nutrientsViewController"
+   override func viewDidLoad()
     {
         super.viewDidLoad()
         foodImageView.image = UIImage(named: "Chocolate Oatmeal")
         containtsScrollView.contentInsetAdjustmentBehavior = .never
         foodImageView.layer.opacity = 0.60
-        
+//
         foodNutrientCollectionView.delegate = self
         foodNutrientCollectionView.dataSource = self
-
-        // Do any additional setup after loading the view.
+//
+        ingredientsCollectionView.delegate = self
+        ingredientsCollectionView.dataSource = self
+//
+//
+//        // Do any additional setup after loading the view.
     }
 }
 
+//
 extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        5
+        // Cell count for food nutrients collection view.
+        if collectionView == self.foodNutrientCollectionView
+        {
+            return 10
+        }
+        // Cell count for ingredients collection view.
+        else if collectionView == self.ingredientsCollectionView
+        {
+            return 10
+        }
+        // Cell count for preparation collection view.
+        else
+        {
+            return 10
+        }
+
+        
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath) as! FoodNutrientsCollectionViewCell
-        
-        cell.configureCell(cellTitle: "prep time", foodQuantity: 60.9, foodUnit: "g")
-        return cell
+        if collectionView == foodNutrientCollectionView
+        {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath)
+            cell.backgroundColor = .red
+            return cell
+        }
+        else if collectionView == self.ingredientsCollectionView
+        {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath)
+
+//            if let image = UIImage(named: "Chocolate Oatmeal")
+//            {
+//                cell.configure(foodName: "Oats", foodImage: image, foodQuantity: "8")
+//            }
+            cell.backgroundColor = .blue
+            return cell
+        }
+        else
+        {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath)
+            
+            cell.backgroundColor = .blue
+            return cell
+        }
+
     }
     
-    
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        if collectionView == self.foodNutrientCollectionView
+        {
+            return CGSize(width: 80.0 , height: 55.0)
+        }
+        else if collectionView == self.ingredientsCollectionView
+        {
+            return CGSize(width: 70.0 , height: 100.0)
+        }
+        else
+        {
+            return CGSize(width: view.bounds.width, height: 30)
+        }
+    }
     
 }
+
 
 //// MARK: Extention for ingredients list view with UICollectionView
 //
