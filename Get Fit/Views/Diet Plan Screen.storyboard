@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-Jk-6QU" customClass="foodCardCollectionView" customModule="Get_Fit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="00v-be-vUh">
                                     <size key="itemSize" width="150" height="200"/>
@@ -308,14 +308,14 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="preparationCollectionViewCell" id="9kl-BR-ukb" customClass="PreparationCollectionViewCell" customModule="Get_Fit" customModuleProvider="target">
-                                                        <rect key="frame" x="2" y="0.0" width="380" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bxp-gd-zMb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="380" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="30"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6h-Vo-ddU" userLabel="Count View">
-                                                                    <rect key="frame" x="15" y="5" width="20" height="20"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5j-eb-fUH">
                                                                             <rect key="frame" x="2.5" y="2.5" width="15" height="15"/>
@@ -336,23 +336,23 @@
                                                                         <constraint firstAttribute="width" constant="20" id="tXR-FZ-0tV"/>
                                                                     </constraints>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="351" translatesAutoresizingMaskIntoConstraints="NO" id="Ya4-es-YQq">
-                                                                    <rect key="frame" x="40" y="0.0" width="340" height="30"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="351" translatesAutoresizingMaskIntoConstraints="NO" id="Ya4-es-YQq">
+                                                                    <rect key="frame" x="25" y="0.0" width="359" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                     <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="N6h-Vo-ddU" firstAttribute="leading" secondItem="Bxp-gd-zMb" secondAttribute="leading" constant="15" id="8a9-yS-hgs"/>
+                                                                <constraint firstItem="N6h-Vo-ddU" firstAttribute="top" secondItem="Bxp-gd-zMb" secondAttribute="top" id="57j-w9-O3N"/>
+                                                                <constraint firstItem="N6h-Vo-ddU" firstAttribute="leading" secondItem="Bxp-gd-zMb" secondAttribute="leading" id="8a9-yS-hgs"/>
                                                                 <constraint firstItem="Ya4-es-YQq" firstAttribute="top" secondItem="Bxp-gd-zMb" secondAttribute="top" id="8gy-xY-hRw"/>
                                                                 <constraint firstAttribute="bottom" secondItem="Ya4-es-YQq" secondAttribute="bottom" id="GFb-FQ-rrs"/>
                                                                 <constraint firstItem="Ya4-es-YQq" firstAttribute="leading" secondItem="N6h-Vo-ddU" secondAttribute="trailing" constant="5" id="Mzb-IX-x2d"/>
-                                                                <constraint firstAttribute="trailing" secondItem="Ya4-es-YQq" secondAttribute="trailing" id="j6n-jj-8eL"/>
-                                                                <constraint firstItem="N6h-Vo-ddU" firstAttribute="centerY" secondItem="Bxp-gd-zMb" secondAttribute="centerY" id="kd3-gB-XV4"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Ya4-es-YQq" secondAttribute="trailing" id="uRJ-Oz-WT5"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
-                                                        <size key="customSize" width="380" height="30"/>
+                                                        <size key="customSize" width="384" height="30"/>
                                                         <connections>
                                                             <outlet property="ProcedureText" destination="Ya4-es-YQq" id="D49-Rv-rzV"/>
                                                             <outlet property="countNumber" destination="g5j-eb-fUH" id="jih-2R-kqB"/>
