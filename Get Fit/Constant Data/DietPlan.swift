@@ -53,6 +53,13 @@ struct DietPlan
         [
             "Combine all ingredients in a small pot. Mix until fullly combined three times.",
             "Transfer the pot to a stove.Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!", "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
+            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
             "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"
             
         ]
