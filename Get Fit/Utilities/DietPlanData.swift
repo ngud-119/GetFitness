@@ -73,7 +73,83 @@ class DietPlanData
         catch
         {
             return FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
+            
         }
          
     }
+    
+    /// Function for getting data for populating food nutrients collection view cells.
+    public func getRecipesNutrients(foodCategory: String) async -> FoodNutrientsModel
+    {
+        var heading:[String] = [String]()
+        var value:[String] = [String]()
+        var unit:[Double] = [Double]()
+        
+        
+        var foodNutrientsData = FoodNutrientsModel(heading: "", value: "", unit: "")
+
+        // URL
+        let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")
+        
+        guard let url = url else
+        {
+            print("Error creating url object!")
+            return FoodNutrientsModel(heading: "", value: "", unit: "")
+        }
+        
+        // URL Request
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
+        
+        // Specify the header
+        let headers = [
+            "X-RapidAPI-Key": "541dd37637msh5d41896e86719efp19da0ejsn8c426b6b0b58",
+            "X-RapidAPI-Host": "edamam-recipe-search.p.rapidapi.com"
+        ]
+        request.allHTTPHeaderFields = headers
+        
+        // Set the request type
+        request.httpMethod = "GET"
+        
+        // Get the URLSession
+        let session = URLSession.shared
+        
+        do
+        {
+            let (data, _) = try await session.data(for: request)
+            let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
+            
+            for recipe in recipes.hits
+            {
+                
+                let rDict = recipe.recipe?.totalNutrients
+                
+            
+                print(rDict!.values)
+//                cardImageURL.append(recipe.recipe!.image!)
+//                foodName.append(recipe.recipe!.label!)
+//                foodQuantity.append(recipe.recipe!.totalWeight!)
+//                foodCalorie.append(recipe.recipe!.calories!)
+                
+            }
+            
+//            foodCardData.cardImage = cardImageURL
+//            foodCardData.foodName = foodName
+//            foodCardData.foodQuantity = foodQuantity
+//            foodCardData.foodCalorie = foodCalorie
+            
+            return foodNutrientsData
+        }
+        
+        catch
+        {
+            return FoodNutrientsModel(heading: "", value: "", unit: "")
+            
+        }
+         
+    }
+    
+    
+    
+    
+    
 }
