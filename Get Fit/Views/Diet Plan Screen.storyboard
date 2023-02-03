@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sO7-Jk-6QU" customClass="foodCardCollectionView" customModule="Get_Fit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="20" id="00v-be-vUh">
                                     <size key="itemSize" width="150" height="200"/>
@@ -406,14 +406,16 @@
                     <connections>
                         <outlet property="containtsScrollView" destination="wsz-SB-SOa" id="Xf8-Ca-SuP"/>
                         <outlet property="foodImageView" destination="y2W-cf-SCg" id="UYh-pd-L3u"/>
+                        <outlet property="foodName" destination="30c-Nf-CeM" id="IJC-gs-nc8"/>
                         <outlet property="foodNutrientCollectionView" destination="4hQ-Nu-TJe" id="FlR-dm-Crw"/>
+                        <outlet property="foodQuantitiy" destination="YTt-Q6-khF" id="yFI-8J-m1y"/>
                         <outlet property="ingredientsCollectionView" destination="7aP-89-JCU" id="ZL4-QB-LuW"/>
                         <outlet property="preparationCollectionView" destination="OpY-fq-0oS" id="Q9e-Vc-rwD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVJ-hY-iEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2550.7246376811595" y="91.741071428571431"/>
+            <point key="canvasLocation" x="2510" y="-9"/>
         </scene>
         <!--Diet Plan-->
         <scene sceneID="240-lB-JFY">
