@@ -22,7 +22,7 @@ class DietPlanData
         var foodCalorie:[Double] = [Double]()
         
         var foodCardData = FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
-
+        
         // URL
         let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")
         
@@ -75,26 +75,24 @@ class DietPlanData
             return FoodCardModel(foodCategory: "", cardImage: [], foodName: [], foodQuantity: [], foodCalorie: [])
             
         }
-         
+        
     }
     
     /// Function for getting data for populating food nutrients collection view cells.
-    public func getRecipesNutrients(foodCategory: String) async -> FoodNutrientsModel
+    public func getRecipesNutrients(foodCategory: String, recipeNumber: Int) async -> [FoodNutrientsModel]
     {
-        var heading:[String] = [String]()
-        var value:[String] = [String]()
-        var unit:[Double] = [Double]()
         
         
-        var foodNutrientsData = FoodNutrientsModel(heading: "", value: "", unit: "")
-
+        var foodNutrientsData = [FoodNutrientsModel]()
+        let foodNutrientsCode = ["ENERC_KCAL","FAT","CHOCDF","PROCNT","FIBTG","SUGAR"]
+        
         // URL
         let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")
         
         guard let url = url else
         {
             print("Error creating url object!")
-            return FoodNutrientsModel(heading: "", value: "", unit: "")
+            return []
         }
         
         // URL Request
@@ -118,34 +116,31 @@ class DietPlanData
             let (data, _) = try await session.data(for: request)
             let recipes = try JSONDecoder().decode(RecipeDescription.self, from: data)
             
-            for recipe in recipes.hits
-            {
-                
-                let rDict = recipe.recipe?.totalNutrients
-                
             
-                print(rDict!.values)
-//                cardImageURL.append(recipe.recipe!.image!)
-//                foodName.append(recipe.recipe!.label!)
-//                foodQuantity.append(recipe.recipe!.totalWeight!)
-//                foodCalorie.append(recipe.recipe!.calories!)
+            
+            for nutrient in foodNutrientsCode
+            {
+                let nutrientsDictionary = recipes.hits[recipeNumber].recipe?.totalNutrients
+                let singleNutrient = nutrientsDictionary?[nutrient]
+                
+                // Unwrapping optionals
+                if let heading = singleNutrient?.label, let value = singleNutrient?.quantity,let unit = singleNutrient?.unit
+                {
+                    foodNutrientsData.append(FoodNutrientsModel(heading: "\(String(format:"%.0f",heading))", value: "\(String(format:"%.1f",value))", unit: unit.rawValue))
+                }
+                //String(format:"" , heading)
                 
             }
-            
-//            foodCardData.cardImage = cardImageURL
-//            foodCardData.foodName = foodName
-//            foodCardData.foodQuantity = foodQuantity
-//            foodCardData.foodCalorie = foodCalorie
             
             return foodNutrientsData
         }
         
         catch
         {
-            return FoodNutrientsModel(heading: "", value: "", unit: "")
+            return []
             
         }
-         
+        
     }
     
     
