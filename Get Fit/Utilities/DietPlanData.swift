@@ -126,7 +126,7 @@ class DietPlanData
                 // Unwrapping optionals
                 if let heading = singleNutrient?.label, let value = singleNutrient?.quantity,let unit = singleNutrient?.unit
                 {
-                    foodNutrientsData.append(FoodNutrientsModel(heading: "\(String(format:"%.0f",heading))", value: "\(String(format:"%.1f",value))", unit: unit.rawValue))
+                    foodNutrientsData.append(FoodNutrientsModel(heading: heading, value: value, unit: unit.rawValue))
                 }
                 //String(format:"" , heading)
                 
