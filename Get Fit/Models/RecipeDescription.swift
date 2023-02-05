@@ -4,12 +4,7 @@
 //
 //  Created by Sandeep Sahani on 13/12/22.
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let recipeDescription = try? newJSONDecoder().decode(RecipeDescription.self, from: jsonData)
 
-// Made the data model with quicktype.io
 import Foundation
 
 // MARK: - RecipeDescription
@@ -42,7 +37,7 @@ struct Recipe: Codable {
     let totalTime: Int?
     let cuisineType: [String]?
     // let mealType: [MealType]?
-    // let dishType: [DishType]?
+    // let dishType: [DishType]? // Error throwing code.
     let totalNutrients, totalDaily: [String: Total]?
     let digest: [Digest]?
 }

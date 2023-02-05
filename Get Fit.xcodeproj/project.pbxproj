@@ -201,6 +201,33 @@
 			path = "Diet Plan View Controller";
 			sourceTree = "<group>";
 		};
+		5A8522E3298A693000AEE9EC /* Food Nutrients View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AEE70D12975B999007F1FD1 /* PreparationDescription.swift */,
+				5AEE70D52975CD4C007F1FD1 /* FoodNutrientsModel.swift */,
+				5AEE70CF2975B8CD007F1FD1 /* IngredientModel.swift */,
+			);
+			path = "Food Nutrients View Controller";
+			sourceTree = "<group>";
+		};
+		5A8522E4298A696000AEE9EC /* Workouts View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */,
+				5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */,
+			);
+			path = "Workouts View Controller";
+			sourceTree = "<group>";
+		};
+		5A8522E5298A69A700AEE9EC /* Diet Plan View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5A87AE7928F89EB90079E68E /* FoodCardModel.swift */,
+			);
+			path = "Diet Plan View Controller";
+			sourceTree = "<group>";
+		};
 		5AB27F7E28F01B66008DFEB0 /* Workouts Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,13 +298,10 @@
 		5ADCF4B22887313F00EB653A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5A87AE7928F89EB90079E68E /* FoodCardModel.swift */,
-				5AEE70D12975B999007F1FD1 /* PreparationDescription.swift */,
-				5AD2FDF029333B5A000A5740 /* ExerciseDescription.swift */,
-				5AD79D892935E20F0084F661 /* ExerciseListDataModel.swift */,
+				5A8522E5298A69A700AEE9EC /* Diet Plan View Controller */,
+				5A8522E4298A696000AEE9EC /* Workouts View Controller */,
+				5A8522E3298A693000AEE9EC /* Food Nutrients View Controller */,
 				5A6AA27529488C2E004A9018 /* RecipeDescription.swift */,
-				5AEE70CF2975B8CD007F1FD1 /* IngredientModel.swift */,
-				5AEE70D52975CD4C007F1FD1 /* FoodNutrientsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

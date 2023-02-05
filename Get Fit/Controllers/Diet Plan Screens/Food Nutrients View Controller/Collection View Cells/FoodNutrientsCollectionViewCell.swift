@@ -15,13 +15,13 @@ final class FoodNutrientsCollectionViewCell: UICollectionViewCell
     @IBOutlet weak var title: UILabel!
 
     @IBOutlet weak var amount: UILabel!
-
     @IBOutlet weak var unit: UILabel!
-
+    
     public func configureCell(cellTitle: String,foodQuantity: Double,foodUnit: String)
     {
         self.title.text = cellTitle
-        self.amount.text = "\(foodQuantity)"
+        self.amount.text = "\(String(format: "%.1f",foodQuantity))"
         self.unit.text = foodUnit
+       
     }
 }

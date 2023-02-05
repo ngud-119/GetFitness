@@ -11,6 +11,6 @@ import Foundation
 struct FoodNutrientsModel
 {
     let heading: String
-    let value: String
+    let value: Double
     let unit: String
 }

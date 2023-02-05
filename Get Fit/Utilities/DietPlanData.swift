@@ -84,7 +84,7 @@ class DietPlanData
         
         
         var foodNutrientsData = [FoodNutrientsModel]()
-        let foodNutrientsCode = ["ENERC_KCAL","FAT","CHOCDF","PROCNT","FIBTG","SUGAR"]
+        let foodNutrientsCode = ["ENERC_KCAL","CHOCDF","FAT","PROCNT","FIBTG","SUGAR"]
         
         // URL
         let url = URL(string: "https://edamam-recipe-search.p.rapidapi.com/search?q=\(foodCategory)")

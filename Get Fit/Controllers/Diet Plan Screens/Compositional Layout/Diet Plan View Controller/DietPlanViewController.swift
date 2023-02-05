@@ -8,7 +8,7 @@
 import UIKit
 
 
-// Array for pupulating table view cells
+// Array for populating food card collection view cells.
 var foodCardViewData = [FoodCardModel]()
 
 // Task2: Implement Compositional Layout;
@@ -21,6 +21,13 @@ class DietPlanViewController: UIViewController
         configureCollectionView()
         
         // Fetch data from API
+         fetchFoodData()
+        
+    }
+    
+    private func fetchFoodData()
+    {
+        
         Task.init(operation: {
             
             let breakfast = await DietPlanData.shared.getRecipes(foodCategory: "Breakfast")
@@ -52,8 +59,6 @@ class DietPlanViewController: UIViewController
                 self.foodCardCollectionView.reloadData()
             }
         })
-       
-        // Do any additional setup after loading the view.
     }
 }
 
@@ -112,6 +117,7 @@ extension DietPlanViewController
         foodCardCollectionView.collectionViewLayout = createCompositionalLayout()
     }
     
+    
 }
 
 // MARK: Extension for Populating collection view.
@@ -121,32 +127,30 @@ extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewData
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier , for: indexPath) as! FoodCardCollectionViewCell
         
-        cell.configureFoodCard(cardImageUrl: "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg", foodNameLabel: "Food", foodQuantityLabel: 111, calorieLabel: 344)
+        // Mock Data for cells.
+        //cell.configureFoodCard(cardImageUrl: "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg", foodNameLabel: "Food", foodQuantityLabel: 111, calorieLabel: 344)
         
-//        cell.configureFoodCard(cardImageUrl: foodCardViewData[indexPath.section].cardImage[indexPath.row], foodNameLabel: foodCardViewData[indexPath.section].foodName[indexPath.row], foodQuantityLabel: foodCardViewData[indexPath.section].foodQuantity[indexPath.row], calorieLabel: foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        // API Data for cells.
+        cell.configureFoodCard(cardImageUrl: foodCardViewData[indexPath.section].cardImage[indexPath.row], foodNameLabel: foodCardViewData[indexPath.section].foodName[indexPath.row], foodQuantityLabel: foodCardViewData[indexPath.section].foodQuantity[indexPath.row], calorieLabel: foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
         
         return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        5
-        //return foodCardViewData[0].foodName.count
+        //return 5
+         return foodCardViewData[0].foodName.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int
     {
-        2
-        //return foodCardViewData.count
+        //return 2
+        return foodCardViewData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier, for: indexPath) as! FoodCardCollectionViewCell
-        
-//        print(foodCardViewData[indexPath.section].foodName[indexPath.row])
-//        print(foodCardViewData[indexPath.section].foodQuantity[indexPath.row])
-//        print(foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier, for: indexPath) as! FoodCardCollectionViewCell
         
         // Storyboard Instance
         let DietPlanstoryboard = UIStoryboard(name: "Diet Plan Screen", bundle: nil)
@@ -154,6 +158,15 @@ extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewData
         // Instance of NutrientsViewController
         let vc = DietPlanstoryboard.instantiateViewController(withIdentifier: NutrientsViewController.storyboardID) as! NutrientsViewController
         
+        let imageURL = foodCardViewData[indexPath.section].cardImage[indexPath.row]
+        let foodName = foodCardViewData[indexPath.section].foodName[indexPath.row]
+        let foodQuantity = foodCardViewData[indexPath.section].foodQuantity[indexPath.row]
+        
+        let foodCategory = foodCardViewData[indexPath.section].foodCategory
+        let indexNumber = indexPath.row
+        
+        cell.passDataToNutrientsVC(vc: vc, imageURL: imageURL, foodName: foodName, foodQuantity: foodQuantity,indexNumber: indexNumber,foodCategory: foodCategory)
+    
         // To navigate from Diet Plan Viewcontroller to NutrientsViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -169,8 +182,12 @@ extension DietPlanViewController
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
         
-        //header.configure(headerTitle: foodCardViewData[indexPath.section].foodCategory)
-        header.configure(headerTitle: "Food Header")
+        // Function call for testing.
+         //header.configure(headerTitle: "Food Header")
+        
+        // Function call for populating API data.
+        header.configure(headerTitle: foodCardViewData[indexPath.section].foodCategory)
+       
         return header
     }
 }

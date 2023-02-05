@@ -172,30 +172,37 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pcV-op-8cy" userLabel="Main Stack">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="46" height="55"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="55"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdL-KI-7E8">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="12"/>
-                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="80" height="19"/>
+                                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                             <color key="textColor" red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" translatesAutoresizingMaskIntoConstraints="NO" id="Byu-xj-8Td" userLabel="Quantitiy Stack">
-                                                                            <rect key="frame" x="0.0" y="12" width="46" height="43"/>
+                                                                            <rect key="frame" x="0.0" y="19" width="80" height="36"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ0-JS-ig7">
-                                                                                    <rect key="frame" x="0.0" y="7" width="34" height="36"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ0-JS-ig7">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="68" height="36"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="g" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YOh-Aw-PKn">
-                                                                                    <rect key="frame" x="34" y="16.5" width="12" height="24"/>
+                                                                                    <rect key="frame" x="68" y="9.5" width="12" height="26.5"/>
                                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                                                     <color key="textColor" red="0.65490196079999996" green="0.031372549020000001" blue="0.031372549020000001" alpha="0.8980392157" colorSpace="calibratedRGB"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                             </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="YOh-Aw-PKn" firstAttribute="leading" secondItem="sQ0-JS-ig7" secondAttribute="trailing" id="BF6-qL-sgT"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="sQ0-JS-ig7" secondAttribute="bottom" id="Rj5-de-PMb"/>
+                                                                                <constraint firstItem="sQ0-JS-ig7" firstAttribute="leading" secondItem="Byu-xj-8Td" secondAttribute="leading" id="TDl-2n-rf9"/>
+                                                                                <constraint firstItem="sQ0-JS-ig7" firstAttribute="top" secondItem="Byu-xj-8Td" secondAttribute="top" id="W37-R5-F5V"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="YOh-Aw-PKn" secondAttribute="bottom" id="dDZ-82-9ck"/>
+                                                                            </constraints>
                                                                         </stackView>
                                                                     </subviews>
                                                                 </stackView>
@@ -203,6 +210,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="pcV-op-8cy" secondAttribute="bottom" id="6L2-f7-kuO"/>
                                                                 <constraint firstItem="pcV-op-8cy" firstAttribute="leading" secondItem="ZTw-9C-AEi" secondAttribute="leading" id="DVe-dx-NEn"/>
+                                                                <constraint firstAttribute="trailing" secondItem="pcV-op-8cy" secondAttribute="trailing" id="YQI-go-xj2"/>
                                                                 <constraint firstItem="pcV-op-8cy" firstAttribute="top" secondItem="ZTw-9C-AEi" secondAttribute="top" id="cPj-UQ-Dt6"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
@@ -210,7 +218,7 @@
                                                         <connections>
                                                             <outlet property="amount" destination="sQ0-JS-ig7" id="cmP-cX-TNx"/>
                                                             <outlet property="title" destination="WdL-KI-7E8" id="5AL-gp-rFO"/>
-                                                            <outlet property="unit" destination="YOh-Aw-PKn" id="o3k-Nw-KG9"/>
+                                                            <outlet property="unit" destination="YOh-Aw-PKn" id="bcc-Zh-Fcq"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
