@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher // For fetching image from url.
 
 /// Custom class for IngredientsCollectionViewCell.
 final class IngredientsCollectionViewCell: UICollectionViewCell
@@ -16,11 +17,11 @@ final class IngredientsCollectionViewCell: UICollectionViewCell
     @IBOutlet weak private var foodImage: UIImageView!
     @IBOutlet weak private var foodQuantity: UILabel!
     
-    public func configure(foodName: String,foodImage: UIImage,foodQuantity: String)
+    public func configure(foodName: String,foodImage: String,foodQuantity: Double)
     {
         self.foodName?.text = foodName
-        self.foodImage?.image = foodImage
-        self.foodQuantity?.text = foodQuantity
+        self.foodImage.kf.setImage(with: URL(string: foodImage))
+        self.foodQuantity?.text = "\(String(format: "%.1f g",foodQuantity))"
         self.foodImage?.makeImageCircular()
     }
 }

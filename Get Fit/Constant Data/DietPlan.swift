@@ -7,45 +7,49 @@
 
 import UIKit
 
+/// Mock data for Diet Plan VC and Nutrients VC
 struct DietPlan
 {
     static let foodCategoryTitle: [String] = ["BreakFast","Brunch","Lunch","Drinks","Supper","Dinner"]
     
-    struct Breakfast
-    {
-        static let cardImage: [UIImage] = [UIImage(named: "Chocolate Oatmeal")!,UIImage(named: "Eggs")!,UIImage(named: "Omelette")!]
+    static let foodCardViewData: [FoodCardModel] =
+    [
+        FoodCardModel(foodCategory: "Breakfast",
+                      
+                      cardImage: ["https://choosingchia.com/jessh-jessh/uploads/2022/01/Chocolate-Oatmeal-8.jpg","https://www.thespruceeats.com/thmb/67fUhzexgkuAZZkNPCzN_L54Vn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/banana-smoothie-recipes-759606-hero-01-d2abaa79f3204030a0ec0a8940456acc.jpg",
+                                  "https://somethingaboutsandwiches.com/wp-content/uploads/2022/02/strawberry-jam-sandwiches.jpg","https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/9/0/FNK_French-Omelet_s4x3.jpg.rend.hgtvcom.826.620.suffix/1386784369204.jpeg"],
+                      
+            foodName: ["Chocolate Oatmeal", "Banana Shake","Bread Jam","French omelette"],
+                      
+            foodQuantity: [23.0,73.9,21.0,22.3,33.3],
+            
+            foodCalorie: [100,120,300,450,310]),
         
-        static let cardImageURL: [String] = ["https://edamam-product-images.s3.amazonaws.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA8aCXVzLWVhc3QtMSJHMEUCIA%2F7VxeLO6P9%2B6rre7oVao9sAw%2BM1tpjteSAxC4U%2BeRTAiEAynwLaIke4dkZN60RGrFaqesIA429Fo0xwqpHwZrUknoqzAQIWBAAGgwxODcwMTcxNTA5ODYiDD1b%2FJv8cndnxVCUcyqpBOIQdC2O4wZ003f1qWT1WMkAyMBYoyiNeeUZkw9LT9gB2oNs3y%2BUGFdcDctxg8o0l4bHULiH7537e0vzfL6nKBjz1oExWacG4MajDCgMh4G7gOQP4Cb%2BjuVu7au6RsRKpRjYWDZ96rZM1%2F95Jx9raQEfpsAFUS2DTgJIHTpD%2BRYcvUp7vvl5ORB%2Fpe%2BGB9MXp%2BpR1RsYE5FdQT75Ltyu86dC0gJ8JtPpoE4p0SG49C2O8mXI5J3vB9wYAjqRePxbLjYe1Pub2hAXLMSaSrcnd6GF%2F5Z4hL4SGAUUw1rvGKmYdBmIjDzVzNEN4Ss161hgO3lYHYYRPoW6futoUuJYuieGlWhfGVsutYkTCvDEWRa5%2FSVG6JxS6Yal%2F4ji%2BtYgBtQmqWcEDz9RNw6Cdu8HnNoKvPg9g0DdiwCAZ0B7juFBw7aShEt9d9apA9Iw1wvo%2Fo%2FPs%2FFIEjiuZlEoZGXzKziRZ5oBUuWo39VGdqMS8r5gqu6kVGqXDqPVmgX4iar4l5Cf%2FB53jHm8tCOC2cv2AzsHRFxDtI%2Bd1S5Ixb3dKrPQ%2FKg5pu9hGf2nvdEHeOAMSDEA1sPYhSzoYA3ohTnyLpf%2B%2B6DijNjjM8upz%2B7YRGzQpZpobzUkx09MbDruPiuJV8xkNWeQLDXkwTMdk4YtUP7MBvkIoFTeoYagrObUe0jnO0TLldYPms%2FflxKVF4lzXRo2lS5f6%2FIqPe0oRldE%2Ffiy8C5UwXQPIvwwqei0nQY6qQH%2BVsVL49zhJgTMfoEmWV0AXqUo35y52QQsSPcVo6JKCHuFzJezplltGbOR52BR7G5KB8MnQ3qigBf2C6guMVlLOG%2Fz1WBENJFbRwtO7oPC8FLGmpaYEZsMdsJGubQXAnKt8LXQev04pKFhGv8xFTeLWQo54W4333cFhcelhrTJYi0RWyYaZ8%2BPutIbGCvaOGb8v6ebXZhbUSbBM9Q4rfKIBEgpAmFJG41J&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221229T070304Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFHT2BSHU7%2F20221229%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=5c170435c2f848b8e3271abdb3f8bde782c7ea7106b90030cc04a2144749064b"]
+        FoodCardModel(foodCategory: "Lunch", cardImage: ["https://easyhealthyrecipes.com/wp-content/uploads/2022/06/grilled-chicken-rice-16.jpg","https://www.cubesnjuliennes.com/wp-content/uploads/2020/01/Chicken-Biryani.jpg","https://img.taste.com.au/7kiSTr2Y/w720-h480-cfill-q80/taste/2018/01/chicken-breast-134275-2.jpg","https://www.recipetineats.com/wp-content/uploads/2017/01/Chicken-Shawarma-Wrap_3.jpg"], foodName: ["Rice & Chicken","Chicken Biryani","Low Fat Pasta","chicken shawarma"], foodQuantity: [223.0,113.9,121.0,122.3,143.3], foodCalorie: [120,140,350,490,320]),
         
-        static let foodName: [String] = ["Chocolate Oats","Boiled Eggs","Omelette","Omelette","Omelette","Omelette"]
-        static let foodQuantity: [String] = ["1 cup(120 grams)","Per Serving(3 nos)","Per Serving(122 grams)","1 cup(120 grams)","Per Serving(3 nos)","Per Serving(122 grams)"]
-        static let foodCalories: [String] = ["460 Kcal","225 Kcal","225 Kcal","460 Kcal","225 Kcal","225 Kcal"]
-    }
+        FoodCardModel(foodCategory: "Dinner", cardImage: ["https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn-harissa-spaghetti-d29786f.jpg?quality=90&webp=true&resize=440,400","https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spinach-sweet-potato-and-lentil-dhal-be8fae5.jpg?quality=90&webp=true&resize=440,400","https://images.immediate.co.uk/production/volatile/sites/30/2020/08/simple-fish-stew-1d0b259.jpg?quality=90&webp=true&resize=440,400","https://www.whiskaffair.com/wp-content/uploads/2020/06/Chicken-Tikka-2-3.jpg"], foodName: ["Prawn & harissa spaghetti","Spinach, sweet potato & lentil dhal","Simple fish stew","Healthy tikka masala"], foodQuantity: [100,230,150,180], foodCalorie: [200,250,420,350])
+    ]
     
-    struct Lunch
-    {
-        static let cardImage: [UIImage] = [UIImage(named: "Curd Rice")!,UIImage(named: "Mustard Chicken")!,UIImage(named: "Tandoori Chicken")!]
-        static let foodName: [String] = ["Curd Rice","Mustard Chicken","Chicken Tandoori"]
-        static let foodQuantity: [String] = ["1 cup(120 grams)","Per Serving(200 grams)","Per Serving(220 grams)"]
-        static let foodCalories: [String] = ["130 Kcal","220 Kcal","280 Kcal"]
-    }
+    static let foodNutientsData: [FoodNutrientsModel] =
+    [
+        FoodNutrientsModel(heading: "Enengy", value: 134.2, unit: "kcal"),
+        FoodNutrientsModel(heading: "Carbs", value: 80.9, unit: "g"),
+        FoodNutrientsModel(heading: "Protein", value: 50.9, unit: "g"),
+        FoodNutrientsModel(heading: "Fat", value: 60.9, unit: "g"),
+        FoodNutrientsModel(heading: "Sugers", value: 14.8, unit: "g")
+    ]
     
-    struct Dinner
-    {
-        static let cardImage: [UIImage] = [UIImage(named: "Fish Curry")!,UIImage(named: "Biryani")!,UIImage(named: "Chicken Curry")!]
-        static let foodName: [String] = ["Fish Curry","Veg Biryani","Chicken Curry"]
-        static let foodQuantity: [String] = ["1 cup(120 grams)","Per Serving(200 grams)","Per Serving(220 grams)"]
-        static let foodCalories: [String] = ["300 Kcal","220 Kcal","290 Kcal"]
-    }
+    static let foodIngredientsData: [IngredientModel] =
+    [
+        IngredientModel(ingredientName: "Plan Oats", ingredientImage: "https://post.healthline.com/wp-content/uploads/2020/03/oats-oatmeal-732x549-thumbnail.jpg", ingredientQuantity: 10.0),
+        IngredientModel(ingredientName: "Full Fat Milk", ingredientImage: "https://ik.bebodywise.com/mosaic-wellness/image/upload/f_auto,w_1000,c_limit/v1643983013/BW%20BLOG/Untitled-design---2022-02-04T192644.467_11zon.jpg", ingredientQuantity: 62.0),
+        IngredientModel(ingredientName: "White Chocolate", ingredientImage: "https://upload.wikimedia.org/wikipedia/commons/4/47/Chopped_white_chocolate_chunks.jpg", ingredientQuantity: 40.0),
+        IngredientModel(ingredientName: "Peanut Butter", ingredientImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/PeanutButter.jpg/640px-PeanutButter.jpg", ingredientQuantity: 46.0),
+        IngredientModel(ingredientName: "Water", ingredientImage: "https://domf5oio6qrcr.cloudfront.net/medialibrary/7909/conversions/b8a1309a-ba53-48c7-bca3-9c36aab2338a-thumb.jpg", ingredientQuantity: 23.0),
+        IngredientModel(ingredientName: "Musli", ingredientImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzVkfMsrELZHhy7araVs_tq1sKGm5huf1H-7ObFVRWFzWC827RJnchG9vidaC_ELt872I&usqp=CAU", ingredientQuantity: 11.0)
+        
     
-    struct Ingredients
-    {
-        static let foodName: [String] = ["Oats","Cocoa Powder","Honey","Milk","Flax Seed"]
-        
-        static let foodImage: [UIImage] = [UIImage(named: "Oats")!,UIImage(named: "Cocoa Powder")!,UIImage(named: "Honey")!,UIImage(named: "Milk")!,UIImage(named: "Flaxseeds")!]
-        
-        static let foodQuantity: [String] = ["1 cup","2-3 tbsp","5-6 tbsp","1 cup","2-3 tbsp"]
-    }
+    ]
     
     struct PreparationProcedure
     {

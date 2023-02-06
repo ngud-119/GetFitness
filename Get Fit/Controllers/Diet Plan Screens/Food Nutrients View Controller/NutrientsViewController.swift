@@ -11,6 +11,11 @@ import Kingfisher
 // Array for populating food nutrients collection view cells.
 var foodNutrientsData = [FoodNutrientsModel]()
 
+// Array for populating ingredients nutrients collection view cells.
+var foodIngredientsData = [IngredientModel]()
+
+
+
 class NutrientsViewController: UIViewController
 {
     
@@ -41,21 +46,31 @@ class NutrientsViewController: UIViewController
         configureAllViews()
         self.updateVC(imageURL: foodImageURL, foodNameLabel: name, foodQuantityLabel: quantity)
         
-        Task.init
-        {
-            let data = await DietPlanData.shared.getRecipesNutrients(foodCategory: foodCategory,recipeNumber: recipeNumber)
-            
-            foodNutrientsData = data
-            DispatchQueue.main.async
-            {
-                self.foodNutrientCollectionView.reloadData()
-            }
+        // fetchData()
         
-        }
         
         
     }
     
+    private func fetchData()
+    {
+        Task.init
+        {
+            let data = await DietPlanData.shared.getRecipesNutrients(foodCategory: foodCategory,recipeNumber: recipeNumber)
+            
+            let ingredients = await DietPlanData.shared.getRecipesIngredients(foodCategory: foodCategory, recipeNumber: recipeNumber)
+            
+            foodNutrientsData = data
+            foodIngredientsData = ingredients
+            
+            DispatchQueue.main.async
+            {
+                self.foodNutrientCollectionView.reloadData()
+                self.ingredientsCollectionView.reloadData()
+            }
+        
+        }
+    }
     private func configureAllViews()
     {
         foodImageView.image = UIImage(named: "Chocolate Oatmeal")
@@ -77,7 +92,7 @@ class NutrientsViewController: UIViewController
         collectionFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         preparationCollectionView.collectionViewLayout = collectionFlowLayout
         
-        // foodNutrientCollectionView.collectionViewLayout = cfl
+        ingredientsCollectionView.collectionViewLayout = collectionFlowLayout
     }
     
     private func updateVC(imageURL: String,foodNameLabel: String,foodQuantityLabel: Double)
@@ -99,16 +114,25 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         // Cell count for food nutrients collection view.
         if collectionView == self.foodNutrientCollectionView
         {
-            return foodNutrientsData.count
+            // API Data
+            // return foodNutrientsData.count
+            
+            // Mock Data
+            return DietPlan.foodNutientsData.count
         }
         // Cell count for ingredients collection view.
         else if collectionView == self.ingredientsCollectionView
         {
-            return 10
+            // API Data
+            // return foodIngredientsData.count
+            
+            // Mock Data
+            return DietPlan.foodIngredientsData.count
         }
         // Cell count for preparation collection view.
         else
         {
+            // Mock Data
             return DietPlan.PreparationProcedure.steps.count
         }
 
@@ -121,19 +145,24 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath) as! FoodNutrientsCollectionViewCell
             
-            cell.configureCell(cellTitle: foodNutrientsData[indexPath.row].heading, foodQuantity: foodNutrientsData[indexPath.row].value, foodUnit: foodNutrientsData[indexPath.row].unit)
+            // API Data
+            // cell.configureCell(cellTitle: foodNutrientsData[indexPath.row].heading, foodQuantity: foodNutrientsData[indexPath.row].value, foodUnit: foodNutrientsData[indexPath.row].unit)
+            
+            // Mock Data
+            cell.configureCell(cellTitle: DietPlan.foodNutientsData[indexPath.row].heading, foodQuantity: DietPlan.foodNutientsData[indexPath.row].value, foodUnit: DietPlan.foodNutientsData[indexPath.row].unit)
             
             return cell
         }
         else if collectionView == self.ingredientsCollectionView
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath) as! IngredientsCollectionViewCell
-
-            if let image = UIImage(named: "Chocolate Oatmeal")
-            {
-                cell.configure(foodName: "Oats", foodImage: image, foodQuantity: "8")
-            }
-    
+            
+            // API Data
+            // cell.configure(foodName: foodIngredientsData[indexPath.row].ingredientName, foodImage: foodIngredientsData[indexPath.row].ingredientImage, foodQuantity: foodIngredientsData[indexPath.row].ingredientQuantity)
+            
+            // Mock Data
+            cell.configure(foodName: DietPlan.foodIngredientsData[indexPath.row].ingredientName, foodImage: DietPlan.foodIngredientsData[indexPath.row].ingredientImage, foodQuantity: DietPlan.foodIngredientsData[indexPath.row].ingredientQuantity)
+           
             return cell
         }
         else
@@ -156,9 +185,12 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         }
         else
         {
-            return CGSize(width: 70.0 , height: 100.0)
+            return CGSize(width: view.bounds.width, height: 80)
         }
         // return CGSize(width: 70.0 , height: 100.0)
+    // return CGSize(width: 80.0 , height: 55.0)
+       
+
   
     }
     

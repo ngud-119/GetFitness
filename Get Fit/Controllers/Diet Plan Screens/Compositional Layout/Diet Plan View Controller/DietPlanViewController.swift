@@ -21,7 +21,7 @@ class DietPlanViewController: UIViewController
         configureCollectionView()
         
         // Fetch data from API
-         fetchFoodData()
+        // fetchFoodData()
         
     }
     
@@ -31,26 +31,22 @@ class DietPlanViewController: UIViewController
         Task.init(operation: {
             
             let breakfast = await DietPlanData.shared.getRecipes(foodCategory: "Breakfast")
+            let brunch = await DietPlanData.shared.getRecipes(foodCategory: "Brunch")
+            let lunch = await DietPlanData.shared.getRecipes(foodCategory: "Lunch")
+            let drinks = await DietPlanData.shared.getRecipes(foodCategory: "Drinks")
+            let supper = await DietPlanData.shared.getRecipes(foodCategory: "Supper")
+            let dinner = await DietPlanData.shared.getRecipes(foodCategory: "Dinner")
             
             foodCardViewData.append(FoodCardModel(foodCategory: "Breakfast" , cardImage: breakfast.cardImage, foodName: breakfast.foodName, foodQuantity: breakfast.foodQuantity, foodCalorie: breakfast.foodCalorie))
             
-            let brunch = await DietPlanData.shared.getRecipes(foodCategory: "Brunch")
-            
             foodCardViewData.append(FoodCardModel(foodCategory: "Brunch" , cardImage: brunch.cardImage, foodName: brunch.foodName, foodQuantity: brunch.foodQuantity, foodCalorie: brunch.foodCalorie))
-            
-            let lunch = await DietPlanData.shared.getRecipes(foodCategory: "Lunch")
             
             foodCardViewData.append(FoodCardModel(foodCategory: "Lunch" , cardImage: lunch.cardImage, foodName: lunch.foodName, foodQuantity: lunch.foodQuantity, foodCalorie: lunch.foodCalorie))
             
-            let drinks = await DietPlanData.shared.getRecipes(foodCategory: "Drinks")
             
             foodCardViewData.append(FoodCardModel(foodCategory: "Drinks" , cardImage: drinks.cardImage, foodName: drinks.foodName, foodQuantity: drinks.foodQuantity, foodCalorie: drinks.foodCalorie))
             
-            let supper = await DietPlanData.shared.getRecipes(foodCategory: "Supper")
-            
             foodCardViewData.append(FoodCardModel(foodCategory: "Supper" , cardImage: supper.cardImage, foodName: supper.foodName, foodQuantity: supper.foodQuantity, foodCalorie: supper.foodCalorie))
-            
-            let dinner = await DietPlanData.shared.getRecipes(foodCategory: "Dinner")
             
             foodCardViewData.append(FoodCardModel(foodCategory: "Dinner" , cardImage: dinner.cardImage, foodName: dinner.foodName, foodQuantity: dinner.foodQuantity, foodCalorie: dinner.foodCalorie))
             
@@ -127,25 +123,33 @@ extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewData
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodCardCollectionViewCell.identifier , for: indexPath) as! FoodCardCollectionViewCell
         
-        // Mock Data for cells.
-        //cell.configureFoodCard(cardImageUrl: "https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__340.jpg", foodNameLabel: "Food", foodQuantityLabel: 111, calorieLabel: 344)
-        
         // API Data for cells.
-        cell.configureFoodCard(cardImageUrl: foodCardViewData[indexPath.section].cardImage[indexPath.row], foodNameLabel: foodCardViewData[indexPath.section].foodName[indexPath.row], foodQuantityLabel: foodCardViewData[indexPath.section].foodQuantity[indexPath.row], calorieLabel: foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        //        cell.configureFoodCard(cardImageUrl: foodCardViewData[indexPath.section].cardImage[indexPath.row], foodNameLabel: foodCardViewData[indexPath.section].foodName[indexPath.row], foodQuantityLabel: foodCardViewData[indexPath.section].foodQuantity[indexPath.row], calorieLabel: foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        
+        // Mock Data for cells.
+        cell.configureFoodCard(cardImageUrl: DietPlan.foodCardViewData[indexPath.section].cardImage[indexPath.row], foodNameLabel: DietPlan.foodCardViewData[indexPath.section].foodName[indexPath.row], foodQuantityLabel: DietPlan.foodCardViewData[indexPath.section].foodQuantity[indexPath.section], calorieLabel: DietPlan.foodCardViewData[indexPath.section].foodCalorie[indexPath.row])
+        
         
         return cell
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        //return 5
-         return foodCardViewData[0].foodName.count
+        // API Data
+        // return foodCardViewData[0].foodName.count
+        
+        // Mock Data
+        return DietPlan.foodCardViewData[0].cardImage.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int
     {
-        //return 2
-        return foodCardViewData.count
+        // API Data
+        // return foodCardViewData.count
+        
+        // Mock Data
+        return DietPlan.foodCardViewData.count
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
@@ -154,19 +158,28 @@ extension DietPlanViewController: UICollectionViewDelegate, UICollectionViewData
         
         // Storyboard Instance
         let DietPlanstoryboard = UIStoryboard(name: "Diet Plan Screen", bundle: nil)
-
+        
         // Instance of NutrientsViewController
         let vc = DietPlanstoryboard.instantiateViewController(withIdentifier: NutrientsViewController.storyboardID) as! NutrientsViewController
         
-        let imageURL = foodCardViewData[indexPath.section].cardImage[indexPath.row]
-        let foodName = foodCardViewData[indexPath.section].foodName[indexPath.row]
-        let foodQuantity = foodCardViewData[indexPath.section].foodQuantity[indexPath.row]
+        // Actual data
+        //        let imageURL = foodCardViewData[indexPath.section].cardImage[indexPath.row]
+        //        let foodName = foodCardViewData[indexPath.section].foodName[indexPath.row]
+        //        let foodQuantity = foodCardViewData[indexPath.section].foodQuantity[indexPath.row]
+        //
+        //        let foodCategory = foodCardViewData[indexPath.section].foodCategory
         
-        let foodCategory = foodCardViewData[indexPath.section].foodCategory
+        // Mock Data
+        let imageURL = DietPlan.foodCardViewData[indexPath.section].cardImage[indexPath.row]
+        let foodName = DietPlan.foodCardViewData[indexPath.section].foodName[indexPath.row]
+        let foodQuantity = DietPlan.foodCardViewData[indexPath.section].foodQuantity[indexPath.section]
+        
+        let foodCategory = DietPlan.foodCategoryTitle[indexPath.section]
+        
         let indexNumber = indexPath.row
         
         cell.passDataToNutrientsVC(vc: vc, imageURL: imageURL, foodName: foodName, foodQuantity: foodQuantity,indexNumber: indexNumber,foodCategory: foodCategory)
-    
+        
         // To navigate from Diet Plan Viewcontroller to NutrientsViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -182,12 +195,14 @@ extension DietPlanViewController
     {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCollectionReusableView.identifier, for: indexPath) as! HeaderCollectionReusableView
         
-        // Function call for testing.
-         //header.configure(headerTitle: "Food Header")
-        
         // Function call for populating API data.
-        header.configure(headerTitle: foodCardViewData[indexPath.section].foodCategory)
-       
+        // header.configure(headerTitle: foodCardViewData[indexPath.section].foodCategory)
+        
+        // Function call for Mock data.
+        header.configure(headerTitle: DietPlan.foodCardViewData[indexPath.section].foodCategory)
+        
+        
+        
         return header
     }
 }

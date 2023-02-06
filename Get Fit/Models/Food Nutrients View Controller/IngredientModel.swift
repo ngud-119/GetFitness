@@ -12,5 +12,5 @@ struct IngredientModel
 {
     let ingredientName: String
     let ingredientImage: String
-    let ingredientQuantity: String
+    let ingredientQuantity: Double
 }
