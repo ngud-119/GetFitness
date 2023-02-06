@@ -21,7 +21,7 @@ final class IngredientsCollectionViewCell: UICollectionViewCell
     {
         self.foodName?.text = foodName
         self.foodImage.kf.setImage(with: URL(string: foodImage))
-        self.foodQuantity?.text = "\(String(format: "%.1f g",foodQuantity))"
+        self.foodQuantity?.text = "\(String(format: "Weight: %.1f g",foodQuantity))"
         self.foodImage?.makeImageCircular()
     }
 }

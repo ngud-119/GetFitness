@@ -41,12 +41,12 @@ struct DietPlan
     
     static let foodIngredientsData: [IngredientModel] =
     [
-        IngredientModel(ingredientName: "Plan Oats", ingredientImage: "https://post.healthline.com/wp-content/uploads/2020/03/oats-oatmeal-732x549-thumbnail.jpg", ingredientQuantity: 10.0),
-        IngredientModel(ingredientName: "Full Fat Milk", ingredientImage: "https://ik.bebodywise.com/mosaic-wellness/image/upload/f_auto,w_1000,c_limit/v1643983013/BW%20BLOG/Untitled-design---2022-02-04T192644.467_11zon.jpg", ingredientQuantity: 62.0),
-        IngredientModel(ingredientName: "White Chocolate", ingredientImage: "https://upload.wikimedia.org/wikipedia/commons/4/47/Chopped_white_chocolate_chunks.jpg", ingredientQuantity: 40.0),
-        IngredientModel(ingredientName: "Peanut Butter", ingredientImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/PeanutButter.jpg/640px-PeanutButter.jpg", ingredientQuantity: 46.0),
-        IngredientModel(ingredientName: "Water", ingredientImage: "https://domf5oio6qrcr.cloudfront.net/medialibrary/7909/conversions/b8a1309a-ba53-48c7-bca3-9c36aab2338a-thumb.jpg", ingredientQuantity: 23.0),
-        IngredientModel(ingredientName: "Musli", ingredientImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzVkfMsrELZHhy7araVs_tq1sKGm5huf1H-7ObFVRWFzWC827RJnchG9vidaC_ELt872I&usqp=CAU", ingredientQuantity: 11.0)
+        IngredientModel(ingredientName: "4 cups plan oatmeal", ingredientImage: "https://post.healthline.com/wp-content/uploads/2020/03/oats-oatmeal-732x549-thumbnail.jpg", ingredientQuantity: 10.0),
+        IngredientModel(ingredientName: "3 cups full fat milk", ingredientImage: "https://ik.bebodywise.com/mosaic-wellness/image/upload/f_auto,w_1000,c_limit/v1643983013/BW%20BLOG/Untitled-design---2022-02-04T192644.467_11zon.jpg", ingredientQuantity: 62.0),
+        IngredientModel(ingredientName: "5 pieces White Chocolate", ingredientImage: "https://upload.wikimedia.org/wikipedia/commons/4/47/Chopped_white_chocolate_chunks.jpg", ingredientQuantity: 40.0),
+        IngredientModel(ingredientName: "3 tbsp Peanut Butter", ingredientImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/PeanutButter.jpg/640px-PeanutButter.jpg", ingredientQuantity: 46.0),
+        IngredientModel(ingredientName: "2 cup Water(add more if needed)", ingredientImage: "https://domf5oio6qrcr.cloudfront.net/medialibrary/7909/conversions/b8a1309a-ba53-48c7-bca3-9c36aab2338a-thumb.jpg", ingredientQuantity: 23.0),
+        IngredientModel(ingredientName: "three cupsMusli mix", ingredientImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzVkfMsrELZHhy7araVs_tq1sKGm5huf1H-7ObFVRWFzWC827RJnchG9vidaC_ELt872I&usqp=CAU", ingredientQuantity: 11.0)
         
     
     ]
@@ -57,12 +57,6 @@ struct DietPlan
         [
             "Combine all ingredients in a small pot. Mix until fullly combined three times.",
             "Transfer the pot to a stove.Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
-            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
-            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!", "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
-            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
-            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
-            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
-            "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
             "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!",
             "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"
             

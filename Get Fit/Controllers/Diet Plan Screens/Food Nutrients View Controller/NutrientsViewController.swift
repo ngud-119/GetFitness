@@ -86,13 +86,10 @@ class NutrientsViewController: UIViewController
         preparationCollectionView.delegate = self
         preparationCollectionView.dataSource = self
         
-        // For self-sizing collection view cells.
-        let collectionFlowLayout = UICollectionViewFlowLayout()
-    
-        collectionFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        preparationCollectionView.collectionViewLayout = collectionFlowLayout
-        
-        ingredientsCollectionView.collectionViewLayout = collectionFlowLayout
+        // For self-sizing collection view cells for preparation collection view.
+        let preparationcollectionFlowLayout = UICollectionViewFlowLayout()
+        preparationcollectionFlowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        preparationCollectionView.collectionViewLayout = preparationcollectionFlowLayout
     }
     
     private func updateVC(imageURL: String,foodNameLabel: String,foodQuantityLabel: Double)
@@ -183,12 +180,15 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
             // return CGSize(width: 70.0 , height: 100.0)
             return CGSize(width: 80.0 , height: 55.0)
         }
+        else if collectionView == self.ingredientsCollectionView
+        {
+            return .init(width: view.frame.width, height: 70)
+        }
         else
         {
-            return CGSize(width: view.bounds.width, height: 80)
+            return .init(width: view.frame.width, height: 30)
         }
-        // return CGSize(width: 70.0 , height: 100.0)
-    // return CGSize(width: 80.0 , height: 55.0)
+   
        
 
   
