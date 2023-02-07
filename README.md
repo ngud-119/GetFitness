@@ -40,9 +40,6 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 
 </div>
 
-
-[UI Design](https://www.figma.com/community/file/1127341178423272618)
-
 # Technologies Used:
 ### Foundation
 - Swift5
@@ -54,4 +51,7 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 - Firebase(for authentication and saving user data)
 - [Kingfisher](https://github.com/onevcat/Kingfisher)(A light weight swift library to get images from the web)
 
+# Resources
+- Some element of current UI design is different from the provided design file.
+  - [UI design(Figma)](https://www.figma.com/community/file/1127341178423272618)
 
