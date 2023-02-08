@@ -32,8 +32,11 @@ class ExerciseListViewController: UIViewController
         title = viewControllerTitle
         configureCard(image: self.image,workoutName: self.workoutName, totalWorkouts: self.totalWorkouts)
         
+        // Data from API Call
         // fetchExerciseList()
-        // mockExerciseListData(bodyPart: "Cardio")
+        
+        // Mock Data
+        mockExerciseListData(bodyPart: bodyPart)
     
     }
     
@@ -76,11 +79,34 @@ class ExerciseListViewController: UIViewController
             
         }
     }
-    // Function to populate exercise list view controller with mock data
     
+    // Function to populate exercise list view controller with mock data with selected body part.
     private func mockExerciseListData(bodyPart: String)
     {
         
+        switch bodyPart
+        {
+        case "cardio":
+            
+            exerciseListData = ExerciseList.shared.mockData[0]
+            
+        case "shoulders":
+            exerciseListData = ExerciseList.shared.mockData[1]
+        case "upper%20arms":
+            exerciseListData = ExerciseList.shared.mockData[2]
+        case "lower%20arms":
+            exerciseListData = ExerciseList.shared.mockData[3]
+        case "chest":
+            exerciseListData = ExerciseList.shared.mockData[4]
+        case "back":
+            exerciseListData = ExerciseList.shared.mockData[5]
+        case "upper%20legs":
+            exerciseListData = ExerciseList.shared.mockData[6]
+        case "lower%20legs":
+            exerciseListData = ExerciseList.shared.mockData[7]
+        default:
+            exerciseListData = ExerciseListDataModel(exerciseGIF: [], exerciseName: [], targetMuscle: [], exerciseEquipment: [])
+        }
     }
     
     // Method to configure the card view.
@@ -117,11 +143,9 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     // Returns the number of cell.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        // API Data
-        // return exerciseListData.exerciseName.count
-        
-        // Mock Data
-        return ExerciseList.exerciseName.count
+    
+        return exerciseListData.exerciseName.count
+    
     }
     
     // Populates data in table view cell.
@@ -129,12 +153,9 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "exerciseListCell", for: indexPath) as! ExerciseListCell
         
-        // API Data
-         // cell.configureCell(name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
-        
-        // Mock Data
-         // cell.configureCell(name: ExerciseList.exerciseName[indexPath.row], targetMuscle: ExerciseList.muscle[indexPath.row] , equipment: "Barbell")
-        
+        // Populate cells with data.
+         cell.configureCell(name: exerciseListData.exerciseName[indexPath.row].capitalized, targetMuscle: exerciseListData.targetMuscle[indexPath.row].capitalized, equipment: exerciseListData.exerciseEquipment[indexPath.row].capitalized)
+                
         return cell
     }
     
@@ -147,18 +168,13 @@ extension ExerciseListViewController: UITableViewDelegate,UITableViewDataSource
         let vc = storyboard?.instantiateViewController(withIdentifier: "gifViewController") as? GifViewController
         
         
-        // Populating card view of exercise view controller with selected table view cell with API's Data.
+        // Populating card view of exercise view controller with selected table view cell with Data.
         
-        // cell.passData(vc: vc, name: exerciseListData.exerciseName[indexPath.row], muscle: exerciseListData.targetMuscle[indexPath.row], equipment: exerciseListData.exerciseEquipment[indexPath.row], gifUrl: exerciseListData.exerciseGIF[indexPath.row])
-        
-        // Populating card view of exercise view controller with selected table view cell with Mock data.
-        cell.passData(vc: vc, name: ExerciseList.exerciseName[indexPath.row], muscle: ExerciseList.muscle[indexPath.row],equipment: ExerciseList.equipment[indexPath.row], gifUrl: ExerciseList.gifURL[indexPath.row])
-        
+        cell.passData(vc: vc, name: exerciseListData.exerciseName[indexPath.row], muscle: exerciseListData.targetMuscle[indexPath.row], equipment: exerciseListData.exerciseEquipment[indexPath.row], gifUrl: exerciseListData.exerciseGIF[indexPath.row])
+    
         // To navigate from WorkoutsVC to ExerciseListVC
         self.navigationController?.pushViewController(vc!, animated: true)
     }
-    
-    
     
 }
 
