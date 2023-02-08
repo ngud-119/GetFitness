@@ -19,6 +19,6 @@ struct WorkoutScreenConstants
     /// Array for stroing the workout name.
     public static let workoutName: [String] = ["Cardio","Shoulder Workout","Upper arms","Lower arms","Chest Workout","Back Workout","Upper legs","Lower legs"]
     
-    /// Array for storing total workouts.
+    /// Array for storing total workouts from API.
     public static let totalWorkouts: [Int] = [29,144,292,37,164,203,227,59]
 }

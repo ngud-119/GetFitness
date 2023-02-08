@@ -5,9 +5,9 @@
 //  Created by Sandeep Sahani on 29/11/22.
 //
 
-// Model for exercise list view controller to populate ExerciseListVC
 import Foundation
 
+///Struct for storing exercise list data.
 struct ExerciseListDataModel: Codable
 {
     var exerciseGIF: [String]

@@ -5,6 +5,7 @@
 //  Created by Sandeep Sahani on 26/10/22.
 //
 
+/// Struct for storing storyboard identifier constants.
 struct Storyboards
 {
     struct Name

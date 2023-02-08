@@ -23,10 +23,11 @@ class GifViewController: UIViewController
     {
         super.viewDidLoad()
         gif.roundCorners(corners:UIRectCorner.allCorners, radius: 5)
-        exerciseName.text = name
-        targetMuscle.text = "Target Muscle: \(muscle)"
-        equipment.text = "Equipment: \(equipmentType)"
-        gif.kf.setImage(with: URL(string: gifUrl)!)
+        exerciseName.text = name.capitalized
+        targetMuscle.text = "Target Muscle: \(muscle.capitalized)"
+        equipment.text = "Equipment: \(equipmentType.capitalized)"
+        gif.kf.setImage(with: URL(string: gifUrl))
+        print(gifUrl)
         
     }
     
