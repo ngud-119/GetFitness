@@ -39,19 +39,29 @@ class NutrientsViewController: UIViewController
     
     var recipeNumber: Int = 0
     var foodCategory: String = ""
-
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         configureAllViews()
         self.updateVC(imageURL: foodImageURL, foodNameLabel: name, foodQuantityLabel: quantity)
         
+        // Populating the collection view's with API's data.
         // fetchData()
+        
+        // Populating the collection view's with mock data.
+        dummyData()
         
         
         
     }
-    
+    /// Function to assign foodNutrientsData and foodIngredientsData with mock data.
+    private func dummyData()
+    {
+        foodNutrientsData = DietPlan.foodNutientsData
+        foodIngredientsData = DietPlan.foodIngredientsData
+    }
+    /// Function for fetching data from API.
     private func fetchData()
     {
         Task.init
@@ -68,7 +78,7 @@ class NutrientsViewController: UIViewController
                 self.foodNutrientCollectionView.reloadData()
                 self.ingredientsCollectionView.reloadData()
             }
-        
+            
         }
     }
     private func configureAllViews()
@@ -92,12 +102,13 @@ class NutrientsViewController: UIViewController
         preparationCollectionView.collectionViewLayout = preparationcollectionFlowLayout
     }
     
+    /// Function for updating view controller.
     private func updateVC(imageURL: String,foodNameLabel: String,foodQuantityLabel: Double)
     {
         self.foodImageView.kf.setImage(with: URL(string: imageURL))
         self.foodName.text = foodNameLabel
         self.foodQuantitiy.text =  "\(String(format:"Per Serving(%.0f grams)",foodQuantityLabel))"
-               
+        
     }
     
 }
@@ -111,20 +122,16 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         // Cell count for food nutrients collection view.
         if collectionView == self.foodNutrientCollectionView
         {
-            // API Data
-            // return foodNutrientsData.count
             
-            // Mock Data
-            return DietPlan.foodNutientsData.count
+            return foodNutrientsData.count
+            
         }
         // Cell count for ingredients collection view.
         else if collectionView == self.ingredientsCollectionView
         {
-            // API Data
-            // return foodIngredientsData.count
             
-            // Mock Data
-            return DietPlan.foodIngredientsData.count
+            return foodIngredientsData.count
+            
         }
         // Cell count for preparation collection view.
         else
@@ -132,9 +139,9 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
             // Mock Data
             return DietPlan.PreparationProcedure.steps.count
         }
-
+        
     }
-
+    
     // Populating data in the cells.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -142,11 +149,8 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FoodNutrientsCollectionViewCell.identifier, for: indexPath) as! FoodNutrientsCollectionViewCell
             
-            // API Data
-            // cell.configureCell(cellTitle: foodNutrientsData[indexPath.row].heading, foodQuantity: foodNutrientsData[indexPath.row].value, foodUnit: foodNutrientsData[indexPath.row].unit)
-            
-            // Mock Data
-            cell.configureCell(cellTitle: DietPlan.foodNutientsData[indexPath.row].heading, foodQuantity: DietPlan.foodNutientsData[indexPath.row].value, foodUnit: DietPlan.foodNutientsData[indexPath.row].unit)
+            // Populating cells.
+            cell.configureCell(cellTitle: foodNutrientsData[indexPath.row].heading, foodQuantity: foodNutrientsData[indexPath.row].value, foodUnit: foodNutrientsData[indexPath.row].unit)
             
             return cell
         }
@@ -154,12 +158,9 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientsCollectionViewCell.identifier, for: indexPath) as! IngredientsCollectionViewCell
             
-            // API Data
-            // cell.configure(foodName: foodIngredientsData[indexPath.row].ingredientName, foodImage: foodIngredientsData[indexPath.row].ingredientImage, foodQuantity: foodIngredientsData[indexPath.row].ingredientQuantity)
+            // Populating cells.
+            cell.configure(foodName: foodIngredientsData[indexPath.row].ingredientName, foodImage: foodIngredientsData[indexPath.row].ingredientImage, foodQuantity: foodIngredientsData[indexPath.row].ingredientQuantity)
             
-            // Mock Data
-            cell.configure(foodName: DietPlan.foodIngredientsData[indexPath.row].ingredientName, foodImage: DietPlan.foodIngredientsData[indexPath.row].ingredientImage, foodQuantity: DietPlan.foodIngredientsData[indexPath.row].ingredientQuantity)
-           
             return cell
         }
         else
@@ -169,7 +170,7 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
             cell.configureList(countNumber: "\(indexPath.row + 1)", procedureText: DietPlan.PreparationProcedure.steps[indexPath.row])
             return cell
         }
-
+        
     }
     
     // Setting size of cells.
@@ -188,10 +189,8 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         {
             return .init(width: view.frame.width, height: 30)
         }
-   
-       
-
-  
+        
+        
     }
     
 }
