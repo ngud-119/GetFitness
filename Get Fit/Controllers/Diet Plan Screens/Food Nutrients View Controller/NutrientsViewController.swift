@@ -167,7 +167,7 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PreparationCollectionViewCell.identifier, for: indexPath) as! PreparationCollectionViewCell
             
-            cell.configureList(countNumber: "\(indexPath.row + 1)", procedureText: DietPlan.PreparationProcedure.steps[indexPath.row])
+            cell.configureList(countNumber: "\(indexPath.row + 1)", procedureText: DietPlan.PreparationProcedure.steps[0][0].description[indexPath.row])
             return cell
         }
         
