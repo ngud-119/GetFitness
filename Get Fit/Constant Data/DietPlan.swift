@@ -237,65 +237,64 @@ struct DietPlan
          IngredientModel(ingredientName: "2 carrots, diced", ingredientImage: "https://cdn.shopify.com/s/files/1/0017/9234/4153/products/carrots-2_1024x1024@2x.jpg?v=1594208113", ingredientQuantity: 120.0),
          IngredientModel(ingredientName: "2 celery sticks, diced", ingredientImage: "https://s3.amazonaws.com/com.niches.production/story_images/new_images/000/004/697/width_1200/how-much-is-in-a-celery-stalk-2.jpg?1631649750", ingredientQuantity: 50.0),
          IngredientModel(ingredientName: "2 garlic cloves, finely chopped", ingredientImage: "https://www.mashed.com/img/gallery/what-is-a-garlic-clove-really-and-how-do-you-use-it/intro-1628012061.webp", ingredientQuantity: 10.0),
-         IngredientModel(ingredientName: "2 leeks, thinly sliced", ingredientImage: "", ingredientQuantity: 19.0),
-         IngredientModel(ingredientName: "400g can chopped tomatoes", ingredientImage: "", ingredientQuantity: 400.0),
-         IngredientModel(ingredientName: "500ml hot fish stock, heated to a simmer", ingredientImage: "", ingredientQuantity: 500.0),
-         IngredientModel(ingredientName: "2 skinless pollock fillets (about 200g), thawed if frozen, and cut into chunks", ingredientImage: "", ingredientQuantity: 200.0),
+         IngredientModel(ingredientName: "2 leeks, thinly sliced", ingredientImage: "https://healthyfitnessmeals.com/wp-content/uploads/2021/04/Leeks-15.jpg", ingredientQuantity: 19.0),
+         IngredientModel(ingredientName: "400g can chopped tomatoes", ingredientImage: "https://isorepublic.com/wp-content/uploads/2019/12/iso-republic-chopped-tomatoes-1-2048x1367.jpg", ingredientQuantity: 400.0),
+         IngredientModel(ingredientName: "500ml hot fish stock, heated to a simmer", ingredientImage: "https://assets.epicurious.com/photos/57a8ae4a47750f3f7bc358da/1:1/w_2240,c_limit/strong-fish-stock.jpg", ingredientQuantity: 500.0),
+         IngredientModel(ingredientName: "2 skinless pollock fillets (about 200g), thawed if frozen, and cut into chunks", ingredientImage: "https://www.debriar.co.uk/uploads/images/zoom/18258_haddock_fillets_10.jpg", ingredientQuantity: 200.0),
          IngredientModel(ingredientName: "85g raw shelled king prawns", ingredientImage: "https://www.great-alaska-seafood.com/products600/16-king-prawns98372047-600.jpg", ingredientQuantity: 85)
          
         ]
         
     ]
     
-    struct PreparationProcedure
-    {
-        static let steps: [[PreparationDescription]] =
-        [
-            // Breakfast Section
-            // Preparation description for Chocolate Oats.
-            [PreparationDescription(description: ["Combine all ingredients in a small pot. Mix until fullly combined three times.",
-                                                  "Transfer the pot to a stove.Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
-                                                  "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"])
-            ],
-            // Preparation description for Banana Shake.
-            [PreparationDescription(description: ["Peel the bananas and chop them.",
-                                                  "Transfer the chopped bananas, vanilla and coconut milk into the blender.",
-                                                  "Add raw sugar or your preferred choice of sweetener. You can choose to omit the sweetener.","Blend everything until smooth and creamy. If you find the banana shake to be too thick for your liking, add a few splashes of water and blend again.","Pour the milkshake in glasses and serve right away."])
-            ],
-            // Preparation description for Bread & Jam.
-            [PreparationDescription(description: ["Take a bread slice, spread butter generously over it, then spread jam over it. Sandwich it together.",
-                                                  "Cut the edges, then cut into slices or strips.",
-                                                  "You can cut and serve as such OR toast it. For this, apply butter on a hot tawa","Toast the bread butter jam both the sides and serve hot !"])
-            ],
-            // Preparation description for French omelette.
-            [PreparationDescription(description: ["Whisk eggs, water, and salt together in a mixing bowl. Whisk until mixture is very liquid and whites are completely blended in, 1 or 2 minutes.",
-                                                  "Heat 1 1/2 tablespoons butter in a 9- or 10-inch nonstick skillet over medium-high heat. As soon as butter melts and before it starts to sizzle, pour in whisked eggs. Stir in a circular pattern with a heat-proof spatula, lifting and scrambling eggs, shaking the pan to keep leveling out the mixture, and scraping down the sides. Continue stirring until shaking the pan no longer levels the eggs.",
-                                                  "Reduce heat to low. Using the spatula, smooth the surface to move runny eggs to less runny spots, working toward an even thickness. As soon as the surface is wet but not runny, remove from heat.","Starting at the handle side of the pan, use the spatula to begin rolling omelette into a cylinder shape, about 3 rolls until omelette is about 2 inches from opposite side of the pan. Use the spatula to fold the last flap of egg over the top of the cylinder leaving the seam-side up. Add remaining 1/2 tablespoon butter to the pan. Gently push the butter as it melts under the omelette.","Slide omelette to edge of the pan. Flip onto a plate with the seam-side down. Even out the shape, if necessary. You can tuck in the ends, if you like. Brush surface with a bit more butter. Dust with cayenne pepper."])
-            ],
-            // Lunch Section
-            // Preparation description for Rice & Chicken.
-            [PreparationDescription(description: ["Toss the chicken breast with garlic powder, salt, and pepper. Heat olive oil in a 10-inch skillet over medium heat. Add chicken breast and cook until browned, stirring often, about 3 minutes. Add garlic to skillet and cook for 30 seconds more.",
-                                                  "Stir in rice and chicken broth. Bring to a boil, reduce to a simmer, and cover. Cook for 20 minutes, stirring occasionally.",
-                                                  "Remove pan from heat and place baby spinach on top of the rice. Cover and let sit for 5 minutes.","Remove lid and stir well. Stir in cream and serve."])
-            ],
-           
-            // Preparation description for Low Fat Pasta.
-            [PreparationDescription(description: ["Cook the pasta in a large saucepan of boiling water following packet directions or until al dente, adding the peas for the last 2 minutes of cooking. Reserve 125ml (1/2 cup) of the cooking liquid.","Meanwhile, heat the oil in a non-stick frying pan over medium-high heat. Add the garlic and half the shallot and cook, stirring, for 2 minutes or until aromatic. Add the wine and simmer for 1-2 minutes or until reduced. Tear half the basil leaves.","Combine the cream cheese and reserved pasta water in a bowl. Whisk until smooth and combined. Season well with pepper. Add to the frying pan and immediately remove from the heat.","Drain the pasta mixture. Return to the pan. Add the cream cheese mixture, ham and torn basil. Use tongs to toss well to combine. Sprinkle with the remaining shallot and basil."])
-            ],
-            // Preparation description for chicken shawarma.
-            [PreparationDescription(description: ["Combine the marinade ingredients in a large ziplock bag. Add the chicken, seal, the massage from the outside with your hands to make sure each piece is coated. Marinate 24 hours (minimum 3 hours).","Combine the Yogurt Sauce ingredients in a bowl and mix. Cover and put in the fridge until required (it will last for 3 days in the fridge).","Heat a large non-stick skillet with 1 tablespoon over medium high heat, or lightly brush a BBQ hotplate/grills with oil and heat to medium high. (See notes for baking)","Place chicken in the skillet or on the grill and cook the first side for 4 to 5 minutes until nicely charred. Turn and cook the other side for 3 to 4 minutes (the 2nd side takes less time).","Remove chicken from the grill and cover loosely with foil. Set aside to rest for 5 minutes.","Slice chicken and pile onto platter alongside flatbreads, Salad and the Yoghurt Sauce (or dairy free Tahini sauce from this recipe).","To make a wrap, get a piece of flatbread and smear with Yoghurt Sauce. Top with a bit of lettuce and tomato and Chicken Shawarma. Roll up and enjoy!"])
-            ],
-            // Dinner Section
-            // Preparation description for Prawn & harissa spaghetti.
-            [PreparationDescription(description: ["Bring a pan of lightly salted water to the boil. Add the broccoli and boil for 1 min 30 secs, or until tender. Drain and set aside. Cook the pasta following pack instructions, then drain, reserving a ladleful of cooking water.","Heat the oil in a large frying pan, add the garlic clove and fry over a low heat for 2 mins. Remove with a slotted spoon and discard, leaving the flavoured oil.","Add the tomatoes to the pan and fry over a medium heat for 5 mins, or until beginning to soften and turn juicy. Stir through the prawns and cook for 2 mins, or until turning pink. Add the harissa and lemon zest, stirring to coat.","Toss the cooked spaghetti and pasta water through the prawns and harissa. Stir through the broccoli, season to taste and serve."])
-            ],
-            // Preparation description for Spinach, sweet potato & lentil dhal.
-            [PreparationDescription(description: ["Heat 1 tbsp sesame oil in a wide-based pan with a tight-fitting lid.","Add 1 finely chopped red onion and cook over a low heat for 10 mins, stirring occasionally, until softened.","Add 1 crushed garlic clove, a finely chopped thumb-sized piece of ginger and 1 finely chopped red chilli, cook for 1 min, then add 1½ tsp ground turmeric and 1½ tsp ground cumin and cook for 1 min more.","urn up the heat to medium, add 2 sweet potatoes, cut into even chunks, and stir everything together so the potato is coated in the spice mixture.","Tip in 250g red split lentils, 600ml vegetable stock and some seasoning.","Bring the liquid to the boil, then reduce the heat, cover and cook for 20 mins until the lentils are tender and the potato is just holding its shape.","Taste and adjust the seasoning, then gently stir in the 80g spinach. Once wilted, top with the 4 diagonally sliced spring onions and ½ small pack torn basil leaves to serve."])
-            ],
-            // Preparation description for Simple fish stew.
-            [PreparationDescription(description: ["","","",""])
-            ]
-        ]
-    }
+    static let foodPreparationData: [PreparationDescription] =
+    [
+        // Breakfast Section
+        // Preparation description for Chocolate Oats.
+        PreparationDescription(description: ["Combine all ingredients in a small pot. Mix until fullly combined three times.",
+                                              "Transfer the pot to a stove.Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
+                                              "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"])
+        ,
+        // Preparation description for Banana Shake.
+        PreparationDescription(description: ["Peel the bananas and chop them.",
+                                              "Transfer the chopped bananas, vanilla and coconut milk into the blender.",
+                                              "Add raw sugar or your preferred choice of sweetener. You can choose to omit the sweetener.","Blend everything until smooth and creamy. If you find the banana shake to be too thick for your liking, add a few splashes of water and blend again.","Pour the milkshake in glasses and serve right away."])
+        ,
+        // Preparation description for Bread & Jam.
+        PreparationDescription(description: ["Take a bread slice, spread butter generously over it, then spread jam over it. Sandwich it together.",
+                                              "Cut the edges, then cut into slices or strips.",
+                                              "You can cut and serve as such OR toast it. For this, apply butter on a hot tawa","Toast the bread butter jam both the sides and serve hot !"])
+        ,
+        // Preparation description for French omelette.
+        PreparationDescription(description: ["Whisk eggs, water, and salt together in a mixing bowl. Whisk until mixture is very liquid and whites are completely blended in, 1 or 2 minutes.",
+                                              "Heat 1 1/2 tablespoons butter in a 9- or 10-inch nonstick skillet over medium-high heat. As soon as butter melts and before it starts to sizzle, pour in whisked eggs. Stir in a circular pattern with a heat-proof spatula, lifting and scrambling eggs, shaking the pan to keep leveling out the mixture, and scraping down the sides. Continue stirring until shaking the pan no longer levels the eggs.",
+                                              "Reduce heat to low. Using the spatula, smooth the surface to move runny eggs to less runny spots, working toward an even thickness. As soon as the surface is wet but not runny, remove from heat.","Starting at the handle side of the pan, use the spatula to begin rolling omelette into a cylinder shape, about 3 rolls until omelette is about 2 inches from opposite side of the pan. Use the spatula to fold the last flap of egg over the top of the cylinder leaving the seam-side up. Add remaining 1/2 tablespoon butter to the pan. Gently push the butter as it melts under the omelette.","Slide omelette to edge of the pan. Flip onto a plate with the seam-side down. Even out the shape, if necessary. You can tuck in the ends, if you like. Brush surface with a bit more butter. Dust with cayenne pepper."])
+        ,
+        // Lunch Section
+        // Preparation description for Rice & Chicken.
+        PreparationDescription(description: ["Toss the chicken breast with garlic powder, salt, and pepper. Heat olive oil in a 10-inch skillet over medium heat. Add chicken breast and cook until browned, stirring often, about 3 minutes. Add garlic to skillet and cook for 30 seconds more.",
+                                              "Stir in rice and chicken broth. Bring to a boil, reduce to a simmer, and cover. Cook for 20 minutes, stirring occasionally.",
+                                              "Remove pan from heat and place baby spinach on top of the rice. Cover and let sit for 5 minutes.","Remove lid and stir well. Stir in cream and serve."])
+        ,
+       
+        // Preparation description for Low Fat Pasta.
+        PreparationDescription(description: ["Cook the pasta in a large saucepan of boiling water following packet directions or until al dente, adding the peas for the last 2 minutes of cooking. Reserve 125ml (1/2 cup) of the cooking liquid.","Meanwhile, heat the oil in a non-stick frying pan over medium-high heat. Add the garlic and half the shallot and cook, stirring, for 2 minutes or until aromatic. Add the wine and simmer for 1-2 minutes or until reduced. Tear half the basil leaves.","Combine the cream cheese and reserved pasta water in a bowl. Whisk until smooth and combined. Season well with pepper. Add to the frying pan and immediately remove from the heat.","Drain the pasta mixture. Return to the pan. Add the cream cheese mixture, ham and torn basil. Use tongs to toss well to combine. Sprinkle with the remaining shallot and basil."])
+        ,
+        // Preparation description for chicken shawarma.
+        PreparationDescription(description: ["Combine the marinade ingredients in a large ziplock bag. Add the chicken, seal, the massage from the outside with your hands to make sure each piece is coated. Marinate 24 hours (minimum 3 hours).","Combine the Yogurt Sauce ingredients in a bowl and mix. Cover and put in the fridge until required (it will last for 3 days in the fridge).","Heat a large non-stick skillet with 1 tablespoon over medium high heat, or lightly brush a BBQ hotplate/grills with oil and heat to medium high. (See notes for baking)","Place chicken in the skillet or on the grill and cook the first side for 4 to 5 minutes until nicely charred. Turn and cook the other side for 3 to 4 minutes (the 2nd side takes less time).","Remove chicken from the grill and cover loosely with foil. Set aside to rest for 5 minutes.","Slice chicken and pile onto platter alongside flatbreads, Salad and the Yoghurt Sauce (or dairy free Tahini sauce from this recipe).","To make a wrap, get a piece of flatbread and smear with Yoghurt Sauce. Top with a bit of lettuce and tomato and Chicken Shawarma. Roll up and enjoy!"])
+        ,
+        // Dinner Section
+        // Preparation description for Prawn & harissa spaghetti.
+        PreparationDescription(description: ["Bring a pan of lightly salted water to the boil. Add the broccoli and boil for 1 min 30 secs, or until tender. Drain and set aside. Cook the pasta following pack instructions, then drain, reserving a ladleful of cooking water.","Heat the oil in a large frying pan, add the garlic clove and fry over a low heat for 2 mins. Remove with a slotted spoon and discard, leaving the flavoured oil.","Add the tomatoes to the pan and fry over a medium heat for 5 mins, or until beginning to soften and turn juicy. Stir through the prawns and cook for 2 mins, or until turning pink. Add the harissa and lemon zest, stirring to coat.","Toss the cooked spaghetti and pasta water through the prawns and harissa. Stir through the broccoli, season to taste and serve."])
+        ,
+        // Preparation description for Spinach, sweet potato & lentil dhal.
+        PreparationDescription(description: ["Heat 1 tbsp sesame oil in a wide-based pan with a tight-fitting lid.","Add 1 finely chopped red onion and cook over a low heat for 10 mins, stirring occasionally, until softened.","Add 1 crushed garlic clove, a finely chopped thumb-sized piece of ginger and 1 finely chopped red chilli, cook for 1 min, then add 1½ tsp ground turmeric and 1½ tsp ground cumin and cook for 1 min more.","urn up the heat to medium, add 2 sweet potatoes, cut into even chunks, and stir everything together so the potato is coated in the spice mixture.","Tip in 250g red split lentils, 600ml vegetable stock and some seasoning.","Bring the liquid to the boil, then reduce the heat, cover and cook for 20 mins until the lentils are tender and the potato is just holding its shape.","Taste and adjust the seasoning, then gently stir in the 80g spinach. Once wilted, top with the 4 diagonally sliced spring onions and ½ small pack torn basil leaves to serve."])
+        ,
+        // Preparation description for Simple fish stew.
+        PreparationDescription(description: ["Heat the oil in a large pan, add the fennel seeds, carrots, celery and garlic, and cook for 5 mins until starting to soften. Tip in the leeks, tomatoes and stock, season and bring to the boil, then cover and simmer for 15-20 mins until the vegetables are tender and the sauce has thickened and reduced slightly.","Add the fish, scatter over the prawns and cook for 2 mins more until lightly cooked. Ladle into bowls and serve with a spoon."])
+        
+    ]
+    
+    
     
 }

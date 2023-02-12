@@ -14,6 +14,10 @@ var foodNutrientsData = [FoodNutrientsModel]()
 // Array for populating ingredients nutrients collection view cells.
 var foodIngredientsData = [IngredientModel]()
 
+// Variable for populating preparation Collection Viewcells.
+var foodPreparationData: PreparationDescription = PreparationDescription(description: [])
+
+
 
 
 class NutrientsViewController: UIViewController
@@ -50,16 +54,70 @@ class NutrientsViewController: UIViewController
         // fetchData()
         
         // Populating the collection view's with mock data.
-        dummyData()
+        dummyData(dishName: name)
         
         
         
     }
     /// Function to assign foodNutrientsData and foodIngredientsData with mock data.
-    private func dummyData()
+    private func dummyData(dishName: String)
     {
-        foodNutrientsData = DietPlan.foodNutientsData
-        foodIngredientsData = DietPlan.foodIngredientsData
+        switch dishName
+        {
+            // For Breakfast section
+        case "Chocolate Oatmeal":
+            foodNutrientsData = DietPlan.foodNutientsData[0]
+            foodIngredientsData = DietPlan.foodIngredientsData[0]
+            foodPreparationData = DietPlan.foodPreparationData[0]
+            
+        case "Banana Shake":
+            foodNutrientsData = DietPlan.foodNutientsData[1]
+            foodIngredientsData = DietPlan.foodIngredientsData[1]
+            foodPreparationData = DietPlan.foodPreparationData[1]
+        case "Bread Jam":
+            foodNutrientsData = DietPlan.foodNutientsData[2]
+            foodIngredientsData = DietPlan.foodIngredientsData[2]
+            foodPreparationData = DietPlan.foodPreparationData[2]
+        case "French omelette":
+            foodNutrientsData = DietPlan.foodNutientsData[3]
+            foodIngredientsData = DietPlan.foodIngredientsData[3]
+            foodPreparationData = DietPlan.foodPreparationData[3]
+            
+            // For Lunch Section
+            
+        case "Rice & Chicken":
+            foodNutrientsData = DietPlan.foodNutientsData[4]
+            foodIngredientsData = DietPlan.foodIngredientsData[4]
+            foodPreparationData = DietPlan.foodPreparationData[4]
+        case "Low Fat Pasta":
+            foodNutrientsData = DietPlan.foodNutientsData[5]
+            foodIngredientsData = DietPlan.foodIngredientsData[5]
+            foodPreparationData = DietPlan.foodPreparationData[5]
+        case "chicken shawarma":
+            foodNutrientsData = DietPlan.foodNutientsData[6]
+            foodIngredientsData = DietPlan.foodIngredientsData[6]
+            foodPreparationData = DietPlan.foodPreparationData[6]
+            
+            // For Dinner Section
+        case "Prawn & harissa spaghetti":
+            foodNutrientsData = DietPlan.foodNutientsData[7]
+            foodIngredientsData = DietPlan.foodIngredientsData[7]
+            foodPreparationData = DietPlan.foodPreparationData[7]
+        case "Spinach, sweet potato & lentil dhal":
+            foodNutrientsData = DietPlan.foodNutientsData[8]
+            foodIngredientsData = DietPlan.foodIngredientsData[8]
+            foodPreparationData = DietPlan.foodPreparationData[8]
+        case "Simple fish stew":
+            foodNutrientsData = DietPlan.foodNutientsData[9]
+            foodIngredientsData = DietPlan.foodIngredientsData[9]
+            foodPreparationData = DietPlan.foodPreparationData[9]
+            
+        default:
+            
+            foodNutrientsData = DietPlan.foodNutientsData[0]
+            foodIngredientsData = DietPlan.foodIngredientsData[0]
+            foodPreparationData = DietPlan.foodPreparationData[0]
+        }
     }
     /// Function for fetching data from API.
     private func fetchData()
@@ -137,7 +195,7 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         else
         {
             // Mock Data
-            return DietPlan.PreparationProcedure.steps.count
+            return foodPreparationData.description.count
         }
         
     }
@@ -167,7 +225,7 @@ extension NutrientsViewController: UICollectionViewDelegate,UICollectionViewData
         {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PreparationCollectionViewCell.identifier, for: indexPath) as! PreparationCollectionViewCell
             
-            cell.configureList(countNumber: "\(indexPath.row + 1)", procedureText: DietPlan.PreparationProcedure.steps[0][0].description[indexPath.row])
+            cell.configureList(countNumber: "\(indexPath.row + 1)", procedureText:foodPreparationData.description[indexPath.row])
             return cell
         }
         
