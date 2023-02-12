@@ -45,14 +45,15 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 ### Foundation
 - Swift5
 - UIKit
-- TableView with custom cell
-- CollectionView with custom cell
+- Collection View with custom cell
+- Scroll View
 - Networking(URLSession)
-### Third party library
-- Firebase(for authentication and saving user data)
+### Dependencies 
+- [Firebase](https://firebase.google.com)(for authentication and saving user data)
 - [Kingfisher](https://github.com/onevcat/Kingfisher)(A light weight swift library to get images from the web)
 
-# Resources
+# Links
 - Some element of current UI design is different from the provided design file.
-  - [UI design(Figma)](https://www.figma.com/community/file/1127341178423272618)
+  - [App's UI design(Figma)](https://www.figma.com/community/file/1127341178423272618)
+- App in action [Click to watch the video](www.youtube.com)
 
