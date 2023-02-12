@@ -45,8 +45,9 @@ Get Fit, a one destination fitness app that will provide workout plan(with video
 ### Foundation
 - Swift5
 - UIKit
-- Collection View with custom cell
-- Scroll View
+- UICollectionView(with custom cell)
+- UIScrollView
+- UITabBarController
 - Networking(URLSession)
 ### Dependencies 
 - [Firebase](https://firebase.google.com)(for authentication and saving user data)
