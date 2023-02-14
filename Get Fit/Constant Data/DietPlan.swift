@@ -16,16 +16,15 @@ struct DietPlan
     [
         FoodCardModel(foodCategory: "Breakfast",
                       
-                      cardImage: ["https://choosingchia.com/jessh-jessh/uploads/2022/01/Chocolate-Oatmeal-8.jpg","https://www.thespruceeats.com/thmb/67fUhzexgkuAZZkNPCzN_L54Vn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/banana-smoothie-recipes-759606-hero-01-d2abaa79f3204030a0ec0a8940456acc.jpg",
-                                  "https://somethingaboutsandwiches.com/wp-content/uploads/2022/02/strawberry-jam-sandwiches.jpg","https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/9/0/FNK_French-Omelet_s4x3.jpg.rend.hgtvcom.826.620.suffix/1386784369204.jpeg"],
+                      cardImage: ["https://choosingchia.com/jessh-jessh/uploads/2022/01/Chocolate-Oatmeal-8.jpg","https://www.thespruceeats.com/thmb/67fUhzexgkuAZZkNPCzN_L54Vn8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/banana-smoothie-recipes-759606-hero-01-d2abaa79f3204030a0ec0a8940456acc.jpg","https://food.fnr.sndimg.com/content/dam/images/food/fullset/2013/12/9/0/FNK_French-Omelet_s4x3.jpg.rend.hgtvcom.826.620.suffix/1386784369204.jpeg"],
                       
-                      foodName: ["Chocolate Oatmeal", "Banana Shake","Bread Jam","French omelette"],
+                      foodName: ["Chocolate Oatmeal", "Banana Shake","French omelette"],
                       
-                      foodQuantity: [23.0,73.9,21.0,22.3],
+                      foodQuantity: [23.0,73.9,22.3],
                       
-                      foodCalorie: [215.5,250,309,393]),
+                      foodCalorie: [215.5,250,393]),
         
-        FoodCardModel(foodCategory: "Lunch", cardImage: ["https://easyhealthyrecipes.com/wp-content/uploads/2022/06/grilled-chicken-rice-16.jpg","https://img.taste.com.au/7kiSTr2Y/w720-h480-cfill-q80/taste/2018/01/chicken-breast-134275-2.jpg","https://www.recipetineats.com/wp-content/uploads/2017/01/Chicken-Shawarma-Wrap_3.jpg"], foodName: ["Rice & Chicken","Low Fat Pasta","chicken shawarma"], foodQuantity: [223.0,113.9,121.0], foodCalorie: [450,216,287,]),
+        FoodCardModel(foodCategory: "Lunch", cardImage: ["https://easyhealthyrecipes.com/wp-content/uploads/2022/06/grilled-chicken-rice-16.jpg","https://img.taste.com.au/7kiSTr2Y/w720-h480-cfill-q80/taste/2018/01/chicken-breast-134275-2.jpg","https://www.recipetineats.com/wp-content/uploads/2017/01/Chicken-Shawarma-Wrap_3.jpg"], foodName: ["Rice & Chicken","Low Fat Pasta","chicken shawarma"], foodQuantity: [223.0,113.9,121.0], foodCalorie: [450,216,287]),
         
         FoodCardModel(foodCategory: "Dinner", cardImage: ["https://images.immediate.co.uk/production/volatile/sites/30/2020/08/prawn-harissa-spaghetti-d29786f.jpg?quality=90&webp=true&resize=440,400","https://images.immediate.co.uk/production/volatile/sites/30/2020/08/spinach-sweet-potato-and-lentil-dhal-be8fae5.jpg?quality=90&webp=true&resize=440,400","https://images.immediate.co.uk/production/volatile/sites/30/2020/08/simple-fish-stew-1d0b259.jpg?quality=90&webp=true&resize=440,400"], foodName: ["Prawn & harissa spaghetti","Spinach, sweet potato & lentil dhal","Simple fish stew"], foodQuantity: [100,230,150], foodCalorie: [511,397,346])
     ]
@@ -49,14 +48,6 @@ struct DietPlan
             FoodNutrientsModel(heading: "Fat", value: 9, unit: "g"),
             FoodNutrientsModel(heading: "Sugers", value: 22, unit: "g")
         ],
-        // Food Nutrients for Bread Jam
-        [
-            FoodNutrientsModel(heading: "Enengy", value: 309, unit: "kcal"),
-            FoodNutrientsModel(heading: "Carbs", value: 40, unit: "g"),
-            FoodNutrientsModel(heading: "Protein", value: 6, unit: "g"),
-            FoodNutrientsModel(heading: "Fat", value: 14, unit: "g"),
-            FoodNutrientsModel(heading: "Sugers", value: 13, unit: "g")
-        ],
         // Food Nutrients for French omelette
         [
             FoodNutrientsModel(heading: "Enengy", value: 393, unit: "kcal"),
@@ -75,7 +66,7 @@ struct DietPlan
             FoodNutrientsModel(heading: "Fat", value: 30, unit: "g"),
             FoodNutrientsModel(heading: "Sugers", value: 10, unit: "g")
         ],
-       
+        
         // Food Nutrients for Low Fat Pasta.
         [
             FoodNutrientsModel(heading: "Enengy", value: 216, unit: "kcal"),
@@ -141,11 +132,6 @@ struct DietPlan
             IngredientModel(ingredientName: "½ teaspoon vanilla extract or 1 to 2 pinches of vanilla powder (optional)", ingredientImage: "https://www.simplyrecipes.com/thmb/gz0CxuzvrOPqDPOi9J3F0jN1knQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Vanilla-Extract-LEAD-1-8e0a18a28da645148ce248208110a008.jpg", ingredientQuantity: 1.0),
             IngredientModel(ingredientName: "¼ teaspoon cardamom powder or ground cinnamon powder for garnish – (optional)", ingredientImage: "https://www.jiithyaschocolate.com/image/cache/data/dhirens/Cardamom-powder-900x600.jpg", ingredientQuantity: 1.5)
         ],
-        // Ingredient for Bread and Jam.
-        [IngredientModel(ingredientName: "2 slices Bread", ingredientImage: "https://www.joyofbaking.com/images/whitesandwichbread.jpg", ingredientQuantity: 10.0),
-         IngredientModel(ingredientName: "1 tbsp Butter", ingredientImage: "https://www.southernliving.com/thmb/e9PRDV-qQ9F1GRYh4C_SBAi4foI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc()/How_To_Soften_Butter_013-2000-61e8b4e1ad9c431887472483ae714dbb.jpg", ingredientQuantity: 15.0),
-         IngredientModel(ingredientName: "1 tbsp Jam", ingredientImage: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/4B7C3510-7041-4B5D-8000-1D10B1BA4678/Derivates/6749ac4e-586d-4055-9df2-5a96832897f6.jpg", ingredientQuantity: 15.0)
-        ],
         // Ingredient for French omelette.
         [IngredientModel(ingredientName: "3 large fresh eggs", ingredientImage: "https://cdn.britannica.com/94/151894-050-F72A5317/Brown-eggs.jpg", ingredientQuantity: 180.0),
          IngredientModel(ingredientName: "½ teaspoon cold water", ingredientImage: "https://d2jx2rerrg6sh3.cloudfront.net/image-handler/ts/20210712083540/ri/673/picture/2021/7/shutterstock_1548860402.jpg", ingredientQuantity: 10.0),
@@ -166,11 +152,10 @@ struct DietPlan
          IngredientModel(ingredientName: "3/4 cup long grain white rice", ingredientImage: "https://aicmtinternational.com/wp-content/uploads/2021/07/Long-Grain-White-Rice.jpg", ingredientQuantity: 400),
          IngredientModel(ingredientName: "2 1/2 cups chicken broth", ingredientImage: "https://www.thecookierookie.com/wp-content/uploads/2018/09/homemade-chicken-stock-broth-3-of-3.jpg", ingredientQuantity: 250),
          IngredientModel(ingredientName: "2 cups baby spinach", ingredientImage: "https://cdn.shopify.com/s/files/1/0017/9234/4153/products/Spinach43_1024x1024@2x.jpg?v=1602165575", ingredientQuantity: 100),
-         IngredientModel(ingredientName: "2 tablespoons heavy cream", ingredientImage: "https://static.toiimg.com/thumb/68811614.cms?width=680&height=512&imgsize=679470", ingredientQuantity: 30),
-         
+         IngredientModel(ingredientName: "2 tablespoons heavy cream", ingredientImage: "https://static.toiimg.com/thumb/68811614.cms?width=680&height=512&imgsize=679470", ingredientQuantity: 30)
          
         ],
-     
+        
         // Ingredient for Low Fat Pasta.
         [IngredientModel(ingredientName: "280g dried casarecce pasta", ingredientImage: "https://img.freepik.com/premium-photo/healthy-dry-casarecce-pasta-bowl_693630-10346.jpg?w=2000", ingredientQuantity: 280.0),
          IngredientModel(ingredientName: "150g (1 cup) frozen peas", ingredientImage: "https://www.simplywhisked.com/wp-content/uploads/2022/03/How-to-Cook-Frozen-Peas-3.jpg", ingredientQuantity: 150.0),
@@ -203,7 +188,7 @@ struct DietPlan
          IngredientModel(ingredientName: "Cheese , shredded (optional)", ingredientImage: "https://www.eatthis.com/wp-content/uploads/sites/4//media/images/ext/855666897/shredded-swiss-cheese.jpg?quality=82&strip=1&w=1400", ingredientQuantity: 30)
          
         ],
-
+        
         // Dinner Section
         // Ingredient for Prawn & harissa spaghetti.
         [IngredientModel(ingredientName: "100g long-stem broccoli, cut into thirds", ingredientImage: "https://images.immediate.co.uk/production/volatile/sites/30/2020/02/Broccoli-ab30ab9.jpg?quality=90&webp=true&resize=600,545", ingredientQuantity: 100.0),
@@ -252,31 +237,26 @@ struct DietPlan
         // Breakfast Section
         // Preparation description for Chocolate Oats.
         PreparationDescription(description: ["Combine all ingredients in a small pot. Mix until fullly combined three times.",
-                                              "Transfer the pot to a stove.Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
-                                              "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"])
+                                             "Transfer the pot to a stove.Cook over medium heat, stirring frequently, until thick and creamy. This should take about 6-8 minutes. Stir the oatmeal often to prevent it from sticking to the bottom of the pot.",
+                                             "Transfer oatmeal to bowl(s). Add your favorite toppings. Enjoy!"])
         ,
         // Preparation description for Banana Shake.
         PreparationDescription(description: ["Peel the bananas and chop them.",
-                                              "Transfer the chopped bananas, vanilla and coconut milk into the blender.",
-                                              "Add raw sugar or your preferred choice of sweetener. You can choose to omit the sweetener.","Blend everything until smooth and creamy. If you find the banana shake to be too thick for your liking, add a few splashes of water and blend again.","Pour the milkshake in glasses and serve right away."])
-        ,
-        // Preparation description for Bread & Jam.
-        PreparationDescription(description: ["Take a bread slice, spread butter generously over it, then spread jam over it. Sandwich it together.",
-                                              "Cut the edges, then cut into slices or strips.",
-                                              "You can cut and serve as such OR toast it. For this, apply butter on a hot tawa","Toast the bread butter jam both the sides and serve hot !"])
+                                             "Transfer the chopped bananas, vanilla and coconut milk into the blender.",
+                                             "Add raw sugar or your preferred choice of sweetener. You can choose to omit the sweetener.","Blend everything until smooth and creamy. If you find the banana shake to be too thick for your liking, add a few splashes of water and blend again.","Pour the milkshake in glasses and serve right away."])
         ,
         // Preparation description for French omelette.
         PreparationDescription(description: ["Whisk eggs, water, and salt together in a mixing bowl. Whisk until mixture is very liquid and whites are completely blended in, 1 or 2 minutes.",
-                                              "Heat 1 1/2 tablespoons butter in a 9- or 10-inch nonstick skillet over medium-high heat. As soon as butter melts and before it starts to sizzle, pour in whisked eggs. Stir in a circular pattern with a heat-proof spatula, lifting and scrambling eggs, shaking the pan to keep leveling out the mixture, and scraping down the sides. Continue stirring until shaking the pan no longer levels the eggs.",
-                                              "Reduce heat to low. Using the spatula, smooth the surface to move runny eggs to less runny spots, working toward an even thickness. As soon as the surface is wet but not runny, remove from heat.","Starting at the handle side of the pan, use the spatula to begin rolling omelette into a cylinder shape, about 3 rolls until omelette is about 2 inches from opposite side of the pan. Use the spatula to fold the last flap of egg over the top of the cylinder leaving the seam-side up. Add remaining 1/2 tablespoon butter to the pan. Gently push the butter as it melts under the omelette.","Slide omelette to edge of the pan. Flip onto a plate with the seam-side down. Even out the shape, if necessary. You can tuck in the ends, if you like. Brush surface with a bit more butter. Dust with cayenne pepper."])
+                                             "Heat 1 1/2 tablespoons butter in a 9- or 10-inch nonstick skillet over medium-high heat. As soon as butter melts and before it starts to sizzle, pour in whisked eggs. Stir in a circular pattern with a heat-proof spatula, lifting and scrambling eggs, shaking the pan to keep leveling out the mixture, and scraping down the sides. Continue stirring until shaking the pan no longer levels the eggs.",
+                                             "Reduce heat to low. Using the spatula, smooth the surface to move runny eggs to less runny spots, working toward an even thickness. As soon as the surface is wet but not runny, remove from heat.","Starting at the handle side of the pan, use the spatula to begin rolling omelette into a cylinder shape, about 3 rolls until omelette is about 2 inches from opposite side of the pan. Use the spatula to fold the last flap of egg over the top of the cylinder leaving the seam-side up. Add remaining 1/2 tablespoon butter to the pan. Gently push the butter as it melts under the omelette.","Slide omelette to edge of the pan. Flip onto a plate with the seam-side down. Even out the shape, if necessary. You can tuck in the ends, if you like. Brush surface with a bit more butter. Dust with cayenne pepper."])
         ,
         // Lunch Section
         // Preparation description for Rice & Chicken.
         PreparationDescription(description: ["Toss the chicken breast with garlic powder, salt, and pepper. Heat olive oil in a 10-inch skillet over medium heat. Add chicken breast and cook until browned, stirring often, about 3 minutes. Add garlic to skillet and cook for 30 seconds more.",
-                                              "Stir in rice and chicken broth. Bring to a boil, reduce to a simmer, and cover. Cook for 20 minutes, stirring occasionally.",
-                                              "Remove pan from heat and place baby spinach on top of the rice. Cover and let sit for 5 minutes.","Remove lid and stir well. Stir in cream and serve."])
+                                             "Stir in rice and chicken broth. Bring to a boil, reduce to a simmer, and cover. Cook for 20 minutes, stirring occasionally.",
+                                             "Remove pan from heat and place baby spinach on top of the rice. Cover and let sit for 5 minutes.","Remove lid and stir well. Stir in cream and serve."])
         ,
-       
+        
         // Preparation description for Low Fat Pasta.
         PreparationDescription(description: ["Cook the pasta in a large saucepan of boiling water following packet directions or until al dente, adding the peas for the last 2 minutes of cooking. Reserve 125ml (1/2 cup) of the cooking liquid.","Meanwhile, heat the oil in a non-stick frying pan over medium-high heat. Add the garlic and half the shallot and cook, stirring, for 2 minutes or until aromatic. Add the wine and simmer for 1-2 minutes or until reduced. Tear half the basil leaves.","Combine the cream cheese and reserved pasta water in a bowl. Whisk until smooth and combined. Season well with pepper. Add to the frying pan and immediately remove from the heat.","Drain the pasta mixture. Return to the pan. Add the cream cheese mixture, ham and torn basil. Use tongs to toss well to combine. Sprinkle with the remaining shallot and basil."])
         ,

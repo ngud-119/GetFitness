@@ -25,6 +25,8 @@ class DietPlanViewController: UIViewController
         
         // Populate the collection view with mock data.
         dummyData()
+        print(foodCardViewData[1].cardImage.count)
+        print(foodCardViewData[2].cardImage.count)
         
     }
     

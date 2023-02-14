@@ -39,7 +39,11 @@ class ProfileViewController: UIViewController
                 
                 else
                 {
-                    let currentUserUid = Auth.auth().currentUser!.uid
+                    guard let currentUserUid = Auth.auth().currentUser?.uid else
+                    {
+                        print("Unexpectedly found nil while unwrapping current user id!")
+                        return
+                    }
                     for document in querySnapshot!.documents
                     {
                         
