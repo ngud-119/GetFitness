@@ -5,8 +5,8 @@
 
 <p align="center">
  
- <img alt="Icon-60@3x" src="https://img.shields.io/badge/platform-iOS-orange?style=for-the-badge">
- <img alt="Icon-60@3x" src="https://img.shields.io/badge/Language-Swift-F64935?logo=swift&style=for-the-badge">
+ <img alt="Icon-60@3x" src="https://img.shields.io/badge/platform-iOS-orange?style=flat">
+ <img alt="Icon-60@3x" src="https://img.shields.io/badge/Language-Swift-F64935?logo=swift&style=flat">
  
 </p>
 
